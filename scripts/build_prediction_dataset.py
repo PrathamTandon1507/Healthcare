@@ -87,18 +87,22 @@ def generate_incidence_reports(
         "metadata": {
             "generated_at": datetime.now().isoformat(),
             "total_conditions_evaluated": len(incidence_A),
-            "horizon_days": 365
+            "horizon_days": 365,
+            "curated_comorbidity_targets_count": len([r for r in incidence_A if r.get("is_comorbidity_target") and r["incident_positive_landmarks"] >= 100]),
+            "statistically_qualifying_all_count": len([r for r in incidence_A if r["incident_positive_landmarks"] >= 100])
         },
         "cutoffs_summary": {
             "Cohort_A_Inpatient_ED": {
-                "threshold_gte_50": len([r for r in incidence_A if r["incident_positive_landmarks"] >= 50]),
-                "threshold_gte_100": len([r for r in incidence_A if r["incident_positive_landmarks"] >= 100]),
-                "threshold_gte_200": len([r for r in incidence_A if r["incident_positive_landmarks"] >= 200]),
+                "all_qualifying_gte_50": len([r for r in incidence_A if r["incident_positive_landmarks"] >= 50]),
+                "all_qualifying_gte_100": len([r for r in incidence_A if r["incident_positive_landmarks"] >= 100]),
+                "all_qualifying_gte_200": len([r for r in incidence_A if r["incident_positive_landmarks"] >= 200]),
+                "curated_comorbidity_gte_100": len([r for r in incidence_A if r.get("is_comorbidity_target") and r["incident_positive_landmarks"] >= 100]),
             },
             "Cohort_B_General": {
-                "threshold_gte_50": len([r for r in incidence_B if r["incident_positive_landmarks"] >= 50]),
-                "threshold_gte_100": len([r for r in incidence_B if r["incident_positive_landmarks"] >= 100]),
-                "threshold_gte_200": len([r for r in incidence_B if r["incident_positive_landmarks"] >= 200]),
+                "all_qualifying_gte_50": len([r for r in incidence_B if r["incident_positive_landmarks"] >= 50]),
+                "all_qualifying_gte_100": len([r for r in incidence_B if r["incident_positive_landmarks"] >= 100]),
+                "all_qualifying_gte_200": len([r for r in incidence_B if r["incident_positive_landmarks"] >= 200]),
+                "curated_comorbidity_gte_100": len([r for r in incidence_B if r.get("is_comorbidity_target") and r["incident_positive_landmarks"] >= 100]),
             }
         },
         "cohort_a_incidence": incidence_A,
@@ -111,39 +115,88 @@ def generate_incidence_reports(
 
     # Build Markdown report
     md = []
-    md.append("# Empirical Disease Incidence & Target Space Selection Report")
+    md.append("# Empirical Disease Incidence & Target Space Curation Report")
     md.append(f"\n*Generated At:* {datetime.now().isoformat()}  ")
     md.append("*Specification:* `COMORBIDITY_ENSEMBLE_ML_PLAN.md` (Sections 1.4, 8)  \n")
     md.append("---\n")
 
-    md.append("## 1. Target Selection Rationale & Threshold Analysis\n")
-    md.append("Rather than arbitrarily fixing $K = 30\\text{--}75$, we measured actual 365-day incident onset events across all 143 condition concepts in Synthea 100K.")
-    md.append("For each condition, the at-risk denominator strictly excludes landmarks where the patient was already diagnosed on or before $T$.\n")
-    
-    md.append("### Target Retention by Minimum Positive Landmark Count")
-    md.append("| Minimum Positive Landmark Threshold | Cohort A Targets (Inpatient/ED) | Cohort B Targets (General) | Modeling Feasibility / Imbalance Profile |")
-    md.append("|---|---|---|---|")
-    c50_A = output_data["cutoffs_summary"]["Cohort_A_Inpatient_ED"]["threshold_gte_50"]
-    c50_B = output_data["cutoffs_summary"]["Cohort_B_General"]["threshold_gte_50"]
-    c100_A = output_data["cutoffs_summary"]["Cohort_A_Inpatient_ED"]["threshold_gte_100"]
-    c100_B = output_data["cutoffs_summary"]["Cohort_B_General"]["threshold_gte_100"]
-    c200_A = output_data["cutoffs_summary"]["Cohort_A_Inpatient_ED"]["threshold_gte_200"]
-    c200_B = output_data["cutoffs_summary"]["Cohort_B_General"]["threshold_gte_200"]
-
-    md.append(f"| $\ge 50$ positive events | **{c50_A} diseases** | **{c50_B} diseases** | Broad coverage, includes lower prevalence chronic entities |")
-    md.append(f"| $\ge 100$ positive events (Recommended baseline) | **{c100_A} diseases** | **{c100_B} diseases** | Stable 5-fold CV splits ($\ge 20$ positives per fold) |")
-    md.append(f"| $\ge 200$ positive events | **{c200_A} diseases** | **{c200_B} diseases** | Highly robust, focused on major chronic/acute conditions |")
+    md.append("## 1. Methodological & Numerical Reconciliations\n")
+    md.append("Before final target space curation, three numerical transitions between exploratory Phase 2 profiling and strict Phase 3 prediction cohort materialization are documented:\n")
+    md.append(r"1. **$144 \rightarrow 143$ Distinct Condition Concepts**:")
+    md.append("   - In the raw `condition_occurrence` table, 144 distinct `condition_concept_id` values exist, including concept `0` (`No matching concept` / unmapped source strings).")
+    md.append("   - Concept `0` represents unmapped administrative or free-text diagnoses without semantic clinical definitions. In accordance with OMOP standards and our multi-label prediction formulation, concept `0` is excluded from the modeled target space, leaving exactly **143 valid clinical condition concepts**.\n")
+    md.append(r"2. **$325,359 \rightarrow 325,259$ Cohort A (Inpatient / ED) Landmarks ($\Delta = 100$)**:")
+    md.append(r"   - In preliminary Phase 2 exploratory profiling, any visit row with $\ge 1$ condition occurrence row in history (including concept `0`) was counted as 325,359.")
+    md.append(r"   - Under strict Phase 3 eligibility enforcement requiring $\ge 1$ *valid, non-zero* distinct condition concept diagnosed on or before $T$, exactly 100 landmarks whose only historical condition was concept `0` were excluded, yielding **325,259 fully eligible landmarks**.\n")
+    md.append(r"3. **$3,365,062 \rightarrow 3,364,928$ Cohort B (General) Landmarks ($\Delta = 134$)**:")
+    md.append("   - Identical resolution on the general encounter cohort: 134 landmarks had only concept `0` in their pre-landmark history and were excluded under strict eligibility, yielding **3,364,928 eligible landmarks**.\n")
 
     md.append("\n---\n")
-    md.append("## 2. Ranked Incidence Table: Top 50 Condition Targets (Cohort A — Inpatient / ED)\n")
-    md.append("| Concept ID | Condition / Disease Name | Pre-existing at $T$ | At-Risk Landmarks | Incident Positive Events | Unique Incident Patients | Incidence Rate (%) | Prevalence Tier |")
+    md.append("## 2. Clinical Target Space Curation Rationale\n")
+    md.append("A core requirement of the **Comorbidity Network + Prediction Tool** is that the target prediction space $K$ must represent **genuine future comorbidities** (chronic, progressive, or recurring disease entities) rather than acute, transient events or administrative artifacts.\n")
+    md.append("Selection was performed using **both** statistical incidence and clinical suitability:\n")
+    md.append(r"- **Statistical Threshold**: $\ge 100$ incident positive landmarks in Cohort A (and $\ge 50$ unique incident patients) to ensure robust sample sizes for 5-fold cross-validation (at least $\ge 20$ positive events per validation fold).")
+    md.append("- **Clinical Exclusion Criteria**:")
+    md.append("  1. **Acute / Transient Infections**: Self-limiting upper respiratory and localized infections (e.g. *Viral sinusitis*, *Acute bronchitis*, *Streptococcal sore throat*, *Acute viral pharyngitis*, *Otitis media*, *Acute cystitis*, *Appendicitis*).")
+    md.append("  2. **Acute Mechanical Trauma & Injuries**: Accidental fractures, sprains, lacerations, burns, whiplash, and accidental poisonings (e.g. *Rib fracture*, *Ankle sprain*, *Wrist sprain*, *Lacerations*, *Burn injuries*, *Concussions*).")
+    md.append("  3. **Obstetric & Normal Pregnancy**: Physiologic status codes and pregnancy complications (e.g. *Normal pregnancy*, *Miscarriage*, *Tubal pregnancy*, *Pre-eclampsia*).")
+    md.append("  4. **Administrative & Non-Disease Findings**: Screening and non-pathological status codes (e.g. *Normal BMI*, *Suspected condition*, *Postoperative state*).\n")
+
+    # Summary counts
+    curated_A = [r for r in incidence_A if r.get("is_comorbidity_target") and r["incident_positive_landmarks"] >= 100]
+    excluded_qual_A = [r for r in incidence_A if (not r.get("is_comorbidity_target")) and r["incident_positive_landmarks"] >= 100]
+
+    md.append("### Target Selection Summary (Cohort A — Inpatient / ED)")
+    md.append(f"- **Total OMOP Condition Concepts Evaluated**: **{len(incidence_A)}**")
+    md.append(rf"- **Statistically Qualifying Concepts ($\ge 100$ positives)**: **{len(curated_A) + len(excluded_qual_A)}**")
+    md.append(f"- **Curated Chronic Comorbidity Targets**: **{len(curated_A)} diseases** (Retained for ML modeling)")
+    md.append(f"- **Excluded Acute / Non-Comorbid Conditions**: **{len(excluded_qual_A)} conditions** (Filtered out)\n")
+
+    md.append("\n---\n")
+    md.append(f"## 3. Curated Comorbidity Target Space (K = {len(curated_A)} Diseases)\n")
+    md.append("| Concept ID | Disease Name | Clinical Domain | Pre-existing at $T$ | At-Risk Landmarks | Incident Positive Events | Unique Patients | Incidence Rate (%) |")
     md.append("|---|---|---|---|---|---|---|---|")
 
-    for r in incidence_A[:50]:
-        inc_rate = r["incidence_rate_pct"]
-        tier = "High (≥5%)" if inc_rate >= 5.0 else "Medium (1–5%)" if inc_rate >= 1.0 else "Low (0.1–1%)" if inc_rate >= 0.1 else "Rare (<0.1%)"
+    # Sort curated by domain and positives
+    curated_sorted = sorted(curated_A, key=lambda x: (x.get("category", "Other"), -x["incident_positive_landmarks"]))
+    for r in curated_sorted:
         md.append(
-            f"| `{r['condition_concept_id']}` | **{r['condition_name']}** | {r['pre_existing_landmarks']:,} | {r['at_risk_landmarks']:,} | **{r['incident_positive_landmarks']:,}** | **{r['unique_incident_patients']:,}** | **{inc_rate}%** | {tier} |"
+            f"| `{r['condition_concept_id']}` | **{r['condition_name']}** | {r.get('category', 'Other')} | {r['pre_existing_landmarks']:,} | {r['at_risk_landmarks']:,} | **{r['incident_positive_landmarks']:,}** | **{r['unique_incident_patients']:,}** | **{r['incidence_rate_pct']}%** |"
+        )
+
+    md.append("\n---\n")
+    md.append(f"## 4. Excluded Qualifying Conditions with Clinical Rationales (N = {len(excluded_qual_A)})\n")
+    md.append("| Concept ID | Condition Name | Clinical Category | Incident Positives | Unique Patients | Primary Clinical Exclusion Rationale |")
+    md.append("|---|---|---|---|---|---|")
+
+    for r in sorted(excluded_qual_A, key=lambda x: -x["incident_positive_landmarks"]):
+        cat = r.get("category", "Other")
+        if cat == "Acute Infection":
+            reason = "Acute transient infection; self-limiting, not a chronic comorbidity"
+        elif cat == "Acute Injury / Trauma":
+            reason = "Acute mechanical trauma / accidental injury; not a chronic comorbidity"
+        elif cat == "Obstetric / Pregnancy":
+            reason = "Obstetric / pregnancy-related physiological condition"
+        elif cat == "Administrative / Finding":
+            reason = "Non-disease screening finding or administrative status code"
+        else:
+            reason = "Non-chronic condition unsuitable for comorbidity network prediction"
+
+        md.append(
+            f"| `{r['condition_concept_id']}` | {r['condition_name']} | *{cat}* | {r['incident_positive_landmarks']:,} | {r['unique_incident_patients']:,} | {reason} |"
+        )
+
+    md.append("\n---\n")
+    md.append("## 5. Complete Empirical Incidence Table: All 143 Evaluated Condition Concepts\n")
+    md.append("For full research transparency, the complete empirical distribution across all 143 candidate concepts in Cohort A is presented below:\n")
+    md.append("| Concept ID | Condition Name | Domain | Status | Pre-existing at $T$ | At-Risk Landmarks | Incident Positives | Unique Patients | Incidence Rate (%) |")
+    md.append("|---|---|---|---|---|---|---|---|---|")
+
+    for r in incidence_A:
+        is_cur = r.get("is_comorbidity_target") and r["incident_positive_landmarks"] >= 100
+        status = "🎯 **Curated Target**" if is_cur else "Excluded (Acute/Trauma/Obs)" if r["incident_positive_landmarks"] >= 100 else "Excluded (<100 Positives)"
+        md.append(
+            f"| `{r['condition_concept_id']}` | {r['condition_name']} | {r.get('category', 'Other')} | {status} | {r['pre_existing_landmarks']:,} | {r['at_risk_landmarks']:,} | {r['incident_positive_landmarks']:,} | {r['unique_incident_patients']:,} | {r['incidence_rate_pct']}% |"
         )
 
     os.makedirs(os.path.dirname(os.path.abspath(output_md_path)), exist_ok=True)

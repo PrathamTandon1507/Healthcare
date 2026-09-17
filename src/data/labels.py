@@ -27,6 +27,193 @@ from src.data.landmarks import select_landmarks
 from src.data.timeline import get_condition_name, get_visit_name
 
 
+# Comprehensive Taxonomy: (Clinical Name, Clinical Category, Is Chronic Comorbidity Target)
+CONDITION_METADATA = {
+    # Cardiometabolic & Endocrine
+    316866: ("Essential Hypertension", "Cardiometabolic", True),
+    201826: ("Type 2 Diabetes Mellitus", "Cardiometabolic", True),
+    4311629: ("Prediabetes", "Cardiometabolic", True),
+    432867: ("Hyperlipidemia", "Cardiometabolic", True),
+    4120314: ("Hypertriglyceridemia", "Cardiometabolic", True),
+    436940: ("Metabolic Syndrome X", "Cardiometabolic", True),
+    317576: ("Coronary Arteriosclerosis", "Cardiometabolic", True),
+    192279: ("Congestive Heart Failure", "Cardiometabolic", True),
+    4329847: ("Myocardial Infarction", "Cardiometabolic", True),
+    321042: ("Cardiac Arrest", "Cardiometabolic", True),
+    4214376: ("Hyperglycemia", "Cardiometabolic", True),
+    83664006: ("Hypothyroidism", "Cardiometabolic", True),
+    4309027: ("Hypothyroidism", "Cardiometabolic", True),
+    375557: ("Hypothyroidism", "Cardiometabolic", True),
+    440674: ("Gout", "Cardiometabolic", True),
+    7200002: ("Alcoholism / Alcohol Dependence", "Cardiometabolic", True),
+    4218106: ("Alcoholism / Alcohol Dependence", "Cardiometabolic", True),
+    438130: ("Opioid Abuse / Harmful Use", "Cardiometabolic", True),
+    440383: ("Atrial Fibrillation", "Cardiometabolic", True),
+    
+    # Diabetic Complications
+    37016354: ("Neuropathy due to Type 2 Diabetes", "Diabetic Complication", True),
+    43530656: ("Nonproliferative Retinopathy due to Type 2 Diabetes", "Diabetic Complication", True),
+    45769905: ("Microalbuminuria due to Type 2 Diabetes", "Diabetic Complication", True),
+    45770830: ("Macular Edema due to Type 2 Diabetes", "Diabetic Complication", True),
+    43530685: ("Proliferative Retinopathy due to Type 2 Diabetes", "Diabetic Complication", True),
+    45757499: ("Proteinuria due to Type 2 Diabetes", "Diabetic Complication", True),
+    422034002: ("Retinopathy due to Type 2 Diabetes", "Diabetic Complication", True),
+    4226121: ("Retinopathy due to Type 2 Diabetes", "Diabetic Complication", True),
+    45763582: ("Blindness due to Type 2 Diabetes", "Diabetic Complication", True),
+
+    # Renal & Urological Chronic
+    4229440: ("Chronic Kidney Disease", "Renal", True),
+    443614: ("Chronic Kidney Disease Stage 1", "Renal", True),
+    443601: ("Chronic Kidney Disease Stage 1", "Renal", True),
+    443597: ("Chronic Kidney Disease Stage 2", "Renal", True),
+    443612: ("Chronic Kidney Disease Stage 4", "Renal", True),
+    443600: ("Chronic Kidney Disease Stage 4", "Renal", True),
+    443613: ("Chronic Kidney Disease Stage 5", "Renal", True),
+    193782: ("End Stage Renal Disease", "Renal", True),
+    197927001: ("Recurrent Urinary Tract Infection", "Renal", True),
+    4056621: ("Recurrent Urinary Tract Infection", "Renal", True),
+
+    # Neurological & Mental Health
+    381316: ("Stroke (Cerebrovascular Accident)", "Neurological / Mental Health", True),
+    381591: ("Stroke (Cerebrovascular Accident)", "Neurological / Mental Health", True),
+    26929004: ("Alzheimer's Disease", "Neurological / Mental Health", True),
+    378419: ("Alzheimer's Disease", "Neurological / Mental Health", True),
+    4043241: ("Familial Alzheimer's Disease", "Neurological / Mental Health", True),
+    84757009: ("Epilepsy / Seizure Disorder", "Neurological / Mental Health", True),
+    380378: ("Epilepsy / Seizure Disorder", "Neurological / Mental Health", True),
+    4029498: ("Seizure Disorder", "Neurological / Mental Health", True),
+    4152280: ("Major Depressive Disorder", "Neurological / Mental Health", True),
+    378253: ("Major Depressive Disorder", "Neurological / Mental Health", True),
+    4282096: ("Major Depression, Single Episode", "Neurological / Mental Health", True),
+    436676: ("Posttraumatic Stress Disorder", "Neurological / Mental Health", True),
+    440086: ("Childhood ADHD", "Neurological / Mental Health", True),
+    4316217: ("Fibromyalgia Syndrome", "Neurological / Mental Health", True),
+    44782520: ("Chronic Paralysis due to Spinal Cord Lesion", "Neurological / Mental Health", True),
+
+    # Chronic Respiratory & Allergic
+    257012: ("Chronic Sinusitis", "Respiratory / Allergic", True),
+    4283893: ("Sinusitis", "Respiratory / Allergic", True),
+    438112: ("Sinusitis", "Respiratory / Allergic", True),
+    258780: ("Chronic Obstructive Bronchitis (COPD)", "Respiratory / Allergic", True),
+    255573: ("Chronic Obstructive Lung Disease", "Respiratory / Allergic", True),
+    4051466: ("Childhood Asthma", "Respiratory / Allergic", True),
+    317009: ("Asthma", "Respiratory / Allergic", True),
+    4048171: ("Childhood Asthma Exacerbation / Peritonitis", "Respiratory / Allergic", True),
+    40486433: ("Perennial Allergic Rhinitis", "Respiratory / Allergic", True),
+    4280726: ("Seasonal Allergic Rhinitis", "Respiratory / Allergic", True),
+    133834: ("Atopic Dermatitis / Eczema", "Respiratory / Allergic", True),
+    4084167: ("Acute Allergic Reaction", "Respiratory / Allergic", False),
+
+    # Musculoskeletal & Degenerative
+    4079750: ("Osteoarthritis of Knee", "Musculoskeletal", True),
+    4079749: ("Osteoarthritis of Hip", "Musculoskeletal", True),
+    75036: ("Localized Osteoarthritis of Hand", "Musculoskeletal", True),
+    80502: ("Osteoporosis", "Musculoskeletal", True),
+    80809: ("Rheumatoid Arthritis", "Musculoskeletal", True),
+    436096: ("Chronic Pain", "Musculoskeletal", True),
+    43530652: ("Chronic Intractable Migraine", "Musculoskeletal", True),
+
+    # Oncology & Pre-Malignant Neoplasms
+    4285898: ("Polyp of Colon", "Oncology / Pre-Malignant", True),
+    37017023: ("Recurrent Rectal Polyp", "Oncology / Pre-Malignant", True),
+    4129902: ("Neoplasm of Prostate", "Oncology / Pre-Malignant", True),
+    200970: ("Carcinoma in situ of Prostate", "Oncology / Pre-Malignant", True),
+    4115276: ("Non-Small Cell Lung Cancer", "Oncology / Pre-Malignant", True),
+    4310703: ("Non-Small Cell Carcinoma of Lung, Stage 1", "Oncology / Pre-Malignant", True),
+    37395648: ("Small Cell Carcinoma of Lung, Stage 1", "Oncology / Pre-Malignant", True),
+    4110591: ("Small Cell Carcinoma of Lung", "Oncology / Pre-Malignant", True),
+    4180790: ("Malignant Neoplasm of Colon", "Oncology / Pre-Malignant", True),
+    79740: ("Primary Malignant Neoplasm of Colon", "Oncology / Pre-Malignant", True),
+    197500: ("Primary Malignant Neoplasm of Colon", "Oncology / Pre-Malignant", True),
+    4311765: ("Secondary Malignant Neoplasm of Colon", "Oncology / Pre-Malignant", True),
+
+    # Hematology
+    439777: ("Anemia", "Hematology", True),
+
+    # Acute / Transient Infections (Excluded from comorbidity prediction)
+    40481087: ("Viral Sinusitis", "Acute Infection", False),
+    260139: ("Acute Bronchitis", "Acute Infection", False),
+    28060: ("Streptococcal Sore Throat", "Acute Infection", False),
+    4294548: ("Acute Viral Pharyngitis", "Acute Infection", False),
+    372328: ("Otitis Media", "Acute Infection", False),
+    4134304: ("Acute Upper Respiratory Infection", "Acute Infection", False),
+    440448: ("Appendicitis", "Acute Infection", False),
+    4166224: ("Ruptured Appendix", "Acute Infection", False),
+    195588: ("Cystitis (Urinary Tract Infection)", "Acute Infection", False),
+    255848: ("Pneumonia", "Acute Infection", False),
+    4341247: ("Protracted Diarrhea", "Acute Infection", False),
+    198809: ("Acute Cholecystitis", "Acute Infection", False),
+    196456: ("Gallbladder Calculus (Gallstone)", "Acute Infection", False),
+    198199: ("Pyelonephritis", "Acute Infection", False),
+    4008261: ("Pseudomonas Aeruginosa Infection", "Acute Infection", False),
+    40489907: ("Staphylococcus Aureus Sepsis", "Acute Infection", False),
+    40491961: ("Pseudomonas Sepsis", "Acute Infection", False),
+    4116491: ("Infectious Process", "Acute Infection", False),
+
+    # Acute Trauma / Injuries / Fractures / Burns (Excluded from comorbidity prediction)
+    81151: ("Sprain of Ankle", "Acute Injury / Trauma", False),
+    78272: ("Sprain of Wrist", "Acute Injury / Trauma", False),
+    4055754: ("Fracture of Rib", "Acute Injury / Trauma", False),
+    4237458: ("Fracture of Upper Limb", "Acute Injury / Trauma", False),
+    4142905: ("Fracture of Clavicle", "Acute Injury / Trauma", False),
+    4230399: ("Closed Fracture of Wrist", "Acute Injury / Trauma", False),
+    4059173: ("Fracture of Ankle", "Acute Injury / Trauma", False),
+    4156265: ("Facial Laceration", "Acute Injury / Trauma", False),
+    4152936: ("Laceration of Thigh", "Acute Injury / Trauma", False),
+    4113008: ("Laceration of Hand", "Acute Injury / Trauma", False),
+    4155034: ("Laceration of Forearm", "Acute Injury / Trauma", False),
+    4109685: ("Laceration of Foot", "Acute Injury / Trauma", False),
+    378001: ("Concussion Injury", "Acute Injury / Trauma", False),
+    375671: ("Concussion with Loss of Consciousness", "Acute Injury / Trauma", False),
+    4001336: ("Concussion Injury of Brain", "Acute Injury / Trauma", False),
+    40479422: ("Second Degree Burn", "Acute Injury / Trauma", False),
+    4296204: ("First Degree Burn", "Acute Injury / Trauma", False),
+    4296205: ("Second Degree Burn", "Acute Injury / Trauma", False),
+    4299128: ("Third Degree Burn", "Acute Injury / Trauma", False),
+    40480160: ("Burn Injury", "Acute Injury / Trauma", False),
+    4149245: ("Rupture of Patellar Tendon", "Acute Injury / Trauma", False),
+    4035415: ("Tear of Meniscus of Knee", "Acute Injury / Trauma", False),
+    40479768: ("Injury of Anterior Cruciate Ligament", "Acute Injury / Trauma", False),
+    4048695: ("Fracture of Vertebral Column", "Acute Injury / Trauma", False),
+    4066995: ("Fracture of Vertebral Column with Spinal Cord Injury", "Acute Injury / Trauma", False),
+    4132546: ("Traumatic Brain Injury", "Acute Injury / Trauma", False),
+    4208104: ("Drug Overdose", "Acute Injury / Trauma", False),
+    4262136: ("Drug Overdose / Poisoning", "Acute Injury / Trauma", False),
+    4196262: ("Suicidal Deliberate Poisoning", "Acute Injury / Trauma", False),
+    444362: ("Suicidal Poisoning", "Acute Injury / Trauma", False),
+    4218389: ("Whiplash Injury to Neck", "Acute Injury / Trauma", False),
+    4278672: ("Fracture of Forearm", "Acute Injury / Trauma", False),
+
+    # Obstetric / Pregnancy Conditions (Excluded from comorbidity prediction)
+    4217975: ("Normal Pregnancy", "Obstetric / Pregnancy", False),
+    28060: ("Normal Pregnancy", "Obstetric / Pregnancy", False),
+    4078393: ("Miscarriage (Spontaneous Abortion)", "Obstetric / Pregnancy", False),
+    40318618: ("Complete Miscarriage", "Obstetric / Pregnancy", False),
+    199076: ("Tubal Pregnancy", "Obstetric / Pregnancy", False),
+    439393: ("Pre-Eclampsia", "Obstetric / Pregnancy", False),
+    137613: ("Eclampsia in Pregnancy", "Obstetric / Pregnancy", False),
+    4188598: ("High Risk Pregnancy", "Obstetric / Pregnancy", False),
+
+    # Administrative / Status / Non-Disease Findings (Excluded from comorbidity prediction)
+    4112343: ("Normal Body Mass Index", "Administrative / Finding", False),
+    261325: ("Suspected Condition", "Administrative / Finding", False),
+    313217: ("Suspected Respiratory Finding", "Administrative / Finding", False),
+    4146173: ("Postoperative State", "Administrative / Finding", False),
+    4166590: ("Postoperative State", "Administrative / Finding", False),
+    4094814: ("Postoperative Finding", "Administrative / Finding", False),
+    134438: ("Contact Dermatitis", "Administrative / Finding", False),
+    4245614: ("Bleeding from Anus", "Administrative / Finding", False),
+    441267: ("Cystic Fibrosis", "Administrative / Finding", False),
+    4144583: ("Diabetes Mellitus due to Cystic Fibrosis", "Administrative / Finding", False),
+    4021336: ("At Risk for Suicide", "Administrative / Finding", False),
+    45769019: ("Female Infertility due to Cystic Fibrosis", "Administrative / Finding", False),
+    319049: ("Clinical Finding", "Administrative / Finding", False),
+    255891: ("Clinical Finding", "Administrative / Finding", False),
+    433125: ("Clinical Finding", "Administrative / Finding", False),
+    193591: ("Clinical Finding", "Administrative / Finding", False)
+}
+
+
 def analyze_disease_incidence(
     con: duckdb.DuckDBPyConnection,
     cohort_view: str = "cohort_a_inpatient_ed",
@@ -139,7 +326,11 @@ def analyze_disease_incidence(
     results = []
     for r in rows:
         d = dict(zip(cols, r))
-        d["condition_name"] = get_condition_name(d["condition_concept_id"], d["sample_source_value"])
+        cid = d["condition_concept_id"]
+        meta = CONDITION_METADATA.get(cid, (get_condition_name(cid, d["sample_source_value"]), "Other", False))
+        d["condition_name"] = meta[0]
+        d["category"] = meta[1]
+        d["is_comorbidity_target"] = meta[2]
         results.append(d)
 
     return results
@@ -148,16 +339,22 @@ def analyze_disease_incidence(
 def select_target_disease_space(
     incidence_results: List[Dict[str, Any]],
     min_positive_landmarks: int = 100,
-    min_positive_patients: int = 50
+    min_positive_patients: int = 50,
+    filter_comorbidities_only: bool = True
 ) -> List[Dict[str, Any]]:
     """
-    Selects the target disease space K based on empirical positive counts.
+    Selects the target disease space K based on BOTH:
+    1. Empirical statistical incidence (>= min_positive_landmarks and >= min_positive_patients)
+    2. Clinical suitability for future comorbidity prediction (filtering acute infections, trauma, obstetrics)
     """
-    selected = [
-        r for r in incidence_results
-        if r["incident_positive_landmarks"] >= min_positive_landmarks
-        and r["unique_incident_patients"] >= min_positive_patients
-    ]
+    selected = []
+    for r in incidence_results:
+        if r["incident_positive_landmarks"] >= min_positive_landmarks and r["unique_incident_patients"] >= min_positive_patients:
+            if filter_comorbidities_only:
+                if r.get("is_comorbidity_target", True):
+                    selected.append(r)
+            else:
+                selected.append(r)
     return selected
 
 

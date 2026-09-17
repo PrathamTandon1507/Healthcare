@@ -1,19 +1,23 @@
 {
   "metadata": {
-    "generated_at": "2026-09-18T02:02:43.887880",
+    "generated_at": "2026-09-18T02:15:40.891668",
     "total_conditions_evaluated": 143,
-    "horizon_days": 365
+    "horizon_days": 365,
+    "curated_comorbidity_targets_count": 42,
+    "statistically_qualifying_all_count": 86
   },
   "cutoffs_summary": {
     "Cohort_A_Inpatient_ED": {
-      "threshold_gte_50": 109,
-      "threshold_gte_100": 86,
-      "threshold_gte_200": 72
+      "all_qualifying_gte_50": 109,
+      "all_qualifying_gte_100": 86,
+      "all_qualifying_gte_200": 72,
+      "curated_comorbidity_gte_100": 42
     },
     "Cohort_B_General": {
-      "threshold_gte_50": 128,
-      "threshold_gte_100": 125,
-      "threshold_gte_200": 119
+      "all_qualifying_gte_50": 128,
+      "all_qualifying_gte_100": 125,
+      "all_qualifying_gte_200": 119,
+      "curated_comorbidity_gte_100": 66
     }
   },
   "cohort_a_incidence": [
@@ -27,7 +31,9 @@
       "unique_incident_patients": 8731,
       "incidence_rate_pct": 8.772,
       "population_positive_rate_pct": 5.4,
-      "condition_name": "Viral sinusitis"
+      "condition_name": "Viral Sinusitis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4112343,
@@ -39,7 +45,9 @@
       "unique_incident_patients": 6134,
       "incidence_rate_pct": 5.098,
       "population_positive_rate_pct": 3.872,
-      "condition_name": "Normal body mass index"
+      "condition_name": "Normal Body Mass Index",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 260139,
@@ -51,7 +59,9 @@
       "unique_incident_patients": 5393,
       "incidence_rate_pct": 4.308,
       "population_positive_rate_pct": 3.409,
-      "condition_name": "Acute bronchitis"
+      "condition_name": "Acute Bronchitis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 43530652,
@@ -63,7 +73,9 @@
       "unique_incident_patients": 2011,
       "incidence_rate_pct": 1.623,
       "population_positive_rate_pct": 1.25,
-      "condition_name": "Condition (source_code: 124171000119105)"
+      "condition_name": "Chronic Intractable Migraine",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 436096,
@@ -75,7 +87,9 @@
       "unique_incident_patients": 1975,
       "incidence_rate_pct": 1.569,
       "population_positive_rate_pct": 1.207,
-      "condition_name": "Condition (source_code: 82423001)"
+      "condition_name": "Chronic Pain",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4055754,
@@ -87,7 +101,9 @@
       "unique_incident_patients": 1965,
       "incidence_rate_pct": 1.559,
       "population_positive_rate_pct": 1.201,
-      "condition_name": "Fracture of rib"
+      "condition_name": "Fracture of Rib",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 28060,
@@ -99,7 +115,9 @@
       "unique_incident_patients": 1770,
       "incidence_rate_pct": 1.152,
       "population_positive_rate_pct": 1.08,
-      "condition_name": "Streptococcal sore throat"
+      "condition_name": "Normal Pregnancy",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 439777,
@@ -111,7 +129,9 @@
       "unique_incident_patients": 1803,
       "incidence_rate_pct": 1.537,
       "population_positive_rate_pct": 0.926,
-      "condition_name": "Anemia"
+      "condition_name": "Anemia",
+      "category": "Hematology",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4217975,
@@ -123,7 +143,9 @@
       "unique_incident_patients": 1573,
       "incidence_rate_pct": 1.094,
       "population_positive_rate_pct": 0.908,
-      "condition_name": "Normal pregnancy"
+      "condition_name": "Normal Pregnancy",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 378419,
@@ -135,7 +157,9 @@
       "unique_incident_patients": 619,
       "incidence_rate_pct": 0.974,
       "population_positive_rate_pct": 0.899,
-      "condition_name": "Condition (source_code: 26929004)"
+      "condition_name": "Alzheimer's Disease",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 81151,
@@ -147,7 +171,9 @@
       "unique_incident_patients": 974,
       "incidence_rate_pct": 0.742,
       "population_positive_rate_pct": 0.68,
-      "condition_name": "Sprain of ankle"
+      "condition_name": "Sprain of Ankle",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4310703,
@@ -159,7 +185,9 @@
       "unique_incident_patients": 1281,
       "incidence_rate_pct": 0.79,
       "population_positive_rate_pct": 0.675,
-      "condition_name": "Condition (source_code: 424132000)"
+      "condition_name": "Non-Small Cell Carcinoma of Lung, Stage 1",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4285898,
@@ -171,7 +199,9 @@
       "unique_incident_patients": 814,
       "incidence_rate_pct": 0.719,
       "population_positive_rate_pct": 0.67,
-      "condition_name": "Polyp of colon"
+      "condition_name": "Polyp of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4115276,
@@ -183,7 +213,9 @@
       "unique_incident_patients": 1281,
       "incidence_rate_pct": 0.781,
       "population_positive_rate_pct": 0.668,
-      "condition_name": "Condition (source_code: 254637007)"
+      "condition_name": "Non-Small Cell Lung Cancer",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4311629,
@@ -195,7 +227,9 @@
       "unique_incident_patients": 1218,
       "incidence_rate_pct": 1.045,
       "population_positive_rate_pct": 0.667,
-      "condition_name": "Prediabetes"
+      "condition_name": "Prediabetes",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4208104,
@@ -207,7 +241,9 @@
       "unique_incident_patients": 870,
       "incidence_rate_pct": 0.775,
       "population_positive_rate_pct": 0.665,
-      "condition_name": "Condition (source_code: 55680006)"
+      "condition_name": "Drug Overdose",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4229440,
@@ -219,7 +255,9 @@
       "unique_incident_patients": 707,
       "incidence_rate_pct": 0.614,
       "population_positive_rate_pct": 0.604,
-      "condition_name": "Chronic kidney disease"
+      "condition_name": "Chronic Kidney Disease",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4294548,
@@ -231,7 +269,9 @@
       "unique_incident_patients": 894,
       "incidence_rate_pct": 0.611,
       "population_positive_rate_pct": 0.591,
-      "condition_name": "Acute viral pharyngitis"
+      "condition_name": "Acute Viral Pharyngitis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 257012,
@@ -243,7 +283,9 @@
       "unique_incident_patients": 861,
       "incidence_rate_pct": 0.76,
       "population_positive_rate_pct": 0.579,
-      "condition_name": "Chronic sinusitis"
+      "condition_name": "Chronic Sinusitis",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4283893,
@@ -255,7 +297,9 @@
       "unique_incident_patients": 807,
       "incidence_rate_pct": 0.595,
       "population_positive_rate_pct": 0.576,
-      "condition_name": "Sinusitis"
+      "condition_name": "Sinusitis",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4129902,
@@ -267,7 +311,9 @@
       "unique_incident_patients": 302,
       "incidence_rate_pct": 0.57,
       "population_positive_rate_pct": 0.514,
-      "condition_name": "Condition (source_code: 126906006)"
+      "condition_name": "Neoplasm of Prostate",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 317576,
@@ -279,7 +325,9 @@
       "unique_incident_patients": 553,
       "incidence_rate_pct": 0.539,
       "population_positive_rate_pct": 0.498,
-      "condition_name": "Coronary arteriosclerosis"
+      "condition_name": "Coronary Arteriosclerosis",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 432867,
@@ -291,7 +339,9 @@
       "unique_incident_patients": 683,
       "incidence_rate_pct": 0.564,
       "population_positive_rate_pct": 0.488,
-      "condition_name": "Hyperlipidemia"
+      "condition_name": "Hyperlipidemia",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 316866,
@@ -303,7 +353,9 @@
       "unique_incident_patients": 782,
       "incidence_rate_pct": 0.686,
       "population_positive_rate_pct": 0.471,
-      "condition_name": "Hypertensive disorder"
+      "condition_name": "Essential Hypertension",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 200970,
@@ -315,7 +367,9 @@
       "unique_incident_patients": 252,
       "incidence_rate_pct": 0.472,
       "population_positive_rate_pct": 0.426,
-      "condition_name": "Condition (source_code: 92691004)"
+      "condition_name": "Carcinoma in situ of Prostate",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 372328,
@@ -327,7 +381,9 @@
       "unique_incident_patients": 848,
       "incidence_rate_pct": 0.434,
       "population_positive_rate_pct": 0.419,
-      "condition_name": "Otitis media"
+      "condition_name": "Otitis Media",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4078393,
@@ -339,7 +395,9 @@
       "unique_incident_patients": 810,
       "incidence_rate_pct": 0.479,
       "population_positive_rate_pct": 0.4,
-      "condition_name": "Miscarriage"
+      "condition_name": "Miscarriage (Spontaneous Abortion)",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 378001,
@@ -351,7 +409,9 @@
       "unique_incident_patients": 585,
       "incidence_rate_pct": 0.419,
       "population_positive_rate_pct": 0.398,
-      "condition_name": "Concussion injury"
+      "condition_name": "Concussion Injury",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 313217,
@@ -363,7 +423,9 @@
       "unique_incident_patients": 380,
       "incidence_rate_pct": 0.398,
       "population_positive_rate_pct": 0.376,
-      "condition_name": "Condition (source_code: 49436004)"
+      "condition_name": "Suspected Respiratory Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 80502,
@@ -375,7 +437,9 @@
       "unique_incident_patients": 407,
       "incidence_rate_pct": 0.379,
       "population_positive_rate_pct": 0.352,
-      "condition_name": "Osteoporosis"
+      "condition_name": "Osteoporosis",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4218389,
@@ -387,7 +451,9 @@
       "unique_incident_patients": 504,
       "incidence_rate_pct": 0.35,
       "population_positive_rate_pct": 0.337,
-      "condition_name": "Condition (source_code: 39848009)"
+      "condition_name": "Whiplash Injury to Neck",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4278672,
@@ -399,7 +465,9 @@
       "unique_incident_patients": 371,
       "incidence_rate_pct": 0.341,
       "population_positive_rate_pct": 0.328,
-      "condition_name": "Condition (source_code: 65966004)"
+      "condition_name": "Fracture of Forearm",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 40318618,
@@ -411,7 +479,9 @@
       "unique_incident_patients": 641,
       "incidence_rate_pct": 0.327,
       "population_positive_rate_pct": 0.322,
-      "condition_name": "Condition (source_code: 156073000)"
+      "condition_name": "Complete Miscarriage",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 381316,
@@ -423,7 +493,9 @@
       "unique_incident_patients": 499,
       "incidence_rate_pct": 0.341,
       "population_positive_rate_pct": 0.315,
-      "condition_name": "Stroke (Cerebrovascular accident)"
+      "condition_name": "Stroke (Cerebrovascular Accident)",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 78272,
@@ -435,7 +507,9 @@
       "unique_incident_patients": 436,
       "incidence_rate_pct": 0.291,
       "population_positive_rate_pct": 0.28,
-      "condition_name": "Sprain of wrist"
+      "condition_name": "Sprain of Wrist",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4237458,
@@ -447,7 +521,9 @@
       "unique_incident_patients": 330,
       "incidence_rate_pct": 0.284,
       "population_positive_rate_pct": 0.276,
-      "condition_name": "Fracture of upper limb"
+      "condition_name": "Fracture of Upper Limb",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4109685,
@@ -459,7 +535,9 @@
       "unique_incident_patients": 334,
       "incidence_rate_pct": 0.28,
       "population_positive_rate_pct": 0.272,
-      "condition_name": "Condition (source_code: 284551006)"
+      "condition_name": "Laceration of Foot",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4059173,
@@ -471,7 +549,9 @@
       "unique_incident_patients": 284,
       "incidence_rate_pct": 0.278,
       "population_positive_rate_pct": 0.271,
-      "condition_name": "Condition (source_code: 16114001)"
+      "condition_name": "Fracture of Ankle",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4116491,
@@ -483,7 +563,9 @@
       "unique_incident_patients": 482,
       "incidence_rate_pct": 0.267,
       "population_positive_rate_pct": 0.264,
-      "condition_name": "Condition (source_code: 301011002)"
+      "condition_name": "Infectious Process",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 40480160,
@@ -495,7 +577,9 @@
       "unique_incident_patients": 208,
       "incidence_rate_pct": 0.262,
       "population_positive_rate_pct": 0.257,
-      "condition_name": "Condition (source_code: 443165006)"
+      "condition_name": "Burn Injury",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4155034,
@@ -507,7 +591,9 @@
       "unique_incident_patients": 311,
       "incidence_rate_pct": 0.257,
       "population_positive_rate_pct": 0.252,
-      "condition_name": "Condition (source_code: 283371005)"
+      "condition_name": "Laceration of Forearm",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4113008,
@@ -519,7 +605,9 @@
       "unique_incident_patients": 322,
       "incidence_rate_pct": 0.253,
       "population_positive_rate_pct": 0.247,
-      "condition_name": "Condition (source_code: 284549007)"
+      "condition_name": "Laceration of Hand",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4156265,
@@ -531,7 +619,9 @@
       "unique_incident_patients": 310,
       "incidence_rate_pct": 0.249,
       "population_positive_rate_pct": 0.242,
-      "condition_name": "Condition (source_code: 370247008)"
+      "condition_name": "Facial Laceration",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4134304,
@@ -543,7 +633,9 @@
       "unique_incident_patients": 289,
       "incidence_rate_pct": 0.227,
       "population_positive_rate_pct": 0.222,
-      "condition_name": "Acute upper respiratory infection"
+      "condition_name": "Acute Upper Respiratory Infection",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4152936,
@@ -555,7 +647,9 @@
       "unique_incident_patients": 313,
       "incidence_rate_pct": 0.226,
       "population_positive_rate_pct": 0.22,
-      "condition_name": "Condition (source_code: 283385000)"
+      "condition_name": "Laceration of Thigh",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4296204,
@@ -567,7 +661,9 @@
       "unique_incident_patients": 248,
       "incidence_rate_pct": 0.186,
       "population_positive_rate_pct": 0.183,
-      "condition_name": "Condition (source_code: 403190006)"
+      "condition_name": "First Degree Burn",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 37017023,
@@ -579,7 +675,9 @@
       "unique_incident_patients": 232,
       "incidence_rate_pct": 0.18,
       "population_positive_rate_pct": 0.176,
-      "condition_name": "Condition (source_code: 713197008)"
+      "condition_name": "Recurrent Rectal Polyp",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 195588,
@@ -591,7 +689,9 @@
       "unique_incident_patients": 320,
       "incidence_rate_pct": 0.173,
       "population_positive_rate_pct": 0.171,
-      "condition_name": "Condition (source_code: 38822007)"
+      "condition_name": "Cystitis (Urinary Tract Infection)",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4079750,
@@ -603,7 +703,9 @@
       "unique_incident_patients": 281,
       "incidence_rate_pct": 0.169,
       "population_positive_rate_pct": 0.159,
-      "condition_name": "Osteoarthritis of knee"
+      "condition_name": "Osteoarthritis of Knee",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 439393,
@@ -615,7 +717,9 @@
       "unique_incident_patients": 288,
       "incidence_rate_pct": 0.153,
       "population_positive_rate_pct": 0.15,
-      "condition_name": "Condition (source_code: 398254007)"
+      "condition_name": "Pre-Eclampsia",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4262136,
@@ -627,7 +731,9 @@
       "unique_incident_patients": 287,
       "incidence_rate_pct": 0.146,
       "population_positive_rate_pct": 0.145,
-      "condition_name": "Condition (source_code: 35999006)"
+      "condition_name": "Drug Overdose / Poisoning",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4196262,
@@ -639,7 +745,9 @@
       "unique_incident_patients": 90,
       "incidence_rate_pct": 0.145,
       "population_positive_rate_pct": 0.145,
-      "condition_name": "Condition (source_code: 314994000)"
+      "condition_name": "Suicidal Deliberate Poisoning",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 436940,
@@ -651,7 +759,9 @@
       "unique_incident_patients": 274,
       "incidence_rate_pct": 0.177,
       "population_positive_rate_pct": 0.144,
-      "condition_name": "Metabolic syndrome X"
+      "condition_name": "Metabolic Syndrome X",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 261325,
@@ -663,7 +773,9 @@
       "unique_incident_patients": 220,
       "incidence_rate_pct": 0.146,
       "population_positive_rate_pct": 0.143,
-      "condition_name": "Suspected condition"
+      "condition_name": "Suspected Condition",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4120314,
@@ -675,7 +787,9 @@
       "unique_incident_patients": 268,
       "incidence_rate_pct": 0.176,
       "population_positive_rate_pct": 0.142,
-      "condition_name": "Hypertriglyceridemia"
+      "condition_name": "Hypertriglyceridemia",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4142905,
@@ -687,7 +801,9 @@
       "unique_incident_patients": 151,
       "incidence_rate_pct": 0.143,
       "population_positive_rate_pct": 0.141,
-      "condition_name": "Fracture of clavicle"
+      "condition_name": "Fracture of Clavicle",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 137613,
@@ -699,7 +815,9 @@
       "unique_incident_patients": 272,
       "incidence_rate_pct": 0.138,
       "population_positive_rate_pct": 0.135,
-      "condition_name": "Condition (source_code: 198992004)"
+      "condition_name": "Eclampsia in Pregnancy",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4296205,
@@ -711,7 +829,9 @@
       "unique_incident_patients": 156,
       "incidence_rate_pct": 0.131,
       "population_positive_rate_pct": 0.13,
-      "condition_name": "Condition (source_code: 403191005)"
+      "condition_name": "Second Degree Burn",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4214376,
@@ -723,7 +843,9 @@
       "unique_incident_patients": 237,
       "incidence_rate_pct": 0.143,
       "population_positive_rate_pct": 0.123,
-      "condition_name": "Hyperglycemia"
+      "condition_name": "Hyperglycemia",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4230399,
@@ -735,7 +857,9 @@
       "unique_incident_patients": 129,
       "incidence_rate_pct": 0.124,
       "population_positive_rate_pct": 0.123,
-      "condition_name": "Closed fracture of wrist"
+      "condition_name": "Closed Fracture of Wrist",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 37395648,
@@ -747,7 +871,9 @@
       "unique_incident_patients": 224,
       "incidence_rate_pct": 0.12,
       "population_positive_rate_pct": 0.116,
-      "condition_name": "Condition (source_code: 67811000119102)"
+      "condition_name": "Small Cell Carcinoma of Lung, Stage 1",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4110591,
@@ -759,7 +885,9 @@
       "unique_incident_patients": 224,
       "incidence_rate_pct": 0.119,
       "population_positive_rate_pct": 0.115,
-      "condition_name": "Condition (source_code: 254632001)"
+      "condition_name": "Small Cell Carcinoma of Lung",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 375671,
@@ -771,7 +899,9 @@
       "unique_incident_patients": 162,
       "incidence_rate_pct": 0.112,
       "population_positive_rate_pct": 0.11,
-      "condition_name": "Condition (source_code: 62564004)"
+      "condition_name": "Concussion with Loss of Consciousness",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 201826,
@@ -783,7 +913,9 @@
       "unique_incident_patients": 236,
       "incidence_rate_pct": 0.133,
       "population_positive_rate_pct": 0.107,
-      "condition_name": "Type 2 diabetes mellitus"
+      "condition_name": "Type 2 Diabetes Mellitus",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 199076,
@@ -795,7 +927,9 @@
       "unique_incident_patients": 215,
       "incidence_rate_pct": 0.103,
       "population_positive_rate_pct": 0.1,
-      "condition_name": "Condition (source_code: 79586000)"
+      "condition_name": "Tubal Pregnancy",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4146173,
@@ -807,7 +941,9 @@
       "unique_incident_patients": 144,
       "incidence_rate_pct": 0.1,
       "population_positive_rate_pct": 0.099,
-      "condition_name": "Condition (source_code: 307731004)"
+      "condition_name": "Postoperative State",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4043241,
@@ -819,7 +955,9 @@
       "unique_incident_patients": 81,
       "incidence_rate_pct": 0.091,
       "population_positive_rate_pct": 0.09,
-      "condition_name": "Condition (source_code: 230265002)"
+      "condition_name": "Familial Alzheimer's Disease",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 380378,
@@ -831,7 +969,9 @@
       "unique_incident_patients": 187,
       "incidence_rate_pct": 0.091,
       "population_positive_rate_pct": 0.089,
-      "condition_name": "Condition (source_code: 84757009)"
+      "condition_name": "Epilepsy / Seizure Disorder",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 192279,
@@ -843,7 +983,9 @@
       "unique_incident_patients": 158,
       "incidence_rate_pct": 0.103,
       "population_positive_rate_pct": 0.087,
-      "condition_name": "Congestive heart failure"
+      "condition_name": "Congestive Heart Failure",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 443614,
@@ -855,7 +997,9 @@
       "unique_incident_patients": 149,
       "incidence_rate_pct": 0.096,
       "population_positive_rate_pct": 0.082,
-      "condition_name": "Condition (source_code: 431855005)"
+      "condition_name": "Chronic Kidney Disease Stage 1",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4084167,
@@ -867,7 +1011,9 @@
       "unique_incident_patients": 149,
       "incidence_rate_pct": 0.082,
       "population_positive_rate_pct": 0.081,
-      "condition_name": "Condition (source_code: 241929008)"
+      "condition_name": "Acute Allergic Reaction",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 258780,
@@ -879,7 +1025,9 @@
       "unique_incident_patients": 102,
       "incidence_rate_pct": 0.08,
       "population_positive_rate_pct": 0.078,
-      "condition_name": "Condition (source_code: 185086009)"
+      "condition_name": "Chronic Obstructive Bronchitis (COPD)",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4180790,
@@ -891,7 +1039,9 @@
       "unique_incident_patients": 92,
       "incidence_rate_pct": 0.075,
       "population_positive_rate_pct": 0.075,
-      "condition_name": "Condition (source_code: 363406005)"
+      "condition_name": "Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 79740,
@@ -903,7 +1053,9 @@
       "unique_incident_patients": 110,
       "incidence_rate_pct": 0.074,
       "population_positive_rate_pct": 0.074,
-      "condition_name": "Condition (source_code: 109838007)"
+      "condition_name": "Primary Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 440448,
@@ -915,7 +1067,9 @@
       "unique_incident_patients": 141,
       "incidence_rate_pct": 0.078,
       "population_positive_rate_pct": 0.072,
-      "condition_name": "Appendicitis"
+      "condition_name": "Appendicitis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 37016354,
@@ -927,7 +1081,9 @@
       "unique_incident_patients": 117,
       "incidence_rate_pct": 0.07,
       "population_positive_rate_pct": 0.064,
-      "condition_name": "Condition (source_code: 368581000119106)"
+      "condition_name": "Neuropathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4226121,
@@ -939,7 +1095,9 @@
       "unique_incident_patients": 118,
       "incidence_rate_pct": 0.063,
       "population_positive_rate_pct": 0.059,
-      "condition_name": "Condition (source_code: 422034002)"
+      "condition_name": "Retinopathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 75036,
@@ -951,7 +1109,9 @@
       "unique_incident_patients": 98,
       "incidence_rate_pct": 0.059,
       "population_positive_rate_pct": 0.058,
-      "condition_name": "Condition (source_code: 201834006)"
+      "condition_name": "Localized Osteoarthritis of Hand",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4029498,
@@ -963,7 +1123,9 @@
       "unique_incident_patients": 113,
       "incidence_rate_pct": 0.058,
       "population_positive_rate_pct": 0.055,
-      "condition_name": "Condition (source_code: 128613002)"
+      "condition_name": "Seizure Disorder",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4079749,
@@ -975,7 +1137,9 @@
       "unique_incident_patients": 102,
       "incidence_rate_pct": 0.051,
       "population_positive_rate_pct": 0.05,
-      "condition_name": "Condition (source_code: 239872002)"
+      "condition_name": "Osteoarthritis of Hip",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 321042,
@@ -987,7 +1151,9 @@
       "unique_incident_patients": 99,
       "incidence_rate_pct": 0.051,
       "population_positive_rate_pct": 0.049,
-      "condition_name": "Condition (source_code: 410429000)"
+      "condition_name": "Cardiac Arrest",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 40479422,
@@ -999,7 +1165,9 @@
       "unique_incident_patients": 70,
       "incidence_rate_pct": 0.046,
       "population_positive_rate_pct": 0.046,
-      "condition_name": "Second degree burn"
+      "condition_name": "Second Degree Burn",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4051466,
@@ -1011,7 +1179,9 @@
       "unique_incident_patients": 109,
       "incidence_rate_pct": 0.046,
       "population_positive_rate_pct": 0.045,
-      "condition_name": "Childhood asthma"
+      "condition_name": "Childhood Asthma",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 440086,
@@ -1023,7 +1193,9 @@
       "unique_incident_patients": 100,
       "incidence_rate_pct": 0.042,
       "population_positive_rate_pct": 0.042,
-      "condition_name": "Childhood attention deficit hyperactivity disorder"
+      "condition_name": "Childhood ADHD",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4149245,
@@ -1035,7 +1207,9 @@
       "unique_incident_patients": 59,
       "incidence_rate_pct": 0.042,
       "population_positive_rate_pct": 0.042,
-      "condition_name": "Condition (source_code: 30832001)"
+      "condition_name": "Rupture of Patellar Tendon",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 197500,
@@ -1047,7 +1221,9 @@
       "unique_incident_patients": 41,
       "incidence_rate_pct": 0.041,
       "population_positive_rate_pct": 0.041,
-      "condition_name": "Condition (source_code: 93761005)"
+      "condition_name": "Primary Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 40486433,
@@ -1059,7 +1235,9 @@
       "unique_incident_patients": 92,
       "incidence_rate_pct": 0.039,
       "population_positive_rate_pct": 0.038,
-      "condition_name": "Condition (source_code: 446096008)"
+      "condition_name": "Perennial Allergic Rhinitis",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4048171,
@@ -1071,7 +1249,9 @@
       "unique_incident_patients": 87,
       "incidence_rate_pct": 0.037,
       "population_positive_rate_pct": 0.036,
-      "condition_name": "Peritonitis"
+      "condition_name": "Childhood Asthma Exacerbation / Peritonitis",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 134438,
@@ -1083,7 +1263,9 @@
       "unique_incident_patients": 80,
       "incidence_rate_pct": 0.034,
       "population_positive_rate_pct": 0.034,
-      "condition_name": "Condition (source_code: 40275004)"
+      "condition_name": "Contact Dermatitis",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 40479768,
@@ -1095,7 +1277,9 @@
       "unique_incident_patients": 54,
       "incidence_rate_pct": 0.033,
       "population_positive_rate_pct": 0.033,
-      "condition_name": "Condition (source_code: 444470001)"
+      "condition_name": "Injury of Anterior Cruciate Ligament",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 45769905,
@@ -1107,7 +1291,9 @@
       "unique_incident_patients": 54,
       "incidence_rate_pct": 0.034,
       "population_positive_rate_pct": 0.032,
-      "condition_name": "Condition (source_code: 90781000119102)"
+      "condition_name": "Microalbuminuria due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 43530656,
@@ -1119,7 +1305,9 @@
       "unique_incident_patients": 66,
       "incidence_rate_pct": 0.032,
       "population_positive_rate_pct": 0.03,
-      "condition_name": "Condition (source_code: 1551000119108)"
+      "condition_name": "Nonproliferative Retinopathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 255848,
@@ -1131,7 +1319,9 @@
       "unique_incident_patients": 16,
       "incidence_rate_pct": 0.03,
       "population_positive_rate_pct": 0.03,
-      "condition_name": "Condition (source_code: 233604007)"
+      "condition_name": "Pneumonia",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4309027,
@@ -1143,7 +1333,9 @@
       "unique_incident_patients": 44,
       "incidence_rate_pct": 0.029,
       "population_positive_rate_pct": 0.029,
-      "condition_name": "Condition (source_code: 83664006)"
+      "condition_name": "Hypothyroidism",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4035415,
@@ -1155,7 +1347,9 @@
       "unique_incident_patients": 47,
       "incidence_rate_pct": 0.028,
       "population_positive_rate_pct": 0.028,
-      "condition_name": "Condition (source_code: 239720000)"
+      "condition_name": "Tear of Meniscus of Knee",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4166224,
@@ -1167,7 +1361,9 @@
       "unique_incident_patients": 41,
       "incidence_rate_pct": 0.029,
       "population_positive_rate_pct": 0.028,
-      "condition_name": "Ruptured appendix"
+      "condition_name": "Ruptured Appendix",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4001336,
@@ -1179,7 +1375,9 @@
       "unique_incident_patients": 37,
       "incidence_rate_pct": 0.027,
       "population_positive_rate_pct": 0.027,
-      "condition_name": "Condition (source_code: 110030002)"
+      "condition_name": "Concussion Injury of Brain",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4094814,
@@ -1191,19 +1389,9 @@
       "unique_incident_patients": 36,
       "incidence_rate_pct": 0.024,
       "population_positive_rate_pct": 0.024,
-      "condition_name": "Condition (source_code: 262574004)"
-    },
-    {
-      "condition_concept_id": 4245614,
-      "sample_source_value": 6072007,
-      "total_landmarks_evaluated": 259889,
-      "pre_existing_landmarks": 916,
-      "at_risk_landmarks": 258973,
-      "incident_positive_landmarks": 60,
-      "unique_incident_patients": 41,
-      "incidence_rate_pct": 0.023,
-      "population_positive_rate_pct": 0.023,
-      "condition_name": "Condition (source_code: 6072007)"
+      "condition_name": "Postoperative Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4341247,
@@ -1215,7 +1403,23 @@
       "unique_incident_patients": 41,
       "incidence_rate_pct": 0.023,
       "population_positive_rate_pct": 0.023,
-      "condition_name": "Condition (source_code: 236077008)"
+      "condition_name": "Protracted Diarrhea",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 4245614,
+      "sample_source_value": 6072007,
+      "total_landmarks_evaluated": 259889,
+      "pre_existing_landmarks": 916,
+      "at_risk_landmarks": 258973,
+      "incident_positive_landmarks": 60,
+      "unique_incident_patients": 41,
+      "incidence_rate_pct": 0.023,
+      "population_positive_rate_pct": 0.023,
+      "condition_name": "Bleeding from Anus",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4329847,
@@ -1227,7 +1431,9 @@
       "unique_incident_patients": 49,
       "incidence_rate_pct": 0.023,
       "population_positive_rate_pct": 0.023,
-      "condition_name": "Myocardial infarction"
+      "condition_name": "Myocardial Infarction",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 80809,
@@ -1239,7 +1445,9 @@
       "unique_incident_patients": 17,
       "incidence_rate_pct": 0.022,
       "population_positive_rate_pct": 0.022,
-      "condition_name": "Condition (source_code: 69896004)"
+      "condition_name": "Rheumatoid Arthritis",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 443601,
@@ -1251,7 +1459,9 @@
       "unique_incident_patients": 41,
       "incidence_rate_pct": 0.022,
       "population_positive_rate_pct": 0.021,
-      "condition_name": "Chronic kidney disease stage 1"
+      "condition_name": "Chronic Kidney Disease Stage 1",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 43530685,
@@ -1263,7 +1473,9 @@
       "unique_incident_patients": 29,
       "incidence_rate_pct": 0.021,
       "population_positive_rate_pct": 0.021,
-      "condition_name": "Condition (source_code: 1501000119109)"
+      "condition_name": "Proliferative Retinopathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4280726,
@@ -1275,7 +1487,9 @@
       "unique_incident_patients": 52,
       "incidence_rate_pct": 0.021,
       "population_positive_rate_pct": 0.021,
-      "condition_name": "Condition (source_code: 367498001)"
+      "condition_name": "Seasonal Allergic Rhinitis",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 196456,
@@ -1287,7 +1501,9 @@
       "unique_incident_patients": 30,
       "incidence_rate_pct": 0.02,
       "population_positive_rate_pct": 0.02,
-      "condition_name": "Condition (source_code: 235919008)"
+      "condition_name": "Gallbladder Calculus (Gallstone)",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 198809,
@@ -1299,7 +1515,9 @@
       "unique_incident_patients": 30,
       "incidence_rate_pct": 0.02,
       "population_positive_rate_pct": 0.02,
-      "condition_name": "Condition (source_code: 65275009)"
+      "condition_name": "Acute Cholecystitis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 133834,
@@ -1311,7 +1529,9 @@
       "unique_incident_patients": 43,
       "incidence_rate_pct": 0.02,
       "population_positive_rate_pct": 0.02,
-      "condition_name": "Condition (source_code: 24079001)"
+      "condition_name": "Atopic Dermatitis / Eczema",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 440674,
@@ -1323,7 +1543,9 @@
       "unique_incident_patients": 36,
       "incidence_rate_pct": 0.02,
       "population_positive_rate_pct": 0.019,
-      "condition_name": "Condition (source_code: 90560007)"
+      "condition_name": "Gout",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4056621,
@@ -1335,7 +1557,9 @@
       "unique_incident_patients": 45,
       "incidence_rate_pct": 0.019,
       "population_positive_rate_pct": 0.019,
-      "condition_name": "Condition (source_code: 197927001)"
+      "condition_name": "Recurrent Urinary Tract Infection",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 436676,
@@ -1347,7 +1571,9 @@
       "unique_incident_patients": 14,
       "incidence_rate_pct": 0.017,
       "population_positive_rate_pct": 0.017,
-      "condition_name": "Condition (source_code: 47505003)"
+      "condition_name": "Posttraumatic Stress Disorder",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4311765,
@@ -1359,7 +1585,9 @@
       "unique_incident_patients": 31,
       "incidence_rate_pct": 0.017,
       "population_positive_rate_pct": 0.017,
-      "condition_name": "Condition (source_code: 94260004)"
+      "condition_name": "Secondary Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 45757499,
@@ -1371,7 +1599,9 @@
       "unique_incident_patients": 19,
       "incidence_rate_pct": 0.014,
       "population_positive_rate_pct": 0.014,
-      "condition_name": "Condition (source_code: 157141000119108)"
+      "condition_name": "Proteinuria due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 443597,
@@ -1383,7 +1613,9 @@
       "unique_incident_patients": 19,
       "incidence_rate_pct": 0.014,
       "population_positive_rate_pct": 0.014,
-      "condition_name": "Chronic kidney disease stage 2"
+      "condition_name": "Chronic Kidney Disease Stage 2",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4218106,
@@ -1395,7 +1627,9 @@
       "unique_incident_patients": 19,
       "incidence_rate_pct": 0.011,
       "population_positive_rate_pct": 0.011,
-      "condition_name": "Condition (source_code: 7200002)"
+      "condition_name": "Alcoholism / Alcohol Dependence",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 438130,
@@ -1407,7 +1641,9 @@
       "unique_incident_patients": 13,
       "incidence_rate_pct": 0.011,
       "population_positive_rate_pct": 0.011,
-      "condition_name": "Condition (source_code: 5602001)"
+      "condition_name": "Opioid Abuse / Harmful Use",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4316217,
@@ -1419,7 +1655,9 @@
       "unique_incident_patients": 21,
       "incidence_rate_pct": 0.01,
       "population_positive_rate_pct": 0.01,
-      "condition_name": "Condition (source_code: 95417003)"
+      "condition_name": "Fibromyalgia Syndrome",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 45770830,
@@ -1431,7 +1669,9 @@
       "unique_incident_patients": 21,
       "incidence_rate_pct": 0.009,
       "population_positive_rate_pct": 0.009,
-      "condition_name": "Condition (source_code: 97331000119101)"
+      "condition_name": "Macular Edema due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4299128,
@@ -1443,7 +1683,9 @@
       "unique_incident_patients": 16,
       "incidence_rate_pct": 0.008,
       "population_positive_rate_pct": 0.008,
-      "condition_name": "Third degree burn"
+      "condition_name": "Third Degree Burn",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4166590,
@@ -1455,7 +1697,9 @@
       "unique_incident_patients": 14,
       "incidence_rate_pct": 0.007,
       "population_positive_rate_pct": 0.007,
-      "condition_name": "Condition (source_code: 275272006)"
+      "condition_name": "Postoperative State",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 198199,
@@ -1467,7 +1711,9 @@
       "unique_incident_patients": 9,
       "incidence_rate_pct": 0.004,
       "population_positive_rate_pct": 0.004,
-      "condition_name": "Condition (source_code: 45816000)"
+      "condition_name": "Pyelonephritis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4152280,
@@ -1479,7 +1725,9 @@
       "unique_incident_patients": 7,
       "incidence_rate_pct": 0.004,
       "population_positive_rate_pct": 0.004,
-      "condition_name": "Condition (source_code: 370143000)"
+      "condition_name": "Major Depressive Disorder",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 317009,
@@ -1491,7 +1739,9 @@
       "unique_incident_patients": 8,
       "incidence_rate_pct": 0.004,
       "population_positive_rate_pct": 0.004,
-      "condition_name": "Asthma"
+      "condition_name": "Asthma",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4048695,
@@ -1503,7 +1753,9 @@
       "unique_incident_patients": 8,
       "incidence_rate_pct": 0.003,
       "population_positive_rate_pct": 0.003,
-      "condition_name": "Condition (source_code: 15724005)"
+      "condition_name": "Fracture of Vertebral Column",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4282096,
@@ -1515,7 +1767,9 @@
       "unique_incident_patients": 5,
       "incidence_rate_pct": 0.003,
       "population_positive_rate_pct": 0.003,
-      "condition_name": "Condition (source_code: 36923009)"
+      "condition_name": "Major Depression, Single Episode",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4066995,
@@ -1527,7 +1781,9 @@
       "unique_incident_patients": 3,
       "incidence_rate_pct": 0.002,
       "population_positive_rate_pct": 0.002,
-      "condition_name": "Condition (source_code: 1734006)"
+      "condition_name": "Fracture of Vertebral Column with Spinal Cord Injury",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 45763582,
@@ -1539,31 +1795,9 @@
       "unique_incident_patients": 3,
       "incidence_rate_pct": 0.002,
       "population_positive_rate_pct": 0.002,
-      "condition_name": "Condition (source_code: 60951000119105)"
-    },
-    {
-      "condition_concept_id": 44782520,
-      "sample_source_value": 698754002,
-      "total_landmarks_evaluated": 259889,
-      "pre_existing_landmarks": 422,
-      "at_risk_landmarks": 259467,
-      "incident_positive_landmarks": 2,
-      "unique_incident_patients": 2,
-      "incidence_rate_pct": 0.001,
-      "population_positive_rate_pct": 0.001,
-      "condition_name": "Condition (source_code: 698754002)"
-    },
-    {
-      "condition_concept_id": 4144583,
-      "sample_source_value": 427089005,
-      "total_landmarks_evaluated": 259889,
-      "pre_existing_landmarks": 52,
-      "at_risk_landmarks": 259837,
-      "incident_positive_landmarks": 2,
-      "unique_incident_patients": 2,
-      "incidence_rate_pct": 0.001,
-      "population_positive_rate_pct": 0.001,
-      "condition_name": "Condition (source_code: 427089005)"
+      "condition_name": "Blindness due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 441267,
@@ -1575,7 +1809,37 @@
       "unique_incident_patients": 2,
       "incidence_rate_pct": 0.001,
       "population_positive_rate_pct": 0.001,
-      "condition_name": "Condition (source_code: 190905008)"
+      "condition_name": "Cystic Fibrosis",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 4144583,
+      "sample_source_value": 427089005,
+      "total_landmarks_evaluated": 259889,
+      "pre_existing_landmarks": 52,
+      "at_risk_landmarks": 259837,
+      "incident_positive_landmarks": 2,
+      "unique_incident_patients": 2,
+      "incidence_rate_pct": 0.001,
+      "population_positive_rate_pct": 0.001,
+      "condition_name": "Diabetes Mellitus due to Cystic Fibrosis",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 44782520,
+      "sample_source_value": 698754002,
+      "total_landmarks_evaluated": 259889,
+      "pre_existing_landmarks": 422,
+      "at_risk_landmarks": 259467,
+      "incident_positive_landmarks": 2,
+      "unique_incident_patients": 2,
+      "incidence_rate_pct": 0.001,
+      "population_positive_rate_pct": 0.001,
+      "condition_name": "Chronic Paralysis due to Spinal Cord Lesion",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 444362,
@@ -1587,7 +1851,9 @@
       "unique_incident_patients": 1,
       "incidence_rate_pct": 0.001,
       "population_positive_rate_pct": 0.001,
-      "condition_name": "Condition (source_code: 86849004)"
+      "condition_name": "Suicidal Poisoning",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 45769019,
@@ -1599,19 +1865,9 @@
       "unique_incident_patients": 1,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 707577004)"
-    },
-    {
-      "condition_concept_id": 4008261,
-      "sample_source_value": 11218009,
-      "total_landmarks_evaluated": 259889,
-      "pre_existing_landmarks": 20,
-      "at_risk_landmarks": 259869,
-      "incident_positive_landmarks": 1,
-      "unique_incident_patients": 1,
-      "incidence_rate_pct": 0.0,
-      "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 11218009)"
+      "condition_name": "Female Infertility due to Cystic Fibrosis",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 40491961,
@@ -1623,7 +1879,9 @@
       "unique_incident_patients": 1,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 448813005)"
+      "condition_name": "Pseudomonas Sepsis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4021336,
@@ -1635,79 +1893,23 @@
       "unique_incident_patients": 1,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 225444004)"
+      "condition_name": "At Risk for Suicide",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
-      "condition_concept_id": 433125,
-      "sample_source_value": 406602003,
+      "condition_concept_id": 4008261,
+      "sample_source_value": 11218009,
       "total_landmarks_evaluated": 259889,
-      "pre_existing_landmarks": 12,
-      "at_risk_landmarks": 259877,
-      "incident_positive_landmarks": 0,
-      "unique_incident_patients": 0,
+      "pre_existing_landmarks": 20,
+      "at_risk_landmarks": 259869,
+      "incident_positive_landmarks": 1,
+      "unique_incident_patients": 1,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 406602003)"
-    },
-    {
-      "condition_concept_id": 443612,
-      "sample_source_value": 431857002,
-      "total_landmarks_evaluated": 259889,
-      "pre_existing_landmarks": 182,
-      "at_risk_landmarks": 259707,
-      "incident_positive_landmarks": 0,
-      "unique_incident_patients": 0,
-      "incidence_rate_pct": 0.0,
-      "population_positive_rate_pct": 0.0,
-      "condition_name": "Chronic kidney disease stage 3"
-    },
-    {
-      "condition_concept_id": 193591,
-      "sample_source_value": 206523001,
-      "total_landmarks_evaluated": 259889,
-      "pre_existing_landmarks": 13,
-      "at_risk_landmarks": 259876,
-      "incident_positive_landmarks": 0,
-      "unique_incident_patients": 0,
-      "incidence_rate_pct": 0.0,
-      "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 206523001)"
-    },
-    {
-      "condition_concept_id": 319049,
-      "sample_source_value": 65710008,
-      "total_landmarks_evaluated": 259889,
-      "pre_existing_landmarks": 1,
-      "at_risk_landmarks": 259888,
-      "incident_positive_landmarks": 0,
-      "unique_incident_patients": 0,
-      "incidence_rate_pct": 0.0,
-      "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 65710008)"
-    },
-    {
-      "condition_concept_id": 40489907,
-      "sample_source_value": 448417001,
-      "total_landmarks_evaluated": 259889,
-      "pre_existing_landmarks": 3,
-      "at_risk_landmarks": 259886,
-      "incident_positive_landmarks": 0,
-      "unique_incident_patients": 0,
-      "incidence_rate_pct": 0.0,
-      "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 448417001)"
-    },
-    {
-      "condition_concept_id": 4132546,
-      "sample_source_value": 127295002,
-      "total_landmarks_evaluated": 259889,
-      "pre_existing_landmarks": 264,
-      "at_risk_landmarks": 259625,
-      "incident_positive_landmarks": 0,
-      "unique_incident_patients": 0,
-      "incidence_rate_pct": 0.0,
-      "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 127295002)"
+      "condition_name": "Pseudomonas Aeruginosa Infection",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4188598,
@@ -1719,7 +1921,65 @@
       "unique_incident_patients": 0,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 47200007)"
+      "condition_name": "High Risk Pregnancy",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 4132546,
+      "sample_source_value": 127295002,
+      "total_landmarks_evaluated": 259889,
+      "pre_existing_landmarks": 264,
+      "at_risk_landmarks": 259625,
+      "incident_positive_landmarks": 0,
+      "unique_incident_patients": 0,
+      "incidence_rate_pct": 0.0,
+      "population_positive_rate_pct": 0.0,
+      "condition_name": "Traumatic Brain Injury",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 319049,
+      "sample_source_value": 65710008,
+      "total_landmarks_evaluated": 259889,
+      "pre_existing_landmarks": 1,
+      "at_risk_landmarks": 259888,
+      "incident_positive_landmarks": 0,
+      "unique_incident_patients": 0,
+      "incidence_rate_pct": 0.0,
+      "population_positive_rate_pct": 0.0,
+      "condition_name": "Clinical Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 433125,
+      "sample_source_value": 406602003,
+      "total_landmarks_evaluated": 259889,
+      "pre_existing_landmarks": 12,
+      "at_risk_landmarks": 259877,
+      "incident_positive_landmarks": 0,
+      "unique_incident_patients": 0,
+      "incidence_rate_pct": 0.0,
+      "population_positive_rate_pct": 0.0,
+      "condition_name": "Clinical Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 443612,
+      "sample_source_value": 431857002,
+      "total_landmarks_evaluated": 259889,
+      "pre_existing_landmarks": 182,
+      "at_risk_landmarks": 259707,
+      "incident_positive_landmarks": 0,
+      "unique_incident_patients": 0,
+      "incidence_rate_pct": 0.0,
+      "population_positive_rate_pct": 0.0,
+      "condition_name": "Chronic Kidney Disease Stage 4",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 255891,
@@ -1731,7 +1991,37 @@
       "unique_incident_patients": 0,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 200936003)"
+      "condition_name": "Clinical Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 193591,
+      "sample_source_value": 206523001,
+      "total_landmarks_evaluated": 259889,
+      "pre_existing_landmarks": 13,
+      "at_risk_landmarks": 259876,
+      "incident_positive_landmarks": 0,
+      "unique_incident_patients": 0,
+      "incidence_rate_pct": 0.0,
+      "population_positive_rate_pct": 0.0,
+      "condition_name": "Clinical Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 40489907,
+      "sample_source_value": 448417001,
+      "total_landmarks_evaluated": 259889,
+      "pre_existing_landmarks": 3,
+      "at_risk_landmarks": 259886,
+      "incident_positive_landmarks": 0,
+      "unique_incident_patients": 0,
+      "incidence_rate_pct": 0.0,
+      "population_positive_rate_pct": 0.0,
+      "condition_name": "Staphylococcus Aureus Sepsis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     }
   ],
   "cohort_b_incidence": [
@@ -1745,7 +2035,9 @@
       "unique_incident_patients": 53005,
       "incidence_rate_pct": 8.511,
       "population_positive_rate_pct": 5.421,
-      "condition_name": "Viral sinusitis"
+      "condition_name": "Viral Sinusitis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4112343,
@@ -1757,7 +2049,9 @@
       "unique_incident_patients": 38010,
       "incidence_rate_pct": 5.153,
       "population_positive_rate_pct": 3.939,
-      "condition_name": "Normal body mass index"
+      "condition_name": "Normal Body Mass Index",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 260139,
@@ -1769,7 +2063,9 @@
       "unique_incident_patients": 32975,
       "incidence_rate_pct": 4.286,
       "population_positive_rate_pct": 3.415,
-      "condition_name": "Acute bronchitis"
+      "condition_name": "Acute Bronchitis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4217975,
@@ -1781,7 +2077,9 @@
       "unique_incident_patients": 13106,
       "incidence_rate_pct": 1.494,
       "population_positive_rate_pct": 1.216,
-      "condition_name": "Normal pregnancy"
+      "condition_name": "Normal Pregnancy",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 28060,
@@ -1793,7 +2091,9 @@
       "unique_incident_patients": 10963,
       "incidence_rate_pct": 1.157,
       "population_positive_rate_pct": 1.083,
-      "condition_name": "Streptococcal sore throat"
+      "condition_name": "Normal Pregnancy",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 81151,
@@ -1805,7 +2105,9 @@
       "unique_incident_patients": 8558,
       "incidence_rate_pct": 0.931,
       "population_positive_rate_pct": 0.886,
-      "condition_name": "Sprain of ankle"
+      "condition_name": "Sprain of Ankle",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 439777,
@@ -1817,7 +2119,9 @@
       "unique_incident_patients": 8486,
       "incidence_rate_pct": 1.242,
       "population_positive_rate_pct": 0.808,
-      "condition_name": "Anemia"
+      "condition_name": "Anemia",
+      "category": "Hematology",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 257012,
@@ -1829,7 +2133,9 @@
       "unique_incident_patients": 6092,
       "incidence_rate_pct": 0.822,
       "population_positive_rate_pct": 0.633,
-      "condition_name": "Chronic sinusitis"
+      "condition_name": "Chronic Sinusitis",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4229440,
@@ -1841,7 +2147,9 @@
       "unique_incident_patients": 5201,
       "incidence_rate_pct": 0.625,
       "population_positive_rate_pct": 0.615,
-      "condition_name": "Chronic kidney disease"
+      "condition_name": "Chronic Kidney Disease",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 137613,
@@ -1853,7 +2161,9 @@
       "unique_incident_patients": 2051,
       "incidence_rate_pct": 0.58,
       "population_positive_rate_pct": 0.572,
-      "condition_name": "Condition (source_code: 198992004)"
+      "condition_name": "Eclampsia in Pregnancy",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4285898,
@@ -1865,7 +2175,9 @@
       "unique_incident_patients": 6166,
       "incidence_rate_pct": 0.596,
       "population_positive_rate_pct": 0.562,
-      "condition_name": "Polyp of colon"
+      "condition_name": "Polyp of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4294548,
@@ -1877,7 +2189,9 @@
       "unique_incident_patients": 4944,
       "incidence_rate_pct": 0.537,
       "population_positive_rate_pct": 0.521,
-      "condition_name": "Acute viral pharyngitis"
+      "condition_name": "Acute Viral Pharyngitis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4311629,
@@ -1889,7 +2203,9 @@
       "unique_incident_patients": 5863,
       "incidence_rate_pct": 0.786,
       "population_positive_rate_pct": 0.516,
-      "condition_name": "Prediabetes"
+      "condition_name": "Prediabetes",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 372328,
@@ -1901,7 +2217,9 @@
       "unique_incident_patients": 5729,
       "incidence_rate_pct": 0.541,
       "population_positive_rate_pct": 0.515,
-      "condition_name": "Otitis media"
+      "condition_name": "Otitis Media",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 378001,
@@ -1913,7 +2231,9 @@
       "unique_incident_patients": 4938,
       "incidence_rate_pct": 0.527,
       "population_positive_rate_pct": 0.512,
-      "condition_name": "Concussion injury"
+      "condition_name": "Concussion Injury",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 439393,
@@ -1925,7 +2245,9 @@
       "unique_incident_patients": 1960,
       "incidence_rate_pct": 0.504,
       "population_positive_rate_pct": 0.498,
-      "condition_name": "Condition (source_code: 398254007)"
+      "condition_name": "Pre-Eclampsia",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4283893,
@@ -1937,7 +2259,9 @@
       "unique_incident_patients": 4801,
       "incidence_rate_pct": 0.489,
       "population_positive_rate_pct": 0.474,
-      "condition_name": "Sinusitis"
+      "condition_name": "Sinusitis",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4078393,
@@ -1949,7 +2273,9 @@
       "unique_incident_patients": 4199,
       "incidence_rate_pct": 0.539,
       "population_positive_rate_pct": 0.429,
-      "condition_name": "Miscarriage"
+      "condition_name": "Miscarriage (Spontaneous Abortion)",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4218389,
@@ -1961,7 +2287,9 @@
       "unique_incident_patients": 4045,
       "incidence_rate_pct": 0.432,
       "population_positive_rate_pct": 0.422,
-      "condition_name": "Condition (source_code: 39848009)"
+      "condition_name": "Whiplash Injury to Neck",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4278672,
@@ -1973,7 +2301,9 @@
       "unique_incident_patients": 3555,
       "incidence_rate_pct": 0.415,
       "population_positive_rate_pct": 0.405,
-      "condition_name": "Condition (source_code: 65966004)"
+      "condition_name": "Fracture of Forearm",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 381316,
@@ -1985,7 +2315,9 @@
       "unique_incident_patients": 4947,
       "incidence_rate_pct": 0.427,
       "population_positive_rate_pct": 0.399,
-      "condition_name": "Stroke (Cerebrovascular accident)"
+      "condition_name": "Stroke (Cerebrovascular Accident)",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 78272,
@@ -1997,7 +2329,9 @@
       "unique_incident_patients": 3868,
       "incidence_rate_pct": 0.404,
       "population_positive_rate_pct": 0.396,
-      "condition_name": "Sprain of wrist"
+      "condition_name": "Sprain of Wrist",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 40318618,
@@ -2009,7 +2343,9 @@
       "unique_incident_patients": 2777,
       "incidence_rate_pct": 0.357,
       "population_positive_rate_pct": 0.35,
-      "condition_name": "Condition (source_code: 156073000)"
+      "condition_name": "Complete Miscarriage",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 317576,
@@ -2021,7 +2357,9 @@
       "unique_incident_patients": 2498,
       "incidence_rate_pct": 0.368,
       "population_positive_rate_pct": 0.342,
-      "condition_name": "Coronary arteriosclerosis"
+      "condition_name": "Coronary Arteriosclerosis",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 378419,
@@ -2033,7 +2371,9 @@
       "unique_incident_patients": 2067,
       "incidence_rate_pct": 0.354,
       "population_positive_rate_pct": 0.341,
-      "condition_name": "Condition (source_code: 26929004)"
+      "condition_name": "Alzheimer's Disease",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4237458,
@@ -2045,7 +2385,9 @@
       "unique_incident_patients": 2894,
       "incidence_rate_pct": 0.341,
       "population_positive_rate_pct": 0.335,
-      "condition_name": "Fracture of upper limb"
+      "condition_name": "Fracture of Upper Limb",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4310703,
@@ -2057,7 +2399,9 @@
       "unique_incident_patients": 1300,
       "incidence_rate_pct": 0.323,
       "population_positive_rate_pct": 0.317,
-      "condition_name": "Condition (source_code: 424132000)"
+      "condition_name": "Non-Small Cell Carcinoma of Lung, Stage 1",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4116491,
@@ -2069,7 +2413,9 @@
       "unique_incident_patients": 2474,
       "incidence_rate_pct": 0.314,
       "population_positive_rate_pct": 0.309,
-      "condition_name": "Condition (source_code: 301011002)"
+      "condition_name": "Infectious Process",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4208104,
@@ -2081,7 +2427,9 @@
       "unique_incident_patients": 2089,
       "incidence_rate_pct": 0.32,
       "population_positive_rate_pct": 0.291,
-      "condition_name": "Condition (source_code: 55680006)"
+      "condition_name": "Drug Overdose",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 80502,
@@ -2093,7 +2441,9 @@
       "unique_incident_patients": 2862,
       "incidence_rate_pct": 0.305,
       "population_positive_rate_pct": 0.287,
-      "condition_name": "Osteoporosis"
+      "condition_name": "Osteoporosis",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4129902,
@@ -2105,7 +2455,9 @@
       "unique_incident_patients": 1678,
       "incidence_rate_pct": 0.302,
       "population_positive_rate_pct": 0.287,
-      "condition_name": "Condition (source_code: 126906006)"
+      "condition_name": "Neoplasm of Prostate",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4113008,
@@ -2117,7 +2469,9 @@
       "unique_incident_patients": 2588,
       "incidence_rate_pct": 0.291,
       "population_positive_rate_pct": 0.287,
-      "condition_name": "Condition (source_code: 284549007)"
+      "condition_name": "Laceration of Hand",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4059173,
@@ -2129,7 +2483,9 @@
       "unique_incident_patients": 2620,
       "incidence_rate_pct": 0.283,
       "population_positive_rate_pct": 0.279,
-      "condition_name": "Condition (source_code: 16114001)"
+      "condition_name": "Fracture of Ankle",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4155034,
@@ -2141,7 +2497,9 @@
       "unique_incident_patients": 2542,
       "incidence_rate_pct": 0.276,
       "population_positive_rate_pct": 0.273,
-      "condition_name": "Condition (source_code: 283371005)"
+      "condition_name": "Laceration of Forearm",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 432867,
@@ -2153,7 +2511,9 @@
       "unique_incident_patients": 2795,
       "incidence_rate_pct": 0.329,
       "population_positive_rate_pct": 0.271,
-      "condition_name": "Hyperlipidemia"
+      "condition_name": "Hyperlipidemia",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4109685,
@@ -2165,7 +2525,9 @@
       "unique_incident_patients": 2478,
       "incidence_rate_pct": 0.274,
       "population_positive_rate_pct": 0.27,
-      "condition_name": "Condition (source_code: 284551006)"
+      "condition_name": "Laceration of Foot",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4115276,
@@ -2177,7 +2539,9 @@
       "unique_incident_patients": 1300,
       "incidence_rate_pct": 0.275,
       "population_positive_rate_pct": 0.27,
-      "condition_name": "Condition (source_code: 254637007)"
+      "condition_name": "Non-Small Cell Lung Cancer",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4152936,
@@ -2189,7 +2553,9 @@
       "unique_incident_patients": 2613,
       "incidence_rate_pct": 0.272,
       "population_positive_rate_pct": 0.268,
-      "condition_name": "Condition (source_code: 283385000)"
+      "condition_name": "Laceration of Thigh",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 313217,
@@ -2201,7 +2567,9 @@
       "unique_incident_patients": 2066,
       "incidence_rate_pct": 0.281,
       "population_positive_rate_pct": 0.268,
-      "condition_name": "Condition (source_code: 49436004)"
+      "condition_name": "Suspected Respiratory Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 436096,
@@ -2213,7 +2581,9 @@
       "unique_incident_patients": 2662,
       "incidence_rate_pct": 0.292,
       "population_positive_rate_pct": 0.265,
-      "condition_name": "Condition (source_code: 82423001)"
+      "condition_name": "Chronic Pain",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 43530652,
@@ -2225,7 +2595,9 @@
       "unique_incident_patients": 2641,
       "incidence_rate_pct": 0.287,
       "population_positive_rate_pct": 0.261,
-      "condition_name": "Condition (source_code: 124171000119105)"
+      "condition_name": "Chronic Intractable Migraine",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4156265,
@@ -2237,7 +2609,9 @@
       "unique_incident_patients": 2608,
       "incidence_rate_pct": 0.263,
       "population_positive_rate_pct": 0.259,
-      "condition_name": "Condition (source_code: 370247008)"
+      "condition_name": "Facial Laceration",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4055754,
@@ -2249,7 +2623,9 @@
       "unique_incident_patients": 2615,
       "incidence_rate_pct": 0.277,
       "population_positive_rate_pct": 0.252,
-      "condition_name": "Fracture of rib"
+      "condition_name": "Fracture of Rib",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4134304,
@@ -2261,7 +2637,9 @@
       "unique_incident_patients": 2584,
       "incidence_rate_pct": 0.256,
       "population_positive_rate_pct": 0.252,
-      "condition_name": "Acute upper respiratory infection"
+      "condition_name": "Acute Upper Respiratory Infection",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 40480160,
@@ -2273,7 +2651,9 @@
       "unique_incident_patients": 1603,
       "incidence_rate_pct": 0.248,
       "population_positive_rate_pct": 0.245,
-      "condition_name": "Condition (source_code: 443165006)"
+      "condition_name": "Burn Injury",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 200970,
@@ -2285,7 +2665,9 @@
       "unique_incident_patients": 1458,
       "incidence_rate_pct": 0.256,
       "population_positive_rate_pct": 0.244,
-      "condition_name": "Condition (source_code: 92691004)"
+      "condition_name": "Carcinoma in situ of Prostate",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 316866,
@@ -2297,7 +2679,9 @@
       "unique_incident_patients": 2507,
       "incidence_rate_pct": 0.341,
       "population_positive_rate_pct": 0.235,
-      "condition_name": "Hypertensive disorder"
+      "condition_name": "Essential Hypertension",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 195588,
@@ -2309,7 +2693,9 @@
       "unique_incident_patients": 1671,
       "incidence_rate_pct": 0.215,
       "population_positive_rate_pct": 0.212,
-      "condition_name": "Condition (source_code: 38822007)"
+      "condition_name": "Cystitis (Urinary Tract Infection)",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4296204,
@@ -2321,7 +2707,9 @@
       "unique_incident_patients": 1913,
       "incidence_rate_pct": 0.196,
       "population_positive_rate_pct": 0.194,
-      "condition_name": "Condition (source_code: 403190006)"
+      "condition_name": "First Degree Burn",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 37017023,
@@ -2333,7 +2721,9 @@
       "unique_incident_patients": 2018,
       "incidence_rate_pct": 0.193,
       "population_positive_rate_pct": 0.19,
-      "condition_name": "Condition (source_code: 713197008)"
+      "condition_name": "Recurrent Rectal Polyp",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4079750,
@@ -2345,7 +2735,9 @@
       "unique_incident_patients": 2150,
       "incidence_rate_pct": 0.189,
       "population_positive_rate_pct": 0.177,
-      "condition_name": "Osteoarthritis of knee"
+      "condition_name": "Osteoarthritis of Knee",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4262136,
@@ -2357,7 +2749,9 @@
       "unique_incident_patients": 1390,
       "incidence_rate_pct": 0.17,
       "population_positive_rate_pct": 0.168,
-      "condition_name": "Condition (source_code: 35999006)"
+      "condition_name": "Drug Overdose / Poisoning",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4296205,
@@ -2369,7 +2763,9 @@
       "unique_incident_patients": 1303,
       "incidence_rate_pct": 0.152,
       "population_positive_rate_pct": 0.151,
-      "condition_name": "Condition (source_code: 403191005)"
+      "condition_name": "Second Degree Burn",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4142905,
@@ -2381,7 +2777,9 @@
       "unique_incident_patients": 1298,
       "incidence_rate_pct": 0.149,
       "population_positive_rate_pct": 0.148,
-      "condition_name": "Fracture of clavicle"
+      "condition_name": "Fracture of Clavicle",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 436940,
@@ -2393,7 +2791,9 @@
       "unique_incident_patients": 1974,
       "incidence_rate_pct": 0.18,
       "population_positive_rate_pct": 0.147,
-      "condition_name": "Metabolic syndrome X"
+      "condition_name": "Metabolic Syndrome X",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4120314,
@@ -2405,7 +2805,9 @@
       "unique_incident_patients": 1904,
       "incidence_rate_pct": 0.173,
       "population_positive_rate_pct": 0.141,
-      "condition_name": "Hypertriglyceridemia"
+      "condition_name": "Hypertriglyceridemia",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4230399,
@@ -2417,7 +2819,9 @@
       "unique_incident_patients": 1030,
       "incidence_rate_pct": 0.14,
       "population_positive_rate_pct": 0.139,
-      "condition_name": "Closed fracture of wrist"
+      "condition_name": "Closed Fracture of Wrist",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4084167,
@@ -2429,7 +2833,9 @@
       "unique_incident_patients": 907,
       "incidence_rate_pct": 0.137,
       "population_positive_rate_pct": 0.135,
-      "condition_name": "Condition (source_code: 241929008)"
+      "condition_name": "Acute Allergic Reaction",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4214376,
@@ -2441,7 +2847,9 @@
       "unique_incident_patients": 1759,
       "incidence_rate_pct": 0.144,
       "population_positive_rate_pct": 0.125,
-      "condition_name": "Hyperglycemia"
+      "condition_name": "Hyperglycemia",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 375671,
@@ -2453,7 +2861,9 @@
       "unique_incident_patients": 1295,
       "incidence_rate_pct": 0.126,
       "population_positive_rate_pct": 0.125,
-      "condition_name": "Condition (source_code: 62564004)"
+      "condition_name": "Concussion with Loss of Consciousness",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4146173,
@@ -2465,7 +2875,9 @@
       "unique_incident_patients": 1229,
       "incidence_rate_pct": 0.122,
       "population_positive_rate_pct": 0.121,
-      "condition_name": "Condition (source_code: 307731004)"
+      "condition_name": "Postoperative State",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 79740,
@@ -2477,7 +2889,9 @@
       "unique_incident_patients": 773,
       "incidence_rate_pct": 0.104,
       "population_positive_rate_pct": 0.104,
-      "condition_name": "Condition (source_code: 109838007)"
+      "condition_name": "Primary Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4180790,
@@ -2489,7 +2903,9 @@
       "unique_incident_patients": 784,
       "incidence_rate_pct": 0.102,
       "population_positive_rate_pct": 0.102,
-      "condition_name": "Condition (source_code: 363406005)"
+      "condition_name": "Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 201826,
@@ -2501,7 +2917,9 @@
       "unique_incident_patients": 1189,
       "incidence_rate_pct": 0.121,
       "population_positive_rate_pct": 0.098,
-      "condition_name": "Type 2 diabetes mellitus"
+      "condition_name": "Type 2 Diabetes Mellitus",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4196262,
@@ -2513,7 +2931,9 @@
       "unique_incident_patients": 450,
       "incidence_rate_pct": 0.091,
       "population_positive_rate_pct": 0.091,
-      "condition_name": "Condition (source_code: 314994000)"
+      "condition_name": "Suicidal Deliberate Poisoning",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4051466,
@@ -2525,7 +2945,9 @@
       "unique_incident_patients": 871,
       "incidence_rate_pct": 0.089,
       "population_positive_rate_pct": 0.086,
-      "condition_name": "Childhood asthma"
+      "condition_name": "Childhood Asthma",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 192279,
@@ -2537,7 +2959,9 @@
       "unique_incident_patients": 1220,
       "incidence_rate_pct": 0.096,
       "population_positive_rate_pct": 0.082,
-      "condition_name": "Congestive heart failure"
+      "condition_name": "Congestive Heart Failure",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 199076,
@@ -2549,7 +2973,9 @@
       "unique_incident_patients": 1142,
       "incidence_rate_pct": 0.082,
       "population_positive_rate_pct": 0.08,
-      "condition_name": "Condition (source_code: 79586000)"
+      "condition_name": "Tubal Pregnancy",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 321042,
@@ -2561,7 +2987,9 @@
       "unique_incident_patients": 839,
       "incidence_rate_pct": 0.08,
       "population_positive_rate_pct": 0.077,
-      "condition_name": "Condition (source_code: 410429000)"
+      "condition_name": "Cardiac Arrest",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 443614,
@@ -2573,7 +3001,9 @@
       "unique_incident_patients": 1148,
       "incidence_rate_pct": 0.089,
       "population_positive_rate_pct": 0.077,
-      "condition_name": "Condition (source_code: 431855005)"
+      "condition_name": "Chronic Kidney Disease Stage 1",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 440448,
@@ -2585,7 +3015,9 @@
       "unique_incident_patients": 939,
       "incidence_rate_pct": 0.081,
       "population_positive_rate_pct": 0.076,
-      "condition_name": "Appendicitis"
+      "condition_name": "Appendicitis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4029498,
@@ -2597,7 +3029,9 @@
       "unique_incident_patients": 999,
       "incidence_rate_pct": 0.076,
       "population_positive_rate_pct": 0.074,
-      "condition_name": "Condition (source_code: 128613002)"
+      "condition_name": "Seizure Disorder",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 40479422,
@@ -2609,7 +3043,9 @@
       "unique_incident_patients": 640,
       "incidence_rate_pct": 0.071,
       "population_positive_rate_pct": 0.071,
-      "condition_name": "Second degree burn"
+      "condition_name": "Second Degree Burn",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 37016354,
@@ -2621,7 +3057,9 @@
       "unique_incident_patients": 778,
       "incidence_rate_pct": 0.067,
       "population_positive_rate_pct": 0.062,
-      "condition_name": "Condition (source_code: 368581000119106)"
+      "condition_name": "Neuropathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 75036,
@@ -2633,7 +3071,9 @@
       "unique_incident_patients": 845,
       "incidence_rate_pct": 0.064,
       "population_positive_rate_pct": 0.062,
-      "condition_name": "Condition (source_code: 201834006)"
+      "condition_name": "Localized Osteoarthritis of Hand",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 37395648,
@@ -2645,7 +3085,9 @@
       "unique_incident_patients": 225,
       "incidence_rate_pct": 0.06,
       "population_positive_rate_pct": 0.06,
-      "condition_name": "Condition (source_code: 67811000119102)"
+      "condition_name": "Small Cell Carcinoma of Lung, Stage 1",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4048171,
@@ -2657,7 +3099,9 @@
       "unique_incident_patients": 654,
       "incidence_rate_pct": 0.061,
       "population_positive_rate_pct": 0.059,
-      "condition_name": "Peritonitis"
+      "condition_name": "Childhood Asthma Exacerbation / Peritonitis",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 40486433,
@@ -2669,7 +3113,9 @@
       "unique_incident_patients": 679,
       "incidence_rate_pct": 0.061,
       "population_positive_rate_pct": 0.059,
-      "condition_name": "Condition (source_code: 446096008)"
+      "condition_name": "Perennial Allergic Rhinitis",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 440086,
@@ -2681,7 +3127,9 @@
       "unique_incident_patients": 914,
       "incidence_rate_pct": 0.059,
       "population_positive_rate_pct": 0.059,
-      "condition_name": "Childhood attention deficit hyperactivity disorder"
+      "condition_name": "Childhood ADHD",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 261325,
@@ -2693,7 +3141,9 @@
       "unique_incident_patients": 535,
       "incidence_rate_pct": 0.058,
       "population_positive_rate_pct": 0.057,
-      "condition_name": "Suspected condition"
+      "condition_name": "Suspected Condition",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4079749,
@@ -2705,7 +3155,9 @@
       "unique_incident_patients": 756,
       "incidence_rate_pct": 0.058,
       "population_positive_rate_pct": 0.057,
-      "condition_name": "Condition (source_code: 239872002)"
+      "condition_name": "Osteoarthritis of Hip",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4110591,
@@ -2717,7 +3169,9 @@
       "unique_incident_patients": 225,
       "incidence_rate_pct": 0.052,
       "population_positive_rate_pct": 0.052,
-      "condition_name": "Condition (source_code: 254632001)"
+      "condition_name": "Small Cell Carcinoma of Lung",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4226121,
@@ -2729,7 +3183,9 @@
       "unique_incident_patients": 641,
       "incidence_rate_pct": 0.054,
       "population_positive_rate_pct": 0.052,
-      "condition_name": "Condition (source_code: 422034002)"
+      "condition_name": "Retinopathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4149245,
@@ -2741,7 +3197,9 @@
       "unique_incident_patients": 518,
       "incidence_rate_pct": 0.049,
       "population_positive_rate_pct": 0.049,
-      "condition_name": "Condition (source_code: 30832001)"
+      "condition_name": "Rupture of Patellar Tendon",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 380378,
@@ -2753,7 +3211,9 @@
       "unique_incident_patients": 667,
       "incidence_rate_pct": 0.05,
       "population_positive_rate_pct": 0.049,
-      "condition_name": "Condition (source_code: 84757009)"
+      "condition_name": "Epilepsy / Seizure Disorder",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 197500,
@@ -2765,7 +3225,9 @@
       "unique_incident_patients": 330,
       "incidence_rate_pct": 0.046,
       "population_positive_rate_pct": 0.046,
-      "condition_name": "Condition (source_code: 93761005)"
+      "condition_name": "Primary Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 134438,
@@ -2777,7 +3239,9 @@
       "unique_incident_patients": 322,
       "incidence_rate_pct": 0.043,
       "population_positive_rate_pct": 0.043,
-      "condition_name": "Condition (source_code: 40275004)"
+      "condition_name": "Contact Dermatitis",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 258780,
@@ -2789,7 +3253,9 @@
       "unique_incident_patients": 394,
       "incidence_rate_pct": 0.043,
       "population_positive_rate_pct": 0.043,
-      "condition_name": "Condition (source_code: 185086009)"
+      "condition_name": "Chronic Obstructive Bronchitis (COPD)",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 45769905,
@@ -2801,7 +3267,9 @@
       "unique_incident_patients": 443,
       "incidence_rate_pct": 0.044,
       "population_positive_rate_pct": 0.041,
-      "condition_name": "Condition (source_code: 90781000119102)"
+      "condition_name": "Microalbuminuria due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4001336,
@@ -2813,7 +3281,9 @@
       "unique_incident_patients": 337,
       "incidence_rate_pct": 0.04,
       "population_positive_rate_pct": 0.04,
-      "condition_name": "Condition (source_code: 110030002)"
+      "condition_name": "Concussion Injury of Brain",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4056621,
@@ -2825,7 +3295,9 @@
       "unique_incident_patients": 314,
       "incidence_rate_pct": 0.04,
       "population_positive_rate_pct": 0.04,
-      "condition_name": "Condition (source_code: 197927001)"
+      "condition_name": "Recurrent Urinary Tract Infection",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 40479768,
@@ -2837,7 +3309,9 @@
       "unique_incident_patients": 436,
       "incidence_rate_pct": 0.04,
       "population_positive_rate_pct": 0.04,
-      "condition_name": "Condition (source_code: 444470001)"
+      "condition_name": "Injury of Anterior Cruciate Ligament",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4035415,
@@ -2849,7 +3323,9 @@
       "unique_incident_patients": 376,
       "incidence_rate_pct": 0.039,
       "population_positive_rate_pct": 0.039,
-      "condition_name": "Condition (source_code: 239720000)"
+      "condition_name": "Tear of Meniscus of Knee",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4043241,
@@ -2861,7 +3337,9 @@
       "unique_incident_patients": 350,
       "incidence_rate_pct": 0.038,
       "population_positive_rate_pct": 0.038,
-      "condition_name": "Condition (source_code: 230265002)"
+      "condition_name": "Familial Alzheimer's Disease",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4309027,
@@ -2873,7 +3351,9 @@
       "unique_incident_patients": 410,
       "incidence_rate_pct": 0.038,
       "population_positive_rate_pct": 0.038,
-      "condition_name": "Condition (source_code: 83664006)"
+      "condition_name": "Hypothyroidism",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4329847,
@@ -2885,7 +3365,9 @@
       "unique_incident_patients": 350,
       "incidence_rate_pct": 0.034,
       "population_positive_rate_pct": 0.034,
-      "condition_name": "Myocardial infarction"
+      "condition_name": "Myocardial Infarction",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 43530656,
@@ -2897,7 +3379,9 @@
       "unique_incident_patients": 427,
       "incidence_rate_pct": 0.033,
       "population_positive_rate_pct": 0.032,
-      "condition_name": "Condition (source_code: 1551000119108)"
+      "condition_name": "Nonproliferative Retinopathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4280726,
@@ -2909,7 +3393,9 @@
       "unique_incident_patients": 336,
       "incidence_rate_pct": 0.03,
       "population_positive_rate_pct": 0.03,
-      "condition_name": "Condition (source_code: 367498001)"
+      "condition_name": "Seasonal Allergic Rhinitis",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 133834,
@@ -2921,7 +3407,9 @@
       "unique_incident_patients": 342,
       "incidence_rate_pct": 0.029,
       "population_positive_rate_pct": 0.028,
-      "condition_name": "Condition (source_code: 24079001)"
+      "condition_name": "Atopic Dermatitis / Eczema",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 443601,
@@ -2933,7 +3421,9 @@
       "unique_incident_patients": 380,
       "incidence_rate_pct": 0.029,
       "population_positive_rate_pct": 0.028,
-      "condition_name": "Chronic kidney disease stage 1"
+      "condition_name": "Chronic Kidney Disease Stage 1",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 440674,
@@ -2945,7 +3435,9 @@
       "unique_incident_patients": 290,
       "incidence_rate_pct": 0.027,
       "population_positive_rate_pct": 0.027,
-      "condition_name": "Condition (source_code: 90560007)"
+      "condition_name": "Gout",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4311765,
@@ -2957,7 +3449,9 @@
       "unique_incident_patients": 197,
       "incidence_rate_pct": 0.027,
       "population_positive_rate_pct": 0.027,
-      "condition_name": "Condition (source_code: 94260004)"
+      "condition_name": "Secondary Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4166224,
@@ -2969,7 +3463,9 @@
       "unique_incident_patients": 297,
       "incidence_rate_pct": 0.026,
       "population_positive_rate_pct": 0.026,
-      "condition_name": "Ruptured appendix"
+      "condition_name": "Ruptured Appendix",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4094814,
@@ -2981,19 +3477,9 @@
       "unique_incident_patients": 248,
       "incidence_rate_pct": 0.024,
       "population_positive_rate_pct": 0.024,
-      "condition_name": "Condition (source_code: 262574004)"
-    },
-    {
-      "condition_concept_id": 4341247,
-      "sample_source_value": 236077008,
-      "total_landmarks_evaluated": 2906150,
-      "pre_existing_landmarks": 10773,
-      "at_risk_landmarks": 2895377,
-      "incident_positive_landmarks": 687,
-      "unique_incident_patients": 278,
-      "incidence_rate_pct": 0.024,
-      "population_positive_rate_pct": 0.024,
-      "condition_name": "Condition (source_code: 236077008)"
+      "condition_name": "Postoperative Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4245614,
@@ -3005,7 +3491,23 @@
       "unique_incident_patients": 278,
       "incidence_rate_pct": 0.024,
       "population_positive_rate_pct": 0.024,
-      "condition_name": "Condition (source_code: 6072007)"
+      "condition_name": "Bleeding from Anus",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 4341247,
+      "sample_source_value": 236077008,
+      "total_landmarks_evaluated": 2906150,
+      "pre_existing_landmarks": 10773,
+      "at_risk_landmarks": 2895377,
+      "incident_positive_landmarks": 687,
+      "unique_incident_patients": 278,
+      "incidence_rate_pct": 0.024,
+      "population_positive_rate_pct": 0.024,
+      "condition_name": "Protracted Diarrhea",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 45757499,
@@ -3017,19 +3519,9 @@
       "unique_incident_patients": 90,
       "incidence_rate_pct": 0.02,
       "population_positive_rate_pct": 0.019,
-      "condition_name": "Condition (source_code: 157141000119108)"
-    },
-    {
-      "condition_concept_id": 198809,
-      "sample_source_value": 65275009,
-      "total_landmarks_evaluated": 2906150,
-      "pre_existing_landmarks": 3485,
-      "at_risk_landmarks": 2902665,
-      "incident_positive_landmarks": 547,
-      "unique_incident_patients": 214,
-      "incidence_rate_pct": 0.019,
-      "population_positive_rate_pct": 0.019,
-      "condition_name": "Condition (source_code: 65275009)"
+      "condition_name": "Proteinuria due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 196456,
@@ -3041,7 +3533,23 @@
       "unique_incident_patients": 214,
       "incidence_rate_pct": 0.019,
       "population_positive_rate_pct": 0.019,
-      "condition_name": "Condition (source_code: 235919008)"
+      "condition_name": "Gallbladder Calculus (Gallstone)",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 198809,
+      "sample_source_value": 65275009,
+      "total_landmarks_evaluated": 2906150,
+      "pre_existing_landmarks": 3485,
+      "at_risk_landmarks": 2902665,
+      "incident_positive_landmarks": 547,
+      "unique_incident_patients": 214,
+      "incidence_rate_pct": 0.019,
+      "population_positive_rate_pct": 0.019,
+      "condition_name": "Acute Cholecystitis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4166590,
@@ -3053,7 +3561,9 @@
       "unique_incident_patients": 154,
       "incidence_rate_pct": 0.016,
       "population_positive_rate_pct": 0.016,
-      "condition_name": "Condition (source_code: 275272006)"
+      "condition_name": "Postoperative State",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4316217,
@@ -3065,7 +3575,9 @@
       "unique_incident_patients": 141,
       "incidence_rate_pct": 0.014,
       "population_positive_rate_pct": 0.014,
-      "condition_name": "Condition (source_code: 95417003)"
+      "condition_name": "Fibromyalgia Syndrome",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4299128,
@@ -3077,7 +3589,9 @@
       "unique_incident_patients": 136,
       "incidence_rate_pct": 0.013,
       "population_positive_rate_pct": 0.013,
-      "condition_name": "Third degree burn"
+      "condition_name": "Third Degree Burn",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 443597,
@@ -3089,7 +3603,9 @@
       "unique_incident_patients": 85,
       "incidence_rate_pct": 0.013,
       "population_positive_rate_pct": 0.013,
-      "condition_name": "Chronic kidney disease stage 2"
+      "condition_name": "Chronic Kidney Disease Stage 2",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 45770830,
@@ -3101,7 +3617,9 @@
       "unique_incident_patients": 191,
       "incidence_rate_pct": 0.013,
       "population_positive_rate_pct": 0.013,
-      "condition_name": "Condition (source_code: 97331000119101)"
+      "condition_name": "Macular Edema due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 80809,
@@ -3113,7 +3631,9 @@
       "unique_incident_patients": 143,
       "incidence_rate_pct": 0.012,
       "population_positive_rate_pct": 0.012,
-      "condition_name": "Condition (source_code: 69896004)"
+      "condition_name": "Rheumatoid Arthritis",
+      "category": "Musculoskeletal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 43530685,
@@ -3125,7 +3645,9 @@
       "unique_incident_patients": 155,
       "incidence_rate_pct": 0.011,
       "population_positive_rate_pct": 0.011,
-      "condition_name": "Condition (source_code: 1501000119109)"
+      "condition_name": "Proliferative Retinopathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4048695,
@@ -3137,7 +3659,9 @@
       "unique_incident_patients": 104,
       "incidence_rate_pct": 0.01,
       "population_positive_rate_pct": 0.01,
-      "condition_name": "Condition (source_code: 15724005)"
+      "condition_name": "Fracture of Vertebral Column",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4218106,
@@ -3149,7 +3673,9 @@
       "unique_incident_patients": 153,
       "incidence_rate_pct": 0.011,
       "population_positive_rate_pct": 0.01,
-      "condition_name": "Condition (source_code: 7200002)"
+      "condition_name": "Alcoholism / Alcohol Dependence",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 436676,
@@ -3161,7 +3687,9 @@
       "unique_incident_patients": 68,
       "incidence_rate_pct": 0.008,
       "population_positive_rate_pct": 0.008,
-      "condition_name": "Condition (source_code: 47505003)"
+      "condition_name": "Posttraumatic Stress Disorder",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 255848,
@@ -3173,7 +3701,9 @@
       "unique_incident_patients": 114,
       "incidence_rate_pct": 0.007,
       "population_positive_rate_pct": 0.007,
-      "condition_name": "Condition (source_code: 233604007)"
+      "condition_name": "Pneumonia",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 438130,
@@ -3185,7 +3715,9 @@
       "unique_incident_patients": 93,
       "incidence_rate_pct": 0.007,
       "population_positive_rate_pct": 0.007,
-      "condition_name": "Condition (source_code: 5602001)"
+      "condition_name": "Opioid Abuse / Harmful Use",
+      "category": "Cardiometabolic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 443612,
@@ -3197,7 +3729,9 @@
       "unique_incident_patients": 6,
       "incidence_rate_pct": 0.007,
       "population_positive_rate_pct": 0.007,
-      "condition_name": "Chronic kidney disease stage 3"
+      "condition_name": "Chronic Kidney Disease Stage 4",
+      "category": "Renal",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 198199,
@@ -3209,7 +3743,9 @@
       "unique_incident_patients": 45,
       "incidence_rate_pct": 0.006,
       "population_positive_rate_pct": 0.006,
-      "condition_name": "Condition (source_code: 45816000)"
+      "condition_name": "Pyelonephritis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 317009,
@@ -3221,7 +3757,9 @@
       "unique_incident_patients": 41,
       "incidence_rate_pct": 0.004,
       "population_positive_rate_pct": 0.004,
-      "condition_name": "Asthma"
+      "condition_name": "Asthma",
+      "category": "Respiratory / Allergic",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4152280,
@@ -3233,7 +3771,9 @@
       "unique_incident_patients": 81,
       "incidence_rate_pct": 0.004,
       "population_positive_rate_pct": 0.004,
-      "condition_name": "Condition (source_code: 370143000)"
+      "condition_name": "Major Depressive Disorder",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4282096,
@@ -3245,7 +3785,9 @@
       "unique_incident_patients": 34,
       "incidence_rate_pct": 0.002,
       "population_positive_rate_pct": 0.002,
-      "condition_name": "Condition (source_code: 36923009)"
+      "condition_name": "Major Depression, Single Episode",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 44782520,
@@ -3257,7 +3799,9 @@
       "unique_incident_patients": 28,
       "incidence_rate_pct": 0.002,
       "population_positive_rate_pct": 0.002,
-      "condition_name": "Condition (source_code: 698754002)"
+      "condition_name": "Chronic Paralysis due to Spinal Cord Lesion",
+      "category": "Neurological / Mental Health",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4066995,
@@ -3269,7 +3813,9 @@
       "unique_incident_patients": 24,
       "incidence_rate_pct": 0.002,
       "population_positive_rate_pct": 0.002,
-      "condition_name": "Condition (source_code: 1734006)"
+      "condition_name": "Fracture of Vertebral Column with Spinal Cord Injury",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 444362,
@@ -3281,7 +3827,9 @@
       "unique_incident_patients": 5,
       "incidence_rate_pct": 0.001,
       "population_positive_rate_pct": 0.001,
-      "condition_name": "Condition (source_code: 86849004)"
+      "condition_name": "Suicidal Poisoning",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4008261,
@@ -3293,7 +3841,9 @@
       "unique_incident_patients": 5,
       "incidence_rate_pct": 0.001,
       "population_positive_rate_pct": 0.001,
-      "condition_name": "Condition (source_code: 11218009)"
+      "condition_name": "Pseudomonas Aeruginosa Infection",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4144583,
@@ -3305,7 +3855,9 @@
       "unique_incident_patients": 4,
       "incidence_rate_pct": 0.001,
       "population_positive_rate_pct": 0.001,
-      "condition_name": "Condition (source_code: 427089005)"
+      "condition_name": "Diabetes Mellitus due to Cystic Fibrosis",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 40491961,
@@ -3317,7 +3869,9 @@
       "unique_incident_patients": 2,
       "incidence_rate_pct": 0.001,
       "population_positive_rate_pct": 0.001,
-      "condition_name": "Condition (source_code: 448813005)"
+      "condition_name": "Pseudomonas Sepsis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 45763582,
@@ -3329,7 +3883,9 @@
       "unique_incident_patients": 7,
       "incidence_rate_pct": 0.001,
       "population_positive_rate_pct": 0.001,
-      "condition_name": "Condition (source_code: 60951000119105)"
+      "condition_name": "Blindness due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "is_comorbidity_target": true
     },
     {
       "condition_concept_id": 4021336,
@@ -3341,7 +3897,9 @@
       "unique_incident_patients": 10,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 225444004)"
+      "condition_name": "At Risk for Suicide",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 40489907,
@@ -3353,7 +3911,9 @@
       "unique_incident_patients": 2,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 448417001)"
+      "condition_name": "Staphylococcus Aureus Sepsis",
+      "category": "Acute Infection",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 433125,
@@ -3365,7 +3925,9 @@
       "unique_incident_patients": 3,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 406602003)"
+      "condition_name": "Clinical Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4188598,
@@ -3377,7 +3939,9 @@
       "unique_incident_patients": 5,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 47200007)"
+      "condition_name": "High Risk Pregnancy",
+      "category": "Obstetric / Pregnancy",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 319049,
@@ -3389,7 +3953,9 @@
       "unique_incident_patients": 2,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 65710008)"
+      "condition_name": "Clinical Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 255891,
@@ -3401,7 +3967,9 @@
       "unique_incident_patients": 4,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 200936003)"
+      "condition_name": "Clinical Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 441267,
@@ -3413,7 +3981,9 @@
       "unique_incident_patients": 3,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 190905008)"
+      "condition_name": "Cystic Fibrosis",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 45769019,
@@ -3425,19 +3995,9 @@
       "unique_incident_patients": 1,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 707577004)"
-    },
-    {
-      "condition_concept_id": 193591,
-      "sample_source_value": 206523001,
-      "total_landmarks_evaluated": 2906150,
-      "pre_existing_landmarks": 240,
-      "at_risk_landmarks": 2905910,
-      "incident_positive_landmarks": 0,
-      "unique_incident_patients": 0,
-      "incidence_rate_pct": 0.0,
-      "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 206523001)"
+      "condition_name": "Female Infertility due to Cystic Fibrosis",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     },
     {
       "condition_concept_id": 4132546,
@@ -3449,7 +4009,23 @@
       "unique_incident_patients": 0,
       "incidence_rate_pct": 0.0,
       "population_positive_rate_pct": 0.0,
-      "condition_name": "Condition (source_code: 127295002)"
+      "condition_name": "Traumatic Brain Injury",
+      "category": "Acute Injury / Trauma",
+      "is_comorbidity_target": false
+    },
+    {
+      "condition_concept_id": 193591,
+      "sample_source_value": 206523001,
+      "total_landmarks_evaluated": 2906150,
+      "pre_existing_landmarks": 240,
+      "at_risk_landmarks": 2905910,
+      "incident_positive_landmarks": 0,
+      "unique_incident_patients": 0,
+      "incidence_rate_pct": 0.0,
+      "population_positive_rate_pct": 0.0,
+      "condition_name": "Clinical Finding",
+      "category": "Administrative / Finding",
+      "is_comorbidity_target": false
     }
   ]
 }
