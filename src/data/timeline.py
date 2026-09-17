@@ -18,7 +18,7 @@ if str(ROOT_DIR) not in sys.path:
 from src.data.loader import OMOPDataLoader, get_db
 
 
-# Human-friendly descriptions for common visit concepts
+# Human-friendly descriptions for visit concepts
 VISIT_NAME_MAP = {
     9201: "Inpatient Visit",
     9202: "Outpatient Visit",
@@ -29,8 +29,9 @@ VISIT_NAME_MAP = {
     581476: "Telehealth Visit"
 }
 
-# Standard SNOMED / OMOP condition names
+# Comprehensive SNOMED / OMOP condition vocabulary mapping for Synthea 100K
 CONDITION_NAME_MAP = {
+    # OMOP Concept IDs
     317576: "Coronary arteriosclerosis",
     439777: "Anemia",
     201826: "Type 2 diabetes mellitus",
@@ -62,20 +63,110 @@ CONDITION_NAME_MAP = {
     140168: "Pneumonia",
     4327941: "Viral sinusitis",
     4102111: "Chronic sinusitis",
-    4028305: "Acute viral pharyngitis"
+    4028305: "Acute viral pharyngitis",
+    40481087: "Viral sinusitis",
+    260139: "Acute bronchitis",
+    4311629: "Prediabetes",
+    257012: "Chronic sinusitis",
+    4217975: "Normal pregnancy",
+    4078393: "Miscarriage (Spontaneous abortion)",
+    372328: "Otitis media",
+    81151: "Sprain of ankle",
+    4285898: "Polyp of colon",
+    4120314: "Hypertriglyceridemia",
+    436940: "Metabolic syndrome X",
+    378001: "Concussion injury",
+    4294548: "Acute viral pharyngitis",
+    381316: "Stroke (Cerebrovascular accident)",
+    4283893: "Sinusitis",
+    4214376: "Hyperglycemia",
+    4079750: "Osteoarthritis of knee",
+    4229440: "Chronic kidney disease",
+    80502: "Osteoporosis",
+    440448: "Appendicitis",
+    4051466: "Childhood asthma",
+    4048171: "Childhood asthma exacerbation",
+    4166224: "Ruptured appendix",
+    4230399: "Closed fracture of wrist",
+    40479422: "Second degree burn",
+    4055754: "Fracture of rib",
+    4142905: "Fracture of clavicle",
+    440086: "Childhood ADHD",
+    4237458: "Fracture of upper limb",
+    78272: "Sprain of wrist",
+    4134304: "Acute upper respiratory infection",
+    4299128: "Third degree burn",
+    261325: "Suspected condition"
+}
+
+# SNOMED Source Code Map
+SOURCE_CODE_MAP = {
+    444814009: "Viral sinusitis",
+    162864005: "Suspected respiratory finding",
+    195662009: "Normal body mass index",
+    10509002: "Acute bronchitis",
+    15777000: "Prediabetes",
+    271737000: "Anemia",
+    38341003: "Hypertensive disorder",
+    40055000: "Chronic sinusitis",
+    72892002: "Normal pregnancy",
+    19169002: "Miscarriage",
+    43878008: "Streptococcal sore throat",
+    408512008: "Body mass index 30+ - obesity",
+    65363002: "Otitis media",
+    55822004: "Hyperlipidemia",
+    44465007: "Sprain of ankle",
+    68496003: "Polyp of colon",
+    44054006: "Type 2 diabetes mellitus",
+    302870006: "Hypertriglyceridemia",
+    237602007: "Metabolic syndrome X",
+    53741008: "Coronary arteriosclerosis",
+    62106007: "Concussion injury",
+    75498004: "Acute viral pharyngitis",
+    230690007: "Stroke (Cerebrovascular accident)",
+    36971009: "Sinusitis",
+    80394007: "Hyperglycemia",
+    239873007: "Osteoarthritis of knee",
+    88805009: "Chronic kidney disease",
+    64859006: "Osteoporosis",
+    74400008: "Appendicitis",
+    428251008: "Postoperative state",
+    47693006: "Ruptured appendix",
+    232353008: "Peritonitis",
+    233678006: "Childhood asthma",
+    359817006: "Closed fracture of wrist",
+    444448004: "Second degree burn",
+    196416002: "Fracture of rib",
+    33737001: "Fracture of clavicle",
+    192127007: "Childhood attention deficit hyperactivity disorder",
+    58150001: "Fracture of upper limb",
+    70704007: "Sprain of wrist",
+    263102004: "Acute upper respiratory infection",
+    403192003: "Third degree burn",
+    87433001: "Suspected condition"
 }
 
 
 def get_visit_name(concept_id: int) -> str:
-    return VISIT_NAME_MAP.get(concept_id, f"Visit ({concept_id})")
+    return VISIT_NAME_MAP.get(concept_id, f"Visit (concept_id: {concept_id})")
 
 
 def get_condition_name(concept_id: int, source_val: Any = None) -> str:
+    # Check source code mapping first if available
+    try:
+        if source_val is not None:
+            s_int = int(source_val)
+            if s_int in SOURCE_CODE_MAP:
+                return SOURCE_CODE_MAP[s_int]
+    except (ValueError, TypeError):
+        pass
+
     if concept_id in CONDITION_NAME_MAP:
         return CONDITION_NAME_MAP[concept_id]
+
     if source_val and str(source_val).strip() and str(source_val) not in ("None", "nan", "0"):
-        return f"Condition {concept_id} (Code: {source_val})"
-    return f"Condition {concept_id}"
+        return f"Condition (source_code: {source_val})"
+    return f"Condition (concept_id: {concept_id})"
 
 
 def build_patient_timelines(

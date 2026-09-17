@@ -1,7 +1,7 @@
 """
 Script to generate human-readable patient timelines for manual clinical verification.
 Selects 15 diverse patients across different clinical and utilization trajectories.
-Outputs reports/sample_patient_timelines.md.
+Outputs reports/sample_patient_timelines.md with formatted concept and source codes.
 """
 
 import os
@@ -23,11 +23,6 @@ def generate_sample_timelines(output_md_path: str = "reports/sample_patient_time
     loader = OMOPDataLoader()
     con = loader.get_connection()
 
-    # Select deterministic sample of diverse patients:
-    # 1. High comorbidity patients (multiple conditions across visits)
-    # 2. Patients with inpatient and ED encounters
-    # 3. Healthy/wellness-only patients
-    # 4. Long longitudinal follow-up patients
     sample_query = f"""
         WITH patient_metrics AS (
             SELECT 
@@ -45,7 +40,7 @@ def generate_sample_timelines(output_md_path: str = "reports/sample_patient_time
         ),
         ranked AS (
             -- 5 high morbidity patients with inpatient visits
-            (SELECT person_id, 'High Morbidity / Inpatient' AS cohort_stratum FROM patient_metrics WHERE n_inpatient >= 2 AND total_condition_events >= 5 ORDER BY person_id LIMIT 5)
+            (SELECT person_id, 'High Morbidity / Inpatient Trajectory' AS cohort_stratum FROM patient_metrics WHERE n_inpatient >= 2 AND total_condition_events >= 5 ORDER BY person_id LIMIT 5)
             UNION ALL
             -- 5 ED & outpatient chronic disease patients
             (SELECT person_id, 'Chronic / Emergency Follow-up' AS cohort_stratum FROM patient_metrics WHERE n_ed >= 2 AND n_inpatient = 0 AND total_condition_events >= 3 ORDER BY person_id LIMIT 5)
@@ -88,13 +83,12 @@ def generate_sample_timelines(output_md_path: str = "reports/sample_patient_time
 
         md.append(f"## Patient #{i} (ID: `{pid}`) — *{stratum}*")
         md.append(f"- **Demographics:** Sex: `{first['gender_source_value']}`, Race: `{first['race_source_value']}`, Birth Year: `{first['year_of_birth']}`")
-        md.append(f"- **Observation Period:** `{first['obs_start_date']}` to `{first['obs_end_date']}` ({round(first['future_obs_days']/365.25 + first['prior_obs_days']/365.25, 1)} years)")
-        md.append(f"- **Timeline Summary:** {n_visits} total visits, {len(all_conds)} unique conditions recorded from `{first['visit_start_date']}` to `{last['visit_end_date']}`\n")
+        md.append(f"- **Observation Period Span:** `{first['obs_start_date']}` to `{first['obs_end_date']}` ({round(first['future_obs_days']/365.25 + first['prior_obs_days']/365.25, 1)} years)")
+        md.append(f"- **Timeline Summary:** {n_visits} total distinct visits, {len(all_conds)} unique conditions recorded from `{first['visit_start_date']}` to `{last['visit_end_date']}`\n")
         
         md.append("| # | Visit Date | Visit Type | Age | Duration | Conditions Diagnosed at Encounter |")
         md.append("|---|---|---|---|---|---|")
 
-        # To avoid overly long documents, display all visits if <= 25, or sample beginning, middle, and end
         display_records = records
         truncated = False
         if len(records) > 25:
@@ -108,11 +102,11 @@ def generate_sample_timelines(output_md_path: str = "reports/sample_patient_time
             v_name = get_visit_name(r["visit_concept_id"])
             dur = f"{r['visit_duration_days']}d" if r['visit_duration_days'] > 1 else "1d"
             
-            # Format conditions
+            # Format conditions with clean name, concept_id, and source code
             cond_strs = []
             for cid, csrc in zip(r["visit_condition_ids"], r["visit_condition_sources"]):
                 c_name = get_condition_name(cid, csrc)
-                cond_strs.append(f"• **{c_name}** (`{cid}`)")
+                cond_strs.append(f"• **{c_name}** (concept_id: `{cid}`, code: `{csrc}`)")
             
             cond_display = "<br>".join(cond_strs) if cond_strs else "—"
             md.append(f"| {r['visit_sequence_num']} | `{r['visit_start_date']}` | **{v_name}** | {r['age_at_visit']}y | {dur} | {cond_display} |")

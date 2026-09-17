@@ -1,13 +1,13 @@
 # Comorbidity Ensemble ML Implementation Progress
 
-Tracking implementation of the 20-phase ML architecture specified in `COMORBIDITY_ENSEMBLE_ML_PLAN.md`.
+Tracking implementation and validation of the 20-phase ML architecture specified in `COMORBIDITY_ENSEMBLE_ML_PLAN.md`.
 
 ---
 
 ## Phase Status Summary
 
-- [x] **Phase 1 — Dataset / Schema Inspection**: [COMPLETED]
-- [x] **Phase 2 — Patient Timeline Construction**: [COMPLETED]
+- [x] **Phase 1 — Dataset / Schema Inspection**: [COMPLETED & AUDITED]
+- [x] **Phase 2 — Patient Timeline Construction**: [COMPLETED & AUDITED]
 - [ ] **Phase 3 — Landmark & Label Generation**: [NOT STARTED]
 - [ ] **Phase 4 — Feature Engineering**: [NOT STARTED]
 - [ ] **Phase 5 — Train / Validation / Test Splitting**: [NOT STARTED]
@@ -29,45 +29,76 @@ Tracking implementation of the 20-phase ML architecture specified in `COMORBIDIT
 
 ---
 
-## Phase 1 & 2 Execution Log
+## Phase 1 & 2 Focused Validation Audit Log
 
-### Phase 1: Dataset & Schema Inspection
-- **Implemented**: 
-  - LZO stream decompressor (`src/data/lzo_util.py`) wrapping `liblzo2-2.dll` via `ctypes` and converting tables directly into indexed Parquet format.
-  - Centralized DuckDB loader & connector (`src/data/loader.py`).
-  - Automated schema and dataset profiling script (`scripts/inspect_data.py`).
-  - Machine-readable profile (`reports/data_profile.json`) and formatted markdown summary (`reports/data_profile.md`).
-- **Files Created/Modified**:
-  - `src/data/lzo_util.py`
-  - `src/data/loader.py`
-  - `scripts/inspect_data.py`
-  - `reports/data_profile.json`
-  - `reports/data_profile.md`
-- **Key Empirical Data Discoveries**:
-  - **Cohort Size**: Exactly 117,611 unique patients (`person_id`).
-  - **Source Table Multiplicity**: Raw export files contained physical block duplicates (person 2x, visit_occurrence 3x). Deduplicating by entity keys (`person_id`, `visit_occurrence_id`, `condition_occurrence_id`) produces clean clinical counts.
-  - **Visits**: 3,676,758 distinct visits across Outpatient (90.6%, 9202), Emergency Room (5.59%, 9203), and Inpatient (3.81%, 9201).
-  - **Conditions**: 1,763,020 distinct condition diagnoses across 144 OMOP/SNOMED concepts with 98.4% patient coverage.
-  - **Observation Period**: 100% cohort coverage, median observation length = 24.3 years.
-  - **Landmark Feasibility**: 94.36% of consecutive patient visits fall within 365 days; 20,190,372 eligible encounters pass index criteria (≥ 1 yr prior observation and ≥ 1 prior diagnosis), with 17.4M maintaining ≥ 365d future observation.
+### 1. Inconsistencies Investigated & Resolved
 
-### Phase 2: Patient Timeline Construction
-- **Implemented**: 
-  - Chronological per-patient timeline builder (`src/data/timeline.py`) using high-performance equi-hash joins in DuckDB, caching to `data/parquet/patient_timelines.parquet`.
-  - Deterministic sample timeline generator (`scripts/generate_sample_timelines.py`) producing formatted clinical trajectories in `reports/sample_patient_timelines.md`.
-  - Automated pytest validation suite (`tests/test_timeline.py`).
-- **Files Created/Modified**:
-  - `src/data/timeline.py`
-  - `scripts/generate_sample_timelines.py`
-  - `reports/sample_patient_timelines.md`
-  - `tests/test_timeline.py`
-- **Tests Executed & Validation Results**:
-  - `pytest tests/test_timeline.py -v` -> **6/6 passed**:
-    1. `test_patient_integrity`: 100% of timeline events belong to valid person IDs in `person`.
-    2. `test_chronological_ordering`: All patient timelines are strictly ordered by date and sequence.
-    3. `test_no_cross_patient_joins`: 0 cross-patient condition join contaminations.
-    4. `test_date_validity`: All start <= end dates, valid age and observation ranges.
-    5. `test_pipeline_reproducibility`: Deterministic output across repeated executions.
-    6. `test_source_consistency`: Aggregated timeline visit and condition counts exactly match direct source table counts.
-- **Next Step**:
-  - Phase 3: Landmark selection and outcome-window comorbidity label generation.
+#### A. Patient Demographic Counts
+- **Issue**: Walkthrough text previously listed Male: 8,507 and Female: 8,532 (which was a copy-paste error copying the concept IDs `8507` and `8532` rather than patient counts).
+- **Resolution**: Audited against `person` table. Total unique patients = **117,611**.
+  - **Male** (`gender_concept_id = 8507`, source `'M'`): **59,127 patients (50.27%)**
+  - **Female** (`gender_concept_id = 8532`, source `'F'`): **58,484 patients (49.73%)**
+  - **Total**: $59,127 + 58,484 = 117,611$ (100.0%, 0 missing).
+  - Race breakdown: White = 89,692 (76.26%), Hispanic = 11,485 (9.77%), Black = 8,696 (7.39%), Asian = 7,105 (6.04%), Native = 517 (0.44%), Other = 116 (0.10%).
+
+#### B. Visit Counts vs. Landmark Count
+- **Issue**: Report previously stated 3,676,758 distinct visits vs 20.1M candidate encounters due to raw file block duplications in un-deduplicated queries ($11\text{M visits} \times 2\text{ observation records} = 22\text{M rows}$).
+- **Resolution**: Deduplicated entities by primary keys (`visit_occurrence_id`, `observation_period_id`, `person_id`).
+  - **Total distinct visits**: **3,676,758** across all 117,611 patients.
+  - **Visits with $\ge 1$ year prior observation**: **3,429,235** (93.27%).
+  - **Total eligible landmarks ($\ge 1$ yr prior obs + $\ge 1$ prior condition)**: **3,365,062** (91.52% of visits).
+  - **Eligible landmarks with $\ge 365$d future observation ($H=365$)**: **2,906,281**.
+  - **Eligible landmarks with $\ge 180$d future observation ($H=180$)**: **3,067,203**.
+  - **Eligible Inpatient index encounters (`visit_concept_id = 9201`)**: **133,674**.
+  - **Eligible Inpatient or Emergency index encounters (`visit_concept_id IN (9201, 9203)`)**: **325,359**.
+
+#### C. Observation Period Semantics & Inter-Visit Cadence
+- **Issue**: Describing the 24.3-year span as "continuous history" was imprecise.
+- **Resolution**: Clarified that 24.3 years represents the **median observation-period span** (enrollment/coverage window). Quantified actual discrete encounter cadence:
+  - Total inter-visit intervals: 3,559,147.
+  - **Median gap between consecutive visits**: **60.0 days** (IQR: 21–286 days, Mean: 345.1 days).
+  - 82.72% of all consecutive visits occur within 365 days of each other.
+
+#### D. Human-Readable Condition Vocabulary
+- **Issue**: Condition concepts in sample timelines and reports were partially displayed as numeric codes.
+- **Resolution**: Built a comprehensive SNOMED CT and OMOP concept dictionary covering all 159 distinct condition concepts/source codes present in Synthea 100K. All reports now format conditions as:
+  `Condition Name (concept_id: XXXXX, source_code: XXXXX)`.
+
+#### E. Temporal Landmark & Pre-existing Masking Audit
+- **Implemented**: `scripts/generate_validation_audit.py` and `reports/phase2_validation_audit.md`.
+- **Verified**:
+  - For each landmark at time $T$, feature history strictly contains records with `timestamp <= T`.
+  - Zero future records leak into pre-landmark features.
+  - Candidate comorbidity labels strictly belong to $(T, T + 365\text{ days}]$.
+  - Pre-existing conditions diagnosed on or before $T$ are masked/excluded from future incident comorbidity labels.
+  - Repeated occurrences of an incident condition within $(T, T + 365]$ are binarized to 1.
+
+---
+
+## 2. Automated Test Results
+
+Executed `pytest -v tests/test_timeline.py`:
+- `test_patient_integrity` [PASSED]
+- `test_chronological_ordering` [PASSED]
+- `test_no_cross_patient_joins` [PASSED]
+- `test_date_validity` [PASSED]
+- `test_pipeline_reproducibility` [PASSED]
+- `test_source_consistency` [PASSED]
+- `test_demographics_count_consistency` [PASSED]
+- `test_no_join_multiplication_in_landmarks` [PASSED]
+- `test_temporal_non_leakage_and_label_masking` [PASSED]
+
+**All 9 automated validation tests PASSED.**
+
+---
+
+## 3. Deliverables & Reports
+
+1. `reports/data_profile.json`: Machine-readable dataset profile.
+2. `reports/data_profile.md`: Formatted schema profile and cohort statistics.
+3. `reports/sample_patient_timelines.md`: Formatted patient trajectories for 15 diverse patients.
+4. `reports/phase2_validation_audit.md`: Detailed temporal and landmark validation audit across 10 sample patients.
+5. `src/data/lzo_util.py`: LZO decompressor & Parquet converter.
+6. `src/data/loader.py`: Centralized DuckDB query interface.
+7. `src/data/timeline.py`: Deduplicated chronological patient timeline builder.
+8. `tests/test_timeline.py`: Automated 9-suite validation test battery.

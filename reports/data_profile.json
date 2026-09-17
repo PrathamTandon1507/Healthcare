@@ -1,7 +1,7 @@
 {
   "metadata": {
     "dataset_source": "synthea100k",
-    "generated_at": "2026-09-18T01:36:26.675729",
+    "generated_at": "2026-09-18T01:46:31.676767",
     "duckdb_version": "1.5.5"
   },
   "tables": {
@@ -384,15 +384,15 @@
       {
         "concept_id": 8507,
         "source_value": "M",
-        "description": "MALE",
-        "count": 59127,
+        "description": "Male",
+        "patient_count": 59127,
         "pct": 50.27
       },
       {
         "concept_id": 8532,
         "source_value": "F",
-        "description": "FEMALE",
-        "count": 58484,
+        "description": "Female",
+        "patient_count": 58484,
         "pct": 49.73
       }
     ],
@@ -401,42 +401,42 @@
         "concept_id": 8527,
         "source_value": "white",
         "description": "White",
-        "count": 89692,
+        "patient_count": 89692,
         "pct": 76.26
       },
       {
         "concept_id": 0,
         "source_value": "hispanic",
-        "description": "Unknown / Unspecified",
-        "count": 11485,
+        "description": "Hispanic",
+        "patient_count": 11485,
         "pct": 9.77
       },
       {
         "concept_id": 8516,
         "source_value": "black",
-        "description": "Black or African American",
-        "count": 8696,
+        "description": "Black",
+        "patient_count": 8696,
         "pct": 7.39
       },
       {
         "concept_id": 8515,
         "source_value": "asian",
         "description": "Asian",
-        "count": 7105,
+        "patient_count": 7105,
         "pct": 6.04
       },
       {
         "concept_id": 0,
         "source_value": "native",
-        "description": "Unknown / Unspecified",
-        "count": 517,
+        "description": "Native",
+        "patient_count": 517,
         "pct": 0.44
       },
       {
         "concept_id": 0,
         "source_value": "other",
-        "description": "Unknown / Unspecified",
-        "count": 116,
+        "description": "Other",
+        "patient_count": 116,
         "pct": 0.1
       }
     ],
@@ -444,185 +444,184 @@
       {
         "concept_id": 0,
         "source_value": "irish",
-        "description": "Unknown / Unspecified",
-        "count": 23595,
+        "description": "Irish",
+        "patient_count": 23595,
         "pct": 20.06
       },
       {
         "concept_id": 0,
         "source_value": "italian",
-        "description": "Unknown / Unspecified",
-        "count": 14446,
+        "description": "Italian",
+        "patient_count": 14446,
         "pct": 12.28
       },
       {
         "concept_id": 0,
         "source_value": "english",
-        "description": "Unknown / Unspecified",
-        "count": 11077,
+        "description": "English",
+        "patient_count": 11077,
         "pct": 9.42
       },
       {
         "concept_id": 0,
         "source_value": "french",
-        "description": "Unknown / Unspecified",
-        "count": 8161,
+        "description": "French",
+        "patient_count": 8161,
         "pct": 6.94
       },
       {
         "concept_id": 38003563,
         "source_value": "puerto_rican",
-        "description": "Hispanic or Latino",
-        "count": 6600,
+        "description": "Puerto_rican",
+        "patient_count": 6600,
         "pct": 5.61
       },
       {
         "concept_id": 0,
         "source_value": "german",
-        "description": "Unknown / Unspecified",
-        "count": 6581,
+        "description": "German",
+        "patient_count": 6581,
         "pct": 5.6
       },
       {
         "concept_id": 0,
         "source_value": "polish",
-        "description": "Unknown / Unspecified",
-        "count": 5076,
+        "description": "Polish",
+        "patient_count": 5076,
         "pct": 4.32
       },
       {
         "concept_id": 0,
         "source_value": "portuguese",
-        "description": "Unknown / Unspecified",
-        "count": 4814,
+        "description": "Portuguese",
+        "patient_count": 4814,
         "pct": 4.09
       },
       {
         "concept_id": 0,
         "source_value": "chinese",
-        "description": "Unknown / Unspecified",
-        "count": 4594,
+        "description": "Chinese",
+        "patient_count": 4594,
         "pct": 3.91
       },
       {
         "concept_id": 0,
         "source_value": "american",
-        "description": "Unknown / Unspecified",
-        "count": 4578,
+        "description": "American",
+        "patient_count": 4578,
         "pct": 3.89
       },
       {
         "concept_id": 0,
         "source_value": "french_canadian",
-        "description": "Unknown / Unspecified",
-        "count": 3855,
+        "description": "French_canadian",
+        "patient_count": 3855,
         "pct": 3.28
       },
       {
         "concept_id": 0,
         "source_value": "west_indian",
-        "description": "Unknown / Unspecified",
-        "count": 2923,
+        "description": "West_indian",
+        "patient_count": 2923,
         "pct": 2.49
       },
       {
         "concept_id": 0,
         "source_value": "dominican",
-        "description": "Unknown / Unspecified",
-        "count": 2906,
+        "description": "Dominican",
+        "patient_count": 2906,
         "pct": 2.47
       },
       {
         "concept_id": 0,
         "source_value": "african",
-        "description": "Unknown / Unspecified",
-        "count": 2867,
+        "description": "African",
+        "patient_count": 2867,
         "pct": 2.44
       },
       {
         "concept_id": 0,
         "source_value": "asian_indian",
-        "description": "Unknown / Unspecified",
-        "count": 2511,
+        "description": "Asian_indian",
+        "patient_count": 2511,
         "pct": 2.14
       },
       {
         "concept_id": 0,
         "source_value": "scottish",
-        "description": "Unknown / Unspecified",
-        "count": 2449,
+        "description": "Scottish",
+        "patient_count": 2449,
         "pct": 2.08
       },
       {
         "concept_id": 0,
         "source_value": "russian",
-        "description": "Unknown / Unspecified",
-        "count": 2041,
+        "description": "Russian",
+        "patient_count": 2041,
         "pct": 1.74
       },
       {
         "concept_id": 0,
         "source_value": "swedish",
-        "description": "Unknown / Unspecified",
-        "count": 1792,
+        "description": "Swedish",
+        "patient_count": 1792,
         "pct": 1.52
       },
       {
         "concept_id": 38003563,
         "source_value": "central_american",
-        "description": "Hispanic or Latino",
-        "count": 1675,
+        "description": "Central_american",
+        "patient_count": 1675,
         "pct": 1.42
       },
       {
         "concept_id": 38003563,
         "source_value": "mexican",
-        "description": "Hispanic or Latino",
-        "count": 1653,
+        "description": "Mexican",
+        "patient_count": 1653,
         "pct": 1.41
       },
       {
         "concept_id": 38003563,
         "source_value": "south_american",
-        "description": "Hispanic or Latino",
-        "count": 1557,
+        "description": "South_american",
+        "patient_count": 1557,
         "pct": 1.32
       },
       {
         "concept_id": 0,
         "source_value": "greek",
-        "description": "Unknown / Unspecified",
-        "count": 1227,
+        "description": "Greek",
+        "patient_count": 1227,
         "pct": 1.04
       },
       {
         "concept_id": 0,
         "source_value": "american_indian",
-        "description": "Unknown / Unspecified",
-        "count": 517,
+        "description": "American_indian",
+        "patient_count": 517,
         "pct": 0.44
       },
       {
         "concept_id": 0,
         "source_value": "arab",
-        "description": "Unknown / Unspecified",
-        "count": 116,
+        "description": "Arab",
+        "patient_count": 116,
         "pct": 0.1
       }
     ]
   },
   "observation_period": {
-    "total_records": 117611,
-    "unique_patients": 117611,
+    "unique_patients_with_obs_period": 117611,
     "earliest_start": "1908-07-02",
     "latest_end": "2019-05-21",
-    "duration_days": {
-      "mean": 10443.7,
-      "median": 8877.0,
-      "min": 0,
-      "max": 40357,
-      "mean_years": 28.59,
-      "median_years": 24.3
+    "span_duration": {
+      "mean_days": 10443.7,
+      "median_days": 8877.0,
+      "min_days": 0,
+      "max_days": 40357,
+      "mean_span_years": 28.59,
+      "median_span_years": 24.3
     }
   },
   "visits": {
@@ -667,7 +666,7 @@
     ]
   },
   "conditions": {
-    "total_distinct_conditions": 2644529,
+    "total_distinct_conditions": 2644523,
     "unique_patients_with_conditions": 115681,
     "unique_condition_concepts": 144,
     "earliest_condition": "1908-07-02",
@@ -686,40 +685,40 @@
       {
         "condition_concept_id": 40481087,
         "source_value": "444814009",
-        "concept_name": "444814009",
-        "total_occurrences": 74879,
+        "concept_name": "Viral sinusitis",
+        "total_occurrences": 368769,
         "unique_patients": 74879,
         "patient_prevalence_pct": 63.67
       },
       {
         "condition_concept_id": 0,
-        "source_value": "162864005",
-        "concept_name": "Unknown / Unspecified",
-        "total_occurrences": 86003,
+        "source_value": "408512008",
+        "concept_name": "Body mass index 30+ - obesity",
+        "total_occurrences": 258009,
         "unique_patients": 61152,
         "patient_prevalence_pct": 52.0
       },
       {
         "condition_concept_id": 4112343,
         "source_value": "195662009",
-        "concept_name": "Body mass index 30+ - obesity",
-        "total_occurrences": 52544,
+        "concept_name": "Normal body mass index",
+        "total_occurrences": 210259,
         "unique_patients": 52544,
         "patient_prevalence_pct": 44.68
       },
       {
         "condition_concept_id": 260139,
         "source_value": "10509002",
-        "concept_name": "10509002",
-        "total_occurrences": 45760,
+        "concept_name": "Acute bronchitis",
+        "total_occurrences": 169617,
         "unique_patients": 45760,
         "patient_prevalence_pct": 38.91
       },
       {
         "condition_concept_id": 4311629,
         "source_value": "15777000",
-        "concept_name": "15777000",
-        "total_occurrences": 35191,
+        "concept_name": "Prediabetes",
+        "total_occurrences": 105573,
         "unique_patients": 35191,
         "patient_prevalence_pct": 29.92
       },
@@ -727,7 +726,7 @@
         "condition_concept_id": 439777,
         "source_value": "271737000",
         "concept_name": "Anemia",
-        "total_occurrences": 35018,
+        "total_occurrences": 105052,
         "unique_patients": 35018,
         "patient_prevalence_pct": 29.77
       },
@@ -735,71 +734,71 @@
         "condition_concept_id": 316866,
         "source_value": "38341003",
         "concept_name": "Hypertensive disorder",
-        "total_occurrences": 30285,
+        "total_occurrences": 90855,
         "unique_patients": 30285,
         "patient_prevalence_pct": 25.75
       },
       {
         "condition_concept_id": 257012,
         "source_value": "40055000",
-        "concept_name": "40055000",
-        "total_occurrences": 24699,
+        "concept_name": "Chronic sinusitis",
+        "total_occurrences": 75117,
         "unique_patients": 24699,
         "patient_prevalence_pct": 21.0
       },
       {
         "condition_concept_id": 4217975,
         "source_value": "72892002",
-        "concept_name": "72892002",
-        "total_occurrences": 20452,
+        "concept_name": "Normal pregnancy",
+        "total_occurrences": 150024,
         "unique_patients": 20452,
         "patient_prevalence_pct": 17.39
       },
       {
         "condition_concept_id": 4078393,
         "source_value": "19169002",
-        "concept_name": "19169002",
-        "total_occurrences": 19976,
+        "concept_name": "Miscarriage",
+        "total_occurrences": 59928,
         "unique_patients": 19976,
         "patient_prevalence_pct": 16.98
       },
       {
         "condition_concept_id": 28060,
         "source_value": "43878008",
-        "concept_name": "Normal pregnancy",
-        "total_occurrences": 15526,
+        "concept_name": "Streptococcal sore throat",
+        "total_occurrences": 51105,
         "unique_patients": 15526,
         "patient_prevalence_pct": 13.2
       },
       {
         "condition_concept_id": 372328,
         "source_value": "65363002",
-        "concept_name": "65363002",
-        "total_occurrences": 13415,
+        "concept_name": "Otitis media",
+        "total_occurrences": 54705,
         "unique_patients": 13415,
         "patient_prevalence_pct": 11.41
       },
       {
         "condition_concept_id": 432867,
         "source_value": "55822004",
-        "concept_name": "Hyperglycemia",
-        "total_occurrences": 13281,
+        "concept_name": "Hyperlipidemia",
+        "total_occurrences": 39843,
         "unique_patients": 13281,
         "patient_prevalence_pct": 11.29
       },
       {
         "condition_concept_id": 81151,
         "source_value": "44465007",
-        "concept_name": "44465007",
-        "total_occurrences": 11749,
+        "concept_name": "Sprain of ankle",
+        "total_occurrences": 37197,
         "unique_patients": 11749,
         "patient_prevalence_pct": 9.99
       },
       {
         "condition_concept_id": 4285898,
         "source_value": "68496003",
-        "concept_name": "68496003",
-        "total_occurrences": 8530,
+        "concept_name": "Polyp of colon",
+        "total_occurrences": 28347,
         "unique_patients": 8530,
         "patient_prevalence_pct": 7.25
       },
@@ -807,23 +806,23 @@
         "condition_concept_id": 201826,
         "source_value": "44054006",
         "concept_name": "Type 2 diabetes mellitus",
-        "total_occurrences": 8150,
+        "total_occurrences": 24450,
         "unique_patients": 8150,
         "patient_prevalence_pct": 6.93
       },
       {
         "condition_concept_id": 4120314,
         "source_value": "302870006",
-        "concept_name": "302870006",
-        "total_occurrences": 7823,
+        "concept_name": "Hypertriglyceridemia",
+        "total_occurrences": 23469,
         "unique_patients": 7823,
         "patient_prevalence_pct": 6.65
       },
       {
         "condition_concept_id": 436940,
         "source_value": "237602007",
-        "concept_name": "237602007",
-        "total_occurrences": 7694,
+        "concept_name": "Metabolic syndrome X",
+        "total_occurrences": 23082,
         "unique_patients": 7694,
         "patient_prevalence_pct": 6.54
       },
@@ -831,159 +830,159 @@
         "condition_concept_id": 317576,
         "source_value": "53741008",
         "concept_name": "Coronary arteriosclerosis",
-        "total_occurrences": 7426,
+        "total_occurrences": 22276,
         "unique_patients": 7426,
         "patient_prevalence_pct": 6.31
       },
       {
         "condition_concept_id": 378001,
         "source_value": "62106007",
-        "concept_name": "62106007",
-        "total_occurrences": 6769,
+        "concept_name": "Concussion injury",
+        "total_occurrences": 20946,
         "unique_patients": 6769,
         "patient_prevalence_pct": 5.76
       },
       {
         "condition_concept_id": 4294548,
         "source_value": "75498004",
-        "concept_name": "75498004",
-        "total_occurrences": 6642,
+        "concept_name": "Acute viral pharyngitis",
+        "total_occurrences": 20577,
         "unique_patients": 6642,
         "patient_prevalence_pct": 5.65
       },
       {
         "condition_concept_id": 381316,
         "source_value": "230690007",
-        "concept_name": "230690007",
-        "total_occurrences": 6620,
+        "concept_name": "Stroke (Cerebrovascular accident)",
+        "total_occurrences": 19860,
         "unique_patients": 6620,
         "patient_prevalence_pct": 5.63
       },
       {
         "condition_concept_id": 4283893,
         "source_value": "36971009",
-        "concept_name": "36971009",
-        "total_occurrences": 6548,
+        "concept_name": "Sinusitis",
+        "total_occurrences": 20328,
         "unique_patients": 6548,
         "patient_prevalence_pct": 5.57
       },
       {
         "condition_concept_id": 4214376,
         "source_value": "80394007",
-        "concept_name": "80394007",
-        "total_occurrences": 6261,
+        "concept_name": "Hyperglycemia",
+        "total_occurrences": 18783,
         "unique_patients": 6261,
         "patient_prevalence_pct": 5.32
       },
       {
         "condition_concept_id": 4079750,
         "source_value": "239873007",
-        "concept_name": "239873007",
-        "total_occurrences": 6158,
+        "concept_name": "Osteoarthritis of knee",
+        "total_occurrences": 18474,
         "unique_patients": 6158,
         "patient_prevalence_pct": 5.24
       },
       {
         "condition_concept_id": 4229440,
         "source_value": "88805009",
-        "concept_name": "88805009",
-        "total_occurrences": 5726,
+        "concept_name": "Chronic kidney disease",
+        "total_occurrences": 17178,
         "unique_patients": 5726,
         "patient_prevalence_pct": 4.87
       },
       {
         "condition_concept_id": 80502,
         "source_value": "64859006",
-        "concept_name": "64859006",
-        "total_occurrences": 5518,
+        "concept_name": "Osteoporosis",
+        "total_occurrences": 16554,
         "unique_patients": 5518,
         "patient_prevalence_pct": 4.69
       },
       {
         "condition_concept_id": 440448,
         "source_value": "74400008",
-        "concept_name": "74400008",
-        "total_occurrences": 5486,
+        "concept_name": "Appendicitis",
+        "total_occurrences": 16458,
         "unique_patients": 5486,
         "patient_prevalence_pct": 4.66
       },
       {
         "condition_concept_id": 436096,
         "source_value": "82423001",
-        "concept_name": "82423001",
-        "total_occurrences": 5481,
+        "concept_name": "Condition (source_code: 82423001)",
+        "total_occurrences": 16443,
         "unique_patients": 5481,
         "patient_prevalence_pct": 4.66
       },
       {
         "condition_concept_id": 4055754,
         "source_value": "196416002",
-        "concept_name": "196416002",
-        "total_occurrences": 5472,
+        "concept_name": "Fracture of rib",
+        "total_occurrences": 16416,
         "unique_patients": 5472,
         "patient_prevalence_pct": 4.65
       },
       {
         "condition_concept_id": 4218389,
         "source_value": "39848009",
-        "concept_name": "39848009",
-        "total_occurrences": 5458,
+        "concept_name": "Condition (source_code: 39848009)",
+        "total_occurrences": 16767,
         "unique_patients": 5458,
         "patient_prevalence_pct": 4.64
       },
       {
         "condition_concept_id": 43530652,
         "source_value": "124171000119105",
-        "concept_name": "124171000119105",
-        "total_occurrences": 5443,
+        "concept_name": "Condition (source_code: 124171000119105)",
+        "total_occurrences": 16329,
         "unique_patients": 5443,
         "patient_prevalence_pct": 4.63
       },
       {
         "condition_concept_id": 78272,
         "source_value": "70704007",
-        "concept_name": "70704007",
-        "total_occurrences": 5302,
+        "concept_name": "Sprain of wrist",
+        "total_occurrences": 16254,
         "unique_patients": 5302,
         "patient_prevalence_pct": 4.51
       },
       {
         "condition_concept_id": 4208104,
         "source_value": "55680006",
-        "concept_name": "55680006",
-        "total_occurrences": 5230,
+        "concept_name": "Condition (source_code: 55680006)",
+        "total_occurrences": 15690,
         "unique_patients": 5230,
         "patient_prevalence_pct": 4.45
       },
       {
         "condition_concept_id": 313217,
         "source_value": "49436004",
-        "concept_name": "49436004",
-        "total_occurrences": 4659,
+        "concept_name": "Condition (source_code: 49436004)",
+        "total_occurrences": 13977,
         "unique_patients": 4659,
         "patient_prevalence_pct": 3.96
       },
       {
         "condition_concept_id": 4278672,
         "source_value": "65966004",
-        "concept_name": "65966004",
-        "total_occurrences": 4481,
+        "concept_name": "Condition (source_code: 65966004)",
+        "total_occurrences": 14013,
         "unique_patients": 4481,
         "patient_prevalence_pct": 3.81
       },
       {
         "condition_concept_id": 321042,
         "source_value": "410429000",
-        "concept_name": "410429000",
-        "total_occurrences": 4268,
+        "concept_name": "Condition (source_code: 410429000)",
+        "total_occurrences": 12804,
         "unique_patients": 4268,
         "patient_prevalence_pct": 3.63
       },
       {
         "condition_concept_id": 4029498,
         "source_value": "128613002",
-        "concept_name": "128613002",
-        "total_occurrences": 4221,
+        "concept_name": "Condition (source_code: 128613002)",
+        "total_occurrences": 12663,
         "unique_patients": 4221,
         "patient_prevalence_pct": 3.59
       },
@@ -991,116 +990,118 @@
         "condition_concept_id": 192279,
         "source_value": "127013003",
         "concept_name": "Congestive heart failure",
-        "total_occurrences": 3922,
+        "total_occurrences": 11766,
         "unique_patients": 3922,
         "patient_prevalence_pct": 3.33
       },
       {
         "condition_concept_id": 4237458,
         "source_value": "58150001",
-        "concept_name": "58150001",
-        "total_occurrences": 3737,
+        "concept_name": "Fracture of upper limb",
+        "total_occurrences": 11472,
         "unique_patients": 3737,
         "patient_prevalence_pct": 3.18
       },
       {
         "condition_concept_id": 443614,
         "source_value": "431855005",
-        "concept_name": "431855005",
-        "total_occurrences": 3611,
+        "concept_name": "Condition (source_code: 431855005)",
+        "total_occurrences": 10833,
         "unique_patients": 3611,
         "patient_prevalence_pct": 3.07
       },
       {
         "condition_concept_id": 4152936,
         "source_value": "283385000",
-        "concept_name": "283385000",
-        "total_occurrences": 3561,
+        "concept_name": "Condition (source_code: 283385000)",
+        "total_occurrences": 10848,
         "unique_patients": 3561,
         "patient_prevalence_pct": 3.03
       },
       {
         "condition_concept_id": 4156265,
         "source_value": "370247008",
-        "concept_name": "370247008",
-        "total_occurrences": 3560,
+        "concept_name": "Condition (source_code: 370247008)",
+        "total_occurrences": 10860,
         "unique_patients": 3560,
         "patient_prevalence_pct": 3.03
       },
       {
         "condition_concept_id": 40318618,
         "source_value": "156073000",
-        "concept_name": "156073000",
-        "total_occurrences": 3524,
+        "concept_name": "Condition (source_code: 156073000)",
+        "total_occurrences": 11865,
         "unique_patients": 3524,
         "patient_prevalence_pct": 3.0
       },
       {
         "condition_concept_id": 4113008,
         "source_value": "284549007",
-        "concept_name": "284549007",
-        "total_occurrences": 3463,
+        "concept_name": "Condition (source_code: 284549007)",
+        "total_occurrences": 10536,
         "unique_patients": 3463,
         "patient_prevalence_pct": 2.94
       },
       {
         "condition_concept_id": 378419,
         "source_value": "26929004",
-        "concept_name": "26929004",
-        "total_occurrences": 3448,
+        "concept_name": "Condition (source_code: 26929004)",
+        "total_occurrences": 10344,
         "unique_patients": 3448,
         "patient_prevalence_pct": 2.93
       },
       {
         "condition_concept_id": 4155034,
         "source_value": "283371005",
-        "concept_name": "283371005",
-        "total_occurrences": 3429,
+        "concept_name": "Condition (source_code: 283371005)",
+        "total_occurrences": 10449,
         "unique_patients": 3429,
         "patient_prevalence_pct": 2.92
       },
       {
         "condition_concept_id": 4134304,
         "source_value": "263102004",
-        "concept_name": "263102004",
-        "total_occurrences": 3370,
+        "concept_name": "Acute upper respiratory infection",
+        "total_occurrences": 10320,
         "unique_patients": 3370,
         "patient_prevalence_pct": 2.87
       },
       {
         "condition_concept_id": 4059173,
         "source_value": "16114001",
-        "concept_name": "16114001",
-        "total_occurrences": 3347,
+        "concept_name": "Condition (source_code: 16114001)",
+        "total_occurrences": 10254,
         "unique_patients": 3347,
         "patient_prevalence_pct": 2.85
       },
       {
         "condition_concept_id": 4109685,
         "source_value": "284551006",
-        "concept_name": "284551006",
-        "total_occurrences": 3332,
+        "concept_name": "Condition (source_code: 284551006)",
+        "total_occurrences": 10146,
         "unique_patients": 3332,
         "patient_prevalence_pct": 2.83
       }
     ]
   },
-  "visit_cadence": {
-    "total_intervals": 3559147.0,
-    "mean_interval_days": 345.08,
-    "median_interval_days": 60.0,
-    "p25_interval_days": 21.0,
-    "p75_interval_days": 286.0,
-    "p90_interval_days": 385.0,
-    "pct_within_180d": 67.73,
-    "pct_within_365d": 82.72
+  "inter_visit_cadence": {
+    "total_inter_visit_gaps": 3559147.0,
+    "mean_gap_days": 345.08,
+    "median_gap_days": 60.0,
+    "p25_gap_days": 21.0,
+    "p75_gap_days": 286.0,
+    "same_day_pct": 1.15,
+    "gap_1_to_180d_pct": 66.59,
+    "gap_181_to_365d_pct": 14.99,
+    "gap_gt_365d_pct": 17.28
   },
   "landmarks_feasibility": {
-    "total_potential_landmarks": 3676758,
-    "patients_with_landmarks": 117611,
-    "eligible_landmarks_h_general": 3365062,
-    "eligible_with_365d_future_obs": 2906281,
-    "eligible_with_180d_future_obs": 3067203,
+    "total_distinct_visits": 3676758,
+    "patients_with_visits": 117611,
+    "visits_with_gte_1yr_prior_obs": 3429235,
+    "eligible_landmarks_total": 3365062,
+    "eligible_landmarks_with_365d_future_obs": 2906281,
+    "eligible_landmarks_with_180d_future_obs": 3067203,
     "eligible_inpatient_landmarks": 133674,
     "eligible_inpatient_or_ed_landmarks": 325359
   }
