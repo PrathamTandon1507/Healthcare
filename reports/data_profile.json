@@ -1,0 +1,1107 @@
+{
+  "metadata": {
+    "dataset_source": "synthea100k",
+    "generated_at": "2026-09-18T01:36:26.675729",
+    "duckdb_version": "1.5.5"
+  },
+  "tables": {
+    "person": {
+      "raw_row_count": 235222,
+      "distinct_records": 117611,
+      "id_column": "person_id",
+      "columns": [
+        {
+          "column_name": "person_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "gender_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "year_of_birth",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "month_of_birth",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "day_of_birth",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "birth_datetime",
+          "data_type": "DATE",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "race_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "ethnicity_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "location_id",
+          "data_type": "VARCHAR",
+          "null_count": 235222,
+          "null_pct": 100.0
+        },
+        {
+          "column_name": "provider_id",
+          "data_type": "VARCHAR",
+          "null_count": 235222,
+          "null_pct": 100.0
+        },
+        {
+          "column_name": "care_site_id",
+          "data_type": "VARCHAR",
+          "null_count": 235222,
+          "null_pct": 100.0
+        },
+        {
+          "column_name": "person_source_value",
+          "data_type": "VARCHAR",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "gender_source_value",
+          "data_type": "VARCHAR",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "gender_source_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "race_source_value",
+          "data_type": "VARCHAR",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "race_source_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "ethnicity_source_value",
+          "data_type": "VARCHAR",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "ethnicity_source_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        }
+      ]
+    },
+    "observation_period": {
+      "raw_row_count": 235222,
+      "distinct_records": 117611,
+      "id_column": "observation_period_id",
+      "columns": [
+        {
+          "column_name": "observation_period_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "person_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "observation_period_start_date",
+          "data_type": "DATE",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "observation_period_end_date",
+          "data_type": "DATE",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "period_type_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        }
+      ]
+    },
+    "condition_occurrence": {
+      "raw_row_count": 2644530,
+      "distinct_records": 1763020,
+      "id_column": "condition_occurrence_id",
+      "columns": [
+        {
+          "column_name": "condition_occurrence_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "person_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "condition_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "condition_start_date",
+          "data_type": "DATE",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "condition_start_datetime",
+          "data_type": "DATE",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "condition_end_date",
+          "data_type": "DATE",
+          "null_count": 1271463,
+          "null_pct": 48.08
+        },
+        {
+          "column_name": "condition_end_datetime",
+          "data_type": "DATE",
+          "null_count": 1271463,
+          "null_pct": 48.08
+        },
+        {
+          "column_name": "condition_type_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "stop_reason",
+          "data_type": "VARCHAR",
+          "null_count": 2644530,
+          "null_pct": 100.0
+        },
+        {
+          "column_name": "provider_id",
+          "data_type": "VARCHAR",
+          "null_count": 2644530,
+          "null_pct": 100.0
+        },
+        {
+          "column_name": "visit_occurrence_id",
+          "data_type": "BIGINT",
+          "null_count": 3045,
+          "null_pct": 0.12
+        },
+        {
+          "column_name": "visit_detail_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "condition_source_value",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "condition_source_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "condition_status_source_value",
+          "data_type": "VARCHAR",
+          "null_count": 2644530,
+          "null_pct": 100.0
+        },
+        {
+          "column_name": "condition_status_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        }
+      ]
+    },
+    "visit_occurrence": {
+      "raw_row_count": 11030274,
+      "distinct_records": 3676758,
+      "id_column": "visit_occurrence_id",
+      "columns": [
+        {
+          "column_name": "visit_occurrence_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "person_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "visit_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "visit_start_date",
+          "data_type": "DATE",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "visit_start_datetime",
+          "data_type": "DATE",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "visit_end_date",
+          "data_type": "DATE",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "visit_end_datetime",
+          "data_type": "DATE",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "visit_type_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "provider_id",
+          "data_type": "VARCHAR",
+          "null_count": 11030274,
+          "null_pct": 100.0
+        },
+        {
+          "column_name": "care_site_id",
+          "data_type": "VARCHAR",
+          "null_count": 11030274,
+          "null_pct": 100.0
+        },
+        {
+          "column_name": "visit_source_value",
+          "data_type": "VARCHAR",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "visit_source_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "admitting_source_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "admitting_source_value",
+          "data_type": "VARCHAR",
+          "null_count": 11030274,
+          "null_pct": 100.0
+        },
+        {
+          "column_name": "discharge_to_concept_id",
+          "data_type": "BIGINT",
+          "null_count": 0,
+          "null_pct": 0.0
+        },
+        {
+          "column_name": "discharge_to_source_value",
+          "data_type": "VARCHAR",
+          "null_count": 11030274,
+          "null_pct": 100.0
+        },
+        {
+          "column_name": "preceding_visit_occurrence_id",
+          "data_type": "BIGINT",
+          "null_count": 235222,
+          "null_pct": 2.13
+        }
+      ]
+    }
+  },
+  "demographics": {
+    "total_unique_patients": 117611,
+    "birth_year_stats": {
+      "min_year": 1908.0,
+      "max_year": 2019.0,
+      "median_year": 1973.0,
+      "mean_year": 1972.6495565890946,
+      "p25_year": 1954.0,
+      "p75_year": 1995.0
+    },
+    "gender_distribution": [
+      {
+        "concept_id": 8507,
+        "source_value": "M",
+        "description": "MALE",
+        "count": 59127,
+        "pct": 50.27
+      },
+      {
+        "concept_id": 8532,
+        "source_value": "F",
+        "description": "FEMALE",
+        "count": 58484,
+        "pct": 49.73
+      }
+    ],
+    "race_distribution": [
+      {
+        "concept_id": 8527,
+        "source_value": "white",
+        "description": "White",
+        "count": 89692,
+        "pct": 76.26
+      },
+      {
+        "concept_id": 0,
+        "source_value": "hispanic",
+        "description": "Unknown / Unspecified",
+        "count": 11485,
+        "pct": 9.77
+      },
+      {
+        "concept_id": 8516,
+        "source_value": "black",
+        "description": "Black or African American",
+        "count": 8696,
+        "pct": 7.39
+      },
+      {
+        "concept_id": 8515,
+        "source_value": "asian",
+        "description": "Asian",
+        "count": 7105,
+        "pct": 6.04
+      },
+      {
+        "concept_id": 0,
+        "source_value": "native",
+        "description": "Unknown / Unspecified",
+        "count": 517,
+        "pct": 0.44
+      },
+      {
+        "concept_id": 0,
+        "source_value": "other",
+        "description": "Unknown / Unspecified",
+        "count": 116,
+        "pct": 0.1
+      }
+    ],
+    "ethnicity_distribution": [
+      {
+        "concept_id": 0,
+        "source_value": "irish",
+        "description": "Unknown / Unspecified",
+        "count": 23595,
+        "pct": 20.06
+      },
+      {
+        "concept_id": 0,
+        "source_value": "italian",
+        "description": "Unknown / Unspecified",
+        "count": 14446,
+        "pct": 12.28
+      },
+      {
+        "concept_id": 0,
+        "source_value": "english",
+        "description": "Unknown / Unspecified",
+        "count": 11077,
+        "pct": 9.42
+      },
+      {
+        "concept_id": 0,
+        "source_value": "french",
+        "description": "Unknown / Unspecified",
+        "count": 8161,
+        "pct": 6.94
+      },
+      {
+        "concept_id": 38003563,
+        "source_value": "puerto_rican",
+        "description": "Hispanic or Latino",
+        "count": 6600,
+        "pct": 5.61
+      },
+      {
+        "concept_id": 0,
+        "source_value": "german",
+        "description": "Unknown / Unspecified",
+        "count": 6581,
+        "pct": 5.6
+      },
+      {
+        "concept_id": 0,
+        "source_value": "polish",
+        "description": "Unknown / Unspecified",
+        "count": 5076,
+        "pct": 4.32
+      },
+      {
+        "concept_id": 0,
+        "source_value": "portuguese",
+        "description": "Unknown / Unspecified",
+        "count": 4814,
+        "pct": 4.09
+      },
+      {
+        "concept_id": 0,
+        "source_value": "chinese",
+        "description": "Unknown / Unspecified",
+        "count": 4594,
+        "pct": 3.91
+      },
+      {
+        "concept_id": 0,
+        "source_value": "american",
+        "description": "Unknown / Unspecified",
+        "count": 4578,
+        "pct": 3.89
+      },
+      {
+        "concept_id": 0,
+        "source_value": "french_canadian",
+        "description": "Unknown / Unspecified",
+        "count": 3855,
+        "pct": 3.28
+      },
+      {
+        "concept_id": 0,
+        "source_value": "west_indian",
+        "description": "Unknown / Unspecified",
+        "count": 2923,
+        "pct": 2.49
+      },
+      {
+        "concept_id": 0,
+        "source_value": "dominican",
+        "description": "Unknown / Unspecified",
+        "count": 2906,
+        "pct": 2.47
+      },
+      {
+        "concept_id": 0,
+        "source_value": "african",
+        "description": "Unknown / Unspecified",
+        "count": 2867,
+        "pct": 2.44
+      },
+      {
+        "concept_id": 0,
+        "source_value": "asian_indian",
+        "description": "Unknown / Unspecified",
+        "count": 2511,
+        "pct": 2.14
+      },
+      {
+        "concept_id": 0,
+        "source_value": "scottish",
+        "description": "Unknown / Unspecified",
+        "count": 2449,
+        "pct": 2.08
+      },
+      {
+        "concept_id": 0,
+        "source_value": "russian",
+        "description": "Unknown / Unspecified",
+        "count": 2041,
+        "pct": 1.74
+      },
+      {
+        "concept_id": 0,
+        "source_value": "swedish",
+        "description": "Unknown / Unspecified",
+        "count": 1792,
+        "pct": 1.52
+      },
+      {
+        "concept_id": 38003563,
+        "source_value": "central_american",
+        "description": "Hispanic or Latino",
+        "count": 1675,
+        "pct": 1.42
+      },
+      {
+        "concept_id": 38003563,
+        "source_value": "mexican",
+        "description": "Hispanic or Latino",
+        "count": 1653,
+        "pct": 1.41
+      },
+      {
+        "concept_id": 38003563,
+        "source_value": "south_american",
+        "description": "Hispanic or Latino",
+        "count": 1557,
+        "pct": 1.32
+      },
+      {
+        "concept_id": 0,
+        "source_value": "greek",
+        "description": "Unknown / Unspecified",
+        "count": 1227,
+        "pct": 1.04
+      },
+      {
+        "concept_id": 0,
+        "source_value": "american_indian",
+        "description": "Unknown / Unspecified",
+        "count": 517,
+        "pct": 0.44
+      },
+      {
+        "concept_id": 0,
+        "source_value": "arab",
+        "description": "Unknown / Unspecified",
+        "count": 116,
+        "pct": 0.1
+      }
+    ]
+  },
+  "observation_period": {
+    "total_records": 117611,
+    "unique_patients": 117611,
+    "earliest_start": "1908-07-02",
+    "latest_end": "2019-05-21",
+    "duration_days": {
+      "mean": 10443.7,
+      "median": 8877.0,
+      "min": 0,
+      "max": 40357,
+      "mean_years": 28.59,
+      "median_years": 24.3
+    }
+  },
+  "visits": {
+    "total_distinct_visits": 3676758,
+    "unique_patients_with_visits": 117611,
+    "earliest_visit": "1908-07-02",
+    "latest_visit": "2019-05-21",
+    "visits_per_patient": {
+      "min_visits": 1.0,
+      "max_visits": 1479.0,
+      "mean_visits": 31.26,
+      "median_visits": 22.0,
+      "p25_visits": 15.0,
+      "p75_visits": 37.0,
+      "p90_visits": 59.0
+    },
+    "concept_breakdown": [
+      {
+        "visit_concept_id": 9202,
+        "concept_name": "Outpatient Visit",
+        "total_visits": 3331255,
+        "unique_patients": 117611,
+        "pct_visits": 90.6,
+        "patient_prevalence_pct": 100.0
+      },
+      {
+        "visit_concept_id": 9203,
+        "concept_name": "Emergency Room Visit",
+        "total_visits": 205486,
+        "unique_patients": 82260,
+        "pct_visits": 5.59,
+        "patient_prevalence_pct": 69.94
+      },
+      {
+        "visit_concept_id": 9201,
+        "concept_name": "Inpatient Visit",
+        "total_visits": 140017,
+        "unique_patients": 27421,
+        "pct_visits": 3.81,
+        "patient_prevalence_pct": 23.31
+      }
+    ]
+  },
+  "conditions": {
+    "total_distinct_conditions": 2644529,
+    "unique_patients_with_conditions": 115681,
+    "unique_condition_concepts": 144,
+    "earliest_condition": "1908-07-02",
+    "latest_condition": "2019-05-14",
+    "conditions_per_patient": {
+      "min_conds": 3.0,
+      "max_conds": 99.0,
+      "mean_conds": 22.86,
+      "median_conds": 21.0,
+      "p25_conds": 15.0,
+      "p75_conds": 30.0,
+      "mean_unique_conds": 6.39,
+      "median_unique_conds": 6.0
+    },
+    "top_50_conditions": [
+      {
+        "condition_concept_id": 40481087,
+        "source_value": "444814009",
+        "concept_name": "444814009",
+        "total_occurrences": 74879,
+        "unique_patients": 74879,
+        "patient_prevalence_pct": 63.67
+      },
+      {
+        "condition_concept_id": 0,
+        "source_value": "162864005",
+        "concept_name": "Unknown / Unspecified",
+        "total_occurrences": 86003,
+        "unique_patients": 61152,
+        "patient_prevalence_pct": 52.0
+      },
+      {
+        "condition_concept_id": 4112343,
+        "source_value": "195662009",
+        "concept_name": "Body mass index 30+ - obesity",
+        "total_occurrences": 52544,
+        "unique_patients": 52544,
+        "patient_prevalence_pct": 44.68
+      },
+      {
+        "condition_concept_id": 260139,
+        "source_value": "10509002",
+        "concept_name": "10509002",
+        "total_occurrences": 45760,
+        "unique_patients": 45760,
+        "patient_prevalence_pct": 38.91
+      },
+      {
+        "condition_concept_id": 4311629,
+        "source_value": "15777000",
+        "concept_name": "15777000",
+        "total_occurrences": 35191,
+        "unique_patients": 35191,
+        "patient_prevalence_pct": 29.92
+      },
+      {
+        "condition_concept_id": 439777,
+        "source_value": "271737000",
+        "concept_name": "Anemia",
+        "total_occurrences": 35018,
+        "unique_patients": 35018,
+        "patient_prevalence_pct": 29.77
+      },
+      {
+        "condition_concept_id": 316866,
+        "source_value": "38341003",
+        "concept_name": "Hypertensive disorder",
+        "total_occurrences": 30285,
+        "unique_patients": 30285,
+        "patient_prevalence_pct": 25.75
+      },
+      {
+        "condition_concept_id": 257012,
+        "source_value": "40055000",
+        "concept_name": "40055000",
+        "total_occurrences": 24699,
+        "unique_patients": 24699,
+        "patient_prevalence_pct": 21.0
+      },
+      {
+        "condition_concept_id": 4217975,
+        "source_value": "72892002",
+        "concept_name": "72892002",
+        "total_occurrences": 20452,
+        "unique_patients": 20452,
+        "patient_prevalence_pct": 17.39
+      },
+      {
+        "condition_concept_id": 4078393,
+        "source_value": "19169002",
+        "concept_name": "19169002",
+        "total_occurrences": 19976,
+        "unique_patients": 19976,
+        "patient_prevalence_pct": 16.98
+      },
+      {
+        "condition_concept_id": 28060,
+        "source_value": "43878008",
+        "concept_name": "Normal pregnancy",
+        "total_occurrences": 15526,
+        "unique_patients": 15526,
+        "patient_prevalence_pct": 13.2
+      },
+      {
+        "condition_concept_id": 372328,
+        "source_value": "65363002",
+        "concept_name": "65363002",
+        "total_occurrences": 13415,
+        "unique_patients": 13415,
+        "patient_prevalence_pct": 11.41
+      },
+      {
+        "condition_concept_id": 432867,
+        "source_value": "55822004",
+        "concept_name": "Hyperglycemia",
+        "total_occurrences": 13281,
+        "unique_patients": 13281,
+        "patient_prevalence_pct": 11.29
+      },
+      {
+        "condition_concept_id": 81151,
+        "source_value": "44465007",
+        "concept_name": "44465007",
+        "total_occurrences": 11749,
+        "unique_patients": 11749,
+        "patient_prevalence_pct": 9.99
+      },
+      {
+        "condition_concept_id": 4285898,
+        "source_value": "68496003",
+        "concept_name": "68496003",
+        "total_occurrences": 8530,
+        "unique_patients": 8530,
+        "patient_prevalence_pct": 7.25
+      },
+      {
+        "condition_concept_id": 201826,
+        "source_value": "44054006",
+        "concept_name": "Type 2 diabetes mellitus",
+        "total_occurrences": 8150,
+        "unique_patients": 8150,
+        "patient_prevalence_pct": 6.93
+      },
+      {
+        "condition_concept_id": 4120314,
+        "source_value": "302870006",
+        "concept_name": "302870006",
+        "total_occurrences": 7823,
+        "unique_patients": 7823,
+        "patient_prevalence_pct": 6.65
+      },
+      {
+        "condition_concept_id": 436940,
+        "source_value": "237602007",
+        "concept_name": "237602007",
+        "total_occurrences": 7694,
+        "unique_patients": 7694,
+        "patient_prevalence_pct": 6.54
+      },
+      {
+        "condition_concept_id": 317576,
+        "source_value": "53741008",
+        "concept_name": "Coronary arteriosclerosis",
+        "total_occurrences": 7426,
+        "unique_patients": 7426,
+        "patient_prevalence_pct": 6.31
+      },
+      {
+        "condition_concept_id": 378001,
+        "source_value": "62106007",
+        "concept_name": "62106007",
+        "total_occurrences": 6769,
+        "unique_patients": 6769,
+        "patient_prevalence_pct": 5.76
+      },
+      {
+        "condition_concept_id": 4294548,
+        "source_value": "75498004",
+        "concept_name": "75498004",
+        "total_occurrences": 6642,
+        "unique_patients": 6642,
+        "patient_prevalence_pct": 5.65
+      },
+      {
+        "condition_concept_id": 381316,
+        "source_value": "230690007",
+        "concept_name": "230690007",
+        "total_occurrences": 6620,
+        "unique_patients": 6620,
+        "patient_prevalence_pct": 5.63
+      },
+      {
+        "condition_concept_id": 4283893,
+        "source_value": "36971009",
+        "concept_name": "36971009",
+        "total_occurrences": 6548,
+        "unique_patients": 6548,
+        "patient_prevalence_pct": 5.57
+      },
+      {
+        "condition_concept_id": 4214376,
+        "source_value": "80394007",
+        "concept_name": "80394007",
+        "total_occurrences": 6261,
+        "unique_patients": 6261,
+        "patient_prevalence_pct": 5.32
+      },
+      {
+        "condition_concept_id": 4079750,
+        "source_value": "239873007",
+        "concept_name": "239873007",
+        "total_occurrences": 6158,
+        "unique_patients": 6158,
+        "patient_prevalence_pct": 5.24
+      },
+      {
+        "condition_concept_id": 4229440,
+        "source_value": "88805009",
+        "concept_name": "88805009",
+        "total_occurrences": 5726,
+        "unique_patients": 5726,
+        "patient_prevalence_pct": 4.87
+      },
+      {
+        "condition_concept_id": 80502,
+        "source_value": "64859006",
+        "concept_name": "64859006",
+        "total_occurrences": 5518,
+        "unique_patients": 5518,
+        "patient_prevalence_pct": 4.69
+      },
+      {
+        "condition_concept_id": 440448,
+        "source_value": "74400008",
+        "concept_name": "74400008",
+        "total_occurrences": 5486,
+        "unique_patients": 5486,
+        "patient_prevalence_pct": 4.66
+      },
+      {
+        "condition_concept_id": 436096,
+        "source_value": "82423001",
+        "concept_name": "82423001",
+        "total_occurrences": 5481,
+        "unique_patients": 5481,
+        "patient_prevalence_pct": 4.66
+      },
+      {
+        "condition_concept_id": 4055754,
+        "source_value": "196416002",
+        "concept_name": "196416002",
+        "total_occurrences": 5472,
+        "unique_patients": 5472,
+        "patient_prevalence_pct": 4.65
+      },
+      {
+        "condition_concept_id": 4218389,
+        "source_value": "39848009",
+        "concept_name": "39848009",
+        "total_occurrences": 5458,
+        "unique_patients": 5458,
+        "patient_prevalence_pct": 4.64
+      },
+      {
+        "condition_concept_id": 43530652,
+        "source_value": "124171000119105",
+        "concept_name": "124171000119105",
+        "total_occurrences": 5443,
+        "unique_patients": 5443,
+        "patient_prevalence_pct": 4.63
+      },
+      {
+        "condition_concept_id": 78272,
+        "source_value": "70704007",
+        "concept_name": "70704007",
+        "total_occurrences": 5302,
+        "unique_patients": 5302,
+        "patient_prevalence_pct": 4.51
+      },
+      {
+        "condition_concept_id": 4208104,
+        "source_value": "55680006",
+        "concept_name": "55680006",
+        "total_occurrences": 5230,
+        "unique_patients": 5230,
+        "patient_prevalence_pct": 4.45
+      },
+      {
+        "condition_concept_id": 313217,
+        "source_value": "49436004",
+        "concept_name": "49436004",
+        "total_occurrences": 4659,
+        "unique_patients": 4659,
+        "patient_prevalence_pct": 3.96
+      },
+      {
+        "condition_concept_id": 4278672,
+        "source_value": "65966004",
+        "concept_name": "65966004",
+        "total_occurrences": 4481,
+        "unique_patients": 4481,
+        "patient_prevalence_pct": 3.81
+      },
+      {
+        "condition_concept_id": 321042,
+        "source_value": "410429000",
+        "concept_name": "410429000",
+        "total_occurrences": 4268,
+        "unique_patients": 4268,
+        "patient_prevalence_pct": 3.63
+      },
+      {
+        "condition_concept_id": 4029498,
+        "source_value": "128613002",
+        "concept_name": "128613002",
+        "total_occurrences": 4221,
+        "unique_patients": 4221,
+        "patient_prevalence_pct": 3.59
+      },
+      {
+        "condition_concept_id": 192279,
+        "source_value": "127013003",
+        "concept_name": "Congestive heart failure",
+        "total_occurrences": 3922,
+        "unique_patients": 3922,
+        "patient_prevalence_pct": 3.33
+      },
+      {
+        "condition_concept_id": 4237458,
+        "source_value": "58150001",
+        "concept_name": "58150001",
+        "total_occurrences": 3737,
+        "unique_patients": 3737,
+        "patient_prevalence_pct": 3.18
+      },
+      {
+        "condition_concept_id": 443614,
+        "source_value": "431855005",
+        "concept_name": "431855005",
+        "total_occurrences": 3611,
+        "unique_patients": 3611,
+        "patient_prevalence_pct": 3.07
+      },
+      {
+        "condition_concept_id": 4152936,
+        "source_value": "283385000",
+        "concept_name": "283385000",
+        "total_occurrences": 3561,
+        "unique_patients": 3561,
+        "patient_prevalence_pct": 3.03
+      },
+      {
+        "condition_concept_id": 4156265,
+        "source_value": "370247008",
+        "concept_name": "370247008",
+        "total_occurrences": 3560,
+        "unique_patients": 3560,
+        "patient_prevalence_pct": 3.03
+      },
+      {
+        "condition_concept_id": 40318618,
+        "source_value": "156073000",
+        "concept_name": "156073000",
+        "total_occurrences": 3524,
+        "unique_patients": 3524,
+        "patient_prevalence_pct": 3.0
+      },
+      {
+        "condition_concept_id": 4113008,
+        "source_value": "284549007",
+        "concept_name": "284549007",
+        "total_occurrences": 3463,
+        "unique_patients": 3463,
+        "patient_prevalence_pct": 2.94
+      },
+      {
+        "condition_concept_id": 378419,
+        "source_value": "26929004",
+        "concept_name": "26929004",
+        "total_occurrences": 3448,
+        "unique_patients": 3448,
+        "patient_prevalence_pct": 2.93
+      },
+      {
+        "condition_concept_id": 4155034,
+        "source_value": "283371005",
+        "concept_name": "283371005",
+        "total_occurrences": 3429,
+        "unique_patients": 3429,
+        "patient_prevalence_pct": 2.92
+      },
+      {
+        "condition_concept_id": 4134304,
+        "source_value": "263102004",
+        "concept_name": "263102004",
+        "total_occurrences": 3370,
+        "unique_patients": 3370,
+        "patient_prevalence_pct": 2.87
+      },
+      {
+        "condition_concept_id": 4059173,
+        "source_value": "16114001",
+        "concept_name": "16114001",
+        "total_occurrences": 3347,
+        "unique_patients": 3347,
+        "patient_prevalence_pct": 2.85
+      },
+      {
+        "condition_concept_id": 4109685,
+        "source_value": "284551006",
+        "concept_name": "284551006",
+        "total_occurrences": 3332,
+        "unique_patients": 3332,
+        "patient_prevalence_pct": 2.83
+      }
+    ]
+  },
+  "visit_cadence": {
+    "total_intervals": 3559147.0,
+    "mean_interval_days": 345.08,
+    "median_interval_days": 60.0,
+    "p25_interval_days": 21.0,
+    "p75_interval_days": 286.0,
+    "p90_interval_days": 385.0,
+    "pct_within_180d": 67.73,
+    "pct_within_365d": 82.72
+  },
+  "landmarks_feasibility": {
+    "total_potential_landmarks": 3676758,
+    "patients_with_landmarks": 117611,
+    "eligible_landmarks_h_general": 3365062,
+    "eligible_with_365d_future_obs": 2906281,
+    "eligible_with_180d_future_obs": 3067203,
+    "eligible_inpatient_landmarks": 133674,
+    "eligible_inpatient_or_ed_landmarks": 325359
+  }
+}
