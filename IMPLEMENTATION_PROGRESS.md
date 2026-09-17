@@ -11,8 +11,8 @@ Tracking implementation and validation of the 20-phase ML architecture specified
 - [x] **Phase 3 — Landmark & Label Generation**: [COMPLETED & VALIDATED]
 - [x] **Phase 4 — Feature Engineering & Target Dissection EDA**: [COMPLETED & VERIFIED]
 - [x] **Phase 5 — Train / Validation / Test Splitting**: [COMPLETED & AUDITED]
-- [ ] **Phase 6 — Baseline Models**: [NOT STARTED]
-- [ ] **Phase 7 — Logistic Regression Base Model**: [NOT STARTED]
+- [x] **Phase 6 — Baseline Models & Metric Harness**: [COMPLETED & VERIFIED]
+- [ ] **Phase 7 — Logistic Regression Base Model**: [READY FOR LOCAL RUN]
 - [ ] **Phase 8 — Random Forest Base Model**: [NOT STARTED]
 - [ ] **Phase 9 — XGBoost Base Model**: [NOT STARTED]
 - [ ] **Phase 10 — Proper Stacked Ensemble (OOF)**: [NOT STARTED]
@@ -253,5 +253,53 @@ Rather than selecting targets purely by frequency or arbitrarily setting $K$, ca
 
 ### 4. Git Commits & Push Log
 - Code, scripts, reports, and tests staged and committed.
+- Pushed to `https://github.com/PrathamTandon1507/Healthcare.git` (`origin/main`).
+
+---
+
+## Phase 6 Execution & Validation Log
+
+### 1. What was Implemented & Validated
+- **Data Loader Module (`src/models/data_loader.py`)**:
+  - Implemented `load_dataset_splits` joining feature tables and split tables on `landmark_id`.
+  - Strictly selects the **81 active clinical ML predictors**, completely dropping all 7 identifier/metadata columns and all 8 network placeholder columns (`net_*`, `network_features_available`).
+  - Supports full multi-target matrices ($K = 41$) or subset slices with optional sample caps for testing.
+- **Evaluation Metric Harness (`src/models/metrics.py`)**:
+  - Implements Section 9 specifications:
+    - Primary Metric: `AUPRC` (`average_precision_score`) per disease and macro-AUPRC across all $K = 41$ targets.
+    - Product-Facing Multi-Disease Ranking Metrics: `Precision@K`, `Recall@K`, `MAP@K` (K = 3, 5, 10) evaluated across all modeled diseases simultaneously per patient.
+    - Secondary Metrics: `AUROC` (`roc_auc_score`), `Brier score` (`brier_score_loss`), and tuned-threshold `F1`.
+    - Prevalence Tier Breakdown: Macro-averages stratified across High ($>0.5\%$), Medium ($0.1\%-0.5\%$), and Low ($<0.1\%$) prevalence tiers.
+- **Model Architecture Module (`src/models/baseline.py`)**:
+  - `PrevalenceBaseline`: Empirical class prevalence prior baseline serving as the floor reference.
+  - Base Learner Factory `build_base_classifier`:
+    - Logistic Regression (`L2` penalty, balanced class weighting, `solver='lbfgs'`).
+    - Random Forest (`n_estimators=100`, `max_depth=10`, `min_samples_leaf=5`, balanced class weighting, `n_jobs=4`).
+    - XGBoost (`n_estimators=100`, `max_depth=6`, `learning_rate=0.05`, `scale_pos_weight`, `tree_method='hist'`).
+  - Hardware Acceleration: Automatic GPU CUDA detection with seamless CPU fallback (`detect_xgboost_device`).
+  - Thread Contention Controls: Explicit environment configuration for OpenMP/OpenBLAS/MKL to avoid Windows thread deadlocks.
+  - Model Artifact Persistence: `save_model_artifact` and `load_model_artifact` using `joblib` with serialized metadata.
+- **Multi-Stage CLI Runner (`scripts/train_baseline.py`)**:
+  - Supports modular, independent execution per stage: `smoke_test`, `prevalence`, `lr`, `rf`, `xgb`, `evaluate`, `all`.
+  - Restartable & resumable (`--resume`) to seamlessly recover from interruptions by skipping completed targets.
+- **Smoke Test Verification**:
+  - Successfully executed `python scripts/train_baseline.py --stage smoke_test` (5,000 samples, 2 targets across Prevalence, LR, RF, XGBoost on GPU).
+  - All 4 models trained and evaluated in < 1 second per model on RTX CUDA.
+
+---
+
+### 2. Automated Test Suite (Phase 1–6)
+- Ran `pytest -v tests/`
+- **30/30 tests PASSED** (100% pass rate in 49.83s):
+  1. `test_prevalence_baseline_logic`: Passed (exact empirical class prevalence output).
+  2. `test_metric_harness_binary_and_ranking`: Passed (AUPRC, AUROC, Brier, P@K, R@K, MAP@K verified).
+  3. `test_data_loader_active_features_and_network_exclusion`: Passed (exact 81 features, zero network/metadata leakage).
+  4. `test_model_artifact_persistence`: Passed (joblib serialization fidelity verified).
+  5. All 26 previous split, feature, landmark, and timeline unit tests passed.
+
+---
+
+### 3. Git Commits & Push Log
+- Code, scripts, and tests staged and committed.
 - Pushed to `https://github.com/PrathamTandon1507/Healthcare.git` (`origin/main`).
 
