@@ -210,6 +210,7 @@ Rather than selecting targets purely by frequency or arbitrarily setting $K$, ca
   - Generated reports:
     - `reports/split_characteristics.md`
     - `reports/split_characteristics.json`
+    - `reports/phase4_5_final_validation.md` (Comprehensive Phase 4–5 audit certification)
 
 ---
 
@@ -245,7 +246,12 @@ Rather than selecting targets purely by frequency or arbitrarily setting $K$, ca
 
 ---
 
-### 3. Git Commits & Push Log
+### 3. Verification Certification
+**`PHASE 4–5 VERIFIED — READY FOR PHASE 6`**
+
+---
+
+### 4. Git Commits & Push Log
 - Code, scripts, reports, and tests staged and committed.
 - Pushed to `https://github.com/PrathamTandon1507/Healthcare.git` (`origin/main`).
 

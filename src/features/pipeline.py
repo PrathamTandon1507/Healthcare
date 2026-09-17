@@ -26,10 +26,60 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from src.data.labels import CONDITION_METADATA
-from src.features.network_interface import get_network_feature_names
+from src.features.network_interface import get_network_feature_names, NETWORK_FEATURE_NAMES
 
 
-# High-prevalence background conditions (informative predictors that are not prediction targets)
+# Identifiers & Metadata (excluded from ML inputs, used for indexing/splitting)
+IDENTIFIER_COLUMNS: List[str] = [
+    "person_id",
+    "landmark_id",
+    "visit_occurrence_id",
+    "visit_concept_id",
+    "is_inpatient_or_ed",
+    "landmark_date",
+    "future_observation_complete"
+]
+
+# Demographic feature predictors (16)
+DEMOGRAPHIC_FEATURE_COLUMNS: List[str] = [
+    "age_at_landmark",
+    "age_lt_30",
+    "age_30_39",
+    "age_40_49",
+    "age_50_59",
+    "age_60_69",
+    "age_70_79",
+    "age_gte_80",
+    "gender_male",
+    "gender_female",
+    "race_white",
+    "race_black",
+    "race_asian",
+    "race_other",
+    "ethnicity_hispanic",
+    "ethnicity_non_hispanic"
+]
+
+# Longitudinal burden & utilization predictors (2)
+BURDEN_FEATURE_COLUMNS: List[str] = [
+    "total_prior_condition_count",
+    "prior_obs_years"
+]
+
+# Clinical multi-disease interaction terms (5)
+INTERACTION_FEATURE_COLUMNS: List[str] = [
+    "interaction_diabetes_and_hypertension",
+    "interaction_hypertension_and_lipid",
+    "interaction_metabolic_triad",
+    "interaction_cvd_and_ckd",
+    "interaction_copd_and_cvd"
+]
+
+# Network placeholder columns (8, excluded from Phase 6 baseline models)
+NETWORK_FEATURE_COLUMNS: List[str] = NETWORK_FEATURE_NAMES
+
+
+# High-prevalence background conditions (informative predictors that are not prediction targets, 17)
 BACKGROUND_CONDITION_CONCEPTS: Dict[int, str] = {
     4112343: "bg_normal_bmi",
     40481087: "bg_viral_sinusitis",
@@ -49,6 +99,16 @@ BACKGROUND_CONDITION_CONCEPTS: Dict[int, str] = {
     313217: "bg_suspected_respiratory_finding",
     4146173: "bg_postoperative_state"
 }
+
+
+def get_baseline_feature_columns(target_concepts: List[int]) -> List[str]:
+    """
+    Returns the exact list of 81 baseline ML feature predictors for Phase 6 modeling.
+    Explicitly excludes identifier/metadata columns and all network placeholder columns.
+    """
+    hist_cols = [f"has_hist_{cid}" for cid in target_concepts]
+    bg_cols = list(BACKGROUND_CONDITION_CONCEPTS.values())
+    return DEMOGRAPHIC_FEATURE_COLUMNS + BURDEN_FEATURE_COLUMNS + hist_cols + bg_cols + INTERACTION_FEATURE_COLUMNS
 
 
 def build_feature_sql(target_concepts: List[int]) -> str:

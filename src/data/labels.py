@@ -213,6 +213,16 @@ CONDITION_METADATA = {
     193591: ("Clinical Finding", "Administrative / Finding", False)
 }
 
+# The exact curated K = 41 chronic comorbidity prediction target concepts
+# (Clinical comorbidity taxonomy with >= 100 incident positive events in Cohort A)
+CURATED_41_TARGET_CONCEPTS: List[int] = [
+    75036, 79740, 80502, 192279, 200970, 201826, 257012, 258780, 316866, 317576,
+    321042, 378419, 380378, 381316, 432867, 436096, 436940, 439777, 440086, 443614,
+    4029498, 4043241, 4051466, 4079749, 4079750, 4110591, 4115276, 4120314, 4129902, 4180790,
+    4214376, 4226121, 4229440, 4283893, 4285898, 4310703, 4311629, 37016354, 37017023, 37395648, 43530652
+]
+TARGET_41_DISEASES: List[int] = sorted(CURATED_41_TARGET_CONCEPTS)
+
 
 def analyze_disease_incidence(
     con: duckdb.DuckDBPyConnection,
