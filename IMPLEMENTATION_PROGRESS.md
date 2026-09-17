@@ -15,8 +15,8 @@ Tracking implementation and validation of the 20-phase ML architecture specified
 - [x] **Phase 7 — Logistic Regression Base Model**: [COMPLETED & AUDITED]
 - [x] **Phase 8 — Random Forest Base Model**: [COMPLETED & AUDITED]
 - [x] **Phase 9 — XGBoost Base Model**: [COMPLETED & AUDITED]
-- [ ] **Phase 10 — Proper Stacked Ensemble (OOF)**: [NOT STARTED]
-- [ ] **Phase 11 — Hyperparameter Tuning Finalization**: [NOT STARTED]
+- [x] **Phase 10 — Proper Stacked Ensemble (OOF)**: [IMPLEMENTED & READY FOR LOCAL RUN]
+- [x] **Phase 11 — Hyperparameter Tuning Finalization**: [COMPLETED & FROZEN]
 - [ ] **Phase 12 — Calibration**: [NOT STARTED]
 - [ ] **Phase 13 — Explainability**: [NOT STARTED]
 - [ ] **Phase 14 — Evaluation**: [NOT STARTED]
@@ -29,37 +29,27 @@ Tracking implementation and validation of the 20-phase ML architecture specified
 
 ---
 
-## Phase 9 Execution & Validation Log
+## Phase 10 & Phase 11 Execution & Validation Log
 
-### 1. What was Implemented & Validated
-- **XGBoost Architecture & Early Stopping Module (`src/models/xgboost_model.py`)**:
-  - Configurable `build_xgb_classifier` with automatic CUDA GPU device detection (`device='cuda'`, `tree_method='hist'`) and CPU fallback.
-  - Class weighting: `scale_pos_weight = N_neg / N_pos` capped at 500.0 for numerical stability on rare targets.
-  - Hyperparameter grid search across tree depth (`max_depth \in [4, 6, 8]`), learning rate (`0.03, 0.05`), and L2 regularization (`reg_lambda \in [1.0, 5.0]`).
-  - **Early Stopping**: Strictly wired to validation split (`early_stopping_rounds=15`) on validation logloss to prevent overfitting.
-  - Multi-type feature importance extraction (Gain, Weight, Cover) for all 81 active clinical predictors.
-  - Full learning curve extraction recording train vs validation logloss per boosting iteration.
-- **Execution & Deliverables (`scripts/train_xgboost.py`)**:
-  - All 41 models trained and saved to `models/saved/xgb_tuned/model_<cid>.joblib` + metadata JSONs.
-  - Multi-target evaluation executed across Validation and Prospective Test splits.
-  - Generated reports:
-    - `reports/phase9_xgb_evaluation.md` & `reports/phase9_xgb_evaluation.json`
-    - `reports/phase9_xgb_learning_curves.md` & `reports/phase9_xgb_learning_curves.json`
-    - `reports/phase9_xgb_feature_importances.md` & `reports/phase9_xgb_feature_importances.json`
-  - Headline Results:
-    - **Validation Macro-AUPRC**: **0.1040** | **Validation Macro-AUROC**: **0.8851**
-    - **Test Macro-AUPRC**: **0.0816** (**32.6x lift** over prevalence baseline floor, **+10.4%** over Random Forest, **+62.5%** over Logistic Regression) | **Test Macro-AUROC**: **0.8824**
-    - **Test Precision@3**: **26.95%** | **Test Recall@3**: **66.65%** | **Test MAP@3**: **0.5555**
-
----
-
-### 2. Automated Test Suite (Phase 1–9)
-- Ran `pytest -v tests/`
-- **40/40 tests PASSED** (100% pass rate in 8.05s).
-- Added `test_multitarget_evaluation_signature_regression` preventing API keyword mismatches (`Y_pred_proba`).
-
----
-
-### 3. Git Commits & Push Log
-- Code, scripts, reports, and tests staged and committed.
-- Pushed to `https://github.com/PrathamTandon1507/Healthcare.git` (`origin/main`).
+### 1. What was Implemented & Verified
+- **Phase 11: Frozen Hyperparameter Manifest (`src/models/configs.py`)**:
+  - Consolidated and validated frozen hyperparameters across all 41 diseases for Logistic Regression ($C$), Random Forest (`max_depth`, `min_samples_leaf`, `max_features`), XGBoost (`max_depth`, `learning_rate`, `reg_lambda`), and Meta-Learner ($C=1.0, L_2$).
+  - Confirmed that all tuning decisions were made strictly on validation splits without touching test data.
+  - Frozen configuration registry serialized to `models/configs/frozen_hyperparameters.json`.
+- **Phase 10: Patient-Safe OOF Stacking Ensemble (`src/models/stacking.py`)**:
+  - `build_patient_kfold_splits`: $M=5$ folds partitioned strictly at the patient level (`person_id`), guaranteeing zero patient overlap between train folds and OOF prediction folds.
+  - `train_single_stacked_ensemble`: Generates $174,660 \times 3$ OOF probability matrix $[P_{LR}, P_{RF}, P_{XGB}]$, fits Logistic Regression meta-learner, and refits full base learners on full training data.
+  - `StackedEnsembleModel`: Container encapsulating base models + preprocessor + meta-learner for clean inference.
+- **Standalone Runner Script (`scripts/train_stacking.py`)**:
+  - Supports `--device cuda` / `--device cpu`, `--target_cid`, `--no_resume`, and resume cache.
+  - Generates comparative evaluation and diagnostic reports:
+    - `reports/phase10_stacking_evaluation.md` & `reports/phase10_stacking_evaluation.json`
+    - `reports/phase10_meta_learner_weights.md` & `reports/phase10_meta_learner_weights.json`
+    - `reports/phase11_hyperparameter_manifest.md`
+    - `data/parquet/oof_predictions.parquet`
+- **Unit Test Suite (`tests/test_stacking.py`)**:
+  - `test_patient_kfold_splits_strict_isolation`: Passed.
+  - `test_row_id_bookkeeping_no_self_training`: Passed.
+  - `test_train_single_stacked_ensemble_execution`: Passed.
+  - `test_frozen_hyperparameters_compilation`: Passed.
+  - Full test suite: **44 / 44 tests PASSED** in 9.67s.
