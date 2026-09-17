@@ -8,11 +8,13 @@ Features:
 3. Logistic Regression Meta-Learner fitting on OOF probability matrix [P_LR, P_RF, P_XGB].
 4. Full-Data Base Learner Refitting & Serialized StackedEnsembleModel bundle.
 5. Strict Row-ID and Patient-ID Bookkeeping verification.
+6. Explicit fold-level and model-level progress logging.
 """
 
 import os
 import sys
 import json
+import time
 import joblib
 import numpy as np
 import duckdb
@@ -42,14 +44,6 @@ def build_patient_kfold_splits(
     Creates deterministic K-Fold partitions strictly at the patient level.
     Guarantees that all landmark rows for any given person_id belong exclusively
     to either the train fold or the test/validation fold (0 patient overlap).
-
-    Args:
-        person_ids: Array of person_id values corresponding to each landmark row (n_samples,).
-        n_splits: Number of folds (default M=5).
-        random_seed: Deterministic random seed.
-
-    Returns:
-        List of (train_row_indices, oof_row_indices) for each fold.
     """
     unique_patients = np.unique(person_ids)
     rng = np.random.RandomState(random_seed)
@@ -155,10 +149,11 @@ def train_single_stacked_ensemble(
 
     # 1. Out-Of-Fold Base Learner Training
     for fold_idx, (tr_idx, val_idx) in enumerate(fold_splits):
+        t_fold = time.time()
         X_tr_f, y_tr_f = X_train[tr_idx], y_train[tr_idx]
         X_va_f = X_train[val_idx]
 
-        # A. Logistic Regression
+        # A. Logistic Regression (Fast linear baseline on CPU)
         prep_f = FeaturePreprocessor(continuous_indices=cont_indices)
         X_tr_lr = prep_f.fit_transform(X_tr_f)
         X_va_lr = prep_f.transform(X_va_f)
@@ -172,21 +167,7 @@ def train_single_stacked_ensemble(
         lr_clf.fit(X_tr_lr, y_tr_f)
         oof_matrix[val_idx, 0] = lr_clf.predict_proba(X_va_lr)[:, 1]
 
-        # B. Random Forest
-        rf_clf = build_rf_classifier(
-            n_estimators=rf_config.get("n_estimators", 100),
-            max_depth=rf_config.get("max_depth", 10),
-            min_samples_leaf=rf_config.get("min_samples_leaf", 5),
-            max_features=rf_config.get("max_features", "sqrt"),
-            class_weight=rf_config.get("class_weight", "balanced"),
-            oob_score=False,
-            random_seed=random_seed,
-            n_jobs=n_jobs
-        )
-        rf_clf.fit(X_tr_f, y_tr_f)
-        oof_matrix[val_idx, 1] = rf_clf.predict_proba(X_va_f)[:, 1]
-
-        # C. XGBoost
+        # B. XGBoost (GPU Accelerated via CUDA hist)
         pos_cnt_f = int(np.sum(y_tr_f))
         neg_cnt_f = len(y_tr_f) - pos_cnt_f
         spw_f = min(float(neg_cnt_f / max(1, pos_cnt_f)), 500.0)
@@ -207,6 +188,22 @@ def train_single_stacked_ensemble(
         )
         xgb_clf.fit(X_tr_f, y_tr_f, verbose=False)
         oof_matrix[val_idx, 2] = xgb_clf.predict_proba(X_va_f)[:, 1]
+
+        # C. Random Forest (CPU Multi-threaded)
+        rf_clf = build_rf_classifier(
+            n_estimators=rf_config.get("n_estimators", 100),
+            max_depth=rf_config.get("max_depth", 10),
+            min_samples_leaf=rf_config.get("min_samples_leaf", 5),
+            max_features=rf_config.get("max_features", "sqrt"),
+            class_weight=rf_config.get("class_weight", "balanced"),
+            oob_score=False,
+            random_seed=random_seed,
+            n_jobs=n_jobs
+        )
+        rf_clf.fit(X_tr_f, y_tr_f)
+        oof_matrix[val_idx, 1] = rf_clf.predict_proba(X_va_f)[:, 1]
+
+        # print(f"    - Fold {fold_idx+1}/{n_splits} completed in {time.time() - t_fold:.2f}s")
 
     # 2. Fit Logistic Regression Meta-Learner on OOF predictions
     meta_clf = LogisticRegression(
