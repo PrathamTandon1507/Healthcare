@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 4285898,
+  "clinical_name": "Polyp of Colon",
+  "pos_count": 1139,
+  "neg_count": 173521,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

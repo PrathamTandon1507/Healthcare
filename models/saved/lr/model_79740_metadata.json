@@ -1,0 +1,9 @@
+{
+  "model_type": "lr",
+  "concept_id": 79740,
+  "clinical_name": "Primary Malignant Neoplasm of Colon",
+  "pos_count": 153,
+  "neg_count": 174507,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

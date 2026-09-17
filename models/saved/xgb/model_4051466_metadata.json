@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 4051466,
+  "clinical_name": "Childhood Asthma",
+  "pos_count": 47,
+  "neg_count": 174613,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

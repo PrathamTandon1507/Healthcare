@@ -1,0 +1,9 @@
+{
+  "model_type": "lr",
+  "concept_id": 321042,
+  "clinical_name": "Cardiac Arrest",
+  "pos_count": 137,
+  "neg_count": 174523,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 4226121,
+  "clinical_name": "Retinopathy due to Type 2 Diabetes",
+  "pos_count": 108,
+  "neg_count": 174552,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

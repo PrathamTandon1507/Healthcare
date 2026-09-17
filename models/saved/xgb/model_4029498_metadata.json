@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 4029498,
+  "clinical_name": "Seizure Disorder",
+  "pos_count": 92,
+  "neg_count": 174568,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

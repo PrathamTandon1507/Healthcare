@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 4229440,
+  "clinical_name": "Chronic Kidney Disease",
+  "pos_count": 1177,
+  "neg_count": 173483,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

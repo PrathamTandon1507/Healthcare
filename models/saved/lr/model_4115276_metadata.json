@@ -1,0 +1,9 @@
+{
+  "model_type": "lr",
+  "concept_id": 4115276,
+  "clinical_name": "Non-Small Cell Lung Cancer",
+  "pos_count": 1114,
+  "neg_count": 173546,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

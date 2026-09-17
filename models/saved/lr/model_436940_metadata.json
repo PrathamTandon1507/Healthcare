@@ -1,0 +1,9 @@
+{
+  "model_type": "lr",
+  "concept_id": 436940,
+  "clinical_name": "Metabolic Syndrome X",
+  "pos_count": 210,
+  "neg_count": 174450,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

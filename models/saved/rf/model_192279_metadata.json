@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 192279,
+  "clinical_name": "Congestive Heart Failure",
+  "pos_count": 103,
+  "neg_count": 174557,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

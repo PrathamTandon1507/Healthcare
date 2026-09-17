@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 381316,
+  "clinical_name": "Stroke (Cerebrovascular Accident)",
+  "pos_count": 703,
+  "neg_count": 173957,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

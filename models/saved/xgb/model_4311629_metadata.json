@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 4311629,
+  "clinical_name": "Prediabetes",
+  "pos_count": 1029,
+  "neg_count": 173631,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

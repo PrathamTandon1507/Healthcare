@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 317576,
+  "clinical_name": "Coronary Arteriosclerosis",
+  "pos_count": 839,
+  "neg_count": 173821,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

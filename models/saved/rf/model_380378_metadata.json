@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 380378,
+  "clinical_name": "Epilepsy / Seizure Disorder",
+  "pos_count": 175,
+  "neg_count": 174485,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

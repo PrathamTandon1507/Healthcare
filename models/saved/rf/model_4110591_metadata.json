@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 4110591,
+  "clinical_name": "Small Cell Carcinoma of Lung",
+  "pos_count": 181,
+  "neg_count": 174479,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

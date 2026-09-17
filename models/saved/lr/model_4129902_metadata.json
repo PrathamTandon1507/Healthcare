@@ -1,0 +1,9 @@
+{
+  "model_type": "lr",
+  "concept_id": 4129902,
+  "clinical_name": "Neoplasm of Prostate",
+  "pos_count": 973,
+  "neg_count": 173687,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

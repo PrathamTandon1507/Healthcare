@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 4310703,
+  "clinical_name": "Non-Small Cell Carcinoma of Lung, Stage 1",
+  "pos_count": 1126,
+  "neg_count": 173534,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

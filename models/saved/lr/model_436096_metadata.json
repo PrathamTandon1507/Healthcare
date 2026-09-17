@@ -1,0 +1,9 @@
+{
+  "model_type": "lr",
+  "concept_id": 436096,
+  "clinical_name": "Chronic Pain",
+  "pos_count": 1983,
+  "neg_count": 172677,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

@@ -1,0 +1,9 @@
+{
+  "model_type": "lr",
+  "concept_id": 37016354,
+  "clinical_name": "Neuropathy due to Type 2 Diabetes",
+  "pos_count": 98,
+  "neg_count": 174562,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

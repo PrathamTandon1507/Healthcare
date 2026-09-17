@@ -1,0 +1,9 @@
+{
+  "model_type": "lr",
+  "concept_id": 200970,
+  "clinical_name": "Carcinoma in situ of Prostate",
+  "pos_count": 766,
+  "neg_count": 173894,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

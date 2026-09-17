@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 4079749,
+  "clinical_name": "Osteoarthritis of Hip",
+  "pos_count": 87,
+  "neg_count": 174573,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

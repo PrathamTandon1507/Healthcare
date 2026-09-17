@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 4214376,
+  "clinical_name": "Hyperglycemia",
+  "pos_count": 185,
+  "neg_count": 174475,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

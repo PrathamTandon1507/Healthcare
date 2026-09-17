@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 257012,
+  "clinical_name": "Chronic Sinusitis",
+  "pos_count": 907,
+  "neg_count": 173753,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

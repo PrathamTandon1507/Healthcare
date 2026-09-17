@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 75036,
+  "clinical_name": "Localized Osteoarthritis of Hand",
+  "pos_count": 91,
+  "neg_count": 174569,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

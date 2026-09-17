@@ -1,0 +1,9 @@
+{
+  "model_type": "lr",
+  "concept_id": 440086,
+  "clinical_name": "Childhood ADHD",
+  "pos_count": 61,
+  "neg_count": 174599,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

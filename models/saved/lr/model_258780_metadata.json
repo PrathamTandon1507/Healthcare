@@ -1,0 +1,9 @@
+{
+  "model_type": "lr",
+  "concept_id": 258780,
+  "clinical_name": "Chronic Obstructive Bronchitis (COPD)",
+  "pos_count": 118,
+  "neg_count": 174542,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

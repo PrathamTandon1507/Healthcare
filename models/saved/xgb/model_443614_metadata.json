@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 443614,
+  "clinical_name": "Chronic Kidney Disease Stage 1",
+  "pos_count": 96,
+  "neg_count": 174564,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

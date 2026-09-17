@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 316866,
+  "clinical_name": "Essential Hypertension",
+  "pos_count": 678,
+  "neg_count": 173982,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

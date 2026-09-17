@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 43530652,
+  "clinical_name": "Chronic Intractable Migraine",
+  "pos_count": 2034,
+  "neg_count": 172626,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

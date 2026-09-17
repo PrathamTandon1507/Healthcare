@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 432867,
+  "clinical_name": "Hyperlipidemia",
+  "pos_count": 802,
+  "neg_count": 173858,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

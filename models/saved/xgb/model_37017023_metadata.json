@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 37017023,
+  "clinical_name": "Recurrent Rectal Polyp",
+  "pos_count": 343,
+  "neg_count": 174317,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

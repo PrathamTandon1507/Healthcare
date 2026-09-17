@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 4120314,
+  "clinical_name": "Hypertriglyceridemia",
+  "pos_count": 210,
+  "neg_count": 174450,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

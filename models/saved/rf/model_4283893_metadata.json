@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 4283893,
+  "clinical_name": "Sinusitis",
+  "pos_count": 831,
+  "neg_count": 173829,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

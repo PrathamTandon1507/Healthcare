@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 37395648,
+  "clinical_name": "Small Cell Carcinoma of Lung, Stage 1",
+  "pos_count": 181,
+  "neg_count": 174479,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

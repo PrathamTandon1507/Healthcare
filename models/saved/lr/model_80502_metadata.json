@@ -1,0 +1,9 @@
+{
+  "model_type": "lr",
+  "concept_id": 80502,
+  "clinical_name": "Osteoporosis",
+  "pos_count": 636,
+  "neg_count": 174024,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

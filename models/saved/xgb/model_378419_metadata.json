@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 378419,
+  "clinical_name": "Alzheimer's Disease",
+  "pos_count": 1591,
+  "neg_count": 173069,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

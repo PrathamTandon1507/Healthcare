@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 4079750,
+  "clinical_name": "Osteoarthritis of Knee",
+  "pos_count": 252,
+  "neg_count": 174408,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

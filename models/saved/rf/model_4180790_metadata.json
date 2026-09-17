@@ -1,0 +1,9 @@
+{
+  "model_type": "rf",
+  "concept_id": 4180790,
+  "clinical_name": "Malignant Neoplasm of Colon",
+  "pos_count": 142,
+  "neg_count": 174518,
+  "trained_samples": 174660,
+  "device": "cpu"
+}

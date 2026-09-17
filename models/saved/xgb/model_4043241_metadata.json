@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 4043241,
+  "clinical_name": "Familial Alzheimer's Disease",
+  "pos_count": 164,
+  "neg_count": 174496,
+  "trained_samples": 174660,
+  "device": "cuda"
+}

@@ -1,0 +1,9 @@
+{
+  "model_type": "xgb",
+  "concept_id": 201826,
+  "clinical_name": "Type 2 Diabetes Mellitus",
+  "pos_count": 174,
+  "neg_count": 174486,
+  "trained_samples": 174660,
+  "device": "cuda"
+}
