@@ -111,7 +111,6 @@ def main():
                 random_seed=42,
                 n_jobs=args.n_jobs
             )
-            # Save artifact & metadata
             save_model_artifact(best_xgb, model_path, metadata=meta)
             print(f"  -> Best Params: {meta['best_hyperparameters']} | Best Iter: {meta['best_iteration']} | Val AUPRC: {meta['diagnostics']['val_auprc']:.4f} in {time.time() - t_start:.2f}s")
 
@@ -132,22 +131,22 @@ def main():
         }
 
     total_time = time.time() - total_t0
-    print(f"\nTuned and trained {len(targets)} XGBoost models in {total_time:.2f}s.")
+    print(f"\nProcessed {len(targets)} XGBoost models in {total_time:.2f}s.")
 
-    # 2. Evaluate Multi-Target Metrics
+    # 2. Evaluate Multi-Target Metrics using correct argument names
     print("\nEvaluating Multi-Target Predictions on Validation and Test splits...")
     val_report = evaluate_multitarget_predictions(
         Y_true=val_split.Y,
-        Y_pred_probs=preds_val,
+        Y_pred_proba=preds_val,
         target_concept_ids=targets,
-        split_name="Validation"
+        condition_metadata=CONDITION_METADATA
     )
 
     test_report = evaluate_multitarget_predictions(
         Y_true=test_split.Y,
-        Y_pred_probs=preds_test,
+        Y_pred_proba=preds_test,
         target_concept_ids=targets,
-        split_name="Test"
+        condition_metadata=CONDITION_METADATA
     )
 
     # 3. Save JSON reports
@@ -155,14 +154,17 @@ def main():
     curves_json_path = f"{reports_dir}/phase9_xgb_learning_curves.json"
     feat_json_path = f"{reports_dir}/phase9_xgb_feature_importances.json"
 
+    clean_summary = {str(k): v for k, v in tuning_summary.items()}
     with open(eval_json_path, "w", encoding="utf-8") as f:
-        json.dump({"validation": val_report, "test": test_report, "tuning_summary": tuning_summary}, f, indent=2)
+        json.dump({"validation": val_report, "test": test_report, "tuning_summary": clean_summary}, f, indent=2)
 
+    clean_diag = {str(k): v for k, v in diagnostics_by_disease.items()}
     with open(curves_json_path, "w", encoding="utf-8") as f:
-        json.dump(diagnostics_by_disease, f, indent=2)
+        json.dump(clean_diag, f, indent=2)
 
+    clean_feat = {str(k): v for k, v in importances_by_disease.items()}
     with open(feat_json_path, "w", encoding="utf-8") as f:
-        json.dump(importances_by_disease, f, indent=2)
+        json.dump(clean_feat, f, indent=2)
 
     print(f"Saved evaluation JSON: {eval_json_path}")
     print(f"Saved learning curves JSON: {curves_json_path}")
@@ -170,6 +172,11 @@ def main():
 
     # 4. Generate Markdown Evaluation Report
     md_eval_path = f"{reports_dir}/phase9_xgb_evaluation.md"
+    v_m = val_report["macro_metrics"]
+    t_m = test_report["macro_metrics"]
+    t_rk = test_report.get("ranking_metrics", {})
+    v_rk = val_report.get("ranking_metrics", {})
+
     with open(md_eval_path, "w", encoding="utf-8") as f:
         f.write("# Phase 9: Standalone XGBoost Base Model Evaluation Report\n\n")
         f.write("## 1. Executive Summary & Benchmark Comparison\n\n")
@@ -183,20 +190,23 @@ def main():
         f.write("| Prevalence Floor (Phase 6) | Test | 0.0025 | 0.5000 | 0.81% | 1.83% | 0.0163 | 0.0028 |\n")
         f.write("| Tuned Logistic Regression (Phase 7) | Test | 0.0502 | 0.8676 | 20.94% | 53.15% | 0.4007 | 0.0527 |\n")
         f.write("| Tuned Random Forest (Phase 8) | Test | 0.0739 | 0.8772 | 25.51% | 63.66% | 0.5315 | 0.0401 |\n")
-        f.write(f"| **Tuned XGBoost (Phase 9)** | **Val** | **{val_report['macro_metrics']['auprc']:.4f}** | **{val_report['macro_metrics']['auroc']:.4f}** | **{val_report['macro_metrics']['precision_at_3']*100:.2f}%** | **{val_report['macro_metrics']['recall_at_3']*100:.2f}%** | **{val_report['macro_metrics']['map_at_3']:.4f}** | **{val_report['macro_metrics']['brier_score']:.4f}** |\n")
-        f.write(f"| **Tuned XGBoost (Phase 9)** | **Test** | **{test_report['macro_metrics']['auprc']:.4f}** | **{test_report['macro_metrics']['auroc']:.4f}** | **{test_report['macro_metrics']['precision_at_3']*100:.2f}%** | **{test_report['macro_metrics']['recall_at_3']*100:.2f}%** | **{test_report['macro_metrics']['map_at_3']:.4f}** | **{test_report['macro_metrics']['brier_score']:.4f}** |\n\n")
+        f.write(f"| **Tuned XGBoost (Phase 9)** | **Val** | **{v_m['macro_auprc']:.4f}** | **{v_m['macro_auroc']:.4f}** | **{v_rk.get('precision_at_3', 0.0)*100:.2f}%** | **{v_rk.get('recall_at_3', 0.0)*100:.2f}%** | **{v_rk.get('map_at_3', 0.0):.4f}** | **{v_m['macro_brier_score']:.4f}** |\n")
+        f.write(f"| **Tuned XGBoost (Phase 9)** | **Test** | **{t_m['macro_auprc']:.4f}** | **{t_m['macro_auroc']:.4f}** | **{t_rk.get('precision_at_3', 0.0)*100:.2f}%** | **{t_rk.get('recall_at_3', 0.0)*100:.2f}%** | **{t_rk.get('map_at_3', 0.0):.4f}** | **{t_m['macro_brier_score']:.4f}** |\n\n")
 
         f.write("## 2. Per-Disease Performance Table (Held-Out Prospective Test Split)\n\n")
         f.write("| Concept ID | Disease Name | Category | Test Prevalence | AUPRC | Lift vs Prev | AUROC | Best Params | Best Iter |\n")
         f.write("|---|---|---|---|---|---|---|---|---|\n")
-        for d in test_report["per_disease_metrics"]:
-            cid = d["concept_id"]
+        for cid in targets:
+            cid_str = str(cid)
+            d = test_report["per_target"].get(cid_str, {})
             diag = tuning_summary.get(cid, {})
-            p = d["prevalence"]
-            auprc = d["auprc"]
+            cname, cat, _ = CONDITION_METADATA.get(cid, (f"Disease {cid}", "General", True))
+            p = d.get("prevalence", 0.0)
+            auprc = d.get("auprc", 0.0)
             lift = (auprc / p) if p > 0 else 0.0
-            params_str = f"d={diag.get('best_params', {}).get('max_depth', '-')}, lr={diag.get('best_params', {}).get('learning_rate', '-')}"
-            f.write(f"| {cid} | {d['concept_name']} | {d['category']} | {p*100:.3f}% | {auprc:.4f} | {lift:.1f}x | {d['auroc']:.4f} | {params_str} | {diag.get('best_iteration', '-')} |\n")
+            params = diag.get("best_params", {})
+            params_str = f"d={params.get('max_depth', '-')}, lr={params.get('learning_rate', '-')}, l2={params.get('reg_lambda', '-')}"
+            f.write(f"| `{cid}` | **{cname}** | {cat} | {p*100:.3f}% | **{auprc:.4f}** | {lift:.1f}x | {d.get('auroc', 0.0):.4f} | `{params_str}` | {diag.get('best_iteration', '-')} |\n")
 
     # 5. Generate Learning Curves & Early Stopping Markdown Report
     md_curves_path = f"{reports_dir}/phase9_xgb_learning_curves.md"
@@ -204,37 +214,37 @@ def main():
         f.write("# Phase 9: XGBoost Early Stopping & Learning Curve Diagnostics\n\n")
         f.write("## 1. Early Stopping Audit Overview\n\n")
         f.write("Early stopping was configured with `early_stopping_rounds=15` tracking validation logloss across 200 trees.\n\n")
-        f.write("| Concept ID | Disease Name | Best Iteration | Early Stopped Sensibly? | Train AUPRC | Val AUPRC | Gen Gap (AUPRC) |\n")
-        f.write("|---|---|---|---|---|---|---|\n")
+        f.write("| Concept ID | Disease Name | Best Iteration | Train AUPRC | Val AUPRC | Gen Gap (AUPRC) |\n")
+        f.write("|---|---|---|---|---|---|\n")
         for cid, diag in diagnostics_by_disease.items():
             cname = diag.get("target_name", f"CID {cid}")
             b_iter = diag.get("best_iteration", 0)
-            sensible = "Yes" if diag.get("early_stopped_sensibly", True) else "No (Edge)"
             d_dict = diag.get("diagnostics", {})
-            f.write(f"| {cid} | {cname} | {b_iter} | {sensible} | {d_dict.get('train_auprc', 0.0):.4f} | {d_dict.get('val_auprc', 0.0):.4f} | {d_dict.get('generalization_gap_auprc', 0.0):.4f} |\n")
+            f.write(f"| `{cid}` | **{cname}** | {b_iter} | {d_dict.get('train_auprc', 0.0):.4f} | {d_dict.get('val_auprc', 0.0):.4f} | {d_dict.get('generalization_gap_auprc', 0.0):+.4f} |\n")
 
     # 6. Generate Feature Importances Markdown Report
     md_feat_path = f"{reports_dir}/phase9_xgb_feature_importances.md"
     with open(md_feat_path, "w", encoding="utf-8") as f:
         f.write("# Phase 9: XGBoost Feature Importance Audit (Gain, Weight, Cover)\n\n")
         f.write("## 1. Top Clinical Predictors by Gain for Representative Benchmark Diseases\n\n")
-        benchmark_cids = [316866, 201826, 317576, 440383, 197320]
+        benchmark_cids = [316866, 201826, 317576, 440383, 197320, 432867]
         for cid in benchmark_cids:
             if cid in diagnostics_by_disease:
                 diag = diagnostics_by_disease[cid]
-                f.write(f"### {diag['target_name']} (OMOP {cid})\n\n")
+                f.write(f"### {diag.get('target_name', f'CID {cid}')} (OMOP `{cid}`)\n\n")
                 f.write("| Rank | Feature Name | Gain (Relative Information) | Weight (Splits) | Cover (Hessian Support) |\n")
                 f.write("|---|---|---|---|---|\n")
                 for r_idx, feat in enumerate(diag.get("top_features_by_gain", [])[:5]):
-                    f.write(f"| {r_idx+1} | `{feat['feature']}` | {feat['gain']:.4f} | {feat['weight']} | {feat['cover']:.2f} |\n")
+                    f.write(f"| {r_idx+1} | `{feat['feature']}` | **{feat['gain']:.4f}** | {feat['weight']} | {feat['cover']:.2f} |\n")
                 f.write("\n")
 
     print(f"Saved Markdown reports:\n  - {md_eval_path}\n  - {md_curves_path}\n  - {md_feat_path}")
 
     print("\n" + "=" * 80)
     print("PHASE 9 COMPLETED SUCCESSFULLY.")
-    print(f"  [Validation] Macro-AUPRC: {val_report['macro_metrics']['auprc']:.4f} | AUROC: {val_report['macro_metrics']['auroc']:.4f}")
-    print(f"  [Test]       Macro-AUPRC: {test_report['macro_metrics']['auprc']:.4f} | AUROC: {test_report['macro_metrics']['auroc']:.4f}")
+    print(f"  [Validation] Macro-AUPRC: {v_m['macro_auprc']:.4f} | AUROC: {v_m['macro_auroc']:.4f}")
+    print(f"  [Test]       Macro-AUPRC: {t_m['macro_auprc']:.4f} | AUROC: {t_m['macro_auroc']:.4f}")
+    print(f"  [Test]       Precision@3: {t_rk.get('precision_at_3', 0.0)*100:.2f}% | Recall@3: {t_rk.get('recall_at_3', 0.0)*100:.2f}% | MAP@3: {t_rk.get('map_at_3', 0.0):.4f}")
     print("=" * 80)
 
 

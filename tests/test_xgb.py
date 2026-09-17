@@ -14,6 +14,7 @@ if str(ROOT_DIR) not in sys.path:
 
 from src.models.xgboost_model import build_xgb_classifier, train_and_tune_single_xgb
 from src.models.baseline import save_model_artifact, load_model_artifact, detect_xgboost_device
+from src.models.metrics import evaluate_multitarget_predictions
 
 
 def test_device_detection():
@@ -83,7 +84,6 @@ def test_train_and_tune_single_xgb():
     assert "learning_curves" in meta
     assert len(meta["learning_curves"]["train_loss"]) > 0
 
-    # Top feature should be feat_0 since y depends on X[:, 0]
     top_feat = meta["top_features_by_gain"][0]["feature"]
     assert top_feat == "feat_0"
 
@@ -104,3 +104,44 @@ def test_xgb_model_serialization(tmp_path):
     probs_orig = clf.predict_proba(X)
     probs_loaded = loaded_clf.predict_proba(X)
     assert np.allclose(probs_orig, probs_loaded)
+
+
+def test_multitarget_evaluation_signature_regression():
+    """
+    Regression test ensuring evaluate_multitarget_predictions works with
+    standard kwargs (Y_true, Y_pred_proba, target_concept_ids, condition_metadata)
+    and does not accept invalid keyword arguments like Y_pred_probs.
+    """
+    np.random.seed(42)
+    Y_true = np.array([
+        [1, 0],
+        [0, 1],
+        [1, 1],
+        [0, 0]
+    ], dtype=np.int32)
+    Y_pred = np.array([
+        [0.8, 0.2],
+        [0.1, 0.9],
+        [0.7, 0.6],
+        [0.3, 0.1]
+    ], dtype=np.float32)
+    targets = [316866, 201826]
+
+    # Must succeed with correct signature
+    report = evaluate_multitarget_predictions(
+        Y_true=Y_true,
+        Y_pred_proba=Y_pred,
+        target_concept_ids=targets
+    )
+    assert "macro_metrics" in report
+    assert "ranking_metrics" in report
+    assert "per_target" in report
+
+    # Must raise TypeError if misspelled keyword argument Y_pred_probs is passed
+    with pytest.raises(TypeError) as excinfo:
+        evaluate_multitarget_predictions(
+            Y_true=Y_true,
+            Y_pred_probs=Y_pred,
+            target_concept_ids=targets
+        )
+    assert "unexpected keyword argument" in str(excinfo.value)
