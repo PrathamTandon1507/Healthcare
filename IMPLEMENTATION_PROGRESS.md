@@ -9,8 +9,8 @@ Tracking implementation and validation of the 20-phase ML architecture specified
 - [x] **Phase 1 — Dataset / Schema Inspection**: [COMPLETED & AUDITED]
 - [x] **Phase 2 — Patient Timeline Construction**: [COMPLETED & AUDITED]
 - [x] **Phase 3 — Landmark & Label Generation**: [COMPLETED & VALIDATED]
-- [ ] **Phase 4 — Feature Engineering**: [NOT STARTED]
-- [ ] **Phase 5 — Train / Validation / Test Splitting**: [NOT STARTED]
+- [x] **Phase 4 — Feature Engineering & Target Dissection EDA**: [COMPLETED & VERIFIED]
+- [x] **Phase 5 — Train / Validation / Test Splitting**: [COMPLETED & AUDITED]
 - [ ] **Phase 6 — Baseline Models**: [NOT STARTED]
 - [ ] **Phase 7 — Logistic Regression Base Model**: [NOT STARTED]
 - [ ] **Phase 8 — Random Forest Base Model**: [NOT STARTED]
@@ -121,4 +121,131 @@ Rather than selecting targets purely by frequency or arbitrarily setting $K$, ca
 
 ### 5. Git Commits & Push Log
 - Code, scripts, reports, and tests staged and committed.
+- Pushed to `https://github.com/PrathamTandon1507/Healthcare.git` (`origin/main`, commit `a8ba694`).
+
+---
+
+## Phase 4 Execution & Validation Log
+
+### 1. What was Implemented & Validated
+- **Network Feature Interface Module (`src/features/network_interface.py`)**:
+  - Modular contract implementing `get_network_features(existing_diagnoses, target_disease, age, gender_concept_id)`.
+  - Fixed-schema numerical placeholder fields (`net_max_relative_risk`, `net_mean_relative_risk`, `net_n_significant_edges`, `net_shortest_path_length`, `net_personalized_pagerank`, `net_target_degree_centrality`, `net_target_community_overlap`, and `network_features_available=0.0`).
+- **Feature Pipeline Module (`src/features/pipeline.py`)**:
+  - Vectorized DuckDB extraction generating 96 total columns (7 identifiers/meta + 89 ML feature predictors):
+    - **Demographic Features**: Raw continuous age, 7 one-hot decade bins (`age_lt_30` to `age_gte_80`), binary sex indicators, race & ethnicity indicators.
+    - **Pre-Landmark Target History**: 41 multi-hot binary indicators (`has_hist_<cid>`) derived strictly from diagnoses with `condition_start_date <= landmark_date`.
+    - **Background Comorbidity Vector**: 17 multi-hot binary indicators for high-frequency non-target clinical conditions.
+    - **Longitudinal Burden & Utilization**: Total prior chronic condition count, prior observation years.
+    - **High-Risk Clinical Interactions**: 5 multi-disease interaction terms (`diabetes_and_hypertension`, `hypertension_and_lipid`, `metabolic_triad`, `cvd_and_ckd`, `copd_and_cvd`).
+    - **Network Graph Contract**: Integrated placeholder vector.
+- **Target Dissection & Imbalance EDA (`scripts/analyze_target_relationships.py`)**:
+  - Quantified empirical base rates, positive counts, unique patients, and imbalance ratios across all 41 curated targets.
+  - Imbalance Tier Categorization:
+    - **Mild (< 100:1)**: *Chronic Intractable Migraine* (1:79.0, 1.25%), *Chronic Pain* (1:81.9, 1.21%).
+    - **Moderate (100–500:1)**: 16 diseases (*Anemia*, *Alzheimer's*, *NSCLC Stage 1*, *Colorectal Polyp*, *NSCLC*, *Prediabetes*, *CKD*, *Chronic Sinusitis*, *Sinusitis*, *Prostate Neoplasm*, *Coronary Arteriosclerosis*, *Hyperlipidemia*, *Hypertension*, *Carcinoma in situ of Prostate*, *Osteoporosis*, *Stroke*).
+    - **High (500–2000:1)**: 20 diseases (e.g. *Rectal Polyp*, *Knee OA*, *Metabolic Syndrome*, *Hypertriglyceridemia*, *SCLC*, *T2D*, *CHF*, *CKD Stage 1*, *COPD*, *Colon Cancer*, *Diabetic Neuropathy/Retinopathy*, *Hand/Hip OA*, *Seizure Disorder*).
+    - **Severe (> 2000:1)**: 3 diseases (*Cardiac Arrest*, *Childhood Asthma*, *Childhood ADHD*).
+  - Evaluated hierarchical pairs: Staging variants (*NSCLC Stage 1* vs. *NSCLC*: $r = 0.994$, *SCLC Stage 1* vs. *SCLC*: $r = 0.995$) and disease variants (*CKD* vs. *CKD Stage 1*: $r = -0.002$, *Prediabetes* vs. *T2D*: $r = -0.003$). Confirmed that one-vs-rest binary stacking naturally handles co-occurrence without collinearity distortion.
+- **Feature Matrix Materialization (`scripts/build_feature_matrix.py`)**:
+  - `data/parquet/features_inpatient_ed.parquet` (Cohort A: 325,259 rows $\times$ 96 columns, 8.60 MB).
+  - `data/parquet/features_general.parquet` (Cohort B: 3,364,928 rows $\times$ 96 columns, 89.04 MB).
+  - Generated reports:
+    - `reports/target_imbalance_and_correlation_eda.md`
+    - `reports/feature_dictionary.md`
+
+---
+
+### 2. Automated Test Suite (Phase 1–4)
+- Ran `pytest -v tests/test_features.py tests/test_landmarks.py tests/test_timeline.py`
+- **21/21 tests PASSED** (100% pass rate):
+  1. `test_feature_matrix_row_alignment`: Passed (exact 1-to-1 row correspondence and unique landmark IDs).
+  2. `test_feature_value_ranges_and_nulls`: Passed (zero unexpected NULLs, valid age/burden ranges).
+  3. `test_feature_temporal_non_leakage`: Passed (zero post-index condition leakage into features).
+  4. `test_interaction_term_logic`: Passed (interaction boolean algebra strictly verified).
+  5. `test_network_interface_contract`: Passed (fixed schema, float types, stub defaults verified).
+  6. `test_landmark_integrity_and_uniqueness`: Passed.
+  7. `test_temporal_observation_bounds`: Passed.
+  8. `test_censoring_flag_accuracy`: Passed.
+  9. `test_existing_disease_masking_rule`: Passed.
+  10. `test_incident_disease_positive_label_rule`: Passed.
+  11. `test_outside_window_diagnoses_not_labeled`: Passed.
+  12. `test_target_dataset_reproducibility`: Passed.
+  13. `test_patient_integrity`: Passed.
+  14. `test_chronological_ordering`: Passed.
+  15. `test_no_cross_patient_joins`: Passed.
+  16. `test_date_validity`: Passed.
+  17. `test_pipeline_reproducibility`: Passed.
+  18. `test_source_consistency`: Passed.
+  19. `test_demographics_count_consistency`: Passed.
+  20. `test_no_join_multiplication_in_landmarks`: Passed.
+  21. `test_temporal_non_leakage_and_label_masking`: Passed.
+
+---
+
+### 3. Git Commits & Push Log
+- Code, scripts, reports, and tests staged and committed.
 - Pushed to `https://github.com/PrathamTandon1507/Healthcare.git` (`origin/main`).
+
+---
+
+## Phase 5 Execution & Validation Log
+
+### 1. What was Implemented & Validated
+- **Splitting Module (`src/data/splits.py`)**:
+  - Implements the hybrid patient-level + temporal splitting strategy defined in Section 6 of `COMORBIDITY_ENSEMBLE_ML_PLAN.md`.
+  - **Unit of Splitting**: Splitting is executed strictly at the **patient level (`person_id`)**, ensuring all landmark rows for a patient reside in exactly one split across their entire longitudinal history.
+  - **Prospective Temporal Holdout (`test`)**: Cutoff boundary set at `2016-01-01`. Patients whose majority of landmarks occur on or after `2016-01-01` are assigned to the prospective temporal test set (2016-01-01 to 2019-05-17).
+  - **Historical Split (`train` & `val`)**: Patients with the majority of their landmarks prior to `2016-01-01` are partitioned into **Train (~70%)** and **Validation (~30%)** using deterministic hashing (`hash(person_id || '_split_seed_42')`).
+  - **Multi-Snapshot Minority Row Dropping**: For patients whose observation histories span the cutoff date, rows occurring on the minority side are excluded to guarantee zero cross-boundary temporal leakage.
+- **Split Pipeline Script & Materialization (`scripts/create_splits.py`)**:
+  - `data/parquet/splits_inpatient_ed.parquet` (Cohort A: 281,826 retained landmark rows across 80,467 patients; 43,433 dropped minority rows).
+    - **Train**: 44,661 patients (55.5%), 174,660 landmarks (62.0% of retained).
+    - **Validation**: 19,106 patients (23.7%), 73,862 landmarks (26.2% of retained).
+    - **Test**: 16,700 patients (20.8%), 33,304 landmarks (11.8% of retained).
+  - `data/parquet/splits_general.parquet` (Cohort B: 2,595,951 retained landmark rows across 115,223 patients).
+    - **Train**: 69,451 patients (60.3%), 1,659,485 landmarks (63.9% of retained).
+    - **Validation**: 29,745 patients (25.8%), 710,739 landmarks (27.4% of retained).
+    - **Test**: 16,027 patients (13.9%), 225,727 landmarks (8.7% of retained).
+  - Generated reports:
+    - `reports/split_characteristics.md`
+    - `reports/split_characteristics.json`
+
+---
+
+### 2. Automated Test Suite (Phase 1–5)
+- Ran `pytest -v tests/test_splits.py tests/test_features.py tests/test_landmarks.py tests/test_timeline.py`
+- **26/26 tests PASSED** (100% pass rate):
+  1. `test_zero_patient_overlap_across_splits`: Passed (0 overlapping patients between Train, Val, and Test across all cohorts).
+  2. `test_temporal_boundary_monotonicity`: Passed (100% of Test landmarks $\ge 2016-01-01$; 100% of Train/Val landmarks $< 2016-01-01$).
+  3. `test_split_determinism_and_reproducibility`: Passed (identical bit-for-bit assignments on repeated runs).
+  4. `test_split_proportions_and_non_empty`: Passed (all splits well-populated with ~70/30 train/val ratio).
+  5. `test_target_label_integrity_in_splits`: Passed (all 41 targets preserved with binary values $\{0, 1\}$).
+  6. `test_feature_matrix_row_alignment`: Passed.
+  7. `test_feature_value_ranges_and_nulls`: Passed.
+  8. `test_feature_temporal_non_leakage`: Passed.
+  9. `test_interaction_term_logic`: Passed.
+  10. `test_network_interface_contract`: Passed.
+  11. `test_landmark_integrity_and_uniqueness`: Passed.
+  12. `test_temporal_observation_bounds`: Passed.
+  13. `test_censoring_flag_accuracy`: Passed.
+  14. `test_existing_disease_masking_rule`: Passed.
+  15. `test_incident_disease_positive_label_rule`: Passed.
+  16. `test_outside_window_diagnoses_not_labeled`: Passed.
+  17. `test_target_dataset_reproducibility`: Passed.
+  18. `test_patient_integrity`: Passed.
+  19. `test_chronological_ordering`: Passed.
+  20. `test_no_cross_patient_joins`: Passed.
+  21. `test_date_validity`: Passed.
+  22. `test_pipeline_reproducibility`: Passed.
+  23. `test_source_consistency`: Passed.
+  24. `test_demographics_count_consistency`: Passed.
+  25. `test_no_join_multiplication_in_landmarks`: Passed.
+  26. `test_temporal_non_leakage_and_label_masking`: Passed.
+
+---
+
+### 3. Git Commits & Push Log
+- Code, scripts, reports, and tests staged and committed.
+- Pushed to `https://github.com/PrathamTandon1507/Healthcare.git` (`origin/main`).
+

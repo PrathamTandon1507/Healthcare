@@ -1,0 +1,1538 @@
+{
+  "methodology": {
+    "strategy": "Hybrid patient-level random split + prospective temporal holdout",
+    "temporal_cutoff_date": "2016-01-01",
+    "train_val_split_ratio": "70/30",
+    "random_seed": 42,
+    "majority_side_rule": "Assigned patient entirely to majority landmark side; dropped minority side landmarks to prevent cross-boundary row leakage",
+    "patient_overlap": "Zero patient overlap guaranteed (strict patient-level partitioning)"
+  },
+  "cohort_a_inpatient_ed": {
+    "dataset_summary": {
+      "input_parquet": "data/parquet/prediction_landmarks_inpatient_ed.parquet",
+      "output_parquet": "data/parquet/splits_inpatient_ed.parquet",
+      "temporal_cutoff_date": "2016-01-01",
+      "train_ratio": 0.7,
+      "random_seed": 42,
+      "raw_total_patients": 80467,
+      "raw_total_landmarks": 325259,
+      "retained_landmarks": 281826,
+      "dropped_minority_landmarks": 43433,
+      "splits": {
+        "test": {
+          "patients": 16700,
+          "landmarks": 33304,
+          "min_date": "2016-01-01",
+          "max_date": "2019-05-17"
+        },
+        "train": {
+          "patients": 44661,
+          "landmarks": 174660,
+          "min_date": "1910-02-08",
+          "max_date": "2015-12-31"
+        },
+        "val": {
+          "patients": 19106,
+          "landmarks": 73862,
+          "min_date": "1910-04-23",
+          "max_date": "2015-12-31"
+        }
+      }
+    },
+    "profile": {
+      "split_parquet": "data/parquet/splits_inpatient_ed.parquet",
+      "splits_summary": {
+        "test": {
+          "n_patients": 16700,
+          "n_landmarks": 33304,
+          "min_date": "2016-01-01",
+          "max_date": "2019-05-17",
+          "mean_age": 42.05,
+          "male_landmarks": 15848,
+          "female_landmarks": 17456
+        },
+        "train": {
+          "n_patients": 44661,
+          "n_landmarks": 174660,
+          "min_date": "1910-02-08",
+          "max_date": "2015-12-31",
+          "mean_age": 51.02,
+          "male_landmarks": 99812,
+          "female_landmarks": 74848
+        },
+        "val": {
+          "n_patients": 19106,
+          "n_landmarks": 73862,
+          "min_date": "1910-04-23",
+          "max_date": "2015-12-31",
+          "mean_age": 51.21,
+          "male_landmarks": 41694,
+          "female_landmarks": 32168
+        }
+      },
+      "target_stats": {
+        "target_192279": {
+          "test": {
+            "total": 33304,
+            "positive": 32,
+            "prevalence_pct": 0.0961
+          },
+          "train": {
+            "total": 174660,
+            "positive": 103,
+            "prevalence_pct": 0.059
+          },
+          "val": {
+            "total": 73862,
+            "positive": 71,
+            "prevalence_pct": 0.0961
+          }
+        },
+        "target_200970": {
+          "test": {
+            "total": 33304,
+            "positive": 23,
+            "prevalence_pct": 0.0691
+          },
+          "train": {
+            "total": 174660,
+            "positive": 766,
+            "prevalence_pct": 0.4386
+          },
+          "val": {
+            "total": 73862,
+            "positive": 409,
+            "prevalence_pct": 0.5537
+          }
+        },
+        "target_201826": {
+          "test": {
+            "total": 33304,
+            "positive": 36,
+            "prevalence_pct": 0.1081
+          },
+          "train": {
+            "total": 174660,
+            "positive": 174,
+            "prevalence_pct": 0.0996
+          },
+          "val": {
+            "total": 73862,
+            "positive": 71,
+            "prevalence_pct": 0.0961
+          }
+        },
+        "target_257012": {
+          "test": {
+            "total": 33304,
+            "positive": 156,
+            "prevalence_pct": 0.4684
+          },
+          "train": {
+            "total": 174660,
+            "positive": 907,
+            "prevalence_pct": 0.5193
+          },
+          "val": {
+            "total": 73862,
+            "positive": 445,
+            "prevalence_pct": 0.6025
+          }
+        },
+        "target_258780": {
+          "test": {
+            "total": 33304,
+            "positive": 18,
+            "prevalence_pct": 0.054
+          },
+          "train": {
+            "total": 174660,
+            "positive": 118,
+            "prevalence_pct": 0.0676
+          },
+          "val": {
+            "total": 73862,
+            "positive": 64,
+            "prevalence_pct": 0.0866
+          }
+        },
+        "target_316866": {
+          "test": {
+            "total": 33304,
+            "positive": 196,
+            "prevalence_pct": 0.5885
+          },
+          "train": {
+            "total": 174660,
+            "positive": 678,
+            "prevalence_pct": 0.3882
+          },
+          "val": {
+            "total": 73862,
+            "positive": 279,
+            "prevalence_pct": 0.3777
+          }
+        },
+        "target_317576": {
+          "test": {
+            "total": 33304,
+            "positive": 63,
+            "prevalence_pct": 0.1892
+          },
+          "train": {
+            "total": 174660,
+            "positive": 839,
+            "prevalence_pct": 0.4804
+          },
+          "val": {
+            "total": 73862,
+            "positive": 367,
+            "prevalence_pct": 0.4969
+          }
+        },
+        "target_321042": {
+          "test": {
+            "total": 33304,
+            "positive": 25,
+            "prevalence_pct": 0.0751
+          },
+          "train": {
+            "total": 174660,
+            "positive": 137,
+            "prevalence_pct": 0.0784
+          },
+          "val": {
+            "total": 73862,
+            "positive": 57,
+            "prevalence_pct": 0.0772
+          }
+        },
+        "target_37016354": {
+          "test": {
+            "total": 33304,
+            "positive": 19,
+            "prevalence_pct": 0.0571
+          },
+          "train": {
+            "total": 174660,
+            "positive": 98,
+            "prevalence_pct": 0.0561
+          },
+          "val": {
+            "total": 73862,
+            "positive": 55,
+            "prevalence_pct": 0.0745
+          }
+        },
+        "target_37017023": {
+          "test": {
+            "total": 33304,
+            "positive": 61,
+            "prevalence_pct": 0.1832
+          },
+          "train": {
+            "total": 174660,
+            "positive": 343,
+            "prevalence_pct": 0.1964
+          },
+          "val": {
+            "total": 73862,
+            "positive": 103,
+            "prevalence_pct": 0.1394
+          }
+        },
+        "target_37395648": {
+          "test": {
+            "total": 33304,
+            "positive": 26,
+            "prevalence_pct": 0.0781
+          },
+          "train": {
+            "total": 174660,
+            "positive": 181,
+            "prevalence_pct": 0.1036
+          },
+          "val": {
+            "total": 73862,
+            "positive": 88,
+            "prevalence_pct": 0.1191
+          }
+        },
+        "target_378419": {
+          "test": {
+            "total": 33304,
+            "positive": 279,
+            "prevalence_pct": 0.8377
+          },
+          "train": {
+            "total": 174660,
+            "positive": 1591,
+            "prevalence_pct": 0.9109
+          },
+          "val": {
+            "total": 73862,
+            "positive": 566,
+            "prevalence_pct": 0.7663
+          }
+        },
+        "target_380378": {
+          "test": {
+            "total": 33304,
+            "positive": 9,
+            "prevalence_pct": 0.027
+          },
+          "train": {
+            "total": 174660,
+            "positive": 175,
+            "prevalence_pct": 0.1002
+          },
+          "val": {
+            "total": 73862,
+            "positive": 58,
+            "prevalence_pct": 0.0785
+          }
+        },
+        "target_381316": {
+          "test": {
+            "total": 33304,
+            "positive": 83,
+            "prevalence_pct": 0.2492
+          },
+          "train": {
+            "total": 174660,
+            "positive": 703,
+            "prevalence_pct": 0.4025
+          },
+          "val": {
+            "total": 73862,
+            "positive": 303,
+            "prevalence_pct": 0.4102
+          }
+        },
+        "target_4029498": {
+          "test": {
+            "total": 33304,
+            "positive": 10,
+            "prevalence_pct": 0.03
+          },
+          "train": {
+            "total": 174660,
+            "positive": 92,
+            "prevalence_pct": 0.0527
+          },
+          "val": {
+            "total": 73862,
+            "positive": 55,
+            "prevalence_pct": 0.0745
+          }
+        },
+        "target_4043241": {
+          "test": {
+            "total": 33304,
+            "positive": 29,
+            "prevalence_pct": 0.0871
+          },
+          "train": {
+            "total": 174660,
+            "positive": 164,
+            "prevalence_pct": 0.0939
+          },
+          "val": {
+            "total": 73862,
+            "positive": 30,
+            "prevalence_pct": 0.0406
+          }
+        },
+        "target_4051466": {
+          "test": {
+            "total": 33304,
+            "positive": 45,
+            "prevalence_pct": 0.1351
+          },
+          "train": {
+            "total": 174660,
+            "positive": 47,
+            "prevalence_pct": 0.0269
+          },
+          "val": {
+            "total": 73862,
+            "positive": 26,
+            "prevalence_pct": 0.0352
+          }
+        },
+        "target_4079749": {
+          "test": {
+            "total": 33304,
+            "positive": 11,
+            "prevalence_pct": 0.033
+          },
+          "train": {
+            "total": 174660,
+            "positive": 87,
+            "prevalence_pct": 0.0498
+          },
+          "val": {
+            "total": 73862,
+            "positive": 29,
+            "prevalence_pct": 0.0393
+          }
+        },
+        "target_4079750": {
+          "test": {
+            "total": 33304,
+            "positive": 33,
+            "prevalence_pct": 0.0991
+          },
+          "train": {
+            "total": 174660,
+            "positive": 252,
+            "prevalence_pct": 0.1443
+          },
+          "val": {
+            "total": 73862,
+            "positive": 139,
+            "prevalence_pct": 0.1882
+          }
+        },
+        "target_4110591": {
+          "test": {
+            "total": 33304,
+            "positive": 26,
+            "prevalence_pct": 0.0781
+          },
+          "train": {
+            "total": 174660,
+            "positive": 181,
+            "prevalence_pct": 0.1036
+          },
+          "val": {
+            "total": 73862,
+            "positive": 87,
+            "prevalence_pct": 0.1178
+          }
+        },
+        "target_4115276": {
+          "test": {
+            "total": 33304,
+            "positive": 136,
+            "prevalence_pct": 0.4084
+          },
+          "train": {
+            "total": 174660,
+            "positive": 1114,
+            "prevalence_pct": 0.6378
+          },
+          "val": {
+            "total": 73862,
+            "positive": 462,
+            "prevalence_pct": 0.6255
+          }
+        },
+        "target_4120314": {
+          "test": {
+            "total": 33304,
+            "positive": 42,
+            "prevalence_pct": 0.1261
+          },
+          "train": {
+            "total": 174660,
+            "positive": 210,
+            "prevalence_pct": 0.1202
+          },
+          "val": {
+            "total": 73862,
+            "positive": 88,
+            "prevalence_pct": 0.1191
+          }
+        },
+        "target_4129902": {
+          "test": {
+            "total": 33304,
+            "positive": 25,
+            "prevalence_pct": 0.0751
+          },
+          "train": {
+            "total": 174660,
+            "positive": 973,
+            "prevalence_pct": 0.5571
+          },
+          "val": {
+            "total": 73862,
+            "positive": 457,
+            "prevalence_pct": 0.6187
+          }
+        },
+        "target_4180790": {
+          "test": {
+            "total": 33304,
+            "positive": 19,
+            "prevalence_pct": 0.0571
+          },
+          "train": {
+            "total": 174660,
+            "positive": 142,
+            "prevalence_pct": 0.0813
+          },
+          "val": {
+            "total": 73862,
+            "positive": 46,
+            "prevalence_pct": 0.0623
+          }
+        },
+        "target_4214376": {
+          "test": {
+            "total": 33304,
+            "positive": 35,
+            "prevalence_pct": 0.1051
+          },
+          "train": {
+            "total": 174660,
+            "positive": 185,
+            "prevalence_pct": 0.1059
+          },
+          "val": {
+            "total": 73862,
+            "positive": 79,
+            "prevalence_pct": 0.107
+          }
+        },
+        "target_4226121": {
+          "test": {
+            "total": 33304,
+            "positive": 11,
+            "prevalence_pct": 0.033
+          },
+          "train": {
+            "total": 174660,
+            "positive": 108,
+            "prevalence_pct": 0.0618
+          },
+          "val": {
+            "total": 73862,
+            "positive": 53,
+            "prevalence_pct": 0.0718
+          }
+        },
+        "target_4229440": {
+          "test": {
+            "total": 33304,
+            "positive": 106,
+            "prevalence_pct": 0.3183
+          },
+          "train": {
+            "total": 174660,
+            "positive": 1177,
+            "prevalence_pct": 0.6739
+          },
+          "val": {
+            "total": 73862,
+            "positive": 496,
+            "prevalence_pct": 0.6715
+          }
+        },
+        "target_4283893": {
+          "test": {
+            "total": 33304,
+            "positive": 120,
+            "prevalence_pct": 0.3603
+          },
+          "train": {
+            "total": 174660,
+            "positive": 831,
+            "prevalence_pct": 0.4758
+          },
+          "val": {
+            "total": 73862,
+            "positive": 461,
+            "prevalence_pct": 0.6241
+          }
+        },
+        "target_4285898": {
+          "test": {
+            "total": 33304,
+            "positive": 207,
+            "prevalence_pct": 0.6215
+          },
+          "train": {
+            "total": 174660,
+            "positive": 1139,
+            "prevalence_pct": 0.6521
+          },
+          "val": {
+            "total": 73862,
+            "positive": 505,
+            "prevalence_pct": 0.6837
+          }
+        },
+        "target_4310703": {
+          "test": {
+            "total": 33304,
+            "positive": 136,
+            "prevalence_pct": 0.4084
+          },
+          "train": {
+            "total": 174660,
+            "positive": 1126,
+            "prevalence_pct": 0.6447
+          },
+          "val": {
+            "total": 73862,
+            "positive": 467,
+            "prevalence_pct": 0.6323
+          }
+        },
+        "target_4311629": {
+          "test": {
+            "total": 33304,
+            "positive": 172,
+            "prevalence_pct": 0.5165
+          },
+          "train": {
+            "total": 174660,
+            "positive": 1029,
+            "prevalence_pct": 0.5891
+          },
+          "val": {
+            "total": 73862,
+            "positive": 440,
+            "prevalence_pct": 0.5957
+          }
+        },
+        "target_432867": {
+          "test": {
+            "total": 33304,
+            "positive": 112,
+            "prevalence_pct": 0.3363
+          },
+          "train": {
+            "total": 174660,
+            "positive": 802,
+            "prevalence_pct": 0.4592
+          },
+          "val": {
+            "total": 73862,
+            "positive": 309,
+            "prevalence_pct": 0.4183
+          }
+        },
+        "target_43530652": {
+          "test": {
+            "total": 33304,
+            "positive": 295,
+            "prevalence_pct": 0.8858
+          },
+          "train": {
+            "total": 174660,
+            "positive": 2034,
+            "prevalence_pct": 1.1645
+          },
+          "val": {
+            "total": 73862,
+            "positive": 852,
+            "prevalence_pct": 1.1535
+          }
+        },
+        "target_436096": {
+          "test": {
+            "total": 33304,
+            "positive": 281,
+            "prevalence_pct": 0.8437
+          },
+          "train": {
+            "total": 174660,
+            "positive": 1983,
+            "prevalence_pct": 1.1353
+          },
+          "val": {
+            "total": 73862,
+            "positive": 871,
+            "prevalence_pct": 1.1792
+          }
+        },
+        "target_436940": {
+          "test": {
+            "total": 33304,
+            "positive": 48,
+            "prevalence_pct": 0.1441
+          },
+          "train": {
+            "total": 174660,
+            "positive": 210,
+            "prevalence_pct": 0.1202
+          },
+          "val": {
+            "total": 73862,
+            "positive": 90,
+            "prevalence_pct": 0.1218
+          }
+        },
+        "target_439777": {
+          "test": {
+            "total": 33304,
+            "positive": 293,
+            "prevalence_pct": 0.8798
+          },
+          "train": {
+            "total": 174660,
+            "positive": 1423,
+            "prevalence_pct": 0.8147
+          },
+          "val": {
+            "total": 73862,
+            "positive": 592,
+            "prevalence_pct": 0.8015
+          }
+        },
+        "target_440086": {
+          "test": {
+            "total": 33304,
+            "positive": 14,
+            "prevalence_pct": 0.042
+          },
+          "train": {
+            "total": 174660,
+            "positive": 61,
+            "prevalence_pct": 0.0349
+          },
+          "val": {
+            "total": 73862,
+            "positive": 15,
+            "prevalence_pct": 0.0203
+          }
+        },
+        "target_443614": {
+          "test": {
+            "total": 33304,
+            "positive": 32,
+            "prevalence_pct": 0.0961
+          },
+          "train": {
+            "total": 174660,
+            "positive": 96,
+            "prevalence_pct": 0.055
+          },
+          "val": {
+            "total": 73862,
+            "positive": 69,
+            "prevalence_pct": 0.0934
+          }
+        },
+        "target_75036": {
+          "test": {
+            "total": 33304,
+            "positive": 7,
+            "prevalence_pct": 0.021
+          },
+          "train": {
+            "total": 174660,
+            "positive": 91,
+            "prevalence_pct": 0.0521
+          },
+          "val": {
+            "total": 73862,
+            "positive": 51,
+            "prevalence_pct": 0.069
+          }
+        },
+        "target_79740": {
+          "test": {
+            "total": 33304,
+            "positive": 45,
+            "prevalence_pct": 0.1351
+          },
+          "train": {
+            "total": 174660,
+            "positive": 153,
+            "prevalence_pct": 0.0876
+          },
+          "val": {
+            "total": 73862,
+            "positive": 44,
+            "prevalence_pct": 0.0596
+          }
+        },
+        "target_80502": {
+          "test": {
+            "total": 33304,
+            "positive": 44,
+            "prevalence_pct": 0.1321
+          },
+          "train": {
+            "total": 174660,
+            "positive": 636,
+            "prevalence_pct": 0.3641
+          },
+          "val": {
+            "total": 73862,
+            "positive": 225,
+            "prevalence_pct": 0.3046
+          }
+        }
+      }
+    }
+  },
+  "cohort_b_general": {
+    "dataset_summary": {
+      "input_parquet": "data/parquet/prediction_landmarks.parquet",
+      "output_parquet": "data/parquet/splits_general.parquet",
+      "temporal_cutoff_date": "2016-01-01",
+      "train_ratio": 0.7,
+      "random_seed": 42,
+      "raw_total_patients": 115223,
+      "raw_total_landmarks": 3364928,
+      "retained_landmarks": 2595951,
+      "dropped_minority_landmarks": 768977,
+      "splits": {
+        "test": {
+          "patients": 16027,
+          "landmarks": 225727,
+          "min_date": "2016-01-01",
+          "max_date": "2019-05-20"
+        },
+        "train": {
+          "patients": 69537,
+          "landmarks": 1651678,
+          "min_date": "1909-10-28",
+          "max_date": "2015-12-31"
+        },
+        "val": {
+          "patients": 29659,
+          "landmarks": 718546,
+          "min_date": "1909-09-09",
+          "max_date": "2015-12-31"
+        }
+      }
+    },
+    "profile": {
+      "split_parquet": "data/parquet/splits_general.parquet",
+      "splits_summary": {
+        "test": {
+          "n_patients": 16027,
+          "n_landmarks": 225727,
+          "min_date": "2016-01-01",
+          "max_date": "2019-05-20",
+          "mean_age": 27.61,
+          "male_landmarks": 81864,
+          "female_landmarks": 143863
+        },
+        "train": {
+          "n_patients": 69537,
+          "n_landmarks": 1651678,
+          "min_date": "1909-10-28",
+          "max_date": "2015-12-31",
+          "mean_age": 47.62,
+          "male_landmarks": 764103,
+          "female_landmarks": 887575
+        },
+        "val": {
+          "n_patients": 29659,
+          "n_landmarks": 718546,
+          "min_date": "1909-09-09",
+          "max_date": "2015-12-31",
+          "mean_age": 48.42,
+          "male_landmarks": 329930,
+          "female_landmarks": 388616
+        }
+      },
+      "target_stats": {
+        "target_192279": {
+          "test": {
+            "total": 225727,
+            "positive": 82,
+            "prevalence_pct": 0.0363
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 1313,
+            "prevalence_pct": 0.0795
+          },
+          "val": {
+            "total": 718546,
+            "positive": 653,
+            "prevalence_pct": 0.0909
+          }
+        },
+        "target_200970": {
+          "test": {
+            "total": 225727,
+            "positive": 15,
+            "prevalence_pct": 0.0066
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 4418,
+            "prevalence_pct": 0.2675
+          },
+          "val": {
+            "total": 718546,
+            "positive": 2530,
+            "prevalence_pct": 0.3521
+          }
+        },
+        "target_201826": {
+          "test": {
+            "total": 225727,
+            "positive": 199,
+            "prevalence_pct": 0.0882
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 1585,
+            "prevalence_pct": 0.096
+          },
+          "val": {
+            "total": 718546,
+            "positive": 687,
+            "prevalence_pct": 0.0956
+          }
+        },
+        "target_257012": {
+          "test": {
+            "total": 225727,
+            "positive": 2135,
+            "prevalence_pct": 0.9458
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 10038,
+            "prevalence_pct": 0.6077
+          },
+          "val": {
+            "total": 718546,
+            "positive": 4477,
+            "prevalence_pct": 0.6231
+          }
+        },
+        "target_258780": {
+          "test": {
+            "total": 225727,
+            "positive": 24,
+            "prevalence_pct": 0.0106
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 825,
+            "prevalence_pct": 0.0499
+          },
+          "val": {
+            "total": 718546,
+            "positive": 299,
+            "prevalence_pct": 0.0416
+          }
+        },
+        "target_316866": {
+          "test": {
+            "total": 225727,
+            "positive": 1092,
+            "prevalence_pct": 0.4838
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 3242,
+            "prevalence_pct": 0.1963
+          },
+          "val": {
+            "total": 718546,
+            "positive": 1429,
+            "prevalence_pct": 0.1989
+          }
+        },
+        "target_317576": {
+          "test": {
+            "total": 225727,
+            "positive": 338,
+            "prevalence_pct": 0.1497
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 5839,
+            "prevalence_pct": 0.3535
+          },
+          "val": {
+            "total": 718546,
+            "positive": 2993,
+            "prevalence_pct": 0.4165
+          }
+        },
+        "target_321042": {
+          "test": {
+            "total": 225727,
+            "positive": 116,
+            "prevalence_pct": 0.0514
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 2253,
+            "prevalence_pct": 0.1364
+          },
+          "val": {
+            "total": 718546,
+            "positive": 771,
+            "prevalence_pct": 0.1073
+          }
+        },
+        "target_37016354": {
+          "test": {
+            "total": 225727,
+            "positive": 178,
+            "prevalence_pct": 0.0789
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 1120,
+            "prevalence_pct": 0.0678
+          },
+          "val": {
+            "total": 718546,
+            "positive": 388,
+            "prevalence_pct": 0.054
+          }
+        },
+        "target_37017023": {
+          "test": {
+            "total": 225727,
+            "positive": 175,
+            "prevalence_pct": 0.0775
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 3347,
+            "prevalence_pct": 0.2026
+          },
+          "val": {
+            "total": 718546,
+            "positive": 1511,
+            "prevalence_pct": 0.2103
+          }
+        },
+        "target_37395648": {
+          "test": {
+            "total": 225727,
+            "positive": 88,
+            "prevalence_pct": 0.039
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 890,
+            "prevalence_pct": 0.0539
+          },
+          "val": {
+            "total": 718546,
+            "positive": 724,
+            "prevalence_pct": 0.1008
+          }
+        },
+        "target_378419": {
+          "test": {
+            "total": 225727,
+            "positive": 413,
+            "prevalence_pct": 0.183
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 6857,
+            "prevalence_pct": 0.4152
+          },
+          "val": {
+            "total": 718546,
+            "positive": 2640,
+            "prevalence_pct": 0.3674
+          }
+        },
+        "target_380378": {
+          "test": {
+            "total": 225727,
+            "positive": 58,
+            "prevalence_pct": 0.0257
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 964,
+            "prevalence_pct": 0.0584
+          },
+          "val": {
+            "total": 718546,
+            "positive": 391,
+            "prevalence_pct": 0.0544
+          }
+        },
+        "target_381316": {
+          "test": {
+            "total": 225727,
+            "positive": 177,
+            "prevalence_pct": 0.0784
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 9655,
+            "prevalence_pct": 0.5846
+          },
+          "val": {
+            "total": 718546,
+            "positive": 3609,
+            "prevalence_pct": 0.5023
+          }
+        },
+        "target_4029498": {
+          "test": {
+            "total": 225727,
+            "positive": 81,
+            "prevalence_pct": 0.0359
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 1404,
+            "prevalence_pct": 0.085
+          },
+          "val": {
+            "total": 718546,
+            "positive": 636,
+            "prevalence_pct": 0.0885
+          }
+        },
+        "target_4043241": {
+          "test": {
+            "total": 225727,
+            "positive": 61,
+            "prevalence_pct": 0.027
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 772,
+            "prevalence_pct": 0.0467
+          },
+          "val": {
+            "total": 718546,
+            "positive": 176,
+            "prevalence_pct": 0.0245
+          }
+        },
+        "target_4051466": {
+          "test": {
+            "total": 225727,
+            "positive": 804,
+            "prevalence_pct": 0.3562
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 1120,
+            "prevalence_pct": 0.0678
+          },
+          "val": {
+            "total": 718546,
+            "positive": 506,
+            "prevalence_pct": 0.0704
+          }
+        },
+        "target_4079749": {
+          "test": {
+            "total": 225727,
+            "positive": 77,
+            "prevalence_pct": 0.0341
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 982,
+            "prevalence_pct": 0.0595
+          },
+          "val": {
+            "total": 718546,
+            "positive": 354,
+            "prevalence_pct": 0.0493
+          }
+        },
+        "target_4079750": {
+          "test": {
+            "total": 225727,
+            "positive": 131,
+            "prevalence_pct": 0.058
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 2910,
+            "prevalence_pct": 0.1762
+          },
+          "val": {
+            "total": 718546,
+            "positive": 1407,
+            "prevalence_pct": 0.1958
+          }
+        },
+        "target_4110591": {
+          "test": {
+            "total": 225727,
+            "positive": 70,
+            "prevalence_pct": 0.031
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 755,
+            "prevalence_pct": 0.0457
+          },
+          "val": {
+            "total": 718546,
+            "positive": 649,
+            "prevalence_pct": 0.0903
+          }
+        },
+        "target_4115276": {
+          "test": {
+            "total": 225727,
+            "positive": 358,
+            "prevalence_pct": 0.1586
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 4997,
+            "prevalence_pct": 0.3025
+          },
+          "val": {
+            "total": 718546,
+            "positive": 2159,
+            "prevalence_pct": 0.3005
+          }
+        },
+        "target_4120314": {
+          "test": {
+            "total": 225727,
+            "positive": 175,
+            "prevalence_pct": 0.0775
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 2362,
+            "prevalence_pct": 0.143
+          },
+          "val": {
+            "total": 718546,
+            "positive": 1099,
+            "prevalence_pct": 0.1529
+          }
+        },
+        "target_4129902": {
+          "test": {
+            "total": 225727,
+            "positive": 15,
+            "prevalence_pct": 0.0066
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 5362,
+            "prevalence_pct": 0.3246
+          },
+          "val": {
+            "total": 718546,
+            "positive": 2737,
+            "prevalence_pct": 0.3809
+          }
+        },
+        "target_4180790": {
+          "test": {
+            "total": 225727,
+            "positive": 166,
+            "prevalence_pct": 0.0735
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 1845,
+            "prevalence_pct": 0.1117
+          },
+          "val": {
+            "total": 718546,
+            "positive": 772,
+            "prevalence_pct": 0.1074
+          }
+        },
+        "target_4214376": {
+          "test": {
+            "total": 225727,
+            "positive": 77,
+            "prevalence_pct": 0.0341
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 2171,
+            "prevalence_pct": 0.1314
+          },
+          "val": {
+            "total": 718546,
+            "positive": 997,
+            "prevalence_pct": 0.1388
+          }
+        },
+        "target_4226121": {
+          "test": {
+            "total": 225727,
+            "positive": 43,
+            "prevalence_pct": 0.019
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 915,
+            "prevalence_pct": 0.0554
+          },
+          "val": {
+            "total": 718546,
+            "positive": 390,
+            "prevalence_pct": 0.0543
+          }
+        },
+        "target_4229440": {
+          "test": {
+            "total": 225727,
+            "positive": 400,
+            "prevalence_pct": 0.1772
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 12524,
+            "prevalence_pct": 0.7583
+          },
+          "val": {
+            "total": 718546,
+            "positive": 6474,
+            "prevalence_pct": 0.901
+          }
+        },
+        "target_4283893": {
+          "test": {
+            "total": 225727,
+            "positive": 1223,
+            "prevalence_pct": 0.5418
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 7431,
+            "prevalence_pct": 0.4499
+          },
+          "val": {
+            "total": 718546,
+            "positive": 3455,
+            "prevalence_pct": 0.4808
+          }
+        },
+        "target_4285898": {
+          "test": {
+            "total": 225727,
+            "positive": 516,
+            "prevalence_pct": 0.2286
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 9110,
+            "prevalence_pct": 0.5516
+          },
+          "val": {
+            "total": 718546,
+            "positive": 4423,
+            "prevalence_pct": 0.6155
+          }
+        },
+        "target_4310703": {
+          "test": {
+            "total": 225727,
+            "positive": 460,
+            "prevalence_pct": 0.2038
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 5888,
+            "prevalence_pct": 0.3565
+          },
+          "val": {
+            "total": 718546,
+            "positive": 2519,
+            "prevalence_pct": 0.3506
+          }
+        },
+        "target_4311629": {
+          "test": {
+            "total": 225727,
+            "positive": 1030,
+            "prevalence_pct": 0.4563
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 8765,
+            "prevalence_pct": 0.5307
+          },
+          "val": {
+            "total": 718546,
+            "positive": 3558,
+            "prevalence_pct": 0.4952
+          }
+        },
+        "target_432867": {
+          "test": {
+            "total": 225727,
+            "positive": 437,
+            "prevalence_pct": 0.1936
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 4460,
+            "prevalence_pct": 0.27
+          },
+          "val": {
+            "total": 718546,
+            "positive": 2109,
+            "prevalence_pct": 0.2935
+          }
+        },
+        "target_43530652": {
+          "test": {
+            "total": 225727,
+            "positive": 1157,
+            "prevalence_pct": 0.5126
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 4255,
+            "prevalence_pct": 0.2576
+          },
+          "val": {
+            "total": 718546,
+            "positive": 1642,
+            "prevalence_pct": 0.2285
+          }
+        },
+        "target_436096": {
+          "test": {
+            "total": 225727,
+            "positive": 1129,
+            "prevalence_pct": 0.5002
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 4136,
+            "prevalence_pct": 0.2504
+          },
+          "val": {
+            "total": 718546,
+            "positive": 1772,
+            "prevalence_pct": 0.2466
+          }
+        },
+        "target_436940": {
+          "test": {
+            "total": 225727,
+            "positive": 217,
+            "prevalence_pct": 0.0961
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 2482,
+            "prevalence_pct": 0.1503
+          },
+          "val": {
+            "total": 718546,
+            "positive": 1145,
+            "prevalence_pct": 0.1593
+          }
+        },
+        "target_439777": {
+          "test": {
+            "total": 225727,
+            "positive": 2276,
+            "prevalence_pct": 1.0083
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 13382,
+            "prevalence_pct": 0.8102
+          },
+          "val": {
+            "total": 718546,
+            "positive": 5558,
+            "prevalence_pct": 0.7735
+          }
+        },
+        "target_440086": {
+          "test": {
+            "total": 225727,
+            "positive": 351,
+            "prevalence_pct": 0.1555
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 736,
+            "prevalence_pct": 0.0446
+          },
+          "val": {
+            "total": 718546,
+            "positive": 266,
+            "prevalence_pct": 0.037
+          }
+        },
+        "target_443614": {
+          "test": {
+            "total": 225727,
+            "positive": 77,
+            "prevalence_pct": 0.0341
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 1224,
+            "prevalence_pct": 0.0741
+          },
+          "val": {
+            "total": 718546,
+            "positive": 608,
+            "prevalence_pct": 0.0846
+          }
+        },
+        "target_75036": {
+          "test": {
+            "total": 225727,
+            "positive": 127,
+            "prevalence_pct": 0.0563
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 925,
+            "prevalence_pct": 0.056
+          },
+          "val": {
+            "total": 718546,
+            "positive": 504,
+            "prevalence_pct": 0.0701
+          }
+        },
+        "target_79740": {
+          "test": {
+            "total": 225727,
+            "positive": 180,
+            "prevalence_pct": 0.0797
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 1776,
+            "prevalence_pct": 0.1075
+          },
+          "val": {
+            "total": 718546,
+            "positive": 791,
+            "prevalence_pct": 0.1101
+          }
+        },
+        "target_80502": {
+          "test": {
+            "total": 225727,
+            "positive": 169,
+            "prevalence_pct": 0.0749
+          },
+          "train": {
+            "total": 1651678,
+            "positive": 4886,
+            "prevalence_pct": 0.2958
+          },
+          "val": {
+            "total": 718546,
+            "positive": 2311,
+            "prevalence_pct": 0.3216
+          }
+        }
+      }
+    }
+  }
+}
