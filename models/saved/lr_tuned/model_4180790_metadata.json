@@ -1,457 +1,457 @@
 {
   "target_concept_id": 4180790,
   "best_C": 0.1,
-  "intercept": -2.19342,
+  "intercept": -2.35905,
   "tuning_log": {
     "C_0.01": {
-      "val_auprc": 0.009164,
-      "val_auroc": 0.942523,
-      "val_brier": 0.039033
+      "val_auprc": 0.009217,
+      "val_auroc": 0.942697,
+      "val_brier": 0.038994
     },
     "C_0.1": {
-      "val_auprc": 0.00954,
-      "val_auroc": 0.942815,
-      "val_brier": 0.032082
+      "val_auprc": 0.009547,
+      "val_auroc": 0.942743,
+      "val_brier": 0.032037
     },
     "C_1.0": {
-      "val_auprc": 0.009261,
-      "val_auroc": 0.939412,
-      "val_brier": 0.02887
+      "val_auprc": 0.008906,
+      "val_auroc": 0.938525,
+      "val_brier": 0.029022
     },
     "C_10.0": {
-      "val_auprc": 0.008727,
-      "val_auroc": 0.938273,
-      "val_brier": 0.028836
+      "val_auprc": 0.008947,
+      "val_auroc": 0.938281,
+      "val_brier": 0.028284
     }
   },
   "top_positive_features": [
     {
       "feature": "has_hist_4285898",
-      "coefficient": 7.60053,
-      "odds_ratio": 1999.24597
+      "coefficient": 7.59207,
+      "odds_ratio": 1982.40442
     },
     {
       "feature": "interaction_hypertension_and_lipid",
-      "coefficient": 4.40463,
-      "odds_ratio": 81.8288
+      "coefficient": 4.43178,
+      "odds_ratio": 84.08097
     },
     {
       "feature": "interaction_cvd_and_ckd",
-      "coefficient": 3.22456,
-      "odds_ratio": 25.14241
+      "coefficient": 3.41272,
+      "odds_ratio": 30.34756
     },
     {
       "feature": "bg_gout",
-      "coefficient": 2.8513,
-      "odds_ratio": 17.31023
+      "coefficient": 2.80561,
+      "odds_ratio": 16.5372
     },
     {
       "feature": "has_hist_4043241",
-      "coefficient": 2.45962,
-      "odds_ratio": 11.70036
+      "coefficient": 2.49389,
+      "odds_ratio": 12.1083
     },
     {
       "feature": "age_40_49",
-      "coefficient": 1.92061,
-      "odds_ratio": 6.8251
+      "coefficient": 1.93501,
+      "odds_ratio": 6.92414
     },
     {
       "feature": "has_hist_75036",
-      "coefficient": 1.79516,
-      "odds_ratio": 6.02041
+      "coefficient": 1.78892,
+      "odds_ratio": 5.98299
     },
     {
       "feature": "age_50_59",
-      "coefficient": 1.75242,
-      "odds_ratio": 5.76854
+      "coefficient": 1.77255,
+      "odds_ratio": 5.88586
     },
     {
       "feature": "interaction_diabetes_and_hypertension",
-      "coefficient": 1.27297,
-      "odds_ratio": 3.57143
+      "coefficient": 1.27385,
+      "odds_ratio": 3.5746
     },
     {
-      "feature": "bg_normal_pregnancy",
-      "coefficient": 1.18742,
-      "odds_ratio": 3.27861
+      "feature": "interaction_copd_and_cvd",
+      "coefficient": 1.26333,
+      "odds_ratio": 3.53718
     }
   ],
   "top_negative_features": [
     {
-      "feature": "has_hist_4214376",
-      "coefficient": -2.85872,
-      "odds_ratio": 0.05734
+      "feature": "has_hist_4226121",
+      "coefficient": -2.90918,
+      "odds_ratio": 0.05452
     },
     {
       "feature": "has_hist_37395648",
-      "coefficient": -3.06013,
-      "odds_ratio": 0.04688
+      "coefficient": -3.03345,
+      "odds_ratio": 0.04815
     },
     {
       "feature": "has_hist_4110591",
-      "coefficient": -3.06016,
-      "odds_ratio": 0.04688
+      "coefficient": -3.03348,
+      "odds_ratio": 0.04815
     },
     {
       "feature": "has_hist_378419",
-      "coefficient": -3.08323,
-      "odds_ratio": 0.04581
+      "coefficient": -3.12248,
+      "odds_ratio": 0.04405
     },
     {
       "feature": "interaction_metabolic_triad",
-      "coefficient": -3.24233,
-      "odds_ratio": 0.03907
+      "coefficient": -3.27696,
+      "odds_ratio": 0.03774
     },
     {
       "feature": "bg_strep_or_pregnancy",
-      "coefficient": -3.32179,
-      "odds_ratio": 0.03609
-    },
-    {
-      "feature": "has_hist_443614",
-      "coefficient": -3.37236,
-      "odds_ratio": 0.03431
+      "coefficient": -3.39301,
+      "odds_ratio": 0.03361
     },
     {
       "feature": "bg_viral_pharyngitis",
-      "coefficient": -3.57177,
-      "odds_ratio": 0.02811
+      "coefficient": -3.63548,
+      "odds_ratio": 0.02637
+    },
+    {
+      "feature": "has_hist_443614",
+      "coefficient": -3.64948,
+      "odds_ratio": 0.026
     },
     {
       "feature": "has_hist_79740",
-      "coefficient": -5.24622,
-      "odds_ratio": 0.00527
+      "coefficient": -5.19764,
+      "odds_ratio": 0.00553
     },
     {
       "feature": "has_hist_4180790",
-      "coefficient": -5.38254,
-      "odds_ratio": 0.0046
+      "coefficient": -5.30126,
+      "odds_ratio": 0.00499
     }
   ],
   "all_coefficients": {
     "age_at_landmark": {
-      "coefficient": -0.43844,
-      "odds_ratio": 0.64504
-    },
-    "total_prior_condition_count": {
-      "coefficient": 0.83672,
-      "odds_ratio": 2.30878
-    },
-    "prior_obs_years": {
-      "coefficient": 0.35423,
-      "odds_ratio": 1.42509
+      "coefficient": -0.50973,
+      "odds_ratio": 0.60066
     },
     "age_lt_30": {
-      "coefficient": -2.4689,
-      "odds_ratio": 0.08468
+      "coefficient": -2.5597,
+      "odds_ratio": 0.07733
     },
     "age_30_39": {
-      "coefficient": -2.16426,
-      "odds_ratio": 0.11483
+      "coefficient": -2.22619,
+      "odds_ratio": 0.10794
     },
     "age_40_49": {
-      "coefficient": 1.92061,
-      "odds_ratio": 6.8251
+      "coefficient": 1.93501,
+      "odds_ratio": 6.92414
     },
     "age_50_59": {
-      "coefficient": 1.75242,
-      "odds_ratio": 5.76854
+      "coefficient": 1.77255,
+      "odds_ratio": 5.88586
     },
     "age_60_69": {
-      "coefficient": 1.17768,
-      "odds_ratio": 3.24685
+      "coefficient": 1.24075,
+      "odds_ratio": 3.45822
     },
     "age_70_79": {
-      "coefficient": 0.76328,
-      "odds_ratio": 2.1453
+      "coefficient": 0.83415,
+      "odds_ratio": 2.30287
     },
     "age_gte_80": {
-      "coefficient": -2.07789,
-      "odds_ratio": 0.12519
+      "coefficient": -1.9758,
+      "odds_ratio": 0.13865
     },
     "gender_male": {
-      "coefficient": -0.87435,
-      "odds_ratio": 0.41713
+      "coefficient": -0.81324,
+      "odds_ratio": 0.44342
     },
     "gender_female": {
-      "coefficient": -0.22046,
-      "odds_ratio": 0.80215
+      "coefficient": -0.16627,
+      "odds_ratio": 0.84682
     },
     "race_white": {
-      "coefficient": 0.40361,
-      "odds_ratio": 1.49722
+      "coefficient": 0.43984,
+      "odds_ratio": 1.55245
     },
     "race_black": {
-      "coefficient": -0.10624,
-      "odds_ratio": 0.89921
+      "coefficient": -0.04818,
+      "odds_ratio": 0.95296
     },
     "race_asian": {
-      "coefficient": -0.34738,
-      "odds_ratio": 0.70654
+      "coefficient": -0.32775,
+      "odds_ratio": 0.72054
     },
     "race_other": {
-      "coefficient": -1.04702,
-      "odds_ratio": 0.35098
+      "coefficient": -1.0411,
+      "odds_ratio": 0.35307
     },
     "ethnicity_hispanic": {
       "coefficient": 0.0,
       "odds_ratio": 1.0
     },
     "ethnicity_non_hispanic": {
-      "coefficient": -1.09708,
-      "odds_ratio": 0.33384
+      "coefficient": -0.97634,
+      "odds_ratio": 0.37669
+    },
+    "total_prior_condition_count": {
+      "coefficient": 0.88916,
+      "odds_ratio": 2.43309
+    },
+    "prior_obs_years": {
+      "coefficient": 0.37674,
+      "odds_ratio": 1.45753
     },
     "has_hist_75036": {
-      "coefficient": 1.79516,
-      "odds_ratio": 6.02041
+      "coefficient": 1.78892,
+      "odds_ratio": 5.98299
     },
     "has_hist_79740": {
-      "coefficient": -5.24622,
-      "odds_ratio": 0.00527
+      "coefficient": -5.19764,
+      "odds_ratio": 0.00553
     },
     "has_hist_80502": {
-      "coefficient": 0.30283,
-      "odds_ratio": 1.35368
+      "coefficient": 0.26691,
+      "odds_ratio": 1.30592
     },
     "has_hist_192279": {
-      "coefficient": 0.27743,
-      "odds_ratio": 1.31973
+      "coefficient": 0.37276,
+      "odds_ratio": 1.45173
     },
     "has_hist_200970": {
-      "coefficient": 0.39234,
-      "odds_ratio": 1.48043
+      "coefficient": 0.47323,
+      "odds_ratio": 1.60518
     },
     "has_hist_201826": {
-      "coefficient": -0.13345,
-      "odds_ratio": 0.87507
+      "coefficient": -0.2375,
+      "odds_ratio": 0.7886
     },
     "has_hist_257012": {
-      "coefficient": -0.83684,
-      "odds_ratio": 0.43308
+      "coefficient": -0.84334,
+      "odds_ratio": 0.43027
     },
     "has_hist_258780": {
-      "coefficient": -1.11462,
-      "odds_ratio": 0.32804
+      "coefficient": -1.30585,
+      "odds_ratio": 0.27094
     },
     "has_hist_316866": {
-      "coefficient": -0.94053,
-      "odds_ratio": 0.39042
+      "coefficient": -0.95455,
+      "odds_ratio": 0.38498
     },
     "has_hist_317576": {
-      "coefficient": -0.40915,
-      "odds_ratio": 0.66421
+      "coefficient": -0.44334,
+      "odds_ratio": 0.64189
     },
     "has_hist_321042": {
-      "coefficient": 0.64063,
-      "odds_ratio": 1.89768
+      "coefficient": 0.62123,
+      "odds_ratio": 1.86122
     },
     "has_hist_378419": {
-      "coefficient": -3.08323,
-      "odds_ratio": 0.04581
+      "coefficient": -3.12248,
+      "odds_ratio": 0.04405
     },
     "has_hist_380378": {
-      "coefficient": -1.48822,
-      "odds_ratio": 0.22577
+      "coefficient": -1.56901,
+      "odds_ratio": 0.20825
     },
     "has_hist_381316": {
-      "coefficient": 0.08195,
-      "odds_ratio": 1.0854
+      "coefficient": 0.04913,
+      "odds_ratio": 1.05036
     },
     "has_hist_432867": {
-      "coefficient": -0.44408,
-      "odds_ratio": 0.64141
+      "coefficient": -0.44356,
+      "odds_ratio": 0.64174
     },
     "has_hist_436096": {
-      "coefficient": -0.04361,
-      "odds_ratio": 0.95732
+      "coefficient": -0.03997,
+      "odds_ratio": 0.96082
     },
     "has_hist_436940": {
-      "coefficient": 0.43695,
-      "odds_ratio": 1.54798
+      "coefficient": 0.44375,
+      "odds_ratio": 1.55855
     },
     "has_hist_439777": {
-      "coefficient": -0.78123,
-      "odds_ratio": 0.45784
+      "coefficient": -0.78981,
+      "odds_ratio": 0.45393
     },
     "has_hist_440086": {
-      "coefficient": -0.06174,
-      "odds_ratio": 0.94013
+      "coefficient": -0.06549,
+      "odds_ratio": 0.9366
     },
     "has_hist_443614": {
-      "coefficient": -3.37236,
-      "odds_ratio": 0.03431
+      "coefficient": -3.64948,
+      "odds_ratio": 0.026
     },
     "has_hist_4029498": {
-      "coefficient": -1.79939,
-      "odds_ratio": 0.1654
+      "coefficient": -1.77977,
+      "odds_ratio": 0.16868
     },
     "has_hist_4043241": {
-      "coefficient": 2.45962,
-      "odds_ratio": 11.70036
+      "coefficient": 2.49389,
+      "odds_ratio": 12.1083
     },
     "has_hist_4051466": {
-      "coefficient": -0.15195,
-      "odds_ratio": 0.85903
+      "coefficient": -0.16244,
+      "odds_ratio": 0.85006
     },
     "has_hist_4079749": {
-      "coefficient": 0.66464,
-      "odds_ratio": 1.9438
+      "coefficient": 0.63646,
+      "odds_ratio": 1.88977
     },
     "has_hist_4079750": {
-      "coefficient": 0.1294,
-      "odds_ratio": 1.13815
+      "coefficient": 0.12451,
+      "odds_ratio": 1.1326
     },
     "has_hist_4110591": {
-      "coefficient": -3.06016,
-      "odds_ratio": 0.04688
+      "coefficient": -3.03348,
+      "odds_ratio": 0.04815
     },
     "has_hist_4115276": {
-      "coefficient": -1.60834,
-      "odds_ratio": 0.20022
+      "coefficient": -1.61526,
+      "odds_ratio": 0.19884
     },
     "has_hist_4120314": {
-      "coefficient": 0.29967,
-      "odds_ratio": 1.34941
+      "coefficient": 0.28232,
+      "odds_ratio": 1.3262
     },
     "has_hist_4129902": {
-      "coefficient": -0.88817,
-      "odds_ratio": 0.41141
+      "coefficient": -1.03012,
+      "odds_ratio": 0.35696
     },
     "has_hist_4180790": {
-      "coefficient": -5.38254,
-      "odds_ratio": 0.0046
+      "coefficient": -5.30126,
+      "odds_ratio": 0.00499
     },
     "has_hist_4214376": {
-      "coefficient": -2.85872,
-      "odds_ratio": 0.05734
+      "coefficient": -2.81273,
+      "odds_ratio": 0.06004
     },
     "has_hist_4226121": {
-      "coefficient": -2.83249,
-      "odds_ratio": 0.05887
+      "coefficient": -2.90918,
+      "odds_ratio": 0.05452
     },
     "has_hist_4229440": {
-      "coefficient": -2.67063,
-      "odds_ratio": 0.06921
+      "coefficient": -2.7514,
+      "odds_ratio": 0.06384
     },
     "has_hist_4283893": {
-      "coefficient": -0.40455,
-      "odds_ratio": 0.66728
+      "coefficient": -0.43375,
+      "odds_ratio": 0.64807
     },
     "has_hist_4285898": {
-      "coefficient": 7.60053,
-      "odds_ratio": 1999.24597
+      "coefficient": 7.59207,
+      "odds_ratio": 1982.40442
     },
     "has_hist_4310703": {
-      "coefficient": -1.57736,
-      "odds_ratio": 0.20652
+      "coefficient": -1.57818,
+      "odds_ratio": 0.20635
     },
     "has_hist_4311629": {
-      "coefficient": -0.24628,
-      "odds_ratio": 0.7817
+      "coefficient": -0.26538,
+      "odds_ratio": 0.76691
     },
     "has_hist_37016354": {
-      "coefficient": 0.19075,
-      "odds_ratio": 1.21016
+      "coefficient": 0.24946,
+      "odds_ratio": 1.28334
     },
     "has_hist_37017023": {
-      "coefficient": -0.89873,
-      "odds_ratio": 0.40708
+      "coefficient": -0.89771,
+      "odds_ratio": 0.4075
     },
     "has_hist_37395648": {
-      "coefficient": -3.06013,
-      "odds_ratio": 0.04688
+      "coefficient": -3.03345,
+      "odds_ratio": 0.04815
     },
     "has_hist_43530652": {
-      "coefficient": 0.21335,
-      "odds_ratio": 1.23782
+      "coefficient": 0.15611,
+      "odds_ratio": 1.16896
     },
     "bg_normal_bmi": {
-      "coefficient": -0.6243,
-      "odds_ratio": 0.53564
+      "coefficient": -0.65099,
+      "odds_ratio": 0.52153
     },
     "bg_viral_sinusitis": {
-      "coefficient": 0.54983,
-      "odds_ratio": 1.73296
+      "coefficient": 0.54438,
+      "odds_ratio": 1.72353
     },
     "bg_acute_bronchitis": {
-      "coefficient": -1.29679,
-      "odds_ratio": 0.27341
+      "coefficient": -1.30293,
+      "odds_ratio": 0.27174
     },
     "bg_strep_or_pregnancy": {
-      "coefficient": -3.32179,
-      "odds_ratio": 0.03609
+      "coefficient": -3.39301,
+      "odds_ratio": 0.03361
     },
     "bg_normal_pregnancy": {
-      "coefficient": 1.18742,
-      "odds_ratio": 3.27861
+      "coefficient": 1.19243,
+      "odds_ratio": 3.29507
     },
     "bg_miscarriage": {
-      "coefficient": -0.86485,
-      "odds_ratio": 0.42111
+      "coefficient": -0.87627,
+      "odds_ratio": 0.41633
     },
     "bg_otitis_media": {
-      "coefficient": -1.78175,
-      "odds_ratio": 0.16834
+      "coefficient": -1.89742,
+      "odds_ratio": 0.14995
     },
     "bg_viral_pharyngitis": {
-      "coefficient": -3.57177,
-      "odds_ratio": 0.02811
+      "coefficient": -3.63548,
+      "odds_ratio": 0.02637
     },
     "bg_appendicitis": {
-      "coefficient": -2.71701,
-      "odds_ratio": 0.06607
+      "coefficient": -2.69779,
+      "odds_ratio": 0.06735
     },
     "bg_cystitis_uti": {
-      "coefficient": -1.5135,
-      "odds_ratio": 0.22014
+      "coefficient": -1.6998,
+      "odds_ratio": 0.18272
     },
     "bg_gout": {
-      "coefficient": 2.8513,
-      "odds_ratio": 17.31023
+      "coefficient": 2.80561,
+      "odds_ratio": 16.5372
     },
     "bg_alcohol_dependence": {
       "coefficient": 0.0,
       "odds_ratio": 1.0
     },
     "bg_opioid_use": {
-      "coefficient": -0.98808,
-      "odds_ratio": 0.37229
+      "coefficient": -1.03327,
+      "odds_ratio": 0.35584
     },
     "bg_atopic_dermatitis_eczema": {
-      "coefficient": -2.02043,
-      "odds_ratio": 0.1326
+      "coefficient": -2.23807,
+      "odds_ratio": 0.10666
     },
     "bg_suspected_condition": {
-      "coefficient": -1.10673,
-      "odds_ratio": 0.33064
+      "coefficient": -1.13594,
+      "odds_ratio": 0.32112
     },
     "bg_suspected_respiratory_finding": {
-      "coefficient": 0.18438,
-      "odds_ratio": 1.20247
+      "coefficient": 0.20695,
+      "odds_ratio": 1.22992
     },
     "bg_postoperative_state": {
-      "coefficient": -0.79722,
-      "odds_ratio": 0.45058
+      "coefficient": -0.80122,
+      "odds_ratio": 0.44878
     },
     "interaction_diabetes_and_hypertension": {
-      "coefficient": 1.27297,
-      "odds_ratio": 3.57143
+      "coefficient": 1.27385,
+      "odds_ratio": 3.5746
     },
     "interaction_hypertension_and_lipid": {
-      "coefficient": 4.40463,
-      "odds_ratio": 81.8288
+      "coefficient": 4.43178,
+      "odds_ratio": 84.08097
     },
     "interaction_metabolic_triad": {
-      "coefficient": -3.24233,
-      "odds_ratio": 0.03907
+      "coefficient": -3.27696,
+      "odds_ratio": 0.03774
     },
     "interaction_cvd_and_ckd": {
-      "coefficient": 3.22456,
-      "odds_ratio": 25.14241
+      "coefficient": 3.41272,
+      "odds_ratio": 30.34756
     },
     "interaction_copd_and_cvd": {
-      "coefficient": 1.13594,
-      "odds_ratio": 3.11408
+      "coefficient": 1.26333,
+      "odds_ratio": 3.53718
     }
   }
 }

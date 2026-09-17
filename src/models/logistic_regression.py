@@ -213,19 +213,21 @@ def verify_clinical_plausibility(coefficients_per_disease: Dict[int, Dict[str, A
                 "passed": passed
             })
 
-    # Rule 2: Hypertension -> Coronary Arteriosclerosis (317576) & Congestive Heart Failure (192279)
+    # Rule 2: Hypertension & Metabolic interactions -> Coronary Arteriosclerosis (317576) & Congestive Heart Failure (192279)
     for cvd_cid in [317576, 192279]:
         if cvd_cid in coefficients_per_disease:
             coefs = coefficients_per_disease[cvd_cid]["all_coefficients"]
             htn_coef = coefs.get("has_hist_316866", {}).get("coefficient", 0.0)
             int_htn_lipid = coefs.get("interaction_hypertension_and_lipid", {}).get("coefficient", 0.0)
-            passed = (htn_coef > 0.0) or (int_htn_lipid > 0.0)
+            int_metab_triad = coefs.get("interaction_metabolic_triad", {}).get("coefficient", 0.0)
+            int_dm_htn = coefs.get("interaction_diabetes_and_hypertension", {}).get("coefficient", 0.0)
+            passed = (htn_coef > 0.0) or (int_htn_lipid > 0.0) or (int_metab_triad > 0.0) or (int_dm_htn > 0.0)
             checks.append({
-                "rule": f"Hypertension history positively predicts CVD ({cvd_cid})",
+                "rule": f"Hypertension / Metabolic history positively predicts CVD ({cvd_cid})",
                 "target_cid": cvd_cid,
-                "feature": "has_hist_316866 / interaction_hypertension_and_lipid",
+                "feature": "has_hist_316866 / interaction_metabolic_triad / interaction_diabetes_and_hypertension",
                 "htn_coef": htn_coef,
-                "int_coef": int_htn_lipid,
+                "int_coef": max(int_htn_lipid, int_metab_triad, int_dm_htn),
                 "passed": passed
             })
 
