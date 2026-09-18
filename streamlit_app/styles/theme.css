@@ -1,0 +1,382 @@
+/* ==========================================================================
+   Clinical Decision Support Design System: White - Navy - Blue - Semantic Red
+   Ultra-clean healthcare interface inspired by NHS Digital, Epic, & Mayo Clinic
+   ========================================================================== */
+
+:root {
+    --color-primary: #1E3A8A;           /* Deep Navy */
+    --color-primary-hover: #172554;     /* Darker Navy */
+    --color-primary-light: #EFF6FF;     /* Ice Blue Tint */
+    --color-accent-blue: #2563EB;       /* Vivid Clinical Blue */
+    --color-accent-blue-hover: #1D4ED8;
+    
+    --color-alert-red: #DC2626;         /* Clinical Crimson */
+    --color-alert-red-dark: #991B1B;
+    --color-alert-red-bg: #FEF2F2;
+    --color-alert-red-border: #FCA5A5;
+
+    --color-alert-amber: #D97706;       /* Amber Warning */
+    --color-alert-amber-dark: #92400E;
+    --color-alert-amber-bg: #FFFBEB;
+    --color-alert-amber-border: #FCD34D;
+
+    --color-bg-page: #F8FAFC;           /* Soft Light Slate Background */
+    --color-surface-white: #FFFFFF;     /* Pure Crisp White Surface */
+    --color-surface-sidebar: #FFFFFF;   /* Pure White Sidebar */
+    --color-border: #E2E8F0;            /* Subtle 1px Divider */
+    --color-border-input: #CBD5E1;      /* Light Slate Input Border */
+    --color-border-strong: #94A3B8;     /* Strong Border */
+    
+    --color-text-primary: #0F172A;      /* Slate-900 (High Contrast AAA) */
+    --color-text-secondary: #334155;    /* Slate-700 */
+    --color-text-muted: #64748B;        /* Slate-500 */
+    --color-text-caption: #94A3B8;      /* Slate-400 */
+    
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --max-content-width: 1140px;
+}
+
+/* 1. Global Reset & Streamlit Chrome Removal */
+html, body, [class*="css"], .stApp {
+    font-family: var(--font-family) !important;
+    background-color: var(--color-bg-page) !important;
+    color: var(--color-text-primary) !important;
+}
+
+/* Hide Streamlit default hamburger menu & footer decoration */
+#MainMenu, footer, header[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+/* 2. Controlled Main Content Container (Max 1140px, Centered) */
+.main .block-container {
+    max-width: var(--max-content-width) !important;
+    padding-top: 2rem !important;
+    padding-bottom: 3.5rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 3. Sidebar / Navigation Styling (250px Clean White Sidebar) */
+section[data-testid="stSidebar"] {
+    width: 260px !important;
+    min-width: 260px !important;
+    background-color: var(--color-surface-sidebar) !important;
+    border-right: 1px solid var(--color-border) !important;
+    box-shadow: 1px 0 3px rgba(15, 23, 42, 0.03) !important;
+}
+
+section[data-testid="stSidebar"] .block-container {
+    padding-top: 1.5rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+}
+
+/* Sidebar Branding Header */
+.sidebar-brand-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.sidebar-brand-subtitle {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Sidebar Navigation Links */
+div[data-testid="stSidebarNav"] {
+    padding-top: 0.5rem !important;
+}
+
+div[data-testid="stSidebarNav"] span,
+div[data-testid="stSidebarNav"] a,
+section[data-testid="stSidebar"] a span,
+section[data-testid="stSidebar"] span {
+    color: var(--color-text-primary) !important;
+    font-weight: 500 !important;
+    font-size: 0.90rem !important;
+}
+
+div[data-testid="stSidebarNav"] a {
+    border-radius: 6px !important;
+    padding: 0.45rem 0.75rem !important;
+    margin-bottom: 2px !important;
+    transition: background-color 0.15s ease, color 0.15s ease !important;
+}
+
+div[data-testid="stSidebarNav"] a:hover {
+    background-color: #F1F5F9 !important;
+    color: var(--color-primary) !important;
+}
+
+div[data-testid="stSidebarNav"] a[aria-current="page"],
+div[data-testid="stSidebarNav"] a[data-testid="stSidebarNavLink"][aria-current="page"] {
+    background-color: var(--color-primary-light) !important;
+    border-left: 3.5px solid var(--color-accent-blue) !important;
+    color: var(--color-primary) !important;
+    font-weight: 700 !important;
+}
+
+div[data-testid="stSidebarNav"] a[aria-current="page"] span {
+    color: var(--color-primary) !important;
+    font-weight: 700 !important;
+}
+
+div[data-testid="stNavSectionHeader"] {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    color: var(--color-text-muted) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 0.35rem !important;
+    padding-left: 0.5rem !important;
+}
+
+/* 4. Typography System */
+h1 {
+    font-size: 1.75rem !important;
+    font-weight: 800 !important;
+    color: var(--color-primary) !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.35rem !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.25 !important;
+}
+
+h2 {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: var(--color-primary) !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.4rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+h3 {
+    font-size: 1.10rem !important;
+    font-weight: 700 !important;
+    color: var(--color-text-primary) !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 0.35rem !important;
+}
+
+h4 {
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: var(--color-text-secondary) !important;
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+p, span, label, div {
+    color: var(--color-text-primary);
+}
+
+.page-subtitle {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin-top: -0.15rem;
+    margin-bottom: 1.5rem;
+}
+
+.clinical-disclaimer {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+}
+
+/* 5. Pure White Form Controls (Strict Light Inputs) */
+div[data-baseweb="input"],
+div[data-baseweb="select"] > div,
+div[data-baseweb="base-input"],
+input,
+textarea,
+div[data-testid="stNumberInput"] input,
+div[data-testid="stTextInput"] input {
+    background-color: #FFFFFF !important;
+    color: var(--color-text-primary) !important;
+    border: 1px solid var(--color-border-input) !important;
+    border-radius: 6px !important;
+    font-size: 0.92rem !important;
+}
+
+input:focus,
+textarea:focus,
+div[data-baseweb="input"]:focus-within,
+div[data-baseweb="select"]:focus-within {
+    border-color: var(--color-accent-blue) !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+}
+
+/* Select dropdown popover */
+ul[data-baseweb="menu"],
+div[data-baseweb="popover"],
+div[role="listbox"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid var(--color-border-input) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+}
+
+li[data-baseweb="menu-item"],
+div[role="option"] {
+    color: var(--color-text-primary) !important;
+    background-color: #FFFFFF !important;
+    font-size: 0.90rem !important;
+}
+
+li[data-baseweb="menu-item"]:hover,
+div[role="option"]:hover,
+li[data-baseweb="menu-item"][aria-selected="true"] {
+    background-color: var(--color-primary-light) !important;
+    color: var(--color-primary) !important;
+}
+
+/* Input Labels and Helper text */
+label[data-testid="stWidgetLabel"] p,
+div[data-testid="stWidgetLabel"] label {
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    color: var(--color-text-secondary) !important;
+    margin-bottom: 0.25rem !important;
+}
+
+div[data-testid="stFormSubmitButton"],
+div.stButton {
+    margin-top: 0.25rem;
+}
+
+/* 6. Professional Primary & Secondary Buttons */
+button[kind="primary"],
+div.stButton > button[kind="primary"] {
+    background-color: var(--color-primary) !important;
+    border: 1px solid var(--color-primary) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    font-size: 0.92rem !important;
+    border-radius: 6px !important;
+    padding: 0.55rem 1.35rem !important;
+    box-shadow: 0 1px 2px rgba(30, 58, 138, 0.2) !important;
+    transition: all 0.15s ease-in-out !important;
+}
+
+button[kind="primary"]:hover,
+div.stButton > button[kind="primary"]:hover {
+    background-color: var(--color-primary-hover) !important;
+    border-color: var(--color-primary-hover) !important;
+    box-shadow: 0 3px 6px rgba(30, 58, 138, 0.3) !important;
+}
+
+button[kind="secondary"],
+div.stButton > button:not([kind="primary"]) {
+    background-color: #FFFFFF !important;
+    border: 1px solid var(--color-border-input) !important;
+    color: var(--color-text-secondary) !important;
+    font-weight: 600 !important;
+    font-size: 0.88rem !important;
+    border-radius: 6px !important;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03) !important;
+    transition: all 0.15s ease-in-out !important;
+}
+
+button[kind="secondary"]:hover,
+div.stButton > button:not([kind="primary"]):hover {
+    background-color: var(--color-primary-light) !important;
+    border-color: #93C5FD !important;
+    color: var(--color-primary) !important;
+}
+
+/* Compact Tag/Shortcut Buttons */
+.shortcut-btn button {
+    font-size: 0.82rem !important;
+    padding: 0.30rem 0.65rem !important;
+    border-radius: 4px !important;
+}
+
+/* 7. Metric Containers */
+div[data-testid="stMetric"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 8px !important;
+    padding: 0.85rem 1.15rem !important;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03) !important;
+}
+
+div[data-testid="stMetricValue"] {
+    font-size: 1.45rem !important;
+    font-weight: 800 !important;
+    color: var(--color-primary) !important;
+}
+
+div[data-testid="stMetricLabel"] {
+    font-size: 0.76rem !important;
+    font-weight: 700 !important;
+    color: var(--color-text-muted) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+}
+
+/* 8. Subtle Section Divider */
+hr {
+    border: none !important;
+    border-top: 1px solid var(--color-border) !important;
+    margin: 1.75rem 0 !important;
+}
+
+/* 9. Structured Summary Card */
+.clinical-summary-box {
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 6px;
+    padding: 1.15rem 1.35rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+/* 10. Selected Condition Chips */
+.condition-chip {
+    display: inline-flex;
+    align-items: center;
+    background-color: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    color: #1E40AF;
+    font-size: 0.84rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 3px 4px 3px 0;
+}
+
+.condition-chip-remove {
+    margin-left: 6px;
+    color: #3B82F6;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.condition-chip-remove:hover {
+    color: #1E3A8A;
+}
+
+/* 11. Completion / Trigger Action Area */
+.assessment-cta-container {
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
