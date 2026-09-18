@@ -1,0 +1,3249 @@
+{
+  "validation_fit_summary": {
+    "macro_summary": {
+      "macro_uncalibrated_brier": 0.003068,
+      "macro_calibrated_brier": 0.002957,
+      "macro_brier_reduction": 0.00011,
+      "n_targets": 41,
+      "n_improved": 40
+    },
+    "per_disease": {
+      "75036": {
+        "concept_id": 75036,
+        "disease_name": "Localized Osteoarthritis of Hand",
+        "category": "Musculoskeletal",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.00069,
+        "calibrated_val_brier": 0.000688,
+        "brier_reduction": 2e-06,
+        "improved": true
+      },
+      "79740": {
+        "concept_id": 79740,
+        "disease_name": "Primary Malignant Neoplasm of Colon",
+        "category": "Oncology / Pre-Malignant",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000656,
+        "calibrated_val_brier": 0.000591,
+        "brier_reduction": 6.5e-05,
+        "improved": true
+      },
+      "80502": {
+        "concept_id": 80502,
+        "disease_name": "Osteoporosis",
+        "category": "Musculoskeletal",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.003085,
+        "calibrated_val_brier": 0.002845,
+        "brier_reduction": 0.00024,
+        "improved": true
+      },
+      "192279": {
+        "concept_id": 192279,
+        "disease_name": "Congestive Heart Failure",
+        "category": "Cardiometabolic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000946,
+        "calibrated_val_brier": 0.000934,
+        "brier_reduction": 1.3e-05,
+        "improved": true
+      },
+      "200970": {
+        "concept_id": 200970,
+        "disease_name": "Carcinoma in situ of Prostate",
+        "category": "Oncology / Pre-Malignant",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.005609,
+        "calibrated_val_brier": 0.005308,
+        "brier_reduction": 0.000301,
+        "improved": true
+      },
+      "201826": {
+        "concept_id": 201826,
+        "disease_name": "Type 2 Diabetes Mellitus",
+        "category": "Cardiometabolic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000957,
+        "calibrated_val_brier": 0.000955,
+        "brier_reduction": 2e-06,
+        "improved": true
+      },
+      "257012": {
+        "concept_id": 257012,
+        "disease_name": "Chronic Sinusitis",
+        "category": "Respiratory / Allergic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.005809,
+        "calibrated_val_brier": 0.005726,
+        "brier_reduction": 8.3e-05,
+        "improved": true
+      },
+      "258780": {
+        "concept_id": 258780,
+        "disease_name": "Chronic Obstructive Bronchitis (COPD)",
+        "category": "Respiratory / Allergic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000872,
+        "calibrated_val_brier": 0.000866,
+        "brier_reduction": 7e-06,
+        "improved": true
+      },
+      "316866": {
+        "concept_id": 316866,
+        "disease_name": "Essential Hypertension",
+        "category": "Cardiometabolic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.003354,
+        "calibrated_val_brier": 0.003228,
+        "brier_reduction": 0.000126,
+        "improved": true
+      },
+      "317576": {
+        "concept_id": 317576,
+        "disease_name": "Coronary Arteriosclerosis",
+        "category": "Cardiometabolic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.005004,
+        "calibrated_val_brier": 0.004926,
+        "brier_reduction": 7.8e-05,
+        "improved": true
+      },
+      "321042": {
+        "concept_id": 321042,
+        "disease_name": "Cardiac Arrest",
+        "category": "Cardiometabolic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000778,
+        "calibrated_val_brier": 0.00077,
+        "brier_reduction": 7e-06,
+        "improved": true
+      },
+      "378419": {
+        "concept_id": 378419,
+        "disease_name": "Alzheimer's Disease",
+        "category": "Neurological / Mental Health",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.007792,
+        "calibrated_val_brier": 0.007197,
+        "brier_reduction": 0.000595,
+        "improved": true
+      },
+      "380378": {
+        "concept_id": 380378,
+        "disease_name": "Epilepsy / Seizure Disorder",
+        "category": "Neurological / Mental Health",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000744,
+        "calibrated_val_brier": 0.000721,
+        "brier_reduction": 2.3e-05,
+        "improved": true
+      },
+      "381316": {
+        "concept_id": 381316,
+        "disease_name": "Stroke (Cerebrovascular Accident)",
+        "category": "Neurological / Mental Health",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.003991,
+        "calibrated_val_brier": 0.003814,
+        "brier_reduction": 0.000178,
+        "improved": true
+      },
+      "432867": {
+        "concept_id": 432867,
+        "disease_name": "Hyperlipidemia",
+        "category": "Cardiometabolic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.004329,
+        "calibrated_val_brier": 0.004144,
+        "brier_reduction": 0.000184,
+        "improved": true
+      },
+      "436096": {
+        "concept_id": 436096,
+        "disease_name": "Chronic Pain",
+        "category": "Musculoskeletal",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.008403,
+        "calibrated_val_brier": 0.008117,
+        "brier_reduction": 0.000286,
+        "improved": true
+      },
+      "436940": {
+        "concept_id": 436940,
+        "disease_name": "Metabolic Syndrome X",
+        "category": "Cardiometabolic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000861,
+        "calibrated_val_brier": 0.000802,
+        "brier_reduction": 5.9e-05,
+        "improved": true
+      },
+      "439777": {
+        "concept_id": 439777,
+        "disease_name": "Anemia",
+        "category": "Hematology",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.007669,
+        "calibrated_val_brier": 0.007575,
+        "brier_reduction": 9.4e-05,
+        "improved": true
+      },
+      "440086": {
+        "concept_id": 440086,
+        "disease_name": "Childhood ADHD",
+        "category": "Neurological / Mental Health",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000203,
+        "calibrated_val_brier": 0.000202,
+        "brier_reduction": 1e-06,
+        "improved": true
+      },
+      "443614": {
+        "concept_id": 443614,
+        "disease_name": "Chronic Kidney Disease Stage 1",
+        "category": "Renal",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.00092,
+        "calibrated_val_brier": 0.000908,
+        "brier_reduction": 1.2e-05,
+        "improved": true
+      },
+      "4029498": {
+        "concept_id": 4029498,
+        "disease_name": "Seizure Disorder",
+        "category": "Neurological / Mental Health",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000742,
+        "calibrated_val_brier": 0.000727,
+        "brier_reduction": 1.5e-05,
+        "improved": true
+      },
+      "4043241": {
+        "concept_id": 4043241,
+        "disease_name": "Familial Alzheimer's Disease",
+        "category": "Neurological / Mental Health",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000439,
+        "calibrated_val_brier": 0.000405,
+        "brier_reduction": 3.3e-05,
+        "improved": true
+      },
+      "4051466": {
+        "concept_id": 4051466,
+        "disease_name": "Childhood Asthma",
+        "category": "Respiratory / Allergic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000346,
+        "calibrated_val_brier": 0.000341,
+        "brier_reduction": 5e-06,
+        "improved": true
+      },
+      "4079749": {
+        "concept_id": 4079749,
+        "disease_name": "Osteoarthritis of Hip",
+        "category": "Musculoskeletal",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000393,
+        "calibrated_val_brier": 0.000392,
+        "brier_reduction": 1e-06,
+        "improved": false
+      },
+      "4079750": {
+        "concept_id": 4079750,
+        "disease_name": "Osteoarthritis of Knee",
+        "category": "Musculoskeletal",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.001878,
+        "calibrated_val_brier": 0.001872,
+        "brier_reduction": 5e-06,
+        "improved": true
+      },
+      "4110591": {
+        "concept_id": 4110591,
+        "disease_name": "Small Cell Carcinoma of Lung",
+        "category": "Oncology / Pre-Malignant",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.001172,
+        "calibrated_val_brier": 0.001155,
+        "brier_reduction": 1.8e-05,
+        "improved": true
+      },
+      "4115276": {
+        "concept_id": 4115276,
+        "disease_name": "Non-Small Cell Lung Cancer",
+        "category": "Oncology / Pre-Malignant",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.005709,
+        "calibrated_val_brier": 0.005516,
+        "brier_reduction": 0.000192,
+        "improved": true
+      },
+      "4120314": {
+        "concept_id": 4120314,
+        "disease_name": "Hypertriglyceridemia",
+        "category": "Cardiometabolic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000709,
+        "calibrated_val_brier": 0.000647,
+        "brier_reduction": 6.1e-05,
+        "improved": true
+      },
+      "4129902": {
+        "concept_id": 4129902,
+        "disease_name": "Neoplasm of Prostate",
+        "category": "Oncology / Pre-Malignant",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.006234,
+        "calibrated_val_brier": 0.005805,
+        "brier_reduction": 0.00043,
+        "improved": true
+      },
+      "4180790": {
+        "concept_id": 4180790,
+        "disease_name": "Malignant Neoplasm of Colon",
+        "category": "Oncology / Pre-Malignant",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.0007,
+        "calibrated_val_brier": 0.00061,
+        "brier_reduction": 9e-05,
+        "improved": true
+      },
+      "4214376": {
+        "concept_id": 4214376,
+        "disease_name": "Hyperglycemia",
+        "category": "Cardiometabolic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000861,
+        "calibrated_val_brier": 0.000794,
+        "brier_reduction": 6.7e-05,
+        "improved": true
+      },
+      "4226121": {
+        "concept_id": 4226121,
+        "disease_name": "Retinopathy due to Type 2 Diabetes",
+        "category": "Diabetic Complication",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000715,
+        "calibrated_val_brier": 0.000699,
+        "brier_reduction": 1.5e-05,
+        "improved": true
+      },
+      "4229440": {
+        "concept_id": 4229440,
+        "disease_name": "Chronic Kidney Disease",
+        "category": "Renal",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.006735,
+        "calibrated_val_brier": 0.006554,
+        "brier_reduction": 0.00018,
+        "improved": true
+      },
+      "4283893": {
+        "concept_id": 4283893,
+        "disease_name": "Sinusitis",
+        "category": "Respiratory / Allergic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.006233,
+        "calibrated_val_brier": 0.006198,
+        "brier_reduction": 3.5e-05,
+        "improved": true
+      },
+      "4285898": {
+        "concept_id": 4285898,
+        "disease_name": "Polyp of Colon",
+        "category": "Oncology / Pre-Malignant",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.006829,
+        "calibrated_val_brier": 0.006622,
+        "brier_reduction": 0.000206,
+        "improved": true
+      },
+      "4310703": {
+        "concept_id": 4310703,
+        "disease_name": "Non-Small Cell Carcinoma of Lung, Stage 1",
+        "category": "Oncology / Pre-Malignant",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.005773,
+        "calibrated_val_brier": 0.005606,
+        "brier_reduction": 0.000168,
+        "improved": true
+      },
+      "4311629": {
+        "concept_id": 4311629,
+        "disease_name": "Prediabetes",
+        "category": "Cardiometabolic",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.005888,
+        "calibrated_val_brier": 0.005843,
+        "brier_reduction": 4.5e-05,
+        "improved": true
+      },
+      "37016354": {
+        "concept_id": 37016354,
+        "disease_name": "Neuropathy due to Type 2 Diabetes",
+        "category": "Diabetic Complication",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.000728,
+        "calibrated_val_brier": 0.00072,
+        "brier_reduction": 8e-06,
+        "improved": true
+      },
+      "37017023": {
+        "concept_id": 37017023,
+        "disease_name": "Recurrent Rectal Polyp",
+        "category": "Oncology / Pre-Malignant",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.001427,
+        "calibrated_val_brier": 0.001278,
+        "brier_reduction": 0.000149,
+        "improved": true
+      },
+      "37395648": {
+        "concept_id": 37395648,
+        "disease_name": "Small Cell Carcinoma of Lung, Stage 1",
+        "category": "Oncology / Pre-Malignant",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.001184,
+        "calibrated_val_brier": 0.00118,
+        "brier_reduction": 4e-06,
+        "improved": true
+      },
+      "43530652": {
+        "concept_id": 43530652,
+        "disease_name": "Chronic Intractable Migraine",
+        "category": "Musculoskeletal",
+        "best_method": "isotonic",
+        "uncalibrated_val_brier": 0.008408,
+        "calibrated_val_brier": 0.007965,
+        "brier_reduction": 0.000442,
+        "improved": true
+      }
+    }
+  },
+  "validation_evaluation": {
+    "macro_metrics": {
+      "macro_uncalibrated_brier": 0.003068,
+      "macro_calibrated_brier": 0.002957,
+      "macro_brier_improvement": 0.00011,
+      "targets_improved": 39
+    },
+    "per_target": {
+      "75036": {
+        "concept_id": 75036,
+        "disease_name": "Localized Osteoarthritis of Hand",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.00069,
+        "calibrated_brier": 0.000688,
+        "brier_improvement": 2e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0006,
+            "true": 0.0007
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0007,
+            "true": 0.0007
+          }
+        ]
+      },
+      "79740": {
+        "concept_id": 79740,
+        "disease_name": "Primary Malignant Neoplasm of Colon",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000656,
+        "calibrated_brier": 0.000591,
+        "brier_improvement": 6.5e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0005,
+            "true": 0.0006
+          },
+          {
+            "pred": 0.1437,
+            "true": 0.0
+          },
+          {
+            "pred": 0.2373,
+            "true": 0.0476
+          },
+          {
+            "pred": 0.3109,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0006,
+            "true": 0.0006
+          },
+          {
+            "pred": 0.2,
+            "true": 0.2
+          }
+        ]
+      },
+      "80502": {
+        "concept_id": 80502,
+        "disease_name": "Osteoporosis",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.003085,
+        "calibrated_brier": 0.002845,
+        "brier_improvement": 0.00024,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0011,
+            "true": 0.002
+          },
+          {
+            "pred": 0.1416,
+            "true": 0.0741
+          },
+          {
+            "pred": 0.2387,
+            "true": 0.0568
+          },
+          {
+            "pred": 0.349,
+            "true": 0.1957
+          },
+          {
+            "pred": 0.4105,
+            "true": 1.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0027,
+            "true": 0.0027
+          },
+          {
+            "pred": 0.1239,
+            "true": 0.1239
+          },
+          {
+            "pred": 0.4,
+            "true": 0.0
+          },
+          {
+            "pred": 0.4,
+            "true": 0.4138
+          },
+          {
+            "pred": 1.0,
+            "true": 1.0
+          }
+        ]
+      },
+      "192279": {
+        "concept_id": 192279,
+        "disease_name": "Congestive Heart Failure",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000946,
+        "calibrated_brier": 0.000934,
+        "brier_improvement": 1.3e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0008,
+            "true": 0.001
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.001,
+            "true": 0.001
+          }
+        ]
+      },
+      "200970": {
+        "concept_id": 200970,
+        "disease_name": "Carcinoma in situ of Prostate",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.005609,
+        "calibrated_brier": 0.005308,
+        "brier_improvement": 0.000301,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0012,
+            "true": 0.0049
+          },
+          {
+            "pred": 0.1423,
+            "true": 0.0388
+          },
+          {
+            "pred": 0.2402,
+            "true": 0.1156
+          },
+          {
+            "pred": 0.3185,
+            "true": 0.0897
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0063,
+            "true": 0.0053
+          },
+          {
+            "pred": 0.1479,
+            "true": 0.1479
+          }
+        ]
+      },
+      "201826": {
+        "concept_id": 201826,
+        "disease_name": "Type 2 Diabetes Mellitus",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000957,
+        "calibrated_brier": 0.000955,
+        "brier_improvement": 2e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.001,
+            "true": 0.001
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.001,
+            "true": 0.001
+          }
+        ]
+      },
+      "257012": {
+        "concept_id": 257012,
+        "disease_name": "Chronic Sinusitis",
+        "category": "Respiratory / Allergic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.005809,
+        "calibrated_brier": 0.005726,
+        "brier_improvement": 8.3e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0036,
+            "true": 0.0053
+          },
+          {
+            "pred": 0.144,
+            "true": 0.0943
+          },
+          {
+            "pred": 0.2367,
+            "true": 0.1538
+          },
+          {
+            "pred": 0.3567,
+            "true": 0.5
+          },
+          {
+            "pred": 0.4265,
+            "true": 0.4211
+          },
+          {
+            "pred": 0.52,
+            "true": 0.3
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0053,
+            "true": 0.0053
+          },
+          {
+            "pred": 0.1127,
+            "true": 0.1127
+          },
+          {
+            "pred": 0.3704,
+            "true": 0.3704
+          },
+          {
+            "pred": 0.4186,
+            "true": 0.4186
+          },
+          {
+            "pred": 1.0,
+            "true": 1.0
+          }
+        ]
+      },
+      "258780": {
+        "concept_id": 258780,
+        "disease_name": "Chronic Obstructive Bronchitis (COPD)",
+        "category": "Respiratory / Allergic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000872,
+        "calibrated_brier": 0.000866,
+        "brier_improvement": 7e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0005,
+            "true": 0.0009
+          },
+          {
+            "pred": 0.2032,
+            "true": 0.0
+          },
+          {
+            "pred": 0.3046,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0009,
+            "true": 0.0009
+          }
+        ]
+      },
+      "316866": {
+        "concept_id": 316866,
+        "disease_name": "Essential Hypertension",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.003354,
+        "calibrated_brier": 0.003228,
+        "brier_improvement": 0.000126,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0007,
+            "true": 0.001
+          },
+          {
+            "pred": 0.1578,
+            "true": 0.1295
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0016,
+            "true": 0.0016
+          },
+          {
+            "pred": 0.1383,
+            "true": 0.1383
+          },
+          {
+            "pred": 0.2199,
+            "true": 0.2199
+          },
+          {
+            "pred": 0.4085,
+            "true": 0.4085
+          }
+        ]
+      },
+      "317576": {
+        "concept_id": 317576,
+        "disease_name": "Coronary Arteriosclerosis",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.005004,
+        "calibrated_brier": 0.004926,
+        "brier_improvement": 7.8e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0033,
+            "true": 0.005
+          },
+          {
+            "pred": 0.1341,
+            "true": 0.0056
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.005,
+            "true": 0.005
+          }
+        ]
+      },
+      "321042": {
+        "concept_id": 321042,
+        "disease_name": "Cardiac Arrest",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000778,
+        "calibrated_brier": 0.00077,
+        "brier_improvement": 7e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0009,
+            "true": 0.0008
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0008,
+            "true": 0.0008
+          }
+        ]
+      },
+      "378419": {
+        "concept_id": 378419,
+        "disease_name": "Alzheimer's Disease",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.007792,
+        "calibrated_brier": 0.007197,
+        "brier_improvement": 0.000595,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0028,
+            "true": 0.0058
+          },
+          {
+            "pred": 0.1338,
+            "true": 0.0434
+          },
+          {
+            "pred": 0.2487,
+            "true": 0.0984
+          },
+          {
+            "pred": 0.3266,
+            "true": 0.234
+          },
+          {
+            "pred": 0.4123,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0066,
+            "true": 0.0066
+          },
+          {
+            "pred": 0.116,
+            "true": 0.116
+          },
+          {
+            "pred": 0.5882,
+            "true": 0.5882
+          }
+        ]
+      },
+      "380378": {
+        "concept_id": 380378,
+        "disease_name": "Epilepsy / Seizure Disorder",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000744,
+        "calibrated_brier": 0.000721,
+        "brier_improvement": 2.3e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0006,
+            "true": 0.0003
+          },
+          {
+            "pred": 0.1348,
+            "true": 0.1048
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0004,
+            "true": 0.0004
+          },
+          {
+            "pred": 0.1075,
+            "true": 0.1075
+          },
+          {
+            "pred": 1.0,
+            "true": 1.0
+          }
+        ]
+      },
+      "381316": {
+        "concept_id": 381316,
+        "disease_name": "Stroke (Cerebrovascular Accident)",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.003991,
+        "calibrated_brier": 0.003814,
+        "brier_improvement": 0.000178,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0036,
+            "true": 0.0034
+          },
+          {
+            "pred": 0.137,
+            "true": 0.1347
+          },
+          {
+            "pred": 0.21,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0035,
+            "true": 0.0035
+          },
+          {
+            "pred": 0.125,
+            "true": 0.125
+          },
+          {
+            "pred": 0.2,
+            "true": 0.2
+          },
+          {
+            "pred": 0.322,
+            "true": 0.322
+          },
+          {
+            "pred": 0.4667,
+            "true": 0.4667
+          },
+          {
+            "pred": 0.7692,
+            "true": 0.7692
+          }
+        ]
+      },
+      "432867": {
+        "concept_id": 432867,
+        "disease_name": "Hyperlipidemia",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.004329,
+        "calibrated_brier": 0.004144,
+        "brier_improvement": 0.000184,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0046,
+            "true": 0.0042
+          },
+          {
+            "pred": 0.1225,
+            "true": 0.0081
+          },
+          {
+            "pred": 0.2213,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0042,
+            "true": 0.0042
+          }
+        ]
+      },
+      "436096": {
+        "concept_id": 436096,
+        "disease_name": "Chronic Pain",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.008403,
+        "calibrated_brier": 0.008117,
+        "brier_improvement": 0.000286,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.004,
+            "true": 0.0042
+          },
+          {
+            "pred": 0.1487,
+            "true": 0.0909
+          },
+          {
+            "pred": 0.2445,
+            "true": 0.2105
+          },
+          {
+            "pred": 0.3655,
+            "true": 0.3578
+          },
+          {
+            "pred": 0.4287,
+            "true": 0.5352
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0042,
+            "true": 0.0042
+          },
+          {
+            "pred": 0.115,
+            "true": 0.1156
+          },
+          {
+            "pred": 0.2476,
+            "true": 0.2476
+          },
+          {
+            "pred": 0.3429,
+            "true": 0.3429
+          },
+          {
+            "pred": 0.4948,
+            "true": 0.4948
+          },
+          {
+            "pred": 0.5612,
+            "true": 0.5612
+          },
+          {
+            "pred": 0.7375,
+            "true": 0.75
+          },
+          {
+            "pred": 0.8,
+            "true": 0.75
+          },
+          {
+            "pred": 0.9333,
+            "true": 0.9333
+          }
+        ]
+      },
+      "436940": {
+        "concept_id": 436940,
+        "disease_name": "Metabolic Syndrome X",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000861,
+        "calibrated_brier": 0.000802,
+        "brier_improvement": 5.9e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0001,
+            "true": 0.0001
+          },
+          {
+            "pred": 0.1433,
+            "true": 0.5263
+          },
+          {
+            "pred": 0.255,
+            "true": 0.1667
+          },
+          {
+            "pred": 0.3572,
+            "true": 0.3625
+          },
+          {
+            "pred": 0.402,
+            "true": 0.6
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0001,
+            "true": 0.0001
+          },
+          {
+            "pred": 0.256,
+            "true": 0.256
+          },
+          {
+            "pred": 0.3721,
+            "true": 0.3721
+          },
+          {
+            "pred": 0.5769,
+            "true": 0.5769
+          },
+          {
+            "pred": 1.0,
+            "true": 1.0
+          }
+        ]
+      },
+      "439777": {
+        "concept_id": 439777,
+        "disease_name": "Anemia",
+        "category": "Hematology",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.007669,
+        "calibrated_brier": 0.007575,
+        "brier_improvement": 9.4e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0071,
+            "true": 0.0066
+          },
+          {
+            "pred": 0.152,
+            "true": 0.1697
+          },
+          {
+            "pred": 0.2069,
+            "true": 0.1875
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0067,
+            "true": 0.0067
+          },
+          {
+            "pred": 0.1362,
+            "true": 0.1362
+          },
+          {
+            "pred": 0.2593,
+            "true": 0.2593
+          }
+        ]
+      },
+      "440086": {
+        "concept_id": 440086,
+        "disease_name": "Childhood ADHD",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000203,
+        "calibrated_brier": 0.000202,
+        "brier_improvement": 1e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0005,
+            "true": 0.0002
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0002,
+            "true": 0.0002
+          }
+        ]
+      },
+      "443614": {
+        "concept_id": 443614,
+        "disease_name": "Chronic Kidney Disease Stage 1",
+        "category": "Renal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.00092,
+        "calibrated_brier": 0.000908,
+        "brier_improvement": 1.2e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0007,
+            "true": 0.0009
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0009,
+            "true": 0.0009
+          }
+        ]
+      },
+      "4029498": {
+        "concept_id": 4029498,
+        "disease_name": "Seizure Disorder",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000742,
+        "calibrated_brier": 0.000727,
+        "brier_improvement": 1.5e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0005,
+            "true": 0.0007
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0007,
+            "true": 0.0007
+          },
+          {
+            "pred": 1.0,
+            "true": 1.0
+          }
+        ]
+      },
+      "4043241": {
+        "concept_id": 4043241,
+        "disease_name": "Familial Alzheimer's Disease",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000439,
+        "calibrated_brier": 0.000405,
+        "brier_improvement": 3.3e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0006,
+            "true": 0.0004
+          },
+          {
+            "pred": 0.1404,
+            "true": 0.0
+          },
+          {
+            "pred": 0.2156,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0004,
+            "true": 0.0004
+          }
+        ]
+      },
+      "4051466": {
+        "concept_id": 4051466,
+        "disease_name": "Childhood Asthma",
+        "category": "Respiratory / Allergic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000346,
+        "calibrated_brier": 0.000341,
+        "brier_improvement": 5e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0004,
+            "true": 0.0004
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0003,
+            "true": 0.0003
+          },
+          {
+            "pred": 0.1667,
+            "true": 0.1667
+          }
+        ]
+      },
+      "4079749": {
+        "concept_id": 4079749,
+        "disease_name": "Osteoarthritis of Hip",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000393,
+        "calibrated_brier": 0.000392,
+        "brier_improvement": 1e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0006,
+            "true": 0.0004
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0004,
+            "true": 0.0004
+          }
+        ]
+      },
+      "4079750": {
+        "concept_id": 4079750,
+        "disease_name": "Osteoarthritis of Knee",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001878,
+        "calibrated_brier": 0.001872,
+        "brier_improvement": 5e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0015,
+            "true": 0.0019
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0019,
+            "true": 0.0019
+          }
+        ]
+      },
+      "4110591": {
+        "concept_id": 4110591,
+        "disease_name": "Small Cell Carcinoma of Lung",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001172,
+        "calibrated_brier": 0.001155,
+        "brier_improvement": 1.8e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0011,
+            "true": 0.0012
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0012,
+            "true": 0.0012
+          },
+          {
+            "pred": 1.0,
+            "true": 1.0
+          }
+        ]
+      },
+      "4115276": {
+        "concept_id": 4115276,
+        "disease_name": "Non-Small Cell Lung Cancer",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.005709,
+        "calibrated_brier": 0.005516,
+        "brier_improvement": 0.000192,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0046,
+            "true": 0.0038
+          },
+          {
+            "pred": 0.1307,
+            "true": 0.1768
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0042,
+            "true": 0.0042
+          },
+          {
+            "pred": 0.1225,
+            "true": 0.1225
+          },
+          {
+            "pred": 0.2767,
+            "true": 0.2767
+          },
+          {
+            "pred": 0.3118,
+            "true": 0.3118
+          },
+          {
+            "pred": 0.4603,
+            "true": 0.4603
+          }
+        ]
+      },
+      "4120314": {
+        "concept_id": 4120314,
+        "disease_name": "Hypertriglyceridemia",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000709,
+        "calibrated_brier": 0.000647,
+        "brier_improvement": 6.1e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0001,
+            "true": 0.0001
+          },
+          {
+            "pred": 0.1475,
+            "true": 0.8
+          },
+          {
+            "pred": 0.2562,
+            "true": 0.4
+          },
+          {
+            "pred": 0.3548,
+            "true": 0.2766
+          },
+          {
+            "pred": 0.4469,
+            "true": 0.5545
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0001,
+            "true": 0.0001
+          },
+          {
+            "pred": 0.3281,
+            "true": 0.3281
+          },
+          {
+            "pred": 0.5,
+            "true": 0.5
+          },
+          {
+            "pred": 0.5132,
+            "true": 0.5132
+          },
+          {
+            "pred": 0.6316,
+            "true": 0.6316
+          },
+          {
+            "pred": 0.8,
+            "true": 0.8
+          },
+          {
+            "pred": 1.0,
+            "true": 1.0
+          }
+        ]
+      },
+      "4129902": {
+        "concept_id": 4129902,
+        "disease_name": "Neoplasm of Prostate",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.006234,
+        "calibrated_brier": 0.005805,
+        "brier_improvement": 0.00043,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0017,
+            "true": 0.0049
+          },
+          {
+            "pred": 0.1477,
+            "true": 0.0771
+          },
+          {
+            "pred": 0.2364,
+            "true": 0.0863
+          },
+          {
+            "pred": 0.3158,
+            "true": 0.0217
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0057,
+            "true": 0.0057
+          },
+          {
+            "pred": 0.2692,
+            "true": 0.2692
+          }
+        ]
+      },
+      "4180790": {
+        "concept_id": 4180790,
+        "disease_name": "Malignant Neoplasm of Colon",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.0007,
+        "calibrated_brier": 0.00061,
+        "brier_improvement": 9e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0004,
+            "true": 0.0006
+          },
+          {
+            "pred": 0.1501,
+            "true": 0.0
+          },
+          {
+            "pred": 0.2527,
+            "true": 0.0435
+          },
+          {
+            "pred": 0.3432,
+            "true": 0.0
+          },
+          {
+            "pred": 0.4242,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0006,
+            "true": 0.0006
+          }
+        ]
+      },
+      "4214376": {
+        "concept_id": 4214376,
+        "disease_name": "Hyperglycemia",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000861,
+        "calibrated_brier": 0.000794,
+        "brier_improvement": 6.7e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0002,
+            "true": 0.0002
+          },
+          {
+            "pred": 0.1582,
+            "true": 0.1053
+          },
+          {
+            "pred": 0.2435,
+            "true": 0.2442
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0002,
+            "true": 0.0002
+          },
+          {
+            "pred": 0.1148,
+            "true": 0.1148
+          },
+          {
+            "pred": 0.2083,
+            "true": 0.2083
+          },
+          {
+            "pred": 0.3226,
+            "true": 0.3226
+          },
+          {
+            "pred": 0.451,
+            "true": 0.451
+          },
+          {
+            "pred": 0.6667,
+            "true": 0.6667
+          }
+        ]
+      },
+      "4226121": {
+        "concept_id": 4226121,
+        "disease_name": "Retinopathy due to Type 2 Diabetes",
+        "category": "Diabetic Complication",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000715,
+        "calibrated_brier": 0.000699,
+        "brier_improvement": 1.5e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0007,
+            "true": 0.0007
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0007,
+            "true": 0.0007
+          }
+        ]
+      },
+      "4229440": {
+        "concept_id": 4229440,
+        "disease_name": "Chronic Kidney Disease",
+        "category": "Renal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.006735,
+        "calibrated_brier": 0.006554,
+        "brier_improvement": 0.00018,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0043,
+            "true": 0.0063
+          },
+          {
+            "pred": 0.1364,
+            "true": 0.0673
+          },
+          {
+            "pred": 0.2291,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0067,
+            "true": 0.0067
+          }
+        ]
+      },
+      "4283893": {
+        "concept_id": 4283893,
+        "disease_name": "Sinusitis",
+        "category": "Respiratory / Allergic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.006233,
+        "calibrated_brier": 0.006198,
+        "brier_improvement": 3.5e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0042,
+            "true": 0.0062
+          },
+          {
+            "pred": 0.1289,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0062,
+            "true": 0.0062
+          }
+        ]
+      },
+      "4285898": {
+        "concept_id": 4285898,
+        "disease_name": "Polyp of Colon",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.006829,
+        "calibrated_brier": 0.006622,
+        "brier_improvement": 0.000206,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0049,
+            "true": 0.0065
+          },
+          {
+            "pred": 0.1215,
+            "true": 0.0299
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0068,
+            "true": 0.0068
+          }
+        ]
+      },
+      "4310703": {
+        "concept_id": 4310703,
+        "disease_name": "Non-Small Cell Carcinoma of Lung, Stage 1",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.005773,
+        "calibrated_brier": 0.005606,
+        "brier_improvement": 0.000168,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0046,
+            "true": 0.0038
+          },
+          {
+            "pred": 0.1321,
+            "true": 0.1778
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0041,
+            "true": 0.0041
+          },
+          {
+            "pred": 0.1311,
+            "true": 0.1311
+          },
+          {
+            "pred": 0.2435,
+            "true": 0.2435
+          },
+          {
+            "pred": 0.4225,
+            "true": 0.4225
+          },
+          {
+            "pred": 1.0,
+            "true": 1.0
+          }
+        ]
+      },
+      "4311629": {
+        "concept_id": 4311629,
+        "disease_name": "Prediabetes",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.005888,
+        "calibrated_brier": 0.005843,
+        "brier_improvement": 4.5e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0062,
+            "true": 0.006
+          },
+          {
+            "pred": 0.1283,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.006,
+            "true": 0.006
+          }
+        ]
+      },
+      "37016354": {
+        "concept_id": 37016354,
+        "disease_name": "Neuropathy due to Type 2 Diabetes",
+        "category": "Diabetic Complication",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000728,
+        "calibrated_brier": 0.00072,
+        "brier_improvement": 8e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0007,
+            "true": 0.0007
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0007,
+            "true": 0.0007
+          },
+          {
+            "pred": 0.1304,
+            "true": 0.1304
+          }
+        ]
+      },
+      "37017023": {
+        "concept_id": 37017023,
+        "disease_name": "Recurrent Rectal Polyp",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001427,
+        "calibrated_brier": 0.001278,
+        "brier_improvement": 0.000149,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0008,
+            "true": 0.0009
+          },
+          {
+            "pred": 0.1431,
+            "true": 0.0559
+          },
+          {
+            "pred": 0.2091,
+            "true": 0.5
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0011,
+            "true": 0.0011
+          },
+          {
+            "pred": 0.1019,
+            "true": 0.1019
+          },
+          {
+            "pred": 1.0,
+            "true": 1.0
+          }
+        ]
+      },
+      "37395648": {
+        "concept_id": 37395648,
+        "disease_name": "Small Cell Carcinoma of Lung, Stage 1",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001184,
+        "calibrated_brier": 0.00118,
+        "brier_improvement": 4e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0011,
+            "true": 0.0012
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0012,
+            "true": 0.0012
+          }
+        ]
+      },
+      "43530652": {
+        "concept_id": 43530652,
+        "disease_name": "Chronic Intractable Migraine",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.008408,
+        "calibrated_brier": 0.007965,
+        "brier_improvement": 0.000442,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0037,
+            "true": 0.0043
+          },
+          {
+            "pred": 0.1433,
+            "true": 0.0751
+          },
+          {
+            "pred": 0.2454,
+            "true": 0.1381
+          },
+          {
+            "pred": 0.3562,
+            "true": 0.3455
+          },
+          {
+            "pred": 0.4428,
+            "true": 0.4912
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0048,
+            "true": 0.0048
+          },
+          {
+            "pred": 0.1333,
+            "true": 0.1333
+          },
+          {
+            "pred": 0.2131,
+            "true": 0.2131
+          },
+          {
+            "pred": 0.3218,
+            "true": 0.3218
+          },
+          {
+            "pred": 0.4627,
+            "true": 0.4627
+          },
+          {
+            "pred": 0.5442,
+            "true": 0.5442
+          },
+          {
+            "pred": 0.7045,
+            "true": 0.7045
+          },
+          {
+            "pred": 0.8261,
+            "true": 0.8261
+          },
+          {
+            "pred": 0.9048,
+            "true": 0.9048
+          }
+        ]
+      }
+    }
+  },
+  "test_evaluation": {
+    "macro_metrics": {
+      "macro_uncalibrated_brier": 0.002329,
+      "macro_calibrated_brier": 0.002304,
+      "macro_brier_improvement": 2.5e-05,
+      "targets_improved": 29
+    },
+    "per_target": {
+      "75036": {
+        "concept_id": 75036,
+        "disease_name": "Localized Osteoarthritis of Hand",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000212,
+        "calibrated_brier": 0.000211,
+        "brier_improvement": 1e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0006,
+            "true": 0.0002
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0006,
+            "true": 0.0002
+          }
+        ]
+      },
+      "79740": {
+        "concept_id": 79740,
+        "disease_name": "Primary Malignant Neoplasm of Colon",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001413,
+        "calibrated_brier": 0.001344,
+        "brier_improvement": 6.9e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0006,
+            "true": 0.0013
+          },
+          {
+            "pred": 0.1351,
+            "true": 0.0225
+          },
+          {
+            "pred": 0.2241,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0006,
+            "true": 0.0014
+          },
+          {
+            "pred": 0.2,
+            "true": 0.0
+          }
+        ]
+      },
+      "80502": {
+        "concept_id": 80502,
+        "disease_name": "Osteoporosis",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001432,
+        "calibrated_brier": 0.001295,
+        "brier_improvement": 0.000137,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0009,
+            "true": 0.0009
+          },
+          {
+            "pred": 0.1421,
+            "true": 0.0457
+          },
+          {
+            "pred": 0.2461,
+            "true": 0.0469
+          },
+          {
+            "pred": 0.3229,
+            "true": 0.1429
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0022,
+            "true": 0.0012
+          },
+          {
+            "pred": 0.12,
+            "true": 0.0789
+          }
+        ]
+      },
+      "192279": {
+        "concept_id": 192279,
+        "disease_name": "Congestive Heart Failure",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000928,
+        "calibrated_brier": 0.000924,
+        "brier_improvement": 4e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0006,
+            "true": 0.001
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0008,
+            "true": 0.001
+          }
+        ]
+      },
+      "200970": {
+        "concept_id": 200970,
+        "disease_name": "Carcinoma in situ of Prostate",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.00095,
+        "calibrated_brier": 0.000837,
+        "brier_improvement": 0.000113,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0011,
+            "true": 0.0007
+          },
+          {
+            "pred": 0.1437,
+            "true": 0.0076
+          },
+          {
+            "pred": 0.2359,
+            "true": 0.0
+          },
+          {
+            "pred": 0.3045,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0053,
+            "true": 0.0007
+          },
+          {
+            "pred": 0.1479,
+            "true": 0.0
+          }
+        ]
+      },
+      "201826": {
+        "concept_id": 201826,
+        "disease_name": "Type 2 Diabetes Mellitus",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001078,
+        "calibrated_brier": 0.001079,
+        "brier_improvement": -1e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0009,
+            "true": 0.0011
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0008,
+            "true": 0.0011
+          }
+        ]
+      },
+      "257012": {
+        "concept_id": 257012,
+        "disease_name": "Chronic Sinusitis",
+        "category": "Respiratory / Allergic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.004593,
+        "calibrated_brier": 0.004538,
+        "brier_improvement": 5.5e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0043,
+            "true": 0.0039
+          },
+          {
+            "pred": 0.1417,
+            "true": 0.0397
+          },
+          {
+            "pred": 0.224,
+            "true": 0.0317
+          },
+          {
+            "pred": 0.3453,
+            "true": 0.4444
+          },
+          {
+            "pred": 0.4529,
+            "true": 0.5714
+          },
+          {
+            "pred": 0.57,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0061,
+            "true": 0.0039
+          },
+          {
+            "pred": 0.1116,
+            "true": 0.042
+          },
+          {
+            "pred": 0.3728,
+            "true": 0.1538
+          },
+          {
+            "pred": 0.415,
+            "true": 0.5833
+          },
+          {
+            "pred": 1.0,
+            "true": 0.0
+          }
+        ]
+      },
+      "258780": {
+        "concept_id": 258780,
+        "disease_name": "Chronic Obstructive Bronchitis (COPD)",
+        "category": "Respiratory / Allergic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000549,
+        "calibrated_brier": 0.000541,
+        "brier_improvement": 8e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0005,
+            "true": 0.0005
+          },
+          {
+            "pred": 0.231,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0009,
+            "true": 0.0005
+          }
+        ]
+      },
+      "316866": {
+        "concept_id": 316866,
+        "disease_name": "Essential Hypertension",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.005467,
+        "calibrated_brier": 0.0053,
+        "brier_improvement": 0.000166,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.001,
+            "true": 0.0012
+          },
+          {
+            "pred": 0.1566,
+            "true": 0.1015
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0029,
+            "true": 0.0026
+          },
+          {
+            "pred": 0.1359,
+            "true": 0.1211
+          },
+          {
+            "pred": 0.2199,
+            "true": 0.1702
+          },
+          {
+            "pred": 0.3807,
+            "true": 0.0
+          },
+          {
+            "pred": 0.4085,
+            "true": 0.2222
+          }
+        ]
+      },
+      "317576": {
+        "concept_id": 317576,
+        "disease_name": "Coronary Arteriosclerosis",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001964,
+        "calibrated_brier": 0.001902,
+        "brier_improvement": 6.2e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.003,
+            "true": 0.0019
+          },
+          {
+            "pred": 0.1371,
+            "true": 0.0
+          },
+          {
+            "pred": 0.2483,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0049,
+            "true": 0.0019
+          }
+        ]
+      },
+      "321042": {
+        "concept_id": 321042,
+        "disease_name": "Cardiac Arrest",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000755,
+        "calibrated_brier": 0.00075,
+        "brier_improvement": 5e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0009,
+            "true": 0.0008
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0009,
+            "true": 0.0008
+          }
+        ]
+      },
+      "378419": {
+        "concept_id": 378419,
+        "disease_name": "Alzheimer's Disease",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.008103,
+        "calibrated_brier": 0.008153,
+        "brier_improvement": -5e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0023,
+            "true": 0.0057
+          },
+          {
+            "pred": 0.1346,
+            "true": 0.0996
+          },
+          {
+            "pred": 0.2506,
+            "true": 0.0711
+          },
+          {
+            "pred": 0.3395,
+            "true": 0.24
+          },
+          {
+            "pred": 0.4455,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0047,
+            "true": 0.0073
+          },
+          {
+            "pred": 0.1236,
+            "true": 0.1352
+          },
+          {
+            "pred": 0.4471,
+            "true": 0.0
+          },
+          {
+            "pred": 0.5882,
+            "true": 0.0
+          }
+        ]
+      },
+      "380378": {
+        "concept_id": 380378,
+        "disease_name": "Epilepsy / Seizure Disorder",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000325,
+        "calibrated_brier": 0.00035,
+        "brier_improvement": -2.5e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0017,
+            "true": 0.0002
+          },
+          {
+            "pred": 0.1337,
+            "true": 0.05
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.001,
+            "true": 0.0002
+          },
+          {
+            "pred": 0.1074,
+            "true": 0.0606
+          },
+          {
+            "pred": 1.0,
+            "true": 0.0
+          }
+        ]
+      },
+      "381316": {
+        "concept_id": 381316,
+        "disease_name": "Stroke (Cerebrovascular Accident)",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.002519,
+        "calibrated_brier": 0.002477,
+        "brier_improvement": 4.2e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0037,
+            "true": 0.0023
+          },
+          {
+            "pred": 0.1202,
+            "true": 0.0467
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0035,
+            "true": 0.0025
+          },
+          {
+            "pred": 0.1326,
+            "true": 0.0476
+          },
+          {
+            "pred": 0.322,
+            "true": 0.0
+          }
+        ]
+      },
+      "432867": {
+        "concept_id": 432867,
+        "disease_name": "Hyperlipidemia",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.003447,
+        "calibrated_brier": 0.003332,
+        "brier_improvement": 0.000116,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0037,
+            "true": 0.0034
+          },
+          {
+            "pred": 0.1178,
+            "true": 0.0
+          },
+          {
+            "pred": 0.26,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0036,
+            "true": 0.0034
+          }
+        ]
+      },
+      "436096": {
+        "concept_id": 436096,
+        "disease_name": "Chronic Pain",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.005649,
+        "calibrated_brier": 0.005511,
+        "brier_improvement": 0.000138,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0022,
+            "true": 0.003
+          },
+          {
+            "pred": 0.1489,
+            "true": 0.0965
+          },
+          {
+            "pred": 0.2405,
+            "true": 0.1899
+          },
+          {
+            "pred": 0.3526,
+            "true": 0.4054
+          },
+          {
+            "pred": 0.4434,
+            "true": 0.6738
+          },
+          {
+            "pred": 0.5158,
+            "true": 0.5
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0031,
+            "true": 0.003
+          },
+          {
+            "pred": 0.1192,
+            "true": 0.0957
+          },
+          {
+            "pred": 0.2507,
+            "true": 0.1765
+          },
+          {
+            "pred": 0.3401,
+            "true": 0.4583
+          },
+          {
+            "pred": 0.4919,
+            "true": 0.5
+          },
+          {
+            "pred": 0.5622,
+            "true": 0.7386
+          },
+          {
+            "pred": 0.7365,
+            "true": 0.7619
+          },
+          {
+            "pred": 0.8344,
+            "true": 1.0
+          },
+          {
+            "pred": 0.9618,
+            "true": 0.5862
+          }
+        ]
+      },
+      "436940": {
+        "concept_id": 436940,
+        "disease_name": "Metabolic Syndrome X",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001028,
+        "calibrated_brier": 0.001015,
+        "brier_improvement": 1.3e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0001,
+            "true": 0.0002
+          },
+          {
+            "pred": 0.1569,
+            "true": 0.4118
+          },
+          {
+            "pred": 0.2578,
+            "true": 0.3611
+          },
+          {
+            "pred": 0.3518,
+            "true": 0.3559
+          },
+          {
+            "pred": 0.4007,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0001,
+            "true": 0.0001
+          },
+          {
+            "pred": 0.2548,
+            "true": 0.4176
+          },
+          {
+            "pred": 0.3721,
+            "true": 0.24
+          },
+          {
+            "pred": 0.5769,
+            "true": 0.25
+          }
+        ]
+      },
+      "439777": {
+        "concept_id": 439777,
+        "disease_name": "Anemia",
+        "category": "Hematology",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.008471,
+        "calibrated_brier": 0.008396,
+        "brier_improvement": 7.5e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0098,
+            "true": 0.0074
+          },
+          {
+            "pred": 0.1532,
+            "true": 0.1838
+          },
+          {
+            "pred": 0.2055,
+            "true": 0.4
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0079,
+            "true": 0.0076
+          },
+          {
+            "pred": 0.1362,
+            "true": 0.2018
+          },
+          {
+            "pred": 0.26,
+            "true": 0.2105
+          }
+        ]
+      },
+      "440086": {
+        "concept_id": 440086,
+        "disease_name": "Childhood ADHD",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000417,
+        "calibrated_brier": 0.000418,
+        "brier_improvement": -0.0,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0008,
+            "true": 0.0004
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0004,
+            "true": 0.0004
+          }
+        ]
+      },
+      "443614": {
+        "concept_id": 443614,
+        "disease_name": "Chronic Kidney Disease Stage 1",
+        "category": "Renal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.00093,
+        "calibrated_brier": 0.000923,
+        "brier_improvement": 7e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0005,
+            "true": 0.001
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0007,
+            "true": 0.001
+          }
+        ]
+      },
+      "4029498": {
+        "concept_id": 4029498,
+        "disease_name": "Seizure Disorder",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000327,
+        "calibrated_brier": 0.000912,
+        "brier_improvement": -0.000585,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0019,
+            "true": 0.0003
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0023,
+            "true": 0.0003
+          },
+          {
+            "pred": 0.3944,
+            "true": 0.0
+          },
+          {
+            "pred": 0.7362,
+            "true": 0.0
+          },
+          {
+            "pred": 1.0,
+            "true": 0.0
+          }
+        ]
+      },
+      "4043241": {
+        "concept_id": 4043241,
+        "disease_name": "Familial Alzheimer's Disease",
+        "category": "Neurological / Mental Health",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000898,
+        "calibrated_brier": 0.000869,
+        "brier_improvement": 3e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0008,
+            "true": 0.0008
+          },
+          {
+            "pred": 0.1463,
+            "true": 0.1111
+          },
+          {
+            "pred": 0.26,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0004,
+            "true": 0.0009
+          }
+        ]
+      },
+      "4051466": {
+        "concept_id": 4051466,
+        "disease_name": "Childhood Asthma",
+        "category": "Respiratory / Allergic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001302,
+        "calibrated_brier": 0.001296,
+        "brier_improvement": 5e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0011,
+            "true": 0.0014
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.001,
+            "true": 0.0013
+          },
+          {
+            "pred": 0.1667,
+            "true": 0.2
+          }
+        ]
+      },
+      "4079749": {
+        "concept_id": 4079749,
+        "disease_name": "Osteoarthritis of Hip",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.00033,
+        "calibrated_brier": 0.00033,
+        "brier_improvement": 0.0,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0004,
+            "true": 0.0003
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0003,
+            "true": 0.0003
+          }
+        ]
+      },
+      "4079750": {
+        "concept_id": 4079750,
+        "disease_name": "Osteoarthritis of Knee",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000991,
+        "calibrated_brier": 0.000989,
+        "brier_improvement": 2e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0013,
+            "true": 0.001
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0017,
+            "true": 0.001
+          }
+        ]
+      },
+      "4110591": {
+        "concept_id": 4110591,
+        "disease_name": "Small Cell Carcinoma of Lung",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000798,
+        "calibrated_brier": 0.000817,
+        "brier_improvement": -1.9e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0017,
+            "true": 0.0008
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0016,
+            "true": 0.0008
+          },
+          {
+            "pred": 1.0,
+            "true": 0.0
+          }
+        ]
+      },
+      "4115276": {
+        "concept_id": 4115276,
+        "disease_name": "Non-Small Cell Lung Cancer",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.004309,
+        "calibrated_brier": 0.004184,
+        "brier_improvement": 0.000125,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0071,
+            "true": 0.0031
+          },
+          {
+            "pred": 0.1154,
+            "true": 0.0411
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0066,
+            "true": 0.0035
+          },
+          {
+            "pred": 0.114,
+            "true": 0.0431
+          },
+          {
+            "pred": 0.2767,
+            "true": 0.0426
+          },
+          {
+            "pred": 0.3118,
+            "true": 0.1034
+          },
+          {
+            "pred": 0.4519,
+            "true": 0.5
+          }
+        ]
+      },
+      "4120314": {
+        "concept_id": 4120314,
+        "disease_name": "Hypertriglyceridemia",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000843,
+        "calibrated_brier": 0.000882,
+        "brier_improvement": -3.9e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0001,
+            "true": 0.0001
+          },
+          {
+            "pred": 0.1376,
+            "true": 0.375
+          },
+          {
+            "pred": 0.273,
+            "true": 0.75
+          },
+          {
+            "pred": 0.3374,
+            "true": 0.4348
+          },
+          {
+            "pred": 0.4487,
+            "true": 0.2895
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0001,
+            "true": 0.0001
+          },
+          {
+            "pred": 0.135,
+            "true": 1.0
+          },
+          {
+            "pred": 0.2083,
+            "true": 0.0
+          },
+          {
+            "pred": 0.3281,
+            "true": 0.4737
+          },
+          {
+            "pred": 0.5,
+            "true": 0.0
+          },
+          {
+            "pred": 0.5132,
+            "true": 0.2647
+          },
+          {
+            "pred": 0.6286,
+            "true": 0.4
+          }
+        ]
+      },
+      "4129902": {
+        "concept_id": 4129902,
+        "disease_name": "Neoplasm of Prostate",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001176,
+        "calibrated_brier": 0.000937,
+        "brier_improvement": 0.000239,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0014,
+            "true": 0.0006
+          },
+          {
+            "pred": 0.1529,
+            "true": 0.0205
+          },
+          {
+            "pred": 0.2416,
+            "true": 0.0
+          },
+          {
+            "pred": 0.3069,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0046,
+            "true": 0.0008
+          },
+          {
+            "pred": 0.1833,
+            "true": 0.0
+          },
+          {
+            "pred": 0.2729,
+            "true": 0.0
+          }
+        ]
+      },
+      "4180790": {
+        "concept_id": 4180790,
+        "disease_name": "Malignant Neoplasm of Colon",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000643,
+        "calibrated_brier": 0.000576,
+        "brier_improvement": 6.8e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0004,
+            "true": 0.0005
+          },
+          {
+            "pred": 0.138,
+            "true": 0.0385
+          },
+          {
+            "pred": 0.2368,
+            "true": 0.0
+          },
+          {
+            "pred": 0.3455,
+            "true": 0.0769
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0006,
+            "true": 0.0006
+          }
+        ]
+      },
+      "4214376": {
+        "concept_id": 4214376,
+        "disease_name": "Hyperglycemia",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.00087,
+        "calibrated_brier": 0.000915,
+        "brier_improvement": -4.5e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0002,
+            "true": 0.0003
+          },
+          {
+            "pred": 0.1539,
+            "true": 0.1887
+          },
+          {
+            "pred": 0.2418,
+            "true": 0.2727
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0003,
+            "true": 0.0004
+          },
+          {
+            "pred": 0.1127,
+            "true": 0.129
+          },
+          {
+            "pred": 0.2083,
+            "true": 0.7333
+          },
+          {
+            "pred": 0.3247,
+            "true": 0.1818
+          },
+          {
+            "pred": 0.451,
+            "true": 0.0
+          },
+          {
+            "pred": 0.6667,
+            "true": 0.0
+          }
+        ]
+      },
+      "4226121": {
+        "concept_id": 4226121,
+        "disease_name": "Retinopathy due to Type 2 Diabetes",
+        "category": "Diabetic Complication",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000338,
+        "calibrated_brier": 0.000334,
+        "brier_improvement": 4e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0005,
+            "true": 0.0003
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0005,
+            "true": 0.0003
+          }
+        ]
+      },
+      "4229440": {
+        "concept_id": 4229440,
+        "disease_name": "Chronic Kidney Disease",
+        "category": "Renal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.00336,
+        "calibrated_brier": 0.003196,
+        "brier_improvement": 0.000164,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0048,
+            "true": 0.0031
+          },
+          {
+            "pred": 0.1277,
+            "true": 0.0163
+          },
+          {
+            "pred": 0.2204,
+            "true": 0.0
+          },
+          {
+            "pred": 0.3027,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.006,
+            "true": 0.0032
+          }
+        ]
+      },
+      "4283893": {
+        "concept_id": 4283893,
+        "disease_name": "Sinusitis",
+        "category": "Respiratory / Allergic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.003624,
+        "calibrated_brier": 0.003602,
+        "brier_improvement": 2.2e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0053,
+            "true": 0.0036
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0066,
+            "true": 0.0036
+          }
+        ]
+      },
+      "4285898": {
+        "concept_id": 4285898,
+        "disease_name": "Polyp of Colon",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.006294,
+        "calibrated_brier": 0.006083,
+        "brier_improvement": 0.000211,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0041,
+            "true": 0.0061
+          },
+          {
+            "pred": 0.1187,
+            "true": 0.0137
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0057,
+            "true": 0.0062
+          }
+        ]
+      },
+      "4310703": {
+        "concept_id": 4310703,
+        "disease_name": "Non-Small Cell Carcinoma of Lung, Stage 1",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.004314,
+        "calibrated_brier": 0.004186,
+        "brier_improvement": 0.000128,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0071,
+            "true": 0.0032
+          },
+          {
+            "pred": 0.1157,
+            "true": 0.0387
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.006,
+            "true": 0.0035
+          },
+          {
+            "pred": 0.1296,
+            "true": 0.0264
+          },
+          {
+            "pred": 0.2444,
+            "true": 0.0741
+          },
+          {
+            "pred": 0.4231,
+            "true": 0.4615
+          },
+          {
+            "pred": 1.0,
+            "true": 0.5
+          }
+        ]
+      },
+      "4311629": {
+        "concept_id": 4311629,
+        "disease_name": "Prediabetes",
+        "category": "Cardiometabolic",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.005112,
+        "calibrated_brier": 0.005085,
+        "brier_improvement": 2.7e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0051,
+            "true": 0.0052
+          },
+          {
+            "pred": 0.1097,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0058,
+            "true": 0.0052
+          }
+        ]
+      },
+      "37016354": {
+        "concept_id": 37016354,
+        "disease_name": "Neuropathy due to Type 2 Diabetes",
+        "category": "Diabetic Complication",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.000559,
+        "calibrated_brier": 0.000567,
+        "brier_improvement": -7e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0006,
+            "true": 0.0006
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0007,
+            "true": 0.0006
+          },
+          {
+            "pred": 0.125,
+            "true": 0.0
+          }
+        ]
+      },
+      "37017023": {
+        "concept_id": 37017023,
+        "disease_name": "Recurrent Rectal Polyp",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.001883,
+        "calibrated_brier": 0.001828,
+        "brier_improvement": 5.5e-05,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0008,
+            "true": 0.0014
+          },
+          {
+            "pred": 0.1453,
+            "true": 0.0465
+          },
+          {
+            "pred": 0.2087,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0011,
+            "true": 0.0017
+          },
+          {
+            "pred": 0.1019,
+            "true": 0.0706
+          },
+          {
+            "pred": 0.4701,
+            "true": 0.0
+          },
+          {
+            "pred": 0.8815,
+            "true": 0.0
+          },
+          {
+            "pred": 1.0,
+            "true": 0.0
+          }
+        ]
+      },
+      "37395648": {
+        "concept_id": 37395648,
+        "disease_name": "Small Cell Carcinoma of Lung, Stage 1",
+        "category": "Oncology / Pre-Malignant",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.00079,
+        "calibrated_brier": 0.000786,
+        "brier_improvement": 4e-06,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0016,
+            "true": 0.0008
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0016,
+            "true": 0.0008
+          }
+        ]
+      },
+      "43530652": {
+        "concept_id": 43530652,
+        "disease_name": "Chronic Intractable Migraine",
+        "category": "Musculoskeletal",
+        "calibrator_method": "isotonic",
+        "uncalibrated_brier": 0.006501,
+        "calibrated_brier": 0.006812,
+        "brier_improvement": -0.000311,
+        "reliability_curve_raw": [
+          {
+            "pred": 0.0022,
+            "true": 0.0028
+          },
+          {
+            "pred": 0.1438,
+            "true": 0.153
+          },
+          {
+            "pred": 0.2462,
+            "true": 0.1719
+          },
+          {
+            "pred": 0.3571,
+            "true": 0.5625
+          },
+          {
+            "pred": 0.4434,
+            "true": 0.4819
+          },
+          {
+            "pred": 0.5052,
+            "true": 0.0
+          }
+        ],
+        "reliability_curve_calibrated": [
+          {
+            "pred": 0.0041,
+            "true": 0.0045
+          },
+          {
+            "pred": 0.1474,
+            "true": 0.1111
+          },
+          {
+            "pred": 0.2134,
+            "true": 0.069
+          },
+          {
+            "pred": 0.3218,
+            "true": 0.4811
+          },
+          {
+            "pred": 0.4513,
+            "true": 0.5
+          },
+          {
+            "pred": 0.551,
+            "true": 0.36
+          },
+          {
+            "pred": 0.6869,
+            "true": 1.0
+          },
+          {
+            "pred": 0.7059,
+            "true": 0.6818
+          },
+          {
+            "pred": 0.8182,
+            "true": 0.6
+          },
+          {
+            "pred": 0.9902,
+            "true": 0.4
+          }
+        ]
+      }
+    }
+  }
+}

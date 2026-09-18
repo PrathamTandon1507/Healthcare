@@ -1,0 +1,646 @@
+[
+  {
+    "target_disease": {
+      "concept_id": 316866,
+      "disease_name": "Essential Hypertension",
+      "category": "Cardiometabolic"
+    },
+    "patient_snapshot": {
+      "age": 18.0,
+      "total_prior_conditions": 2,
+      "prior_observation_years": 7.46999979019165,
+      "active_prior_diagnoses": []
+    },
+    "risk_prediction": {
+      "uncalibrated_probability": 0.1567,
+      "calibrated_probability": 0.0807,
+      "calibration_method": "isotonic",
+      "risk_tier": "Moderate"
+    },
+    "model_architecture": "4-Model Stacked Ensemble (LR + RF + XGB + Meta-LR)",
+    "ensemble_meta_weights": {
+      "logistic_regression": {
+        "base_probability": 0.7748,
+        "meta_weight": 0.5905,
+        "score_contribution": 0.4575
+      },
+      "random_forest": {
+        "base_probability": 0.9399,
+        "meta_weight": 2.976,
+        "score_contribution": 2.7971
+      },
+      "xgboost": {
+        "base_probability": 0.9706,
+        "meta_weight": 3.671,
+        "score_contribution": 3.5632
+      }
+    },
+    "key_risk_increasing_factors": [
+      {
+        "feature": "age_at_landmark",
+        "patient_value": 18.0,
+        "importance_score": 60.4136,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "age_lt_30",
+        "patient_value": 1.0,
+        "importance_score": 13.8368,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "has_hist_316866",
+        "patient_value": 0.0,
+        "importance_score": 2.3523,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "prior_obs_years",
+        "patient_value": 7.46999979019165,
+        "importance_score": 1.968,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "total_prior_condition_count",
+        "patient_value": 2.0,
+        "importance_score": 1.9538,
+        "direction": "increases_risk"
+      }
+    ],
+    "key_protective_factors": [
+      {
+        "feature": "bg_strep_or_pregnancy",
+        "patient_value": 1.0,
+        "importance_score": -5.5865,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "race_black",
+        "patient_value": 1.0,
+        "importance_score": -1.5763,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "has_hist_436096",
+        "patient_value": 0.0,
+        "importance_score": -1.2443,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "gender_female",
+        "patient_value": 0.0,
+        "importance_score": -0.6443,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "bg_normal_pregnancy",
+        "patient_value": 0.0,
+        "importance_score": -0.4883,
+        "direction": "decreases_risk"
+      }
+    ],
+    "clinical_disclaimer": "This statistical attribution describes predictive associations observed in population training data. It does not establish causal etiology."
+  },
+  {
+    "target_disease": {
+      "concept_id": 201826,
+      "disease_name": "Type 2 Diabetes Mellitus",
+      "category": "Cardiometabolic"
+    },
+    "patient_snapshot": {
+      "age": 46.0,
+      "total_prior_conditions": 2,
+      "prior_observation_years": 20.969999313354492,
+      "active_prior_diagnoses": []
+    },
+    "risk_prediction": {
+      "uncalibrated_probability": 0.0106,
+      "calibrated_probability": 0.0188,
+      "calibration_method": "isotonic",
+      "risk_tier": "Low"
+    },
+    "model_architecture": "4-Model Stacked Ensemble (LR + RF + XGB + Meta-LR)",
+    "ensemble_meta_weights": {
+      "logistic_regression": {
+        "base_probability": 0.8696,
+        "meta_weight": 2.0328,
+        "score_contribution": 1.7678
+      },
+      "random_forest": {
+        "base_probability": 0.7752,
+        "meta_weight": 1.4904,
+        "score_contribution": 1.1554
+      },
+      "xgboost": {
+        "base_probability": 0.8409,
+        "meta_weight": 1.9181,
+        "score_contribution": 1.6129
+      }
+    },
+    "key_risk_increasing_factors": [
+      {
+        "feature": "age_at_landmark",
+        "patient_value": 46.0,
+        "importance_score": 22.9911,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "age_40_49",
+        "patient_value": 1.0,
+        "importance_score": 19.132,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "total_prior_condition_count",
+        "patient_value": 2.0,
+        "importance_score": 17.8152,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "race_white",
+        "patient_value": 0.0,
+        "importance_score": 13.649,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "prior_obs_years",
+        "patient_value": 20.969999313354492,
+        "importance_score": 5.9113,
+        "direction": "increases_risk"
+      }
+    ],
+    "key_protective_factors": [
+      {
+        "feature": "race_asian",
+        "patient_value": 0.0,
+        "importance_score": -0.8962,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "bg_suspected_condition",
+        "patient_value": 0.0,
+        "importance_score": -0.6102,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "bg_normal_pregnancy",
+        "patient_value": 0.0,
+        "importance_score": -0.5424,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "has_hist_316866",
+        "patient_value": 0.0,
+        "importance_score": -0.4765,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "has_hist_4311629",
+        "patient_value": 0.0,
+        "importance_score": -0.3954,
+        "direction": "decreases_risk"
+      }
+    ],
+    "clinical_disclaimer": "This statistical attribution describes predictive associations observed in population training data. It does not establish causal etiology."
+  },
+  {
+    "target_disease": {
+      "concept_id": 317576,
+      "disease_name": "Coronary Arteriosclerosis",
+      "category": "Cardiometabolic"
+    },
+    "patient_snapshot": {
+      "age": 50.0,
+      "total_prior_conditions": 6,
+      "prior_observation_years": 16.469999313354492,
+      "active_prior_diagnoses": [
+        {
+          "concept_id": 439777,
+          "condition_name": "Anemia"
+        },
+        {
+          "concept_id": 4311629,
+          "condition_name": "Prediabetes"
+        }
+      ]
+    },
+    "risk_prediction": {
+      "uncalibrated_probability": 0.0007,
+      "calibrated_probability": 0.0056,
+      "calibration_method": "isotonic",
+      "risk_tier": "Low"
+    },
+    "model_architecture": "4-Model Stacked Ensemble (LR + RF + XGB + Meta-LR)",
+    "ensemble_meta_weights": {
+      "logistic_regression": {
+        "base_probability": 0.5504,
+        "meta_weight": -5.0833,
+        "score_contribution": -2.7977
+      },
+      "random_forest": {
+        "base_probability": 0.3172,
+        "meta_weight": 11.3699,
+        "score_contribution": 3.6068
+      },
+      "xgboost": {
+        "base_probability": 0.4293,
+        "meta_weight": 4.6595,
+        "score_contribution": 2.0001
+      }
+    },
+    "key_risk_increasing_factors": [
+      {
+        "feature": "gender_female",
+        "patient_value": 0.0,
+        "importance_score": 36.456,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "gender_male",
+        "patient_value": 1.0,
+        "importance_score": 16.0988,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "has_hist_4115276",
+        "patient_value": 0.0,
+        "importance_score": 15.349,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "age_50_59",
+        "patient_value": 1.0,
+        "importance_score": 11.1269,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "has_hist_317576",
+        "patient_value": 0.0,
+        "importance_score": 10.1121,
+        "direction": "increases_risk"
+      }
+    ],
+    "key_protective_factors": [
+      {
+        "feature": "age_at_landmark",
+        "patient_value": 50.0,
+        "importance_score": -77.5518,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "prior_obs_years",
+        "patient_value": 16.469999313354492,
+        "importance_score": -56.7384,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "has_hist_4311629",
+        "patient_value": 1.0,
+        "importance_score": -48.139,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "total_prior_condition_count",
+        "patient_value": 6.0,
+        "importance_score": -21.7886,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "bg_acute_bronchitis",
+        "patient_value": 1.0,
+        "importance_score": -14.2975,
+        "direction": "decreases_risk"
+      }
+    ],
+    "clinical_disclaimer": "This statistical attribution describes predictive associations observed in population training data. It does not establish causal etiology."
+  },
+  {
+    "target_disease": {
+      "concept_id": 432867,
+      "disease_name": "Hyperlipidemia",
+      "category": "Cardiometabolic"
+    },
+    "patient_snapshot": {
+      "age": 47.0,
+      "total_prior_conditions": 6,
+      "prior_observation_years": 28.940000534057617,
+      "active_prior_diagnoses": [
+        {
+          "concept_id": 316866,
+          "condition_name": "Essential Hypertension"
+        }
+      ]
+    },
+    "risk_prediction": {
+      "uncalibrated_probability": 0.0085,
+      "calibrated_probability": 0.0111,
+      "calibration_method": "isotonic",
+      "risk_tier": "Low"
+    },
+    "model_architecture": "4-Model Stacked Ensemble (LR + RF + XGB + Meta-LR)",
+    "ensemble_meta_weights": {
+      "logistic_regression": {
+        "base_probability": 0.6753,
+        "meta_weight": -2.1608,
+        "score_contribution": -1.4591
+      },
+      "random_forest": {
+        "base_probability": 0.669,
+        "meta_weight": 3.8307,
+        "score_contribution": 2.5627
+      },
+      "xgboost": {
+        "base_probability": 0.5334,
+        "meta_weight": 8.7532,
+        "score_contribution": 4.6692
+      }
+    },
+    "key_risk_increasing_factors": [
+      {
+        "feature": "has_hist_432867",
+        "patient_value": 0.0,
+        "importance_score": 49.6301,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "has_hist_4115276",
+        "patient_value": 0.0,
+        "importance_score": 37.7055,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "age_at_landmark",
+        "patient_value": 47.0,
+        "importance_score": 35.3637,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "has_hist_439777",
+        "patient_value": 0.0,
+        "importance_score": 23.1841,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "age_lt_30",
+        "patient_value": 0.0,
+        "importance_score": 12.9451,
+        "direction": "increases_risk"
+      }
+    ],
+    "key_protective_factors": [
+      {
+        "feature": "prior_obs_years",
+        "patient_value": 28.940000534057617,
+        "importance_score": -49.9539,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "bg_viral_sinusitis",
+        "patient_value": 1.0,
+        "importance_score": -20.5843,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "age_40_49",
+        "patient_value": 1.0,
+        "importance_score": -20.4334,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "bg_normal_bmi",
+        "patient_value": 1.0,
+        "importance_score": -14.392,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "bg_cystitis_uti",
+        "patient_value": 1.0,
+        "importance_score": -11.7149,
+        "direction": "decreases_risk"
+      }
+    ],
+    "clinical_disclaimer": "This statistical attribution describes predictive associations observed in population training data. It does not establish causal etiology."
+  },
+  {
+    "target_disease": {
+      "concept_id": 443614,
+      "disease_name": "Chronic Kidney Disease Stage 1",
+      "category": "Renal"
+    },
+    "patient_snapshot": {
+      "age": 37.0,
+      "total_prior_conditions": 5,
+      "prior_observation_years": 18.0,
+      "active_prior_diagnoses": [
+        {
+          "concept_id": 201826,
+          "condition_name": "Type 2 Diabetes Mellitus"
+        },
+        {
+          "concept_id": 316866,
+          "condition_name": "Essential Hypertension"
+        },
+        {
+          "concept_id": 439777,
+          "condition_name": "Anemia"
+        }
+      ]
+    },
+    "risk_prediction": {
+      "uncalibrated_probability": 0.0159,
+      "calibrated_probability": 0.0274,
+      "calibration_method": "isotonic",
+      "risk_tier": "Low"
+    },
+    "model_architecture": "4-Model Stacked Ensemble (LR + RF + XGB + Meta-LR)",
+    "ensemble_meta_weights": {
+      "logistic_regression": {
+        "base_probability": 0.9782,
+        "meta_weight": 2.3576,
+        "score_contribution": 2.3061
+      },
+      "random_forest": {
+        "base_probability": 0.4403,
+        "meta_weight": 2.4084,
+        "score_contribution": 1.0603
+      },
+      "xgboost": {
+        "base_probability": 0.8074,
+        "meta_weight": 2.4395,
+        "score_contribution": 1.9696
+      }
+    },
+    "key_risk_increasing_factors": [
+      {
+        "feature": "has_hist_201826",
+        "patient_value": 1.0,
+        "importance_score": 58.022,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "has_hist_192279",
+        "patient_value": 0.0,
+        "importance_score": 6.0511,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "age_30_39",
+        "patient_value": 1.0,
+        "importance_score": 5.1785,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "age_at_landmark",
+        "patient_value": 37.0,
+        "importance_score": 4.6269,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "interaction_diabetes_and_hypertension",
+        "patient_value": 1.0,
+        "importance_score": 3.6835,
+        "direction": "increases_risk"
+      }
+    ],
+    "key_protective_factors": [
+      {
+        "feature": "prior_obs_years",
+        "patient_value": 18.0,
+        "importance_score": -9.2641,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "bg_normal_bmi",
+        "patient_value": 1.0,
+        "importance_score": -8.7972,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "has_hist_436940",
+        "patient_value": 0.0,
+        "importance_score": -5.3219,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "interaction_hypertension_and_lipid",
+        "patient_value": 0.0,
+        "importance_score": -4.0384,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "has_hist_4120314",
+        "patient_value": 0.0,
+        "importance_score": -3.9873,
+        "direction": "decreases_risk"
+      }
+    ],
+    "clinical_disclaimer": "This statistical attribution describes predictive associations observed in population training data. It does not establish causal etiology."
+  },
+  {
+    "target_disease": {
+      "concept_id": 380378,
+      "disease_name": "Epilepsy / Seizure Disorder",
+      "category": "Neurological / Mental Health"
+    },
+    "patient_snapshot": {
+      "age": 5.0,
+      "total_prior_conditions": 4,
+      "prior_observation_years": 5.329999923706055,
+      "active_prior_diagnoses": [
+        {
+          "concept_id": 4029498,
+          "condition_name": "Seizure Disorder"
+        }
+      ]
+    },
+    "risk_prediction": {
+      "uncalibrated_probability": 0.1458,
+      "calibrated_probability": 0.107,
+      "calibration_method": "isotonic",
+      "risk_tier": "Moderate"
+    },
+    "model_architecture": "4-Model Stacked Ensemble (LR + RF + XGB + Meta-LR)",
+    "ensemble_meta_weights": {
+      "logistic_regression": {
+        "base_probability": 0.9897,
+        "meta_weight": 2.2809,
+        "score_contribution": 2.2574
+      },
+      "random_forest": {
+        "base_probability": 0.9493,
+        "meta_weight": 2.1063,
+        "score_contribution": 1.9996
+      },
+      "xgboost": {
+        "base_probability": 0.9756,
+        "meta_weight": 3.2436,
+        "score_contribution": 3.1646
+      }
+    },
+    "key_risk_increasing_factors": [
+      {
+        "feature": "has_hist_4029498",
+        "patient_value": 1.0,
+        "importance_score": 63.8533,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "age_at_landmark",
+        "patient_value": 5.0,
+        "importance_score": 20.7844,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "prior_obs_years",
+        "patient_value": 5.329999923706055,
+        "importance_score": 6.6227,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "has_hist_380378",
+        "patient_value": 0.0,
+        "importance_score": 1.7467,
+        "direction": "increases_risk"
+      },
+      {
+        "feature": "bg_viral_sinusitis",
+        "patient_value": 1.0,
+        "importance_score": 1.735,
+        "direction": "increases_risk"
+      }
+    ],
+    "key_protective_factors": [
+      {
+        "feature": "bg_otitis_media",
+        "patient_value": 0.0,
+        "importance_score": -1.7517,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "gender_male",
+        "patient_value": 1.0,
+        "importance_score": -0.9057,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "ethnicity_non_hispanic",
+        "patient_value": 1.0,
+        "importance_score": -0.8767,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "bg_acute_bronchitis",
+        "patient_value": 0.0,
+        "importance_score": -0.8504,
+        "direction": "decreases_risk"
+      },
+      {
+        "feature": "race_white",
+        "patient_value": 1.0,
+        "importance_score": -0.6304,
+        "direction": "decreases_risk"
+      }
+    ],
+    "clinical_disclaimer": "This statistical attribution describes predictive associations observed in population training data. It does not establish causal etiology."
+  }
+]
