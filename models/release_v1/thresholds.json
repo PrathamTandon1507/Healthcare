@@ -1,0 +1,371 @@
+{
+  "75036": {
+    "concept_id": 75036,
+    "name": "Localized Osteoarthritis of Hand",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "79740": {
+    "concept_id": 79740,
+    "name": "Primary Malignant Neoplasm of Colon",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "80502": {
+    "concept_id": 80502,
+    "name": "Osteoporosis",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "192279": {
+    "concept_id": 192279,
+    "name": "Congestive Heart Failure",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "200970": {
+    "concept_id": 200970,
+    "name": "Carcinoma in situ of Prostate",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "201826": {
+    "concept_id": 201826,
+    "name": "Type 2 Diabetes Mellitus",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "257012": {
+    "concept_id": 257012,
+    "name": "Chronic Sinusitis",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "258780": {
+    "concept_id": 258780,
+    "name": "Chronic Obstructive Bronchitis (COPD)",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "316866": {
+    "concept_id": 316866,
+    "name": "Essential Hypertension",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "317576": {
+    "concept_id": 317576,
+    "name": "Coronary Arteriosclerosis",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "321042": {
+    "concept_id": 321042,
+    "name": "Cardiac Arrest",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "378419": {
+    "concept_id": 378419,
+    "name": "Alzheimer's Disease",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "380378": {
+    "concept_id": 380378,
+    "name": "Epilepsy / Seizure Disorder",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "381316": {
+    "concept_id": 381316,
+    "name": "Stroke (Cerebrovascular Accident)",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "432867": {
+    "concept_id": 432867,
+    "name": "Hyperlipidemia",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "436096": {
+    "concept_id": 436096,
+    "name": "Chronic Pain",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "436940": {
+    "concept_id": 436940,
+    "name": "Metabolic Syndrome X",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "439777": {
+    "concept_id": 439777,
+    "name": "Anemia",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "440086": {
+    "concept_id": 440086,
+    "name": "Childhood ADHD",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "443614": {
+    "concept_id": 443614,
+    "name": "Chronic Kidney Disease Stage 1",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4029498": {
+    "concept_id": 4029498,
+    "name": "Seizure Disorder",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4043241": {
+    "concept_id": 4043241,
+    "name": "Familial Alzheimer's Disease",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4051466": {
+    "concept_id": 4051466,
+    "name": "Childhood Asthma",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4079749": {
+    "concept_id": 4079749,
+    "name": "Osteoarthritis of Hip",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4079750": {
+    "concept_id": 4079750,
+    "name": "Osteoarthritis of Knee",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4110591": {
+    "concept_id": 4110591,
+    "name": "Small Cell Carcinoma of Lung",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4115276": {
+    "concept_id": 4115276,
+    "name": "Non-Small Cell Lung Cancer",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4120314": {
+    "concept_id": 4120314,
+    "name": "Hypertriglyceridemia",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4129902": {
+    "concept_id": 4129902,
+    "name": "Neoplasm of Prostate",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4180790": {
+    "concept_id": 4180790,
+    "name": "Malignant Neoplasm of Colon",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4214376": {
+    "concept_id": 4214376,
+    "name": "Hyperglycemia",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4226121": {
+    "concept_id": 4226121,
+    "name": "Retinopathy due to Type 2 Diabetes",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4229440": {
+    "concept_id": 4229440,
+    "name": "Chronic Kidney Disease",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4283893": {
+    "concept_id": 4283893,
+    "name": "Sinusitis",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4285898": {
+    "concept_id": 4285898,
+    "name": "Polyp of Colon",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4310703": {
+    "concept_id": 4310703,
+    "name": "Non-Small Cell Carcinoma of Lung, Stage 1",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "4311629": {
+    "concept_id": 4311629,
+    "name": "Prediabetes",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "37016354": {
+    "concept_id": 37016354,
+    "name": "Neuropathy due to Type 2 Diabetes",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "37017023": {
+    "concept_id": 37017023,
+    "name": "Recurrent Rectal Polyp",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "37395648": {
+    "concept_id": 37395648,
+    "name": "Small Cell Carcinoma of Lung, Stage 1",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  },
+  "43530652": {
+    "concept_id": 43530652,
+    "name": "Chronic Intractable Migraine",
+    "f1_optimal": 0.05,
+    "best_val_f1": 0.0,
+    "recall_80_threshold": 0.02,
+    "prevalence_matched_threshold": 0.05,
+    "default_threshold": 0.05
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "project_title": "Multi-Target 1-Year Incident Comorbidity Risk Prediction & Explainability Platform",
+  "data_cohort": {
+    "source": "Synthea OMOP CDM 23M",
+    "cohort_type": "Inpatient and Emergency Department (ED) Encounter Landmarks",
+    "sample_counts": {
+      "train_split": 174660,
+      "validation_split": 73862,
+      "prospective_test_split": 33304,
+      "total_landmarks": 281826
+    },
+    "patient_counts": {
+      "train_unique_patients": 44661,
+      "val_unique_patients": 19140,
+      "test_unique_patients": 8636,
+      "total_unique_patients": 72437,
+      "patient_overlap_across_splits": 0
+    },
+    "prediction_horizon_days": 365,
+    "target_disease_count": 41,
+    "active_predictor_feature_count": 81
+  },
+  "benchmark_model_ladder_test_metrics": {
+    "prevalence_floor": {
+      "macro_auprc": 0.0025,
+      "macro_auroc": 0.5000,
+      "precision_at_3": 0.1065,
+      "recall_at_3": 0.2946,
+      "map_at_3": 0.1843,
+      "precision_at_5": 0.0937,
+      "recall_at_5": 0.4096,
+      "map_at_5": 0.2118,
+      "macro_brier_score": 0.002451
+    },
+    "tuned_logistic_regression": {
+      "macro_auprc": 0.0502,
+      "macro_auroc": 0.8676,
+      "precision_at_3": 0.2094,
+      "recall_at_3": 0.5315,
+      "map_at_3": 0.4007,
+      "precision_at_5": 0.1700,
+      "recall_at_5": 0.6972,
+      "map_at_5": 0.4455,
+      "macro_brier_score": 0.109898
+    },
+    "tuned_random_forest": {
+      "macro_auprc": 0.0739,
+      "macro_auroc": 0.8772,
+      "precision_at_3": 0.2551,
+      "recall_at_3": 0.6366,
+      "map_at_3": 0.5315,
+      "precision_at_5": 0.1813,
+      "recall_at_5": 0.7380,
+      "map_at_5": 0.5596,
+      "macro_brier_score": 0.071803
+    },
+    "tuned_xgboost": {
+      "macro_auprc": 0.0816,
+      "macro_auroc": 0.8824,
+      "precision_at_3": 0.2695,
+      "recall_at_3": 0.6665,
+      "map_at_3": 0.5555,
+      "precision_at_5": 0.1873,
+      "recall_at_5": 0.7651,
+      "map_at_5": 0.5811,
+      "macro_brier_score": 0.049943
+    },
+    "stacked_ensemble_oof": {
+      "macro_auprc": 0.0728,
+      "macro_auroc": 0.8693,
+      "precision_at_3": 0.2697,
+      "recall_at_3": 0.6638,
+      "map_at_3": 0.5645,
+      "precision_at_5": 0.1899,
+      "recall_at_5": 0.7717,
+      "map_at_5": 0.5939,
+      "macro_brier_score": 0.002329
+    },
+    "calibrated_stacked_ensemble": {
+      "macro_auprc": 0.0680,
+      "macro_auroc": 0.8681,
+      "precision_at_3": 0.2761,
+      "recall_at_3": 0.6851,
+      "map_at_3": 0.5869,
+      "precision_at_5": 0.1928,
+      "recall_at_5": 0.7780,
+      "map_at_5": 0.6134,
+      "macro_brier_score": 0.002304
+    }
+  },
+  "ablation_study_summary": {
+    "arm_a_demographics_only": { "features": 16, "val_auprc": 0.0098, "test_auprc": 0.0104, "test_map3": 0.2126 },
+    "arm_b_diagnoses_only": { "features": 58, "val_auprc": 0.0563, "test_auprc": 0.0442, "test_map3": 0.3583 },
+    "arm_c_demographics_diagnoses": { "features": 74, "val_auprc": 0.0578, "test_auprc": 0.0469, "test_map3": 0.4109 },
+    "arm_d_demographics_diagnoses_derived": { "features": 81, "val_auprc": 0.0562, "test_auprc": 0.0449, "test_map3": 0.4041 },
+    "arm_e_network_features_only_stub": { "features": 8, "val_auprc": 0.0033, "test_auprc": 0.0025, "test_map3": 0.0121 },
+    "arm_f_all_features": { "features": 89, "val_auprc": 0.0565, "test_auprc": 0.0448, "test_map3": 0.4037 }
+  },
+  "release_package": {
+    "version": "1.0.0",
+    "directory": "models/release_v1",
+    "artifacts_tracked": 85,
+    "sha256_checksums_verified": true
+  },
+  "test_suite_status": {
+    "total_tests": 75,
+    "passed_tests": 75,
+    "failed_tests": 0,
+    "leakage_checklist_audit_passed": true
+  }
+}
