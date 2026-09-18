@@ -42,3 +42,7 @@ htmlcov/
 *.swo
 .tmp/
 scratch/
+
+# Intermediate model checkpoint storage (keep release_v1)
+models/saved/
+

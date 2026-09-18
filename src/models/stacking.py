@@ -8,7 +8,7 @@ Features:
 3. Logistic Regression Meta-Learner fitting on OOF probability matrix [P_LR, P_RF, P_XGB].
 4. Full-Data Base Learner Refitting & Serialized StackedEnsembleModel bundle.
 5. Strict Row-ID and Patient-ID Bookkeeping verification.
-6. Explicit fold-level and model-level progress logging.
+6. Clean progress reporting per fold and per base model.
 """
 
 import os
@@ -53,13 +53,11 @@ def build_patient_kfold_splits(
     kf = KFold(n_splits=n_splits, shuffle=False)
     splits = []
 
-    # Map each patient to a fold index
     patient_to_fold = {}
     for fold_idx, (_, test_pt_idx) in enumerate(kf.split(shuffled_patients)):
         for pt in shuffled_patients[test_pt_idx]:
             patient_to_fold[pt] = fold_idx
 
-    # Assign each landmark row index to its patient's fold
     row_folds = np.array([patient_to_fold[pid] for pid in person_ids], dtype=np.int32)
 
     for fold_idx in range(n_splits):
@@ -131,15 +129,11 @@ def train_single_stacked_ensemble(
     n_splits: int = 5,
     device: str = "auto",
     random_seed: int = 42,
-    n_jobs: int = 4
+    n_jobs: int = 4,
+    verbose: bool = True
 ) -> Tuple[StackedEnsembleModel, np.ndarray, Dict[str, Any]]:
     """
-    Executes complete Phase 10 Out-Of-Fold stacking workflow for a single target disease:
-    1. Splits training data into M=5 patient-level folds.
-    2. Trains base models on M-1 folds and generates OOF predictions on held-out folds.
-    3. Fits Logistic Regression meta-learner on the 3-column OOF matrix.
-    4. Refits all 3 base models on the full training set.
-    5. Returns fitted StackedEnsembleModel, OOF probability matrix, and diagnostic metadata.
+    Executes complete Phase 10 Out-Of-Fold stacking workflow for a single target disease.
     """
     n_samples = len(y_train)
     oof_matrix = np.zeros((n_samples, 3), dtype=np.float32)  # [LR, RF, XGB]
@@ -149,11 +143,11 @@ def train_single_stacked_ensemble(
 
     # 1. Out-Of-Fold Base Learner Training
     for fold_idx, (tr_idx, val_idx) in enumerate(fold_splits):
-        t_fold = time.time()
+        t0_f = time.time()
         X_tr_f, y_tr_f = X_train[tr_idx], y_train[tr_idx]
         X_va_f = X_train[val_idx]
 
-        # A. Logistic Regression (Fast linear baseline on CPU)
+        # A. Logistic Regression (CPU)
         prep_f = FeaturePreprocessor(continuous_indices=cont_indices)
         X_tr_lr = prep_f.fit_transform(X_tr_f)
         X_va_lr = prep_f.transform(X_va_f)
@@ -167,7 +161,7 @@ def train_single_stacked_ensemble(
         lr_clf.fit(X_tr_lr, y_tr_f)
         oof_matrix[val_idx, 0] = lr_clf.predict_proba(X_va_lr)[:, 1]
 
-        # B. XGBoost (GPU Accelerated via CUDA hist)
+        # B. XGBoost (GPU via CUDA)
         pos_cnt_f = int(np.sum(y_tr_f))
         neg_cnt_f = len(y_tr_f) - pos_cnt_f
         spw_f = min(float(neg_cnt_f / max(1, pos_cnt_f)), 500.0)
@@ -203,12 +197,12 @@ def train_single_stacked_ensemble(
         rf_clf.fit(X_tr_f, y_tr_f)
         oof_matrix[val_idx, 1] = rf_clf.predict_proba(X_va_f)[:, 1]
 
-        # print(f"    - Fold {fold_idx+1}/{n_splits} completed in {time.time() - t_fold:.2f}s")
+        if verbose:
+            print(f"    Fold {fold_idx+1}/5 done in {time.time() - t0_f:.1f}s (LR: CPU | XGB: {device.upper()} | RF: {n_jobs} CPUs)")
 
     # 2. Fit Logistic Regression Meta-Learner on OOF predictions
     meta_clf = LogisticRegression(
         C=1.0,
-        penalty="l2",
         solver="lbfgs",
         fit_intercept=True,
         random_state=random_seed
@@ -230,6 +224,8 @@ def train_single_stacked_ensemble(
     oof_xgb_metrics = compute_binary_metrics(y_train, oof_matrix[:, 2])
 
     # 3. Refit Base Learners on FULL Training Data
+    if verbose:
+        print("    Refitting base learners on full training dataset (174,660 rows)...")
     full_prep = FeaturePreprocessor(continuous_indices=cont_indices)
     X_train_lr = full_prep.fit_transform(X_train)
     full_lr = LogisticRegression(
@@ -247,7 +243,7 @@ def train_single_stacked_ensemble(
         min_samples_leaf=rf_config.get("min_samples_leaf", 5),
         max_features=rf_config.get("max_features", "sqrt"),
         class_weight=rf_config.get("class_weight", "balanced"),
-        oob_score=True,
+        oob_score=False,
         random_seed=random_seed,
         n_jobs=n_jobs
     )

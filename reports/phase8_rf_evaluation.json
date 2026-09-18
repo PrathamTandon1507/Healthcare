@@ -1,0 +1,1421 @@
+{
+  "tuning_summary": {
+    "75036": {
+      "concept_id": 75036,
+      "clinical_name": "Localized Osteoarthritis of Hand",
+      "category": "Musculoskeletal",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      },
+      "train_positives": 91,
+      "val_positives": 51,
+      "elapsed_seconds": 32.01
+    },
+    "79740": {
+      "concept_id": 79740,
+      "clinical_name": "Primary Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "best_params": {
+        "max_depth": 14,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt"
+      },
+      "train_positives": 153,
+      "val_positives": 44,
+      "elapsed_seconds": 44.74
+    },
+    "80502": {
+      "concept_id": 80502,
+      "clinical_name": "Osteoporosis",
+      "category": "Musculoskeletal",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 636,
+      "val_positives": 225,
+      "elapsed_seconds": 33.53
+    },
+    "192279": {
+      "concept_id": 192279,
+      "clinical_name": "Congestive Heart Failure",
+      "category": "Cardiometabolic",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      },
+      "train_positives": 103,
+      "val_positives": 71,
+      "elapsed_seconds": 31.36
+    },
+    "200970": {
+      "concept_id": 200970,
+      "clinical_name": "Carcinoma in situ of Prostate",
+      "category": "Oncology / Pre-Malignant",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      },
+      "train_positives": 766,
+      "val_positives": 409,
+      "elapsed_seconds": 30.5
+    },
+    "201826": {
+      "concept_id": 201826,
+      "clinical_name": "Type 2 Diabetes Mellitus",
+      "category": "Cardiometabolic",
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt"
+      },
+      "train_positives": 174,
+      "val_positives": 71,
+      "elapsed_seconds": 31.7
+    },
+    "257012": {
+      "concept_id": 257012,
+      "clinical_name": "Chronic Sinusitis",
+      "category": "Respiratory / Allergic",
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt"
+      },
+      "train_positives": 907,
+      "val_positives": 445,
+      "elapsed_seconds": 34.17
+    },
+    "258780": {
+      "concept_id": 258780,
+      "clinical_name": "Chronic Obstructive Bronchitis (COPD)",
+      "category": "Respiratory / Allergic",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 118,
+      "val_positives": 64,
+      "elapsed_seconds": 34.88
+    },
+    "316866": {
+      "concept_id": 316866,
+      "clinical_name": "Essential Hypertension",
+      "category": "Cardiometabolic",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 678,
+      "val_positives": 279,
+      "elapsed_seconds": 51.74
+    },
+    "317576": {
+      "concept_id": 317576,
+      "clinical_name": "Coronary Arteriosclerosis",
+      "category": "Cardiometabolic",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      },
+      "train_positives": 839,
+      "val_positives": 367,
+      "elapsed_seconds": 62.82
+    },
+    "321042": {
+      "concept_id": 321042,
+      "clinical_name": "Cardiac Arrest",
+      "category": "Cardiometabolic",
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt"
+      },
+      "train_positives": 137,
+      "val_positives": 57,
+      "elapsed_seconds": 67.28
+    },
+    "378419": {
+      "concept_id": 378419,
+      "clinical_name": "Alzheimer's Disease",
+      "category": "Neurological / Mental Health",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 1591,
+      "val_positives": 566,
+      "elapsed_seconds": 62.83
+    },
+    "380378": {
+      "concept_id": 380378,
+      "clinical_name": "Epilepsy / Seizure Disorder",
+      "category": "Neurological / Mental Health",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      },
+      "train_positives": 175,
+      "val_positives": 58,
+      "elapsed_seconds": 65.53
+    },
+    "381316": {
+      "concept_id": 381316,
+      "clinical_name": "Stroke (Cerebrovascular Accident)",
+      "category": "Neurological / Mental Health",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 703,
+      "val_positives": 303,
+      "elapsed_seconds": 69.49
+    },
+    "432867": {
+      "concept_id": 432867,
+      "clinical_name": "Hyperlipidemia",
+      "category": "Cardiometabolic",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 802,
+      "val_positives": 309,
+      "elapsed_seconds": 66.28
+    },
+    "436096": {
+      "concept_id": 436096,
+      "clinical_name": "Chronic Pain",
+      "category": "Musculoskeletal",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 1983,
+      "val_positives": 871,
+      "elapsed_seconds": 64.16
+    },
+    "436940": {
+      "concept_id": 436940,
+      "clinical_name": "Metabolic Syndrome X",
+      "category": "Cardiometabolic",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 210,
+      "val_positives": 90,
+      "elapsed_seconds": 61.3
+    },
+    "439777": {
+      "concept_id": 439777,
+      "clinical_name": "Anemia",
+      "category": "Hematology",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 1423,
+      "val_positives": 592,
+      "elapsed_seconds": 63.54
+    },
+    "440086": {
+      "concept_id": 440086,
+      "clinical_name": "Childhood ADHD",
+      "category": "Neurological / Mental Health",
+      "best_params": {
+        "max_depth": 14,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt"
+      },
+      "train_positives": 61,
+      "val_positives": 15,
+      "elapsed_seconds": 56.4
+    },
+    "443614": {
+      "concept_id": 443614,
+      "clinical_name": "Chronic Kidney Disease Stage 1",
+      "category": "Renal",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      },
+      "train_positives": 96,
+      "val_positives": 69,
+      "elapsed_seconds": 62.82
+    },
+    "4029498": {
+      "concept_id": 4029498,
+      "clinical_name": "Seizure Disorder",
+      "category": "Neurological / Mental Health",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 92,
+      "val_positives": 55,
+      "elapsed_seconds": 65.91
+    },
+    "4043241": {
+      "concept_id": 4043241,
+      "clinical_name": "Familial Alzheimer's Disease",
+      "category": "Neurological / Mental Health",
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt"
+      },
+      "train_positives": 164,
+      "val_positives": 30,
+      "elapsed_seconds": 62.69
+    },
+    "4051466": {
+      "concept_id": 4051466,
+      "clinical_name": "Childhood Asthma",
+      "category": "Respiratory / Allergic",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      },
+      "train_positives": 47,
+      "val_positives": 26,
+      "elapsed_seconds": 56.37
+    },
+    "4079749": {
+      "concept_id": 4079749,
+      "clinical_name": "Osteoarthritis of Hip",
+      "category": "Musculoskeletal",
+      "best_params": {
+        "max_depth": 14,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt"
+      },
+      "train_positives": 87,
+      "val_positives": 29,
+      "elapsed_seconds": 57.84
+    },
+    "4079750": {
+      "concept_id": 4079750,
+      "clinical_name": "Osteoarthritis of Knee",
+      "category": "Musculoskeletal",
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt"
+      },
+      "train_positives": 252,
+      "val_positives": 139,
+      "elapsed_seconds": 65.5
+    },
+    "4110591": {
+      "concept_id": 4110591,
+      "clinical_name": "Small Cell Carcinoma of Lung",
+      "category": "Oncology / Pre-Malignant",
+      "best_params": {
+        "max_depth": 14,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt"
+      },
+      "train_positives": 181,
+      "val_positives": 87,
+      "elapsed_seconds": 58.89
+    },
+    "4115276": {
+      "concept_id": 4115276,
+      "clinical_name": "Non-Small Cell Lung Cancer",
+      "category": "Oncology / Pre-Malignant",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 1114,
+      "val_positives": 462,
+      "elapsed_seconds": 50.9
+    },
+    "4120314": {
+      "concept_id": 4120314,
+      "clinical_name": "Hypertriglyceridemia",
+      "category": "Cardiometabolic",
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt"
+      },
+      "train_positives": 210,
+      "val_positives": 88,
+      "elapsed_seconds": 50.1
+    },
+    "4129902": {
+      "concept_id": 4129902,
+      "clinical_name": "Neoplasm of Prostate",
+      "category": "Oncology / Pre-Malignant",
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt"
+      },
+      "train_positives": 973,
+      "val_positives": 457,
+      "elapsed_seconds": 52.13
+    },
+    "4180790": {
+      "concept_id": 4180790,
+      "clinical_name": "Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 142,
+      "val_positives": 46,
+      "elapsed_seconds": 61.69
+    },
+    "4214376": {
+      "concept_id": 4214376,
+      "clinical_name": "Hyperglycemia",
+      "category": "Cardiometabolic",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 185,
+      "val_positives": 79,
+      "elapsed_seconds": 62.03
+    },
+    "4226121": {
+      "concept_id": 4226121,
+      "clinical_name": "Retinopathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt"
+      },
+      "train_positives": 108,
+      "val_positives": 53,
+      "elapsed_seconds": 64.05
+    },
+    "4229440": {
+      "concept_id": 4229440,
+      "clinical_name": "Chronic Kidney Disease",
+      "category": "Renal",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      },
+      "train_positives": 1177,
+      "val_positives": 496,
+      "elapsed_seconds": 66.66
+    },
+    "4283893": {
+      "concept_id": 4283893,
+      "clinical_name": "Sinusitis",
+      "category": "Respiratory / Allergic",
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt"
+      },
+      "train_positives": 831,
+      "val_positives": 461,
+      "elapsed_seconds": 72.93
+    },
+    "4285898": {
+      "concept_id": 4285898,
+      "clinical_name": "Polyp of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 1139,
+      "val_positives": 505,
+      "elapsed_seconds": 65.01
+    },
+    "4310703": {
+      "concept_id": 4310703,
+      "clinical_name": "Non-Small Cell Carcinoma of Lung, Stage 1",
+      "category": "Oncology / Pre-Malignant",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 1126,
+      "val_positives": 467,
+      "elapsed_seconds": 63.62
+    },
+    "4311629": {
+      "concept_id": 4311629,
+      "clinical_name": "Prediabetes",
+      "category": "Cardiometabolic",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 1029,
+      "val_positives": 440,
+      "elapsed_seconds": 68.87
+    },
+    "37016354": {
+      "concept_id": 37016354,
+      "clinical_name": "Neuropathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "best_params": {
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt"
+      },
+      "train_positives": 98,
+      "val_positives": 55,
+      "elapsed_seconds": 63.78
+    },
+    "37017023": {
+      "concept_id": 37017023,
+      "clinical_name": "Recurrent Rectal Polyp",
+      "category": "Oncology / Pre-Malignant",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      },
+      "train_positives": 343,
+      "val_positives": 103,
+      "elapsed_seconds": 57.75
+    },
+    "37395648": {
+      "concept_id": 37395648,
+      "clinical_name": "Small Cell Carcinoma of Lung, Stage 1",
+      "category": "Oncology / Pre-Malignant",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 181,
+      "val_positives": 88,
+      "elapsed_seconds": 57.97
+    },
+    "43530652": {
+      "concept_id": 43530652,
+      "clinical_name": "Chronic Intractable Migraine",
+      "category": "Musculoskeletal",
+      "best_params": {
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3
+      },
+      "train_positives": 2034,
+      "val_positives": 852,
+      "elapsed_seconds": 34.0
+    }
+  },
+  "validation_metrics": {
+    "macro_metrics": {
+      "macro_auprc": 0.088088,
+      "macro_auroc": 0.875412,
+      "macro_brier_score": 0.070454,
+      "macro_f1": 0.139408,
+      "n_targets": 41
+    },
+    "prevalence_tier_auprc": {
+      "high_prevalence_macro_auprc": 0.122103,
+      "medium_prevalence_macro_auprc": 0.140785,
+      "low_prevalence_macro_auprc": 0.020927,
+      "tier_counts": {
+        "high": 13,
+        "medium": 12,
+        "low": 16
+      }
+    },
+    "ranking_metrics": {
+      "precision_at_3": 0.253513,
+      "recall_at_3": 0.588369,
+      "map_at_3": 0.493607,
+      "precision_at_5": 0.187091,
+      "recall_at_5": 0.721908,
+      "map_at_5": 0.528875,
+      "precision_at_10": 0.11757,
+      "recall_at_10": 0.907617,
+      "map_at_10": 0.558785
+    },
+    "per_target": {
+      "75036": {
+        "n_samples": 73862,
+        "n_positive": 51,
+        "prevalence": 0.00069,
+        "auprc": 0.008953,
+        "auroc": 0.805054,
+        "brier_score": 0.068398,
+        "f1_tuned": 0.037037,
+        "tuned_threshold": 0.78
+      },
+      "79740": {
+        "n_samples": 73862,
+        "n_positive": 44,
+        "prevalence": 0.000596,
+        "auprc": 0.007608,
+        "auroc": 0.803749,
+        "brier_score": 0.010081,
+        "f1_tuned": 0.036364,
+        "tuned_threshold": 0.82
+      },
+      "80502": {
+        "n_samples": 73862,
+        "n_positive": 225,
+        "prevalence": 0.003046,
+        "auprc": 0.08791,
+        "auroc": 0.95165,
+        "brier_score": 0.056708,
+        "f1_tuned": 0.163209,
+        "tuned_threshold": 0.79
+      },
+      "192279": {
+        "n_samples": 73862,
+        "n_positive": 71,
+        "prevalence": 0.000961,
+        "auprc": 0.032424,
+        "auroc": 0.944847,
+        "brier_score": 0.018243,
+        "f1_tuned": 0.086598,
+        "tuned_threshold": 0.86
+      },
+      "200970": {
+        "n_samples": 73862,
+        "n_positive": 409,
+        "prevalence": 0.005537,
+        "auprc": 0.060561,
+        "auroc": 0.943201,
+        "brier_score": 0.063192,
+        "f1_tuned": 0.115159,
+        "tuned_threshold": 0.7
+      },
+      "201826": {
+        "n_samples": 73862,
+        "n_positive": 71,
+        "prevalence": 0.000961,
+        "auprc": 0.009917,
+        "auroc": 0.877775,
+        "brier_score": 0.148169,
+        "f1_tuned": 0.044898,
+        "tuned_threshold": 0.77
+      },
+      "257012": {
+        "n_samples": 73862,
+        "n_positive": 445,
+        "prevalence": 0.006025,
+        "auprc": 0.056022,
+        "auroc": 0.669128,
+        "brier_score": 0.156729,
+        "f1_tuned": 0.133811,
+        "tuned_threshold": 0.67
+      },
+      "258780": {
+        "n_samples": 73862,
+        "n_positive": 64,
+        "prevalence": 0.000866,
+        "auprc": 0.0008,
+        "auroc": 0.455101,
+        "brier_score": 0.074883,
+        "f1_tuned": 0.001756,
+        "tuned_threshold": 0.02
+      },
+      "316866": {
+        "n_samples": 73862,
+        "n_positive": 279,
+        "prevalence": 0.003777,
+        "auprc": 0.187719,
+        "auroc": 0.982122,
+        "brier_score": 0.026912,
+        "f1_tuned": 0.281938,
+        "tuned_threshold": 0.97
+      },
+      "317576": {
+        "n_samples": 73862,
+        "n_positive": 367,
+        "prevalence": 0.004969,
+        "auprc": 0.011004,
+        "auroc": 0.702382,
+        "brier_score": 0.103408,
+        "f1_tuned": 0.03005,
+        "tuned_threshold": 0.71
+      },
+      "321042": {
+        "n_samples": 73862,
+        "n_positive": 57,
+        "prevalence": 0.000772,
+        "auprc": 0.001785,
+        "auroc": 0.709288,
+        "brier_score": 0.096627,
+        "f1_tuned": 0.006924,
+        "tuned_threshold": 0.57
+      },
+      "378419": {
+        "n_samples": 73862,
+        "n_positive": 566,
+        "prevalence": 0.007663,
+        "auprc": 0.086106,
+        "auroc": 0.925762,
+        "brier_score": 0.072766,
+        "f1_tuned": 0.128011,
+        "tuned_threshold": 0.9
+      },
+      "380378": {
+        "n_samples": 73862,
+        "n_positive": 58,
+        "prevalence": 0.000785,
+        "auprc": 0.098354,
+        "auroc": 0.918286,
+        "brier_score": 0.037252,
+        "f1_tuned": 0.181303,
+        "tuned_threshold": 0.84
+      },
+      "381316": {
+        "n_samples": 73862,
+        "n_positive": 303,
+        "prevalence": 0.004102,
+        "auprc": 0.088115,
+        "auroc": 0.870456,
+        "brier_score": 0.098369,
+        "f1_tuned": 0.204651,
+        "tuned_threshold": 0.91
+      },
+      "432867": {
+        "n_samples": 73862,
+        "n_positive": 309,
+        "prevalence": 0.004183,
+        "auprc": 0.010522,
+        "auroc": 0.788799,
+        "brier_score": 0.14256,
+        "f1_tuned": 0.022308,
+        "tuned_threshold": 0.6
+      },
+      "436096": {
+        "n_samples": 73862,
+        "n_positive": 871,
+        "prevalence": 0.011792,
+        "auprc": 0.400201,
+        "auroc": 0.92934,
+        "brier_score": 0.064035,
+        "f1_tuned": 0.516563,
+        "tuned_threshold": 0.85
+      },
+      "436940": {
+        "n_samples": 73862,
+        "n_positive": 90,
+        "prevalence": 0.001218,
+        "auprc": 0.388374,
+        "auroc": 0.98027,
+        "brier_score": 0.00218,
+        "f1_tuned": 0.496933,
+        "tuned_threshold": 0.53
+      },
+      "439777": {
+        "n_samples": 73862,
+        "n_positive": 592,
+        "prevalence": 0.008015,
+        "auprc": 0.071104,
+        "auroc": 0.860107,
+        "brier_score": 0.14415,
+        "f1_tuned": 0.165945,
+        "tuned_threshold": 0.82
+      },
+      "440086": {
+        "n_samples": 73862,
+        "n_positive": 15,
+        "prevalence": 0.000203,
+        "auprc": 0.006179,
+        "auroc": 0.981859,
+        "brier_score": 0.025513,
+        "f1_tuned": 0.015209,
+        "tuned_threshold": 0.93
+      },
+      "443614": {
+        "n_samples": 73862,
+        "n_positive": 69,
+        "prevalence": 0.000934,
+        "auprc": 0.036556,
+        "auroc": 0.944614,
+        "brier_score": 0.018017,
+        "f1_tuned": 0.083333,
+        "tuned_threshold": 0.91
+      },
+      "4029498": {
+        "n_samples": 73862,
+        "n_positive": 55,
+        "prevalence": 0.000745,
+        "auprc": 0.012466,
+        "auroc": 0.823154,
+        "brier_score": 0.035939,
+        "f1_tuned": 0.055556,
+        "tuned_threshold": 0.96
+      },
+      "4043241": {
+        "n_samples": 73862,
+        "n_positive": 30,
+        "prevalence": 0.000406,
+        "auprc": 0.002114,
+        "auroc": 0.845842,
+        "brier_score": 0.042107,
+        "f1_tuned": 0.006543,
+        "tuned_threshold": 0.53
+      },
+      "4051466": {
+        "n_samples": 73862,
+        "n_positive": 26,
+        "prevalence": 0.000352,
+        "auprc": 0.033376,
+        "auroc": 0.994003,
+        "brier_score": 0.010662,
+        "f1_tuned": 0.070423,
+        "tuned_threshold": 0.97
+      },
+      "4079749": {
+        "n_samples": 73862,
+        "n_positive": 29,
+        "prevalence": 0.000393,
+        "auprc": 0.002442,
+        "auroc": 0.899505,
+        "brier_score": 0.065091,
+        "f1_tuned": 0.014493,
+        "tuned_threshold": 0.79
+      },
+      "4079750": {
+        "n_samples": 73862,
+        "n_positive": 139,
+        "prevalence": 0.001882,
+        "auprc": 0.005805,
+        "auroc": 0.811182,
+        "brier_score": 0.141334,
+        "f1_tuned": 0.015314,
+        "tuned_threshold": 0.68
+      },
+      "4110591": {
+        "n_samples": 73862,
+        "n_positive": 87,
+        "prevalence": 0.001178,
+        "auprc": 0.020068,
+        "auroc": 0.894829,
+        "brier_score": 0.047627,
+        "f1_tuned": 0.02963,
+        "tuned_threshold": 0.82
+      },
+      "4115276": {
+        "n_samples": 73862,
+        "n_positive": 462,
+        "prevalence": 0.006255,
+        "auprc": 0.151977,
+        "auroc": 0.946851,
+        "brier_score": 0.099365,
+        "f1_tuned": 0.279221,
+        "tuned_threshold": 0.92
+      },
+      "4120314": {
+        "n_samples": 73862,
+        "n_positive": 88,
+        "prevalence": 0.001191,
+        "auprc": 0.513914,
+        "auroc": 0.97968,
+        "brier_score": 0.018118,
+        "f1_tuned": 0.614786,
+        "tuned_threshold": 0.61
+      },
+      "4129902": {
+        "n_samples": 73862,
+        "n_positive": 457,
+        "prevalence": 0.006187,
+        "auprc": 0.083733,
+        "auroc": 0.95457,
+        "brier_score": 0.080452,
+        "f1_tuned": 0.150658,
+        "tuned_threshold": 0.77
+      },
+      "4180790": {
+        "n_samples": 73862,
+        "n_positive": 46,
+        "prevalence": 0.000623,
+        "auprc": 0.016427,
+        "auroc": 0.954591,
+        "brier_score": 0.020666,
+        "f1_tuned": 0.044794,
+        "tuned_threshold": 0.68
+      },
+      "4214376": {
+        "n_samples": 73862,
+        "n_positive": 79,
+        "prevalence": 0.00107,
+        "auprc": 0.28653,
+        "auroc": 0.977984,
+        "brier_score": 0.003753,
+        "f1_tuned": 0.383333,
+        "tuned_threshold": 0.94
+      },
+      "4226121": {
+        "n_samples": 73862,
+        "n_positive": 53,
+        "prevalence": 0.000718,
+        "auprc": 0.026264,
+        "auroc": 0.97447,
+        "brier_score": 0.025465,
+        "f1_tuned": 0.058613,
+        "tuned_threshold": 0.63
+      },
+      "4229440": {
+        "n_samples": 73862,
+        "n_positive": 496,
+        "prevalence": 0.006715,
+        "auprc": 0.042602,
+        "auroc": 0.86153,
+        "brier_score": 0.114417,
+        "f1_tuned": 0.094326,
+        "tuned_threshold": 0.7
+      },
+      "4283893": {
+        "n_samples": 73862,
+        "n_positive": 461,
+        "prevalence": 0.006241,
+        "auprc": 0.006428,
+        "auroc": 0.501348,
+        "brier_score": 0.183209,
+        "f1_tuned": 0.013262,
+        "tuned_threshold": 0.52
+      },
+      "4285898": {
+        "n_samples": 73862,
+        "n_positive": 505,
+        "prevalence": 0.006837,
+        "auprc": 0.027142,
+        "auroc": 0.857049,
+        "brier_score": 0.137864,
+        "f1_tuned": 0.063164,
+        "tuned_threshold": 0.74
+      },
+      "4310703": {
+        "n_samples": 73862,
+        "n_positive": 467,
+        "prevalence": 0.006323,
+        "auprc": 0.151445,
+        "auroc": 0.945636,
+        "brier_score": 0.099886,
+        "f1_tuned": 0.259296,
+        "tuned_threshold": 0.91
+      },
+      "4311629": {
+        "n_samples": 73862,
+        "n_positive": 440,
+        "prevalence": 0.005957,
+        "auprc": 0.02113,
+        "auroc": 0.851056,
+        "brier_score": 0.142812,
+        "f1_tuned": 0.042294,
+        "tuned_threshold": 0.72
+      },
+      "37016354": {
+        "n_samples": 73862,
+        "n_positive": 55,
+        "prevalence": 0.000745,
+        "auprc": 0.039159,
+        "auroc": 0.955949,
+        "brier_score": 0.025565,
+        "f1_tuned": 0.118919,
+        "tuned_threshold": 0.94
+      },
+      "37017023": {
+        "n_samples": 73862,
+        "n_positive": 103,
+        "prevalence": 0.001394,
+        "auprc": 0.072398,
+        "auroc": 0.980274,
+        "brier_score": 0.027975,
+        "f1_tuned": 0.08599,
+        "tuned_threshold": 0.67
+      },
+      "37395648": {
+        "n_samples": 73862,
+        "n_positive": 88,
+        "prevalence": 0.001191,
+        "auprc": 0.017066,
+        "auroc": 0.908986,
+        "brier_score": 0.075339,
+        "f1_tuned": 0.056537,
+        "tuned_threshold": 0.88
+      },
+      "43530652": {
+        "n_samples": 73862,
+        "n_positive": 852,
+        "prevalence": 0.011535,
+        "auprc": 0.428889,
+        "auroc": 0.929595,
+        "brier_score": 0.062771,
+        "f1_tuned": 0.506569,
+        "tuned_threshold": 0.86
+      }
+    }
+  },
+  "test_metrics": {
+    "macro_metrics": {
+      "macro_auprc": 0.073853,
+      "macro_auroc": 0.877203,
+      "macro_brier_score": 0.071803,
+      "macro_f1": 0.1302,
+      "n_targets": 41
+    },
+    "prevalence_tier_auprc": {
+      "high_prevalence_macro_auprc": 0.173599,
+      "medium_prevalence_macro_auprc": 0.091004,
+      "low_prevalence_macro_auprc": 0.019816,
+      "tier_counts": {
+        "high": 7,
+        "medium": 16,
+        "low": 18
+      }
+    },
+    "ranking_metrics": {
+      "precision_at_3": 0.255136,
+      "recall_at_3": 0.636565,
+      "map_at_3": 0.531482,
+      "precision_at_5": 0.181322,
+      "recall_at_5": 0.737965,
+      "map_at_5": 0.5596,
+      "precision_at_10": 0.11285,
+      "recall_at_10": 0.90668,
+      "map_at_10": 0.587088
+    },
+    "per_target": {
+      "75036": {
+        "n_samples": 33304,
+        "n_positive": 7,
+        "prevalence": 0.00021,
+        "auprc": 0.0007,
+        "auroc": 0.830521,
+        "brier_score": 0.057297,
+        "f1_tuned": 0.001875,
+        "tuned_threshold": 0.28
+      },
+      "79740": {
+        "n_samples": 33304,
+        "n_positive": 45,
+        "prevalence": 0.001351,
+        "auprc": 0.01325,
+        "auroc": 0.899404,
+        "brier_score": 0.010668,
+        "f1_tuned": 0.058824,
+        "tuned_threshold": 0.5
+      },
+      "80502": {
+        "n_samples": 33304,
+        "n_positive": 44,
+        "prevalence": 0.001321,
+        "auprc": 0.045026,
+        "auroc": 0.962742,
+        "brier_score": 0.045385,
+        "f1_tuned": 0.116505,
+        "tuned_threshold": 0.84
+      },
+      "192279": {
+        "n_samples": 33304,
+        "n_positive": 32,
+        "prevalence": 0.000961,
+        "auprc": 0.065513,
+        "auroc": 0.970371,
+        "brier_score": 0.012765,
+        "f1_tuned": 0.153846,
+        "tuned_threshold": 0.95
+      },
+      "200970": {
+        "n_samples": 33304,
+        "n_positive": 23,
+        "prevalence": 0.000691,
+        "auprc": 0.004722,
+        "auroc": 0.909399,
+        "brier_score": 0.049617,
+        "f1_tuned": 0.010436,
+        "tuned_threshold": 0.24
+      },
+      "201826": {
+        "n_samples": 33304,
+        "n_positive": 36,
+        "prevalence": 0.001081,
+        "auprc": 0.003977,
+        "auroc": 0.742889,
+        "brier_score": 0.163565,
+        "f1_tuned": 0.013393,
+        "tuned_threshold": 0.75
+      },
+      "257012": {
+        "n_samples": 33304,
+        "n_positive": 156,
+        "prevalence": 0.004684,
+        "auprc": 0.070433,
+        "auroc": 0.74689,
+        "brier_score": 0.181919,
+        "f1_tuned": 0.125,
+        "tuned_threshold": 0.76
+      },
+      "258780": {
+        "n_samples": 33304,
+        "n_positive": 18,
+        "prevalence": 0.00054,
+        "auprc": 0.000442,
+        "auroc": 0.312589,
+        "brier_score": 0.070086,
+        "f1_tuned": 0.001007,
+        "tuned_threshold": 0.06
+      },
+      "316866": {
+        "n_samples": 33304,
+        "n_positive": 196,
+        "prevalence": 0.005885,
+        "auprc": 0.137513,
+        "auroc": 0.964786,
+        "brier_score": 0.050819,
+        "f1_tuned": 0.232044,
+        "tuned_threshold": 0.97
+      },
+      "317576": {
+        "n_samples": 33304,
+        "n_positive": 63,
+        "prevalence": 0.001892,
+        "auprc": 0.008277,
+        "auroc": 0.73594,
+        "brier_score": 0.096701,
+        "f1_tuned": 0.034364,
+        "tuned_threshold": 0.62
+      },
+      "321042": {
+        "n_samples": 33304,
+        "n_positive": 25,
+        "prevalence": 0.000751,
+        "auprc": 0.005302,
+        "auroc": 0.730961,
+        "brier_score": 0.110212,
+        "f1_tuned": 0.040816,
+        "tuned_threshold": 0.76
+      },
+      "378419": {
+        "n_samples": 33304,
+        "n_positive": 279,
+        "prevalence": 0.008377,
+        "auprc": 0.17718,
+        "auroc": 0.954588,
+        "brier_score": 0.052365,
+        "f1_tuned": 0.255079,
+        "tuned_threshold": 0.85
+      },
+      "380378": {
+        "n_samples": 33304,
+        "n_positive": 9,
+        "prevalence": 0.00027,
+        "auprc": 0.079197,
+        "auroc": 0.877911,
+        "brier_score": 0.073834,
+        "f1_tuned": 0.2,
+        "tuned_threshold": 0.94
+      },
+      "381316": {
+        "n_samples": 33304,
+        "n_positive": 83,
+        "prevalence": 0.002492,
+        "auprc": 0.017843,
+        "auroc": 0.90321,
+        "brier_score": 0.09018,
+        "f1_tuned": 0.048387,
+        "tuned_threshold": 0.8
+      },
+      "432867": {
+        "n_samples": 33304,
+        "n_positive": 112,
+        "prevalence": 0.003363,
+        "auprc": 0.012668,
+        "auroc": 0.847357,
+        "brier_score": 0.116303,
+        "f1_tuned": 0.027397,
+        "tuned_threshold": 0.71
+      },
+      "436096": {
+        "n_samples": 33304,
+        "n_positive": 281,
+        "prevalence": 0.008437,
+        "auprc": 0.426827,
+        "auroc": 0.951796,
+        "brier_score": 0.042172,
+        "f1_tuned": 0.578231,
+        "tuned_threshold": 0.82
+      },
+      "436940": {
+        "n_samples": 33304,
+        "n_positive": 48,
+        "prevalence": 0.001441,
+        "auprc": 0.35963,
+        "auroc": 0.996729,
+        "brier_score": 0.002129,
+        "f1_tuned": 0.543353,
+        "tuned_threshold": 0.46
+      },
+      "439777": {
+        "n_samples": 33304,
+        "n_positive": 293,
+        "prevalence": 0.008798,
+        "auprc": 0.077612,
+        "auroc": 0.856241,
+        "brier_score": 0.158604,
+        "f1_tuned": 0.181488,
+        "tuned_threshold": 0.83
+      },
+      "440086": {
+        "n_samples": 33304,
+        "n_positive": 14,
+        "prevalence": 0.00042,
+        "auprc": 0.009272,
+        "auroc": 0.969313,
+        "brier_score": 0.049003,
+        "f1_tuned": 0.022857,
+        "tuned_threshold": 0.93
+      },
+      "443614": {
+        "n_samples": 33304,
+        "n_positive": 32,
+        "prevalence": 0.000961,
+        "auprc": 0.063637,
+        "auroc": 0.972768,
+        "brier_score": 0.012585,
+        "f1_tuned": 0.126582,
+        "tuned_threshold": 0.94
+      },
+      "4029498": {
+        "n_samples": 33304,
+        "n_positive": 10,
+        "prevalence": 0.0003,
+        "auprc": 0.0011,
+        "auroc": 0.798312,
+        "brier_score": 0.101748,
+        "f1_tuned": 0.003123,
+        "tuned_threshold": 0.65
+      },
+      "4043241": {
+        "n_samples": 33304,
+        "n_positive": 29,
+        "prevalence": 0.000871,
+        "auprc": 0.018037,
+        "auroc": 0.875865,
+        "brier_score": 0.039573,
+        "f1_tuned": 0.111111,
+        "tuned_threshold": 0.77
+      },
+      "4051466": {
+        "n_samples": 33304,
+        "n_positive": 45,
+        "prevalence": 0.001351,
+        "auprc": 0.051768,
+        "auroc": 0.985222,
+        "brier_score": 0.027858,
+        "f1_tuned": 0.097087,
+        "tuned_threshold": 0.97
+      },
+      "4079749": {
+        "n_samples": 33304,
+        "n_positive": 11,
+        "prevalence": 0.00033,
+        "auprc": 0.00716,
+        "auroc": 0.904819,
+        "brier_score": 0.043984,
+        "f1_tuned": 0.066667,
+        "tuned_threshold": 0.8
+      },
+      "4079750": {
+        "n_samples": 33304,
+        "n_positive": 33,
+        "prevalence": 0.000991,
+        "auprc": 0.013093,
+        "auroc": 0.855536,
+        "brier_score": 0.119826,
+        "f1_tuned": 0.033898,
+        "tuned_threshold": 0.76
+      },
+      "4110591": {
+        "n_samples": 33304,
+        "n_positive": 26,
+        "prevalence": 0.000781,
+        "auprc": 0.004279,
+        "auroc": 0.898652,
+        "brier_score": 0.062558,
+        "f1_tuned": 0.010101,
+        "tuned_threshold": 0.85
+      },
+      "4115276": {
+        "n_samples": 33304,
+        "n_positive": 136,
+        "prevalence": 0.004084,
+        "auprc": 0.083383,
+        "auroc": 0.91085,
+        "brier_score": 0.117892,
+        "f1_tuned": 0.140704,
+        "tuned_threshold": 0.93
+      },
+      "4120314": {
+        "n_samples": 33304,
+        "n_positive": 42,
+        "prevalence": 0.001261,
+        "auprc": 0.39873,
+        "auroc": 0.995354,
+        "brier_score": 0.0192,
+        "f1_tuned": 0.57971,
+        "tuned_threshold": 0.6
+      },
+      "4129902": {
+        "n_samples": 33304,
+        "n_positive": 25,
+        "prevalence": 0.000751,
+        "auprc": 0.006505,
+        "auroc": 0.914606,
+        "brier_score": 0.062597,
+        "f1_tuned": 0.027304,
+        "tuned_threshold": 0.83
+      },
+      "4180790": {
+        "n_samples": 33304,
+        "n_positive": 19,
+        "prevalence": 0.000571,
+        "auprc": 0.00685,
+        "auroc": 0.833962,
+        "brier_score": 0.019963,
+        "f1_tuned": 0.030303,
+        "tuned_threshold": 0.91
+      },
+      "4214376": {
+        "n_samples": 33304,
+        "n_positive": 35,
+        "prevalence": 0.001051,
+        "auprc": 0.243802,
+        "auroc": 0.996217,
+        "brier_score": 0.003464,
+        "f1_tuned": 0.366197,
+        "tuned_threshold": 0.95
+      },
+      "4226121": {
+        "n_samples": 33304,
+        "n_positive": 11,
+        "prevalence": 0.00033,
+        "auprc": 0.01813,
+        "auroc": 0.954371,
+        "brier_score": 0.020818,
+        "f1_tuned": 0.086957,
+        "tuned_threshold": 0.95
+      },
+      "4229440": {
+        "n_samples": 33304,
+        "n_positive": 106,
+        "prevalence": 0.003183,
+        "auprc": 0.017412,
+        "auroc": 0.895159,
+        "brier_score": 0.095877,
+        "f1_tuned": 0.044206,
+        "tuned_threshold": 0.66
+      },
+      "4283893": {
+        "n_samples": 33304,
+        "n_positive": 120,
+        "prevalence": 0.003603,
+        "auprc": 0.004936,
+        "auroc": 0.628769,
+        "brier_score": 0.201928,
+        "f1_tuned": 0.01085,
+        "tuned_threshold": 0.52
+      },
+      "4285898": {
+        "n_samples": 33304,
+        "n_positive": 207,
+        "prevalence": 0.006215,
+        "auprc": 0.01866,
+        "auroc": 0.830545,
+        "brier_score": 0.114317,
+        "f1_tuned": 0.040677,
+        "tuned_threshold": 0.52
+      },
+      "4310703": {
+        "n_samples": 33304,
+        "n_positive": 136,
+        "prevalence": 0.004084,
+        "auprc": 0.070845,
+        "auroc": 0.909311,
+        "brier_score": 0.117902,
+        "f1_tuned": 0.136842,
+        "tuned_threshold": 0.93
+      },
+      "4311629": {
+        "n_samples": 33304,
+        "n_positive": 172,
+        "prevalence": 0.005165,
+        "auprc": 0.018606,
+        "auroc": 0.837098,
+        "brier_score": 0.136879,
+        "f1_tuned": 0.037229,
+        "tuned_threshold": 0.77
+      },
+      "37016354": {
+        "n_samples": 33304,
+        "n_positive": 19,
+        "prevalence": 0.000571,
+        "auprc": 0.047867,
+        "auroc": 0.98502,
+        "brier_score": 0.023505,
+        "f1_tuned": 0.125984,
+        "tuned_threshold": 0.9
+      },
+      "37017023": {
+        "n_samples": 33304,
+        "n_positive": 61,
+        "prevalence": 0.001832,
+        "auprc": 0.054089,
+        "auroc": 0.981691,
+        "brier_score": 0.02615,
+        "f1_tuned": 0.108254,
+        "tuned_threshold": 0.62
+      },
+      "37395648": {
+        "n_samples": 33304,
+        "n_positive": 26,
+        "prevalence": 0.000781,
+        "auprc": 0.004884,
+        "auroc": 0.904408,
+        "brier_score": 0.095053,
+        "f1_tuned": 0.012299,
+        "tuned_threshold": 0.85
+      },
+      "43530652": {
+        "n_samples": 33304,
+        "n_positive": 295,
+        "prevalence": 0.008858,
+        "auprc": 0.358796,
+        "auroc": 0.933168,
+        "brier_score": 0.046631,
+        "f1_tuned": 0.497222,
+        "tuned_threshold": 0.79
+      }
+    }
+  }
+}

@@ -1,0 +1,1484 @@
+{
+  "version": "1.0.0",
+  "description": "Frozen Hyperparameter Manifest for 41 Curated Chronic Comorbidities (Phase 11)",
+  "selection_protocol": "Tuned strictly on Inner-Validation / Validation split AUPRC; Test split untouched.",
+  "n_targets": 41,
+  "models": {
+    "75036": {
+      "concept_id": 75036,
+      "disease_name": "Localized Osteoarthritis of Hand",
+      "category": "Musculoskeletal",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "79740": {
+      "concept_id": 79740,
+      "disease_name": "Primary Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "logistic_regression": {
+        "C": 10.0,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 14,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "80502": {
+      "concept_id": 80502,
+      "disease_name": "Osteoporosis",
+      "category": "Musculoskeletal",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "192279": {
+      "concept_id": 192279,
+      "disease_name": "Congestive Heart Failure",
+      "category": "Cardiometabolic",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "200970": {
+      "concept_id": 200970,
+      "disease_name": "Carcinoma in situ of Prostate",
+      "category": "Oncology / Pre-Malignant",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 8,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "201826": {
+      "concept_id": 201826,
+      "disease_name": "Type 2 Diabetes Mellitus",
+      "category": "Cardiometabolic",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "257012": {
+      "concept_id": 257012,
+      "disease_name": "Chronic Sinusitis",
+      "category": "Respiratory / Allergic",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "258780": {
+      "concept_id": 258780,
+      "disease_name": "Chronic Obstructive Bronchitis (COPD)",
+      "category": "Respiratory / Allergic",
+      "logistic_regression": {
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 8,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "316866": {
+      "concept_id": 316866,
+      "disease_name": "Essential Hypertension",
+      "category": "Cardiometabolic",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "317576": {
+      "concept_id": 317576,
+      "disease_name": "Coronary Arteriosclerosis",
+      "category": "Cardiometabolic",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "321042": {
+      "concept_id": 321042,
+      "disease_name": "Cardiac Arrest",
+      "category": "Cardiometabolic",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "378419": {
+      "concept_id": 378419,
+      "disease_name": "Alzheimer's Disease",
+      "category": "Neurological / Mental Health",
+      "logistic_regression": {
+        "C": 10.0,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "380378": {
+      "concept_id": 380378,
+      "disease_name": "Epilepsy / Seizure Disorder",
+      "category": "Neurological / Mental Health",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "381316": {
+      "concept_id": 381316,
+      "disease_name": "Stroke (Cerebrovascular Accident)",
+      "category": "Neurological / Mental Health",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 8,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "432867": {
+      "concept_id": 432867,
+      "disease_name": "Hyperlipidemia",
+      "category": "Cardiometabolic",
+      "logistic_regression": {
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "436096": {
+      "concept_id": 436096,
+      "disease_name": "Chronic Pain",
+      "category": "Musculoskeletal",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "436940": {
+      "concept_id": 436940,
+      "disease_name": "Metabolic Syndrome X",
+      "category": "Cardiometabolic",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "439777": {
+      "concept_id": 439777,
+      "disease_name": "Anemia",
+      "category": "Hematology",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "440086": {
+      "concept_id": 440086,
+      "disease_name": "Childhood ADHD",
+      "category": "Neurological / Mental Health",
+      "logistic_regression": {
+        "C": 10.0,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 14,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "443614": {
+      "concept_id": 443614,
+      "disease_name": "Chronic Kidney Disease Stage 1",
+      "category": "Renal",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4029498": {
+      "concept_id": 4029498,
+      "disease_name": "Seizure Disorder",
+      "category": "Neurological / Mental Health",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4043241": {
+      "concept_id": 4043241,
+      "disease_name": "Familial Alzheimer's Disease",
+      "category": "Neurological / Mental Health",
+      "logistic_regression": {
+        "C": 0.1,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4051466": {
+      "concept_id": 4051466,
+      "disease_name": "Childhood Asthma",
+      "category": "Respiratory / Allergic",
+      "logistic_regression": {
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4079749": {
+      "concept_id": 4079749,
+      "disease_name": "Osteoarthritis of Hip",
+      "category": "Musculoskeletal",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 14,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4079750": {
+      "concept_id": 4079750,
+      "disease_name": "Osteoarthritis of Knee",
+      "category": "Musculoskeletal",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4110591": {
+      "concept_id": 4110591,
+      "disease_name": "Small Cell Carcinoma of Lung",
+      "category": "Oncology / Pre-Malignant",
+      "logistic_regression": {
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 14,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4115276": {
+      "concept_id": 4115276,
+      "disease_name": "Non-Small Cell Lung Cancer",
+      "category": "Oncology / Pre-Malignant",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4120314": {
+      "concept_id": 4120314,
+      "disease_name": "Hypertriglyceridemia",
+      "category": "Cardiometabolic",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4129902": {
+      "concept_id": 4129902,
+      "disease_name": "Neoplasm of Prostate",
+      "category": "Oncology / Pre-Malignant",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 8,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4180790": {
+      "concept_id": 4180790,
+      "disease_name": "Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "logistic_regression": {
+        "C": 0.1,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4214376": {
+      "concept_id": 4214376,
+      "disease_name": "Hyperglycemia",
+      "category": "Cardiometabolic",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4226121": {
+      "concept_id": 4226121,
+      "disease_name": "Retinopathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4229440": {
+      "concept_id": 4229440,
+      "disease_name": "Chronic Kidney Disease",
+      "category": "Renal",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4283893": {
+      "concept_id": 4283893,
+      "disease_name": "Sinusitis",
+      "category": "Respiratory / Allergic",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4285898": {
+      "concept_id": 4285898,
+      "disease_name": "Polyp of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "logistic_regression": {
+        "C": 10.0,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4310703": {
+      "concept_id": 4310703,
+      "disease_name": "Non-Small Cell Carcinoma of Lung, Stage 1",
+      "category": "Oncology / Pre-Malignant",
+      "logistic_regression": {
+        "C": 10.0,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "4311629": {
+      "concept_id": 4311629,
+      "disease_name": "Prediabetes",
+      "category": "Cardiometabolic",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 8,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "37016354": {
+      "concept_id": 37016354,
+      "disease_name": "Neuropathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 10,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 8,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "37017023": {
+      "concept_id": 37017023,
+      "disease_name": "Recurrent Rectal Polyp",
+      "category": "Oncology / Pre-Malignant",
+      "logistic_regression": {
+        "C": 0.1,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt",
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "37395648": {
+      "concept_id": 37395648,
+      "disease_name": "Small Cell Carcinoma of Lung, Stage 1",
+      "category": "Oncology / Pre-Malignant",
+      "logistic_regression": {
+        "C": 10.0,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.03,
+        "reg_lambda": 5.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    },
+    "43530652": {
+      "concept_id": 43530652,
+      "disease_name": "Chronic Intractable Migraine",
+      "category": "Musculoskeletal",
+      "logistic_regression": {
+        "C": 0.01,
+        "penalty": "l2",
+        "class_weight": "balanced",
+        "scaling": "standard_continuous"
+      },
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": 0.3,
+        "class_weight": "balanced"
+      },
+      "xgboost": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "reg_lambda": 1.0,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "early_stopping_rounds": 15,
+        "scale_pos_weight_capped": 500.0,
+        "eval_metric": "logloss"
+      },
+      "meta_learner": {
+        "model_type": "logistic_regression",
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": null,
+        "fit_intercept": true
+      }
+    }
+  }
+}
