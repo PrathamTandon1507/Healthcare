@@ -1,0 +1,5856 @@
+{
+  "model_results": {
+    "prevalence_floor": {
+      "validation": {
+        "macro_metrics": {
+          "macro_auprc": 0.003293,
+          "macro_auroc": 0.5,
+          "macro_brier_score": 0.003273,
+          "macro_f1": 0.001125,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.007314,
+          "medium_prevalence_macro_auprc": 0.002433,
+          "low_prevalence_macro_auprc": 0.000672,
+          "tier_counts": {
+            "high": 13,
+            "medium": 12,
+            "low": 16
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.099895,
+          "recall_at_3": 0.264954,
+          "map_at_3": 0.174431,
+          "precision_at_5": 0.088426,
+          "recall_at_5": 0.3789,
+          "map_at_5": 0.2008,
+          "precision_at_10": 0.074732,
+          "recall_at_10": 0.570879,
+          "map_at_10": 0.23231
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 73862,
+            "n_positive": 51,
+            "prevalence": 0.00069,
+            "auprc": 0.00069,
+            "auroc": 0.5,
+            "brier_score": 0.00069,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "79740": {
+            "n_samples": 73862,
+            "n_positive": 44,
+            "prevalence": 0.000596,
+            "auprc": 0.000596,
+            "auroc": 0.5,
+            "brier_score": 0.000595,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "80502": {
+            "n_samples": 73862,
+            "n_positive": 225,
+            "prevalence": 0.003046,
+            "auprc": 0.003046,
+            "auroc": 0.5,
+            "brier_score": 0.003037,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "192279": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.000961,
+            "auroc": 0.5,
+            "brier_score": 0.00096,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "200970": {
+            "n_samples": 73862,
+            "n_positive": 409,
+            "prevalence": 0.005537,
+            "auprc": 0.005537,
+            "auroc": 0.5,
+            "brier_score": 0.005508,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "201826": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.000961,
+            "auroc": 0.5,
+            "brier_score": 0.00096,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "257012": {
+            "n_samples": 73862,
+            "n_positive": 445,
+            "prevalence": 0.006025,
+            "auprc": 0.006025,
+            "auroc": 0.5,
+            "brier_score": 0.005989,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "258780": {
+            "n_samples": 73862,
+            "n_positive": 64,
+            "prevalence": 0.000866,
+            "auprc": 0.000866,
+            "auroc": 0.5,
+            "brier_score": 0.000866,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "316866": {
+            "n_samples": 73862,
+            "n_positive": 279,
+            "prevalence": 0.003777,
+            "auprc": 0.003777,
+            "auroc": 0.5,
+            "brier_score": 0.003763,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "317576": {
+            "n_samples": 73862,
+            "n_positive": 367,
+            "prevalence": 0.004969,
+            "auprc": 0.004969,
+            "auroc": 0.5,
+            "brier_score": 0.004944,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "321042": {
+            "n_samples": 73862,
+            "n_positive": 57,
+            "prevalence": 0.000772,
+            "auprc": 0.000772,
+            "auroc": 0.5,
+            "brier_score": 0.000771,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "378419": {
+            "n_samples": 73862,
+            "n_positive": 566,
+            "prevalence": 0.007663,
+            "auprc": 0.007663,
+            "auroc": 0.5,
+            "brier_score": 0.007606,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "380378": {
+            "n_samples": 73862,
+            "n_positive": 58,
+            "prevalence": 0.000785,
+            "auprc": 0.000785,
+            "auroc": 0.5,
+            "brier_score": 0.000785,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "381316": {
+            "n_samples": 73862,
+            "n_positive": 303,
+            "prevalence": 0.004102,
+            "auprc": 0.004102,
+            "auroc": 0.5,
+            "brier_score": 0.004085,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "432867": {
+            "n_samples": 73862,
+            "n_positive": 309,
+            "prevalence": 0.004183,
+            "auprc": 0.004183,
+            "auroc": 0.5,
+            "brier_score": 0.004166,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "436096": {
+            "n_samples": 73862,
+            "n_positive": 871,
+            "prevalence": 0.011792,
+            "auprc": 0.011792,
+            "auroc": 0.5,
+            "brier_score": 0.011653,
+            "f1_tuned": 0.02331,
+            "tuned_threshold": 0.01
+          },
+          "436940": {
+            "n_samples": 73862,
+            "n_positive": 90,
+            "prevalence": 0.001218,
+            "auprc": 0.001218,
+            "auroc": 0.5,
+            "brier_score": 0.001217,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "439777": {
+            "n_samples": 73862,
+            "n_positive": 592,
+            "prevalence": 0.008015,
+            "auprc": 0.008015,
+            "auroc": 0.5,
+            "brier_score": 0.007951,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "440086": {
+            "n_samples": 73862,
+            "n_positive": 15,
+            "prevalence": 0.000203,
+            "auprc": 0.000203,
+            "auroc": 0.5,
+            "brier_score": 0.000203,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "443614": {
+            "n_samples": 73862,
+            "n_positive": 69,
+            "prevalence": 0.000934,
+            "auprc": 0.000934,
+            "auroc": 0.5,
+            "brier_score": 0.000933,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4029498": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.000745,
+            "auroc": 0.5,
+            "brier_score": 0.000744,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4043241": {
+            "n_samples": 73862,
+            "n_positive": 30,
+            "prevalence": 0.000406,
+            "auprc": 0.000406,
+            "auroc": 0.5,
+            "brier_score": 0.000406,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4051466": {
+            "n_samples": 73862,
+            "n_positive": 26,
+            "prevalence": 0.000352,
+            "auprc": 0.000352,
+            "auroc": 0.5,
+            "brier_score": 0.000352,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4079749": {
+            "n_samples": 73862,
+            "n_positive": 29,
+            "prevalence": 0.000393,
+            "auprc": 0.000393,
+            "auroc": 0.5,
+            "brier_score": 0.000392,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4079750": {
+            "n_samples": 73862,
+            "n_positive": 139,
+            "prevalence": 0.001882,
+            "auprc": 0.001882,
+            "auroc": 0.5,
+            "brier_score": 0.001879,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4110591": {
+            "n_samples": 73862,
+            "n_positive": 87,
+            "prevalence": 0.001178,
+            "auprc": 0.001178,
+            "auroc": 0.5,
+            "brier_score": 0.001177,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4115276": {
+            "n_samples": 73862,
+            "n_positive": 462,
+            "prevalence": 0.006255,
+            "auprc": 0.006255,
+            "auroc": 0.5,
+            "brier_score": 0.006216,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4120314": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.001191,
+            "auroc": 0.5,
+            "brier_score": 0.00119,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4129902": {
+            "n_samples": 73862,
+            "n_positive": 457,
+            "prevalence": 0.006187,
+            "auprc": 0.006187,
+            "auroc": 0.5,
+            "brier_score": 0.006149,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4180790": {
+            "n_samples": 73862,
+            "n_positive": 46,
+            "prevalence": 0.000623,
+            "auprc": 0.000623,
+            "auroc": 0.5,
+            "brier_score": 0.000622,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4214376": {
+            "n_samples": 73862,
+            "n_positive": 79,
+            "prevalence": 0.00107,
+            "auprc": 0.00107,
+            "auroc": 0.5,
+            "brier_score": 0.001068,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4226121": {
+            "n_samples": 73862,
+            "n_positive": 53,
+            "prevalence": 0.000718,
+            "auprc": 0.000718,
+            "auroc": 0.5,
+            "brier_score": 0.000717,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4229440": {
+            "n_samples": 73862,
+            "n_positive": 496,
+            "prevalence": 0.006715,
+            "auprc": 0.006715,
+            "auroc": 0.5,
+            "brier_score": 0.00667,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4283893": {
+            "n_samples": 73862,
+            "n_positive": 461,
+            "prevalence": 0.006241,
+            "auprc": 0.006241,
+            "auroc": 0.5,
+            "brier_score": 0.006205,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4285898": {
+            "n_samples": 73862,
+            "n_positive": 505,
+            "prevalence": 0.006837,
+            "auprc": 0.006837,
+            "auroc": 0.5,
+            "brier_score": 0.00679,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4310703": {
+            "n_samples": 73862,
+            "n_positive": 467,
+            "prevalence": 0.006323,
+            "auprc": 0.006323,
+            "auroc": 0.5,
+            "brier_score": 0.006283,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4311629": {
+            "n_samples": 73862,
+            "n_positive": 440,
+            "prevalence": 0.005957,
+            "auprc": 0.005957,
+            "auroc": 0.5,
+            "brier_score": 0.005922,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "37016354": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.000745,
+            "auroc": 0.5,
+            "brier_score": 0.000744,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "37017023": {
+            "n_samples": 73862,
+            "n_positive": 103,
+            "prevalence": 0.001394,
+            "auprc": 0.001394,
+            "auroc": 0.5,
+            "brier_score": 0.001393,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "37395648": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.001191,
+            "auroc": 0.5,
+            "brier_score": 0.00119,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "43530652": {
+            "n_samples": 73862,
+            "n_positive": 852,
+            "prevalence": 0.011535,
+            "auprc": 0.011535,
+            "auroc": 0.5,
+            "brier_score": 0.011402,
+            "f1_tuned": 0.022807,
+            "tuned_threshold": 0.01
+          }
+        }
+      },
+      "test": {
+        "macro_metrics": {
+          "macro_auprc": 0.002461,
+          "macro_auroc": 0.5,
+          "macro_brier_score": 0.002451,
+          "macro_f1": 0.000836,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.007391,
+          "medium_prevalence_macro_auprc": 0.00238,
+          "low_prevalence_macro_auprc": 0.000616,
+          "tier_counts": {
+            "high": 7,
+            "medium": 16,
+            "low": 18
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.106462,
+          "recall_at_3": 0.294608,
+          "map_at_3": 0.184286,
+          "precision_at_5": 0.093687,
+          "recall_at_5": 0.409563,
+          "map_at_5": 0.21177,
+          "precision_at_10": 0.072096,
+          "recall_at_10": 0.577406,
+          "map_at_10": 0.241245
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 33304,
+            "n_positive": 7,
+            "prevalence": 0.00021,
+            "auprc": 0.00021,
+            "auroc": 0.5,
+            "brier_score": 0.00021,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "79740": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.001351,
+            "auroc": 0.5,
+            "brier_score": 0.00135,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "80502": {
+            "n_samples": 33304,
+            "n_positive": 44,
+            "prevalence": 0.001321,
+            "auprc": 0.001321,
+            "auroc": 0.5,
+            "brier_score": 0.001325,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "192279": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.000961,
+            "auroc": 0.5,
+            "brier_score": 0.00096,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "200970": {
+            "n_samples": 33304,
+            "n_positive": 23,
+            "prevalence": 0.000691,
+            "auprc": 0.000691,
+            "auroc": 0.5,
+            "brier_score": 0.000704,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "201826": {
+            "n_samples": 33304,
+            "n_positive": 36,
+            "prevalence": 0.001081,
+            "auprc": 0.001081,
+            "auroc": 0.5,
+            "brier_score": 0.00108,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "257012": {
+            "n_samples": 33304,
+            "n_positive": 156,
+            "prevalence": 0.004684,
+            "auprc": 0.004684,
+            "auroc": 0.5,
+            "brier_score": 0.004662,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "258780": {
+            "n_samples": 33304,
+            "n_positive": 18,
+            "prevalence": 0.00054,
+            "auprc": 0.00054,
+            "auroc": 0.5,
+            "brier_score": 0.00054,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "316866": {
+            "n_samples": 33304,
+            "n_positive": 196,
+            "prevalence": 0.005885,
+            "auprc": 0.005885,
+            "auroc": 0.5,
+            "brier_score": 0.005855,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "317576": {
+            "n_samples": 33304,
+            "n_positive": 63,
+            "prevalence": 0.001892,
+            "auprc": 0.001892,
+            "auroc": 0.5,
+            "brier_score": 0.001897,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "321042": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.000751,
+            "auroc": 0.5,
+            "brier_score": 0.00075,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "378419": {
+            "n_samples": 33304,
+            "n_positive": 279,
+            "prevalence": 0.008377,
+            "auprc": 0.008377,
+            "auroc": 0.5,
+            "brier_score": 0.008308,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "380378": {
+            "n_samples": 33304,
+            "n_positive": 9,
+            "prevalence": 0.00027,
+            "auprc": 0.00027,
+            "auroc": 0.5,
+            "brier_score": 0.000271,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "381316": {
+            "n_samples": 33304,
+            "n_positive": 83,
+            "prevalence": 0.002492,
+            "auprc": 0.002492,
+            "auroc": 0.5,
+            "brier_score": 0.002488,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "432867": {
+            "n_samples": 33304,
+            "n_positive": 112,
+            "prevalence": 0.003363,
+            "auprc": 0.003363,
+            "auroc": 0.5,
+            "brier_score": 0.003353,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "436096": {
+            "n_samples": 33304,
+            "n_positive": 281,
+            "prevalence": 0.008437,
+            "auprc": 0.008437,
+            "auroc": 0.5,
+            "brier_score": 0.008375,
+            "f1_tuned": 0.016734,
+            "tuned_threshold": 0.01
+          },
+          "436940": {
+            "n_samples": 33304,
+            "n_positive": 48,
+            "prevalence": 0.001441,
+            "auprc": 0.001441,
+            "auroc": 0.5,
+            "brier_score": 0.001439,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "439777": {
+            "n_samples": 33304,
+            "n_positive": 293,
+            "prevalence": 0.008798,
+            "auprc": 0.008798,
+            "auroc": 0.5,
+            "brier_score": 0.008721,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "440086": {
+            "n_samples": 33304,
+            "n_positive": 14,
+            "prevalence": 0.00042,
+            "auprc": 0.00042,
+            "auroc": 0.5,
+            "brier_score": 0.00042,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "443614": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.000961,
+            "auroc": 0.5,
+            "brier_score": 0.00096,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4029498": {
+            "n_samples": 33304,
+            "n_positive": 10,
+            "prevalence": 0.0003,
+            "auprc": 0.0003,
+            "auroc": 0.5,
+            "brier_score": 0.0003,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4043241": {
+            "n_samples": 33304,
+            "n_positive": 29,
+            "prevalence": 0.000871,
+            "auprc": 0.000871,
+            "auroc": 0.5,
+            "brier_score": 0.00087,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4051466": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.001351,
+            "auroc": 0.5,
+            "brier_score": 0.001351,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4079749": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.00033,
+            "auroc": 0.5,
+            "brier_score": 0.00033,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4079750": {
+            "n_samples": 33304,
+            "n_positive": 33,
+            "prevalence": 0.000991,
+            "auprc": 0.000991,
+            "auroc": 0.5,
+            "brier_score": 0.00099,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4110591": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.000781,
+            "auroc": 0.5,
+            "brier_score": 0.00078,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4115276": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.004084,
+            "auroc": 0.5,
+            "brier_score": 0.004072,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4120314": {
+            "n_samples": 33304,
+            "n_positive": 42,
+            "prevalence": 0.001261,
+            "auprc": 0.001261,
+            "auroc": 0.5,
+            "brier_score": 0.00126,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4129902": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.000751,
+            "auroc": 0.5,
+            "brier_score": 0.000773,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4180790": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.000571,
+            "auroc": 0.5,
+            "brier_score": 0.00057,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4214376": {
+            "n_samples": 33304,
+            "n_positive": 35,
+            "prevalence": 0.001051,
+            "auprc": 0.001051,
+            "auroc": 0.5,
+            "brier_score": 0.00105,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4226121": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.00033,
+            "auroc": 0.5,
+            "brier_score": 0.00033,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4229440": {
+            "n_samples": 33304,
+            "n_positive": 106,
+            "prevalence": 0.003183,
+            "auprc": 0.003183,
+            "auroc": 0.5,
+            "brier_score": 0.003185,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4283893": {
+            "n_samples": 33304,
+            "n_positive": 120,
+            "prevalence": 0.003603,
+            "auprc": 0.003603,
+            "auroc": 0.5,
+            "brier_score": 0.003592,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4285898": {
+            "n_samples": 33304,
+            "n_positive": 207,
+            "prevalence": 0.006215,
+            "auprc": 0.006215,
+            "auroc": 0.5,
+            "brier_score": 0.006177,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4310703": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.004084,
+            "auroc": 0.5,
+            "brier_score": 0.004073,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4311629": {
+            "n_samples": 33304,
+            "n_positive": 172,
+            "prevalence": 0.005165,
+            "auprc": 0.005165,
+            "auroc": 0.5,
+            "brier_score": 0.005138,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "37016354": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.000571,
+            "auroc": 0.5,
+            "brier_score": 0.00057,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "37017023": {
+            "n_samples": 33304,
+            "n_positive": 61,
+            "prevalence": 0.001832,
+            "auprc": 0.001832,
+            "auroc": 0.5,
+            "brier_score": 0.001828,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "37395648": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.000781,
+            "auroc": 0.5,
+            "brier_score": 0.00078,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "43530652": {
+            "n_samples": 33304,
+            "n_positive": 295,
+            "prevalence": 0.008858,
+            "auprc": 0.008858,
+            "auroc": 0.5,
+            "brier_score": 0.008787,
+            "f1_tuned": 0.01756,
+            "tuned_threshold": 0.01
+          }
+        }
+      }
+    },
+    "logistic_regression": {
+      "validation": {
+        "macro_metrics": {
+          "macro_auprc": 0.064555,
+          "macro_auroc": 0.867825,
+          "macro_brier_score": 0.102207,
+          "macro_f1": 0.113005,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.094254,
+          "medium_prevalence_macro_auprc": 0.097312,
+          "low_prevalence_macro_auprc": 0.015856,
+          "tier_counts": {
+            "high": 13,
+            "medium": 12,
+            "low": 16
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.216156,
+          "recall_at_3": 0.514563,
+          "map_at_3": 0.39989,
+          "precision_at_5": 0.170961,
+          "recall_at_5": 0.666534,
+          "map_at_5": 0.440312,
+          "precision_at_10": 0.113132,
+          "recall_at_10": 0.872641,
+          "map_at_10": 0.474081
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 73862,
+            "n_positive": 51,
+            "prevalence": 0.00069,
+            "auprc": 0.002903,
+            "auroc": 0.848213,
+            "brier_score": 0.118076,
+            "f1_tuned": 0.00953,
+            "tuned_threshold": 0.84
+          },
+          "79740": {
+            "n_samples": 73862,
+            "n_positive": 44,
+            "prevalence": 0.000596,
+            "auprc": 0.003303,
+            "auroc": 0.749554,
+            "brier_score": 0.05284,
+            "f1_tuned": 0.015437,
+            "tuned_threshold": 0.9
+          },
+          "80502": {
+            "n_samples": 73862,
+            "n_positive": 225,
+            "prevalence": 0.003046,
+            "auprc": 0.013852,
+            "auroc": 0.838251,
+            "brier_score": 0.141569,
+            "f1_tuned": 0.049896,
+            "tuned_threshold": 0.97
+          },
+          "192279": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.030089,
+            "auroc": 0.94467,
+            "brier_score": 0.032632,
+            "f1_tuned": 0.074534,
+            "tuned_threshold": 0.98
+          },
+          "200970": {
+            "n_samples": 73862,
+            "n_positive": 409,
+            "prevalence": 0.005537,
+            "auprc": 0.065936,
+            "auroc": 0.949133,
+            "brier_score": 0.091759,
+            "f1_tuned": 0.130918,
+            "tuned_threshold": 0.92
+          },
+          "201826": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.007605,
+            "auroc": 0.872239,
+            "brier_score": 0.152746,
+            "f1_tuned": 0.028436,
+            "tuned_threshold": 0.95
+          },
+          "257012": {
+            "n_samples": 73862,
+            "n_positive": 445,
+            "prevalence": 0.006025,
+            "auprc": 0.025214,
+            "auroc": 0.704523,
+            "brier_score": 0.18592,
+            "f1_tuned": 0.097257,
+            "tuned_threshold": 0.86
+          },
+          "258780": {
+            "n_samples": 73862,
+            "n_positive": 64,
+            "prevalence": 0.000866,
+            "auprc": 0.001477,
+            "auroc": 0.465863,
+            "brier_score": 0.140837,
+            "f1_tuned": 0.006969,
+            "tuned_threshold": 0.84
+          },
+          "316866": {
+            "n_samples": 73862,
+            "n_positive": 279,
+            "prevalence": 0.003777,
+            "auprc": 0.029184,
+            "auroc": 0.920274,
+            "brier_score": 0.129033,
+            "f1_tuned": 0.074558,
+            "tuned_threshold": 0.87
+          },
+          "317576": {
+            "n_samples": 73862,
+            "n_positive": 367,
+            "prevalence": 0.004969,
+            "auprc": 0.012289,
+            "auroc": 0.757502,
+            "brier_score": 0.169926,
+            "f1_tuned": 0.038961,
+            "tuned_threshold": 0.83
+          },
+          "321042": {
+            "n_samples": 73862,
+            "n_positive": 57,
+            "prevalence": 0.000772,
+            "auprc": 0.001744,
+            "auroc": 0.716301,
+            "brier_score": 0.129615,
+            "f1_tuned": 0.005403,
+            "tuned_threshold": 0.83
+          },
+          "378419": {
+            "n_samples": 73862,
+            "n_positive": 566,
+            "prevalence": 0.007663,
+            "auprc": 0.056195,
+            "auroc": 0.917585,
+            "brier_score": 0.102976,
+            "f1_tuned": 0.12646,
+            "tuned_threshold": 0.9
+          },
+          "380378": {
+            "n_samples": 73862,
+            "n_positive": 58,
+            "prevalence": 0.000785,
+            "auprc": 0.069553,
+            "auroc": 0.930167,
+            "brier_score": 0.061165,
+            "f1_tuned": 0.147208,
+            "tuned_threshold": 0.98
+          },
+          "381316": {
+            "n_samples": 73862,
+            "n_positive": 303,
+            "prevalence": 0.004102,
+            "auprc": 0.024603,
+            "auroc": 0.853512,
+            "brier_score": 0.133193,
+            "f1_tuned": 0.067066,
+            "tuned_threshold": 0.94
+          },
+          "432867": {
+            "n_samples": 73862,
+            "n_positive": 309,
+            "prevalence": 0.004183,
+            "auprc": 0.009482,
+            "auroc": 0.780154,
+            "brier_score": 0.172409,
+            "f1_tuned": 0.020692,
+            "tuned_threshold": 0.74
+          },
+          "436096": {
+            "n_samples": 73862,
+            "n_positive": 871,
+            "prevalence": 0.011792,
+            "auprc": 0.326391,
+            "auroc": 0.926023,
+            "brier_score": 0.086491,
+            "f1_tuned": 0.492857,
+            "tuned_threshold": 0.93
+          },
+          "436940": {
+            "n_samples": 73862,
+            "n_positive": 90,
+            "prevalence": 0.001218,
+            "auprc": 0.33768,
+            "auroc": 0.960235,
+            "brier_score": 0.005897,
+            "f1_tuned": 0.52459,
+            "tuned_threshold": 0.98
+          },
+          "439777": {
+            "n_samples": 73862,
+            "n_positive": 592,
+            "prevalence": 0.008015,
+            "auprc": 0.044596,
+            "auroc": 0.844355,
+            "brier_score": 0.170607,
+            "f1_tuned": 0.11374,
+            "tuned_threshold": 0.83
+          },
+          "440086": {
+            "n_samples": 73862,
+            "n_positive": 15,
+            "prevalence": 0.000203,
+            "auprc": 0.002665,
+            "auroc": 0.961388,
+            "brier_score": 0.059882,
+            "f1_tuned": 0.006691,
+            "tuned_threshold": 0.88
+          },
+          "443614": {
+            "n_samples": 73862,
+            "n_positive": 69,
+            "prevalence": 0.000934,
+            "auprc": 0.027787,
+            "auroc": 0.94269,
+            "brier_score": 0.033151,
+            "f1_tuned": 0.066265,
+            "tuned_threshold": 0.98
+          },
+          "4029498": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.004458,
+            "auroc": 0.800425,
+            "brier_score": 0.138364,
+            "f1_tuned": 0.025478,
+            "tuned_threshold": 0.98
+          },
+          "4043241": {
+            "n_samples": 73862,
+            "n_positive": 30,
+            "prevalence": 0.000406,
+            "auprc": 0.002869,
+            "auroc": 0.900618,
+            "brier_score": 0.089312,
+            "f1_tuned": 0.009821,
+            "tuned_threshold": 0.89
+          },
+          "4051466": {
+            "n_samples": 73862,
+            "n_positive": 26,
+            "prevalence": 0.000352,
+            "auprc": 0.037375,
+            "auroc": 0.992582,
+            "brier_score": 0.011852,
+            "f1_tuned": 0.059113,
+            "tuned_threshold": 0.98
+          },
+          "4079749": {
+            "n_samples": 73862,
+            "n_positive": 29,
+            "prevalence": 0.000393,
+            "auprc": 0.001975,
+            "auroc": 0.878884,
+            "brier_score": 0.132195,
+            "f1_tuned": 0.006718,
+            "tuned_threshold": 0.85
+          },
+          "4079750": {
+            "n_samples": 73862,
+            "n_positive": 139,
+            "prevalence": 0.001882,
+            "auprc": 0.006631,
+            "auroc": 0.805425,
+            "brier_score": 0.149299,
+            "f1_tuned": 0.025907,
+            "tuned_threshold": 0.93
+          },
+          "4110591": {
+            "n_samples": 73862,
+            "n_positive": 87,
+            "prevalence": 0.001178,
+            "auprc": 0.029046,
+            "auroc": 0.902786,
+            "brier_score": 0.092575,
+            "f1_tuned": 0.045455,
+            "tuned_threshold": 0.99
+          },
+          "4115276": {
+            "n_samples": 73862,
+            "n_positive": 462,
+            "prevalence": 0.006255,
+            "auprc": 0.105254,
+            "auroc": 0.930717,
+            "brier_score": 0.111843,
+            "f1_tuned": 0.176231,
+            "tuned_threshold": 0.89
+          },
+          "4120314": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.403498,
+            "auroc": 0.958111,
+            "brier_score": 0.005252,
+            "f1_tuned": 0.575875,
+            "tuned_threshold": 0.9
+          },
+          "4129902": {
+            "n_samples": 73862,
+            "n_positive": 457,
+            "prevalence": 0.006187,
+            "auprc": 0.072896,
+            "auroc": 0.948658,
+            "brier_score": 0.0941,
+            "f1_tuned": 0.142717,
+            "tuned_threshold": 0.96
+          },
+          "4180790": {
+            "n_samples": 73862,
+            "n_positive": 46,
+            "prevalence": 0.000623,
+            "auprc": 0.009547,
+            "auroc": 0.942743,
+            "brier_score": 0.032037,
+            "f1_tuned": 0.032535,
+            "tuned_threshold": 0.72
+          },
+          "4214376": {
+            "n_samples": 73862,
+            "n_positive": 79,
+            "prevalence": 0.00107,
+            "auprc": 0.198869,
+            "auroc": 0.966508,
+            "brier_score": 0.011744,
+            "f1_tuned": 0.322917,
+            "tuned_threshold": 0.99
+          },
+          "4226121": {
+            "n_samples": 73862,
+            "n_positive": 53,
+            "prevalence": 0.000718,
+            "auprc": 0.021449,
+            "auroc": 0.96802,
+            "brier_score": 0.041198,
+            "f1_tuned": 0.055596,
+            "tuned_threshold": 0.9
+          },
+          "4229440": {
+            "n_samples": 73862,
+            "n_positive": 496,
+            "prevalence": 0.006715,
+            "auprc": 0.036478,
+            "auroc": 0.878182,
+            "brier_score": 0.173071,
+            "f1_tuned": 0.080479,
+            "tuned_threshold": 0.86
+          },
+          "4283893": {
+            "n_samples": 73862,
+            "n_positive": 461,
+            "prevalence": 0.006241,
+            "auprc": 0.007215,
+            "auroc": 0.536551,
+            "brier_score": 0.217818,
+            "f1_tuned": 0.01978,
+            "tuned_threshold": 0.69
+          },
+          "4285898": {
+            "n_samples": 73862,
+            "n_positive": 505,
+            "prevalence": 0.006837,
+            "auprc": 0.017646,
+            "auroc": 0.785284,
+            "brier_score": 0.180604,
+            "f1_tuned": 0.047979,
+            "tuned_threshold": 0.85
+          },
+          "4310703": {
+            "n_samples": 73862,
+            "n_positive": 467,
+            "prevalence": 0.006323,
+            "auprc": 0.110392,
+            "auroc": 0.933533,
+            "brier_score": 0.110022,
+            "f1_tuned": 0.189213,
+            "tuned_threshold": 0.97
+          },
+          "4311629": {
+            "n_samples": 73862,
+            "n_positive": 440,
+            "prevalence": 0.005957,
+            "auprc": 0.016386,
+            "auroc": 0.810398,
+            "brier_score": 0.182886,
+            "f1_tuned": 0.034301,
+            "tuned_threshold": 0.81
+          },
+          "37016354": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.028895,
+            "auroc": 0.956735,
+            "brier_score": 0.035226,
+            "f1_tuned": 0.063694,
+            "tuned_threshold": 0.99
+          },
+          "37017023": {
+            "n_samples": 73862,
+            "n_positive": 103,
+            "prevalence": 0.001394,
+            "auprc": 0.07319,
+            "auroc": 0.980861,
+            "brier_score": 0.027606,
+            "f1_tuned": 0.092575,
+            "tuned_threshold": 0.95
+          },
+          "37395648": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.029419,
+            "auroc": 0.901775,
+            "brier_score": 0.092476,
+            "f1_tuned": 0.044444,
+            "tuned_threshold": 0.99
+          },
+          "43530652": {
+            "n_samples": 73862,
+            "n_positive": 852,
+            "prevalence": 0.011535,
+            "auprc": 0.340705,
+            "auroc": 0.919411,
+            "brier_score": 0.090298,
+            "f1_tuned": 0.484914,
+            "tuned_threshold": 0.94
+          }
+        }
+      },
+      "test": {
+        "macro_metrics": {
+          "macro_auprc": 0.050185,
+          "macro_auroc": 0.867644,
+          "macro_brier_score": 0.109898,
+          "macro_f1": 0.101039,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.105623,
+          "medium_prevalence_macro_auprc": 0.067971,
+          "low_prevalence_macro_auprc": 0.012817,
+          "tier_counts": {
+            "high": 7,
+            "medium": 16,
+            "low": 18
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.209438,
+          "recall_at_3": 0.53154,
+          "map_at_3": 0.400687,
+          "precision_at_5": 0.169966,
+          "recall_at_5": 0.697173,
+          "map_at_5": 0.44545,
+          "precision_at_10": 0.107658,
+          "recall_at_10": 0.863622,
+          "map_at_10": 0.473031
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 33304,
+            "n_positive": 7,
+            "prevalence": 0.00021,
+            "auprc": 0.002632,
+            "auroc": 0.929106,
+            "brier_score": 0.12297,
+            "f1_tuned": 0.008,
+            "tuned_threshold": 0.96
+          },
+          "79740": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.012515,
+            "auroc": 0.846527,
+            "brier_score": 0.059434,
+            "f1_tuned": 0.038898,
+            "tuned_threshold": 0.97
+          },
+          "80502": {
+            "n_samples": 33304,
+            "n_positive": 44,
+            "prevalence": 0.001321,
+            "auprc": 0.007664,
+            "auroc": 0.895155,
+            "brier_score": 0.100285,
+            "f1_tuned": 0.018474,
+            "tuned_threshold": 0.72
+          },
+          "192279": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.053464,
+            "auroc": 0.931405,
+            "brier_score": 0.027123,
+            "f1_tuned": 0.10929,
+            "tuned_threshold": 0.97
+          },
+          "200970": {
+            "n_samples": 33304,
+            "n_positive": 23,
+            "prevalence": 0.000691,
+            "auprc": 0.005894,
+            "auroc": 0.918849,
+            "brier_score": 0.070469,
+            "f1_tuned": 0.022472,
+            "tuned_threshold": 0.96
+          },
+          "201826": {
+            "n_samples": 33304,
+            "n_positive": 36,
+            "prevalence": 0.001081,
+            "auprc": 0.00322,
+            "auroc": 0.737869,
+            "brier_score": 0.13841,
+            "f1_tuned": 0.01238,
+            "tuned_threshold": 0.8
+          },
+          "257012": {
+            "n_samples": 33304,
+            "n_positive": 156,
+            "prevalence": 0.004684,
+            "auprc": 0.040533,
+            "auroc": 0.813371,
+            "brier_score": 0.186913,
+            "f1_tuned": 0.136095,
+            "tuned_threshold": 0.92
+          },
+          "258780": {
+            "n_samples": 33304,
+            "n_positive": 18,
+            "prevalence": 0.00054,
+            "auprc": 0.001548,
+            "auroc": 0.430051,
+            "brier_score": 0.136868,
+            "f1_tuned": 0.014109,
+            "tuned_threshold": 0.94
+          },
+          "316866": {
+            "n_samples": 33304,
+            "n_positive": 196,
+            "prevalence": 0.005885,
+            "auprc": 0.027735,
+            "auroc": 0.868859,
+            "brier_score": 0.20994,
+            "f1_tuned": 0.067606,
+            "tuned_threshold": 0.91
+          },
+          "317576": {
+            "n_samples": 33304,
+            "n_positive": 63,
+            "prevalence": 0.001892,
+            "auprc": 0.006945,
+            "auroc": 0.762794,
+            "brier_score": 0.16208,
+            "f1_tuned": 0.023424,
+            "tuned_threshold": 0.76
+          },
+          "321042": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.001966,
+            "auroc": 0.712472,
+            "brier_score": 0.136435,
+            "f1_tuned": 0.010221,
+            "tuned_threshold": 0.88
+          },
+          "378419": {
+            "n_samples": 33304,
+            "n_positive": 279,
+            "prevalence": 0.008377,
+            "auprc": 0.121582,
+            "auroc": 0.959507,
+            "brier_score": 0.071489,
+            "f1_tuned": 0.211016,
+            "tuned_threshold": 0.89
+          },
+          "380378": {
+            "n_samples": 33304,
+            "n_positive": 9,
+            "prevalence": 0.00027,
+            "auprc": 0.02817,
+            "auroc": 0.907981,
+            "brier_score": 0.127453,
+            "f1_tuned": 0.064516,
+            "tuned_threshold": 0.98
+          },
+          "381316": {
+            "n_samples": 33304,
+            "n_positive": 83,
+            "prevalence": 0.002492,
+            "auprc": 0.055055,
+            "auroc": 0.910851,
+            "brier_score": 0.131373,
+            "f1_tuned": 0.102102,
+            "tuned_threshold": 0.93
+          },
+          "432867": {
+            "n_samples": 33304,
+            "n_positive": 112,
+            "prevalence": 0.003363,
+            "auprc": 0.0102,
+            "auroc": 0.840985,
+            "brier_score": 0.141449,
+            "f1_tuned": 0.024427,
+            "tuned_threshold": 0.62
+          },
+          "436096": {
+            "n_samples": 33304,
+            "n_positive": 281,
+            "prevalence": 0.008437,
+            "auprc": 0.242081,
+            "auroc": 0.891229,
+            "brier_score": 0.077266,
+            "f1_tuned": 0.445698,
+            "tuned_threshold": 0.83
+          },
+          "436940": {
+            "n_samples": 33304,
+            "n_positive": 48,
+            "prevalence": 0.001441,
+            "auprc": 0.30995,
+            "auroc": 0.99348,
+            "brier_score": 0.00561,
+            "f1_tuned": 0.531073,
+            "tuned_threshold": 0.74
+          },
+          "439777": {
+            "n_samples": 33304,
+            "n_positive": 293,
+            "prevalence": 0.008798,
+            "auprc": 0.042018,
+            "auroc": 0.824682,
+            "brier_score": 0.203774,
+            "f1_tuned": 0.094787,
+            "tuned_threshold": 0.82
+          },
+          "440086": {
+            "n_samples": 33304,
+            "n_positive": 14,
+            "prevalence": 0.00042,
+            "auprc": 0.00349,
+            "auroc": 0.936396,
+            "brier_score": 0.130853,
+            "f1_tuned": 0.008349,
+            "tuned_threshold": 0.92
+          },
+          "443614": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.055407,
+            "auroc": 0.933606,
+            "brier_score": 0.027452,
+            "f1_tuned": 0.10989,
+            "tuned_threshold": 0.97
+          },
+          "4029498": {
+            "n_samples": 33304,
+            "n_positive": 10,
+            "prevalence": 0.0003,
+            "auprc": 0.001761,
+            "auroc": 0.868855,
+            "brier_score": 0.29992,
+            "f1_tuned": 0.005373,
+            "tuned_threshold": 0.95
+          },
+          "4043241": {
+            "n_samples": 33304,
+            "n_positive": 29,
+            "prevalence": 0.000871,
+            "auprc": 0.002827,
+            "auroc": 0.828878,
+            "brier_score": 0.091907,
+            "f1_tuned": 0.008333,
+            "tuned_threshold": 0.97
+          },
+          "4051466": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.059065,
+            "auroc": 0.983806,
+            "brier_score": 0.035842,
+            "f1_tuned": 0.097087,
+            "tuned_threshold": 0.99
+          },
+          "4079749": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.00257,
+            "auroc": 0.891298,
+            "brier_score": 0.107481,
+            "f1_tuned": 0.008696,
+            "tuned_threshold": 0.92
+          },
+          "4079750": {
+            "n_samples": 33304,
+            "n_positive": 33,
+            "prevalence": 0.000991,
+            "auprc": 0.003696,
+            "auroc": 0.863834,
+            "brier_score": 0.129257,
+            "f1_tuned": 0.010545,
+            "tuned_threshold": 0.63
+          },
+          "4110591": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.004955,
+            "auroc": 0.877451,
+            "brier_score": 0.132059,
+            "f1_tuned": 0.018576,
+            "tuned_threshold": 0.96
+          },
+          "4115276": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.043128,
+            "auroc": 0.889077,
+            "brier_score": 0.146214,
+            "f1_tuned": 0.095238,
+            "tuned_threshold": 0.98
+          },
+          "4120314": {
+            "n_samples": 33304,
+            "n_positive": 42,
+            "prevalence": 0.001261,
+            "auprc": 0.308487,
+            "auroc": 0.990306,
+            "brier_score": 0.005738,
+            "f1_tuned": 0.565217,
+            "tuned_threshold": 0.86
+          },
+          "4129902": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.007624,
+            "auroc": 0.9374,
+            "brier_score": 0.070861,
+            "f1_tuned": 0.018182,
+            "tuned_threshold": 0.95
+          },
+          "4180790": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.004447,
+            "auroc": 0.792739,
+            "brier_score": 0.028254,
+            "f1_tuned": 0.018898,
+            "tuned_threshold": 0.86
+          },
+          "4214376": {
+            "n_samples": 33304,
+            "n_positive": 35,
+            "prevalence": 0.001051,
+            "auprc": 0.123474,
+            "auroc": 0.992776,
+            "brier_score": 0.010474,
+            "f1_tuned": 0.265403,
+            "tuned_threshold": 0.92
+          },
+          "4226121": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.006894,
+            "auroc": 0.892931,
+            "brier_score": 0.028325,
+            "f1_tuned": 0.020761,
+            "tuned_threshold": 0.81
+          },
+          "4229440": {
+            "n_samples": 33304,
+            "n_positive": 106,
+            "prevalence": 0.003183,
+            "auprc": 0.018026,
+            "auroc": 0.880449,
+            "brier_score": 0.150157,
+            "f1_tuned": 0.066246,
+            "tuned_threshold": 0.9
+          },
+          "4283893": {
+            "n_samples": 33304,
+            "n_positive": 120,
+            "prevalence": 0.003603,
+            "auprc": 0.00531,
+            "auroc": 0.600335,
+            "brier_score": 0.238932,
+            "f1_tuned": 0.020134,
+            "tuned_threshold": 0.79
+          },
+          "4285898": {
+            "n_samples": 33304,
+            "n_positive": 207,
+            "prevalence": 0.006215,
+            "auprc": 0.015042,
+            "auroc": 0.78413,
+            "brier_score": 0.149496,
+            "f1_tuned": 0.035593,
+            "tuned_threshold": 0.77
+          },
+          "4310703": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.042686,
+            "auroc": 0.888695,
+            "brier_score": 0.152562,
+            "f1_tuned": 0.091127,
+            "tuned_threshold": 0.97
+          },
+          "4311629": {
+            "n_samples": 33304,
+            "n_positive": 172,
+            "prevalence": 0.005165,
+            "auprc": 0.019747,
+            "auroc": 0.838851,
+            "brier_score": 0.183381,
+            "f1_tuned": 0.048544,
+            "tuned_threshold": 0.76
+          },
+          "37016354": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.038469,
+            "auroc": 0.984072,
+            "brier_score": 0.036669,
+            "f1_tuned": 0.1,
+            "tuned_threshold": 0.99
+          },
+          "37017023": {
+            "n_samples": 33304,
+            "n_positive": 61,
+            "prevalence": 0.001832,
+            "auprc": 0.041275,
+            "auroc": 0.978761,
+            "brier_score": 0.025199,
+            "f1_tuned": 0.105769,
+            "tuned_threshold": 0.64
+          },
+          "37395648": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.004891,
+            "auroc": 0.869948,
+            "brier_score": 0.131981,
+            "f1_tuned": 0.01931,
+            "tuned_threshold": 0.97
+          },
+          "43530652": {
+            "n_samples": 33304,
+            "n_positive": 295,
+            "prevalence": 0.008858,
+            "auprc": 0.271156,
+            "auroc": 0.893652,
+            "brier_score": 0.083448,
+            "f1_tuned": 0.470745,
+            "tuned_threshold": 0.85
+          }
+        }
+      }
+    },
+    "random_forest": {
+      "validation": {
+        "macro_metrics": {
+          "macro_auprc": 0.088088,
+          "macro_auroc": 0.875412,
+          "macro_brier_score": 0.070454,
+          "macro_f1": 0.139408,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.122103,
+          "medium_prevalence_macro_auprc": 0.140785,
+          "low_prevalence_macro_auprc": 0.020927,
+          "tier_counts": {
+            "high": 13,
+            "medium": 12,
+            "low": 16
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.253513,
+          "recall_at_3": 0.588369,
+          "map_at_3": 0.493607,
+          "precision_at_5": 0.187091,
+          "recall_at_5": 0.721908,
+          "map_at_5": 0.528875,
+          "precision_at_10": 0.11757,
+          "recall_at_10": 0.907617,
+          "map_at_10": 0.558785
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 73862,
+            "n_positive": 51,
+            "prevalence": 0.00069,
+            "auprc": 0.008953,
+            "auroc": 0.805054,
+            "brier_score": 0.068398,
+            "f1_tuned": 0.037037,
+            "tuned_threshold": 0.78
+          },
+          "79740": {
+            "n_samples": 73862,
+            "n_positive": 44,
+            "prevalence": 0.000596,
+            "auprc": 0.007608,
+            "auroc": 0.803749,
+            "brier_score": 0.010081,
+            "f1_tuned": 0.036364,
+            "tuned_threshold": 0.82
+          },
+          "80502": {
+            "n_samples": 73862,
+            "n_positive": 225,
+            "prevalence": 0.003046,
+            "auprc": 0.08791,
+            "auroc": 0.95165,
+            "brier_score": 0.056708,
+            "f1_tuned": 0.163209,
+            "tuned_threshold": 0.79
+          },
+          "192279": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.032424,
+            "auroc": 0.944847,
+            "brier_score": 0.018243,
+            "f1_tuned": 0.086598,
+            "tuned_threshold": 0.86
+          },
+          "200970": {
+            "n_samples": 73862,
+            "n_positive": 409,
+            "prevalence": 0.005537,
+            "auprc": 0.060561,
+            "auroc": 0.943201,
+            "brier_score": 0.063192,
+            "f1_tuned": 0.115159,
+            "tuned_threshold": 0.7
+          },
+          "201826": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.009917,
+            "auroc": 0.877775,
+            "brier_score": 0.148169,
+            "f1_tuned": 0.044898,
+            "tuned_threshold": 0.77
+          },
+          "257012": {
+            "n_samples": 73862,
+            "n_positive": 445,
+            "prevalence": 0.006025,
+            "auprc": 0.056022,
+            "auroc": 0.669128,
+            "brier_score": 0.156729,
+            "f1_tuned": 0.133811,
+            "tuned_threshold": 0.67
+          },
+          "258780": {
+            "n_samples": 73862,
+            "n_positive": 64,
+            "prevalence": 0.000866,
+            "auprc": 0.0008,
+            "auroc": 0.455101,
+            "brier_score": 0.074883,
+            "f1_tuned": 0.001756,
+            "tuned_threshold": 0.02
+          },
+          "316866": {
+            "n_samples": 73862,
+            "n_positive": 279,
+            "prevalence": 0.003777,
+            "auprc": 0.187719,
+            "auroc": 0.982122,
+            "brier_score": 0.026912,
+            "f1_tuned": 0.281938,
+            "tuned_threshold": 0.97
+          },
+          "317576": {
+            "n_samples": 73862,
+            "n_positive": 367,
+            "prevalence": 0.004969,
+            "auprc": 0.011004,
+            "auroc": 0.702382,
+            "brier_score": 0.103408,
+            "f1_tuned": 0.03005,
+            "tuned_threshold": 0.71
+          },
+          "321042": {
+            "n_samples": 73862,
+            "n_positive": 57,
+            "prevalence": 0.000772,
+            "auprc": 0.001785,
+            "auroc": 0.709288,
+            "brier_score": 0.096627,
+            "f1_tuned": 0.006924,
+            "tuned_threshold": 0.57
+          },
+          "378419": {
+            "n_samples": 73862,
+            "n_positive": 566,
+            "prevalence": 0.007663,
+            "auprc": 0.086106,
+            "auroc": 0.925762,
+            "brier_score": 0.072766,
+            "f1_tuned": 0.128011,
+            "tuned_threshold": 0.9
+          },
+          "380378": {
+            "n_samples": 73862,
+            "n_positive": 58,
+            "prevalence": 0.000785,
+            "auprc": 0.098354,
+            "auroc": 0.918286,
+            "brier_score": 0.037252,
+            "f1_tuned": 0.181303,
+            "tuned_threshold": 0.84
+          },
+          "381316": {
+            "n_samples": 73862,
+            "n_positive": 303,
+            "prevalence": 0.004102,
+            "auprc": 0.088115,
+            "auroc": 0.870456,
+            "brier_score": 0.098369,
+            "f1_tuned": 0.204651,
+            "tuned_threshold": 0.91
+          },
+          "432867": {
+            "n_samples": 73862,
+            "n_positive": 309,
+            "prevalence": 0.004183,
+            "auprc": 0.010522,
+            "auroc": 0.788799,
+            "brier_score": 0.14256,
+            "f1_tuned": 0.022308,
+            "tuned_threshold": 0.6
+          },
+          "436096": {
+            "n_samples": 73862,
+            "n_positive": 871,
+            "prevalence": 0.011792,
+            "auprc": 0.400201,
+            "auroc": 0.92934,
+            "brier_score": 0.064035,
+            "f1_tuned": 0.516563,
+            "tuned_threshold": 0.85
+          },
+          "436940": {
+            "n_samples": 73862,
+            "n_positive": 90,
+            "prevalence": 0.001218,
+            "auprc": 0.388374,
+            "auroc": 0.98027,
+            "brier_score": 0.00218,
+            "f1_tuned": 0.496933,
+            "tuned_threshold": 0.53
+          },
+          "439777": {
+            "n_samples": 73862,
+            "n_positive": 592,
+            "prevalence": 0.008015,
+            "auprc": 0.071104,
+            "auroc": 0.860107,
+            "brier_score": 0.14415,
+            "f1_tuned": 0.165945,
+            "tuned_threshold": 0.82
+          },
+          "440086": {
+            "n_samples": 73862,
+            "n_positive": 15,
+            "prevalence": 0.000203,
+            "auprc": 0.006179,
+            "auroc": 0.981859,
+            "brier_score": 0.025513,
+            "f1_tuned": 0.015209,
+            "tuned_threshold": 0.93
+          },
+          "443614": {
+            "n_samples": 73862,
+            "n_positive": 69,
+            "prevalence": 0.000934,
+            "auprc": 0.036556,
+            "auroc": 0.944614,
+            "brier_score": 0.018017,
+            "f1_tuned": 0.083333,
+            "tuned_threshold": 0.91
+          },
+          "4029498": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.012466,
+            "auroc": 0.823154,
+            "brier_score": 0.035939,
+            "f1_tuned": 0.055556,
+            "tuned_threshold": 0.96
+          },
+          "4043241": {
+            "n_samples": 73862,
+            "n_positive": 30,
+            "prevalence": 0.000406,
+            "auprc": 0.002114,
+            "auroc": 0.845842,
+            "brier_score": 0.042107,
+            "f1_tuned": 0.006543,
+            "tuned_threshold": 0.53
+          },
+          "4051466": {
+            "n_samples": 73862,
+            "n_positive": 26,
+            "prevalence": 0.000352,
+            "auprc": 0.033376,
+            "auroc": 0.994003,
+            "brier_score": 0.010662,
+            "f1_tuned": 0.070423,
+            "tuned_threshold": 0.97
+          },
+          "4079749": {
+            "n_samples": 73862,
+            "n_positive": 29,
+            "prevalence": 0.000393,
+            "auprc": 0.002442,
+            "auroc": 0.899505,
+            "brier_score": 0.065091,
+            "f1_tuned": 0.014493,
+            "tuned_threshold": 0.79
+          },
+          "4079750": {
+            "n_samples": 73862,
+            "n_positive": 139,
+            "prevalence": 0.001882,
+            "auprc": 0.005805,
+            "auroc": 0.811182,
+            "brier_score": 0.141334,
+            "f1_tuned": 0.015314,
+            "tuned_threshold": 0.68
+          },
+          "4110591": {
+            "n_samples": 73862,
+            "n_positive": 87,
+            "prevalence": 0.001178,
+            "auprc": 0.020068,
+            "auroc": 0.894829,
+            "brier_score": 0.047627,
+            "f1_tuned": 0.02963,
+            "tuned_threshold": 0.82
+          },
+          "4115276": {
+            "n_samples": 73862,
+            "n_positive": 462,
+            "prevalence": 0.006255,
+            "auprc": 0.151977,
+            "auroc": 0.946851,
+            "brier_score": 0.099365,
+            "f1_tuned": 0.279221,
+            "tuned_threshold": 0.92
+          },
+          "4120314": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.513914,
+            "auroc": 0.97968,
+            "brier_score": 0.018118,
+            "f1_tuned": 0.614786,
+            "tuned_threshold": 0.61
+          },
+          "4129902": {
+            "n_samples": 73862,
+            "n_positive": 457,
+            "prevalence": 0.006187,
+            "auprc": 0.083733,
+            "auroc": 0.95457,
+            "brier_score": 0.080452,
+            "f1_tuned": 0.150658,
+            "tuned_threshold": 0.77
+          },
+          "4180790": {
+            "n_samples": 73862,
+            "n_positive": 46,
+            "prevalence": 0.000623,
+            "auprc": 0.016427,
+            "auroc": 0.954591,
+            "brier_score": 0.020666,
+            "f1_tuned": 0.044794,
+            "tuned_threshold": 0.68
+          },
+          "4214376": {
+            "n_samples": 73862,
+            "n_positive": 79,
+            "prevalence": 0.00107,
+            "auprc": 0.28653,
+            "auroc": 0.977984,
+            "brier_score": 0.003753,
+            "f1_tuned": 0.383333,
+            "tuned_threshold": 0.94
+          },
+          "4226121": {
+            "n_samples": 73862,
+            "n_positive": 53,
+            "prevalence": 0.000718,
+            "auprc": 0.026264,
+            "auroc": 0.97447,
+            "brier_score": 0.025465,
+            "f1_tuned": 0.058613,
+            "tuned_threshold": 0.63
+          },
+          "4229440": {
+            "n_samples": 73862,
+            "n_positive": 496,
+            "prevalence": 0.006715,
+            "auprc": 0.042602,
+            "auroc": 0.86153,
+            "brier_score": 0.114417,
+            "f1_tuned": 0.094326,
+            "tuned_threshold": 0.7
+          },
+          "4283893": {
+            "n_samples": 73862,
+            "n_positive": 461,
+            "prevalence": 0.006241,
+            "auprc": 0.006428,
+            "auroc": 0.501348,
+            "brier_score": 0.183209,
+            "f1_tuned": 0.013262,
+            "tuned_threshold": 0.52
+          },
+          "4285898": {
+            "n_samples": 73862,
+            "n_positive": 505,
+            "prevalence": 0.006837,
+            "auprc": 0.027142,
+            "auroc": 0.857049,
+            "brier_score": 0.137864,
+            "f1_tuned": 0.063164,
+            "tuned_threshold": 0.74
+          },
+          "4310703": {
+            "n_samples": 73862,
+            "n_positive": 467,
+            "prevalence": 0.006323,
+            "auprc": 0.151445,
+            "auroc": 0.945636,
+            "brier_score": 0.099886,
+            "f1_tuned": 0.259296,
+            "tuned_threshold": 0.91
+          },
+          "4311629": {
+            "n_samples": 73862,
+            "n_positive": 440,
+            "prevalence": 0.005957,
+            "auprc": 0.02113,
+            "auroc": 0.851056,
+            "brier_score": 0.142812,
+            "f1_tuned": 0.042294,
+            "tuned_threshold": 0.72
+          },
+          "37016354": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.039159,
+            "auroc": 0.955949,
+            "brier_score": 0.025565,
+            "f1_tuned": 0.118919,
+            "tuned_threshold": 0.94
+          },
+          "37017023": {
+            "n_samples": 73862,
+            "n_positive": 103,
+            "prevalence": 0.001394,
+            "auprc": 0.072398,
+            "auroc": 0.980274,
+            "brier_score": 0.027975,
+            "f1_tuned": 0.08599,
+            "tuned_threshold": 0.67
+          },
+          "37395648": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.017066,
+            "auroc": 0.908986,
+            "brier_score": 0.075339,
+            "f1_tuned": 0.056537,
+            "tuned_threshold": 0.88
+          },
+          "43530652": {
+            "n_samples": 73862,
+            "n_positive": 852,
+            "prevalence": 0.011535,
+            "auprc": 0.428889,
+            "auroc": 0.929595,
+            "brier_score": 0.062771,
+            "f1_tuned": 0.506569,
+            "tuned_threshold": 0.86
+          }
+        }
+      },
+      "test": {
+        "macro_metrics": {
+          "macro_auprc": 0.073853,
+          "macro_auroc": 0.877203,
+          "macro_brier_score": 0.071803,
+          "macro_f1": 0.1302,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.173599,
+          "medium_prevalence_macro_auprc": 0.091004,
+          "low_prevalence_macro_auprc": 0.019816,
+          "tier_counts": {
+            "high": 7,
+            "medium": 16,
+            "low": 18
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.255136,
+          "recall_at_3": 0.636565,
+          "map_at_3": 0.531482,
+          "precision_at_5": 0.181322,
+          "recall_at_5": 0.737965,
+          "map_at_5": 0.5596,
+          "precision_at_10": 0.11285,
+          "recall_at_10": 0.90668,
+          "map_at_10": 0.587088
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 33304,
+            "n_positive": 7,
+            "prevalence": 0.00021,
+            "auprc": 0.0007,
+            "auroc": 0.830521,
+            "brier_score": 0.057297,
+            "f1_tuned": 0.001875,
+            "tuned_threshold": 0.28
+          },
+          "79740": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.01325,
+            "auroc": 0.899404,
+            "brier_score": 0.010668,
+            "f1_tuned": 0.058824,
+            "tuned_threshold": 0.5
+          },
+          "80502": {
+            "n_samples": 33304,
+            "n_positive": 44,
+            "prevalence": 0.001321,
+            "auprc": 0.045026,
+            "auroc": 0.962742,
+            "brier_score": 0.045385,
+            "f1_tuned": 0.116505,
+            "tuned_threshold": 0.84
+          },
+          "192279": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.065513,
+            "auroc": 0.970371,
+            "brier_score": 0.012765,
+            "f1_tuned": 0.153846,
+            "tuned_threshold": 0.95
+          },
+          "200970": {
+            "n_samples": 33304,
+            "n_positive": 23,
+            "prevalence": 0.000691,
+            "auprc": 0.004722,
+            "auroc": 0.909399,
+            "brier_score": 0.049617,
+            "f1_tuned": 0.010436,
+            "tuned_threshold": 0.24
+          },
+          "201826": {
+            "n_samples": 33304,
+            "n_positive": 36,
+            "prevalence": 0.001081,
+            "auprc": 0.003977,
+            "auroc": 0.742889,
+            "brier_score": 0.163565,
+            "f1_tuned": 0.013393,
+            "tuned_threshold": 0.75
+          },
+          "257012": {
+            "n_samples": 33304,
+            "n_positive": 156,
+            "prevalence": 0.004684,
+            "auprc": 0.070433,
+            "auroc": 0.74689,
+            "brier_score": 0.181919,
+            "f1_tuned": 0.125,
+            "tuned_threshold": 0.76
+          },
+          "258780": {
+            "n_samples": 33304,
+            "n_positive": 18,
+            "prevalence": 0.00054,
+            "auprc": 0.000442,
+            "auroc": 0.312589,
+            "brier_score": 0.070086,
+            "f1_tuned": 0.001007,
+            "tuned_threshold": 0.06
+          },
+          "316866": {
+            "n_samples": 33304,
+            "n_positive": 196,
+            "prevalence": 0.005885,
+            "auprc": 0.137513,
+            "auroc": 0.964786,
+            "brier_score": 0.050819,
+            "f1_tuned": 0.232044,
+            "tuned_threshold": 0.97
+          },
+          "317576": {
+            "n_samples": 33304,
+            "n_positive": 63,
+            "prevalence": 0.001892,
+            "auprc": 0.008277,
+            "auroc": 0.73594,
+            "brier_score": 0.096701,
+            "f1_tuned": 0.034364,
+            "tuned_threshold": 0.62
+          },
+          "321042": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.005302,
+            "auroc": 0.730961,
+            "brier_score": 0.110212,
+            "f1_tuned": 0.040816,
+            "tuned_threshold": 0.76
+          },
+          "378419": {
+            "n_samples": 33304,
+            "n_positive": 279,
+            "prevalence": 0.008377,
+            "auprc": 0.17718,
+            "auroc": 0.954588,
+            "brier_score": 0.052365,
+            "f1_tuned": 0.255079,
+            "tuned_threshold": 0.85
+          },
+          "380378": {
+            "n_samples": 33304,
+            "n_positive": 9,
+            "prevalence": 0.00027,
+            "auprc": 0.079197,
+            "auroc": 0.877911,
+            "brier_score": 0.073834,
+            "f1_tuned": 0.2,
+            "tuned_threshold": 0.94
+          },
+          "381316": {
+            "n_samples": 33304,
+            "n_positive": 83,
+            "prevalence": 0.002492,
+            "auprc": 0.017843,
+            "auroc": 0.90321,
+            "brier_score": 0.09018,
+            "f1_tuned": 0.048387,
+            "tuned_threshold": 0.8
+          },
+          "432867": {
+            "n_samples": 33304,
+            "n_positive": 112,
+            "prevalence": 0.003363,
+            "auprc": 0.012668,
+            "auroc": 0.847357,
+            "brier_score": 0.116303,
+            "f1_tuned": 0.027397,
+            "tuned_threshold": 0.71
+          },
+          "436096": {
+            "n_samples": 33304,
+            "n_positive": 281,
+            "prevalence": 0.008437,
+            "auprc": 0.426827,
+            "auroc": 0.951796,
+            "brier_score": 0.042172,
+            "f1_tuned": 0.578231,
+            "tuned_threshold": 0.82
+          },
+          "436940": {
+            "n_samples": 33304,
+            "n_positive": 48,
+            "prevalence": 0.001441,
+            "auprc": 0.35963,
+            "auroc": 0.996729,
+            "brier_score": 0.002129,
+            "f1_tuned": 0.543353,
+            "tuned_threshold": 0.46
+          },
+          "439777": {
+            "n_samples": 33304,
+            "n_positive": 293,
+            "prevalence": 0.008798,
+            "auprc": 0.077612,
+            "auroc": 0.856241,
+            "brier_score": 0.158604,
+            "f1_tuned": 0.181488,
+            "tuned_threshold": 0.83
+          },
+          "440086": {
+            "n_samples": 33304,
+            "n_positive": 14,
+            "prevalence": 0.00042,
+            "auprc": 0.009272,
+            "auroc": 0.969313,
+            "brier_score": 0.049003,
+            "f1_tuned": 0.022857,
+            "tuned_threshold": 0.93
+          },
+          "443614": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.063637,
+            "auroc": 0.972768,
+            "brier_score": 0.012585,
+            "f1_tuned": 0.126582,
+            "tuned_threshold": 0.94
+          },
+          "4029498": {
+            "n_samples": 33304,
+            "n_positive": 10,
+            "prevalence": 0.0003,
+            "auprc": 0.0011,
+            "auroc": 0.798312,
+            "brier_score": 0.101748,
+            "f1_tuned": 0.003123,
+            "tuned_threshold": 0.65
+          },
+          "4043241": {
+            "n_samples": 33304,
+            "n_positive": 29,
+            "prevalence": 0.000871,
+            "auprc": 0.018037,
+            "auroc": 0.875865,
+            "brier_score": 0.039573,
+            "f1_tuned": 0.111111,
+            "tuned_threshold": 0.77
+          },
+          "4051466": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.051768,
+            "auroc": 0.985222,
+            "brier_score": 0.027858,
+            "f1_tuned": 0.097087,
+            "tuned_threshold": 0.97
+          },
+          "4079749": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.00716,
+            "auroc": 0.904819,
+            "brier_score": 0.043984,
+            "f1_tuned": 0.066667,
+            "tuned_threshold": 0.8
+          },
+          "4079750": {
+            "n_samples": 33304,
+            "n_positive": 33,
+            "prevalence": 0.000991,
+            "auprc": 0.013093,
+            "auroc": 0.855536,
+            "brier_score": 0.119826,
+            "f1_tuned": 0.033898,
+            "tuned_threshold": 0.76
+          },
+          "4110591": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.004279,
+            "auroc": 0.898652,
+            "brier_score": 0.062558,
+            "f1_tuned": 0.010101,
+            "tuned_threshold": 0.85
+          },
+          "4115276": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.083383,
+            "auroc": 0.91085,
+            "brier_score": 0.117892,
+            "f1_tuned": 0.140704,
+            "tuned_threshold": 0.93
+          },
+          "4120314": {
+            "n_samples": 33304,
+            "n_positive": 42,
+            "prevalence": 0.001261,
+            "auprc": 0.39873,
+            "auroc": 0.995354,
+            "brier_score": 0.0192,
+            "f1_tuned": 0.57971,
+            "tuned_threshold": 0.6
+          },
+          "4129902": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.006505,
+            "auroc": 0.914606,
+            "brier_score": 0.062597,
+            "f1_tuned": 0.027304,
+            "tuned_threshold": 0.83
+          },
+          "4180790": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.00685,
+            "auroc": 0.833962,
+            "brier_score": 0.019963,
+            "f1_tuned": 0.030303,
+            "tuned_threshold": 0.91
+          },
+          "4214376": {
+            "n_samples": 33304,
+            "n_positive": 35,
+            "prevalence": 0.001051,
+            "auprc": 0.243802,
+            "auroc": 0.996217,
+            "brier_score": 0.003464,
+            "f1_tuned": 0.366197,
+            "tuned_threshold": 0.95
+          },
+          "4226121": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.01813,
+            "auroc": 0.954371,
+            "brier_score": 0.020818,
+            "f1_tuned": 0.086957,
+            "tuned_threshold": 0.95
+          },
+          "4229440": {
+            "n_samples": 33304,
+            "n_positive": 106,
+            "prevalence": 0.003183,
+            "auprc": 0.017412,
+            "auroc": 0.895159,
+            "brier_score": 0.095877,
+            "f1_tuned": 0.044206,
+            "tuned_threshold": 0.66
+          },
+          "4283893": {
+            "n_samples": 33304,
+            "n_positive": 120,
+            "prevalence": 0.003603,
+            "auprc": 0.004936,
+            "auroc": 0.628769,
+            "brier_score": 0.201928,
+            "f1_tuned": 0.01085,
+            "tuned_threshold": 0.52
+          },
+          "4285898": {
+            "n_samples": 33304,
+            "n_positive": 207,
+            "prevalence": 0.006215,
+            "auprc": 0.01866,
+            "auroc": 0.830545,
+            "brier_score": 0.114317,
+            "f1_tuned": 0.040677,
+            "tuned_threshold": 0.52
+          },
+          "4310703": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.070845,
+            "auroc": 0.909311,
+            "brier_score": 0.117902,
+            "f1_tuned": 0.136842,
+            "tuned_threshold": 0.93
+          },
+          "4311629": {
+            "n_samples": 33304,
+            "n_positive": 172,
+            "prevalence": 0.005165,
+            "auprc": 0.018606,
+            "auroc": 0.837098,
+            "brier_score": 0.136879,
+            "f1_tuned": 0.037229,
+            "tuned_threshold": 0.77
+          },
+          "37016354": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.047867,
+            "auroc": 0.98502,
+            "brier_score": 0.023505,
+            "f1_tuned": 0.125984,
+            "tuned_threshold": 0.9
+          },
+          "37017023": {
+            "n_samples": 33304,
+            "n_positive": 61,
+            "prevalence": 0.001832,
+            "auprc": 0.054089,
+            "auroc": 0.981691,
+            "brier_score": 0.02615,
+            "f1_tuned": 0.108254,
+            "tuned_threshold": 0.62
+          },
+          "37395648": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.004884,
+            "auroc": 0.904408,
+            "brier_score": 0.095053,
+            "f1_tuned": 0.012299,
+            "tuned_threshold": 0.85
+          },
+          "43530652": {
+            "n_samples": 33304,
+            "n_positive": 295,
+            "prevalence": 0.008858,
+            "auprc": 0.358796,
+            "auroc": 0.933168,
+            "brier_score": 0.046631,
+            "f1_tuned": 0.497222,
+            "tuned_threshold": 0.79
+          }
+        }
+      }
+    },
+    "xgboost": {
+      "validation": {
+        "macro_metrics": {
+          "macro_auprc": 0.104048,
+          "macro_auroc": 0.885129,
+          "macro_brier_score": 0.046351,
+          "macro_f1": 0.146767,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.133821,
+          "medium_prevalence_macro_auprc": 0.183476,
+          "low_prevalence_macro_auprc": 0.020286,
+          "tier_counts": {
+            "high": 13,
+            "medium": 12,
+            "low": 16
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.263202,
+          "recall_at_3": 0.620061,
+          "map_at_3": 0.512365,
+          "precision_at_5": 0.197539,
+          "recall_at_5": 0.767461,
+          "map_at_5": 0.552896,
+          "precision_at_10": 0.120175,
+          "recall_at_10": 0.92514,
+          "map_at_10": 0.579155
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 73862,
+            "n_positive": 51,
+            "prevalence": 0.00069,
+            "auprc": 0.003128,
+            "auroc": 0.856697,
+            "brier_score": 0.012165,
+            "f1_tuned": 0.013986,
+            "tuned_threshold": 0.64
+          },
+          "79740": {
+            "n_samples": 73862,
+            "n_positive": 44,
+            "prevalence": 0.000596,
+            "auprc": 0.027069,
+            "auroc": 0.881051,
+            "brier_score": 0.010076,
+            "f1_tuned": 0.037037,
+            "tuned_threshold": 0.95
+          },
+          "80502": {
+            "n_samples": 73862,
+            "n_positive": 225,
+            "prevalence": 0.003046,
+            "auprc": 0.095011,
+            "auroc": 0.96397,
+            "brier_score": 0.026158,
+            "f1_tuned": 0.132075,
+            "tuned_threshold": 0.96
+          },
+          "192279": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.026724,
+            "auroc": 0.944582,
+            "brier_score": 0.009979,
+            "f1_tuned": 0.070485,
+            "tuned_threshold": 0.84
+          },
+          "200970": {
+            "n_samples": 73862,
+            "n_positive": 409,
+            "prevalence": 0.005537,
+            "auprc": 0.072036,
+            "auroc": 0.933221,
+            "brier_score": 0.03899,
+            "f1_tuned": 0.094763,
+            "tuned_threshold": 0.85
+          },
+          "201826": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.005918,
+            "auroc": 0.883739,
+            "brier_score": 0.05454,
+            "f1_tuned": 0.022642,
+            "tuned_threshold": 0.74
+          },
+          "257012": {
+            "n_samples": 73862,
+            "n_positive": 445,
+            "prevalence": 0.006025,
+            "auprc": 0.070038,
+            "auroc": 0.704368,
+            "brier_score": 0.127071,
+            "f1_tuned": 0.164482,
+            "tuned_threshold": 0.83
+          },
+          "258780": {
+            "n_samples": 73862,
+            "n_positive": 64,
+            "prevalence": 0.000866,
+            "auprc": 0.000834,
+            "auroc": 0.481068,
+            "brier_score": 0.005575,
+            "f1_tuned": 0.001567,
+            "tuned_threshold": 0.02
+          },
+          "316866": {
+            "n_samples": 73862,
+            "n_positive": 279,
+            "prevalence": 0.003777,
+            "auprc": 0.199919,
+            "auroc": 0.983107,
+            "brier_score": 0.022667,
+            "f1_tuned": 0.295503,
+            "tuned_threshold": 0.97
+          },
+          "317576": {
+            "n_samples": 73862,
+            "n_positive": 367,
+            "prevalence": 0.004969,
+            "auprc": 0.015806,
+            "auroc": 0.731366,
+            "brier_score": 0.116353,
+            "f1_tuned": 0.058171,
+            "tuned_threshold": 0.72
+          },
+          "321042": {
+            "n_samples": 73862,
+            "n_positive": 57,
+            "prevalence": 0.000772,
+            "auprc": 0.001986,
+            "auroc": 0.731439,
+            "brier_score": 0.026974,
+            "f1_tuned": 0.008639,
+            "tuned_threshold": 0.65
+          },
+          "378419": {
+            "n_samples": 73862,
+            "n_positive": 566,
+            "prevalence": 0.007663,
+            "auprc": 0.085041,
+            "auroc": 0.927977,
+            "brier_score": 0.068374,
+            "f1_tuned": 0.134392,
+            "tuned_threshold": 0.87
+          },
+          "380378": {
+            "n_samples": 73862,
+            "n_positive": 58,
+            "prevalence": 0.000785,
+            "auprc": 0.085679,
+            "auroc": 0.929358,
+            "brier_score": 0.011176,
+            "f1_tuned": 0.178462,
+            "tuned_threshold": 0.96
+          },
+          "381316": {
+            "n_samples": 73862,
+            "n_positive": 303,
+            "prevalence": 0.004102,
+            "auprc": 0.073491,
+            "auroc": 0.844709,
+            "brier_score": 0.070963,
+            "f1_tuned": 0.189655,
+            "tuned_threshold": 0.91
+          },
+          "432867": {
+            "n_samples": 73862,
+            "n_positive": 309,
+            "prevalence": 0.004183,
+            "auprc": 0.010354,
+            "auroc": 0.785796,
+            "brier_score": 0.089972,
+            "f1_tuned": 0.021122,
+            "tuned_threshold": 0.54
+          },
+          "436096": {
+            "n_samples": 73862,
+            "n_positive": 871,
+            "prevalence": 0.011792,
+            "auprc": 0.433517,
+            "auroc": 0.940752,
+            "brier_score": 0.063784,
+            "f1_tuned": 0.525518,
+            "tuned_threshold": 0.92
+          },
+          "436940": {
+            "n_samples": 73862,
+            "n_positive": 90,
+            "prevalence": 0.001218,
+            "auprc": 0.540878,
+            "auroc": 0.979632,
+            "brier_score": 0.002185,
+            "f1_tuned": 0.570093,
+            "tuned_threshold": 0.99
+          },
+          "439777": {
+            "n_samples": 73862,
+            "n_positive": 592,
+            "prevalence": 0.008015,
+            "auprc": 0.082941,
+            "auroc": 0.866048,
+            "brier_score": 0.116662,
+            "f1_tuned": 0.185252,
+            "tuned_threshold": 0.9
+          },
+          "440086": {
+            "n_samples": 73862,
+            "n_positive": 15,
+            "prevalence": 0.000203,
+            "auprc": 0.006118,
+            "auroc": 0.983178,
+            "brier_score": 0.004017,
+            "f1_tuned": 0.014072,
+            "tuned_threshold": 0.16
+          },
+          "443614": {
+            "n_samples": 73862,
+            "n_positive": 69,
+            "prevalence": 0.000934,
+            "auprc": 0.02515,
+            "auroc": 0.946056,
+            "brier_score": 0.009228,
+            "f1_tuned": 0.066019,
+            "tuned_threshold": 0.78
+          },
+          "4029498": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.011741,
+            "auroc": 0.824183,
+            "brier_score": 0.013093,
+            "f1_tuned": 0.056738,
+            "tuned_threshold": 0.88
+          },
+          "4043241": {
+            "n_samples": 73862,
+            "n_positive": 30,
+            "prevalence": 0.000406,
+            "auprc": 0.00219,
+            "auroc": 0.86967,
+            "brier_score": 0.017474,
+            "f1_tuned": 0.010657,
+            "tuned_threshold": 0.68
+          },
+          "4051466": {
+            "n_samples": 73862,
+            "n_positive": 26,
+            "prevalence": 0.000352,
+            "auprc": 0.039002,
+            "auroc": 0.99349,
+            "brier_score": 0.004494,
+            "f1_tuned": 0.073171,
+            "tuned_threshold": 0.96
+          },
+          "4079749": {
+            "n_samples": 73862,
+            "n_positive": 29,
+            "prevalence": 0.000393,
+            "auprc": 0.002172,
+            "auroc": 0.898422,
+            "brier_score": 0.017642,
+            "f1_tuned": 0.005698,
+            "tuned_threshold": 0.48
+          },
+          "4079750": {
+            "n_samples": 73862,
+            "n_positive": 139,
+            "prevalence": 0.001882,
+            "auprc": 0.005057,
+            "auroc": 0.789149,
+            "brier_score": 0.086436,
+            "f1_tuned": 0.013865,
+            "tuned_threshold": 0.82
+          },
+          "4110591": {
+            "n_samples": 73862,
+            "n_positive": 87,
+            "prevalence": 0.001178,
+            "auprc": 0.016716,
+            "auroc": 0.911044,
+            "brier_score": 0.03634,
+            "f1_tuned": 0.04898,
+            "tuned_threshold": 0.85
+          },
+          "4115276": {
+            "n_samples": 73862,
+            "n_positive": 462,
+            "prevalence": 0.006255,
+            "auprc": 0.174451,
+            "auroc": 0.952717,
+            "brier_score": 0.087224,
+            "f1_tuned": 0.280083,
+            "tuned_threshold": 0.92
+          },
+          "4120314": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.615168,
+            "auroc": 0.976836,
+            "brier_score": 0.001372,
+            "f1_tuned": 0.647619,
+            "tuned_threshold": 0.99
+          },
+          "4129902": {
+            "n_samples": 73862,
+            "n_positive": 457,
+            "prevalence": 0.006187,
+            "auprc": 0.085161,
+            "auroc": 0.943479,
+            "brier_score": 0.047073,
+            "f1_tuned": 0.12394,
+            "tuned_threshold": 0.86
+          },
+          "4180790": {
+            "n_samples": 73862,
+            "n_positive": 46,
+            "prevalence": 0.000623,
+            "auprc": 0.015756,
+            "auroc": 0.943888,
+            "brier_score": 0.002689,
+            "f1_tuned": 0.035763,
+            "tuned_threshold": 0.18
+          },
+          "4214376": {
+            "n_samples": 73862,
+            "n_positive": 79,
+            "prevalence": 0.00107,
+            "auprc": 0.486493,
+            "auroc": 0.983739,
+            "brier_score": 0.003475,
+            "f1_tuned": 0.48062,
+            "tuned_threshold": 0.99
+          },
+          "4226121": {
+            "n_samples": 73862,
+            "n_positive": 53,
+            "prevalence": 0.000718,
+            "auprc": 0.026933,
+            "auroc": 0.975531,
+            "brier_score": 0.008494,
+            "f1_tuned": 0.059172,
+            "tuned_threshold": 0.83
+          },
+          "4229440": {
+            "n_samples": 73862,
+            "n_positive": 496,
+            "prevalence": 0.006715,
+            "auprc": 0.039568,
+            "auroc": 0.878142,
+            "brier_score": 0.108276,
+            "f1_tuned": 0.0808,
+            "tuned_threshold": 0.78
+          },
+          "4283893": {
+            "n_samples": 73862,
+            "n_positive": 461,
+            "prevalence": 0.006241,
+            "auprc": 0.00991,
+            "auroc": 0.538654,
+            "brier_score": 0.14931,
+            "f1_tuned": 0.048945,
+            "tuned_threshold": 0.65
+          },
+          "4285898": {
+            "n_samples": 73862,
+            "n_positive": 505,
+            "prevalence": 0.006837,
+            "auprc": 0.036762,
+            "auroc": 0.904624,
+            "brier_score": 0.101561,
+            "f1_tuned": 0.079334,
+            "tuned_threshold": 0.71
+          },
+          "4310703": {
+            "n_samples": 73862,
+            "n_positive": 467,
+            "prevalence": 0.006323,
+            "auprc": 0.173117,
+            "auroc": 0.953372,
+            "brier_score": 0.087491,
+            "f1_tuned": 0.279492,
+            "tuned_threshold": 0.91
+          },
+          "4311629": {
+            "n_samples": 73862,
+            "n_positive": 440,
+            "prevalence": 0.005957,
+            "auprc": 0.023261,
+            "auroc": 0.855934,
+            "brier_score": 0.114051,
+            "f1_tuned": 0.048862,
+            "tuned_threshold": 0.75
+          },
+          "37016354": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.044169,
+            "auroc": 0.963161,
+            "brier_score": 0.004679,
+            "f1_tuned": 0.12,
+            "tuned_threshold": 0.87
+          },
+          "37017023": {
+            "n_samples": 73862,
+            "n_positive": 103,
+            "prevalence": 0.001394,
+            "auprc": 0.119591,
+            "auroc": 0.983235,
+            "brier_score": 0.017497,
+            "f1_tuned": 0.203175,
+            "tuned_threshold": 0.96
+          },
+          "37395648": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.023232,
+            "auroc": 0.912476,
+            "brier_score": 0.037352,
+            "f1_tuned": 0.040323,
+            "tuned_threshold": 0.85
+          },
+          "43530652": {
+            "n_samples": 73862,
+            "n_positive": 852,
+            "prevalence": 0.011535,
+            "auprc": 0.453873,
+            "auroc": 0.940443,
+            "brier_score": 0.067463,
+            "f1_tuned": 0.496288,
+            "tuned_threshold": 0.94
+          }
+        }
+      },
+      "test": {
+        "macro_metrics": {
+          "macro_auprc": 0.081619,
+          "macro_auroc": 0.882422,
+          "macro_brier_score": 0.049943,
+          "macro_f1": 0.132955,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.188709,
+          "medium_prevalence_macro_auprc": 0.107252,
+          "low_prevalence_macro_auprc": 0.017188,
+          "tier_counts": {
+            "high": 7,
+            "medium": 16,
+            "low": 18
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.269456,
+          "recall_at_3": 0.66648,
+          "map_at_3": 0.555524,
+          "precision_at_5": 0.187299,
+          "recall_at_5": 0.765129,
+          "map_at_5": 0.58107,
+          "precision_at_10": 0.113112,
+          "recall_at_10": 0.911088,
+          "map_at_10": 0.60588
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 33304,
+            "n_positive": 7,
+            "prevalence": 0.00021,
+            "auprc": 0.001159,
+            "auroc": 0.887163,
+            "brier_score": 0.010906,
+            "f1_tuned": 0.0035,
+            "tuned_threshold": 0.31
+          },
+          "79740": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.011407,
+            "auroc": 0.880393,
+            "brier_score": 0.012123,
+            "f1_tuned": 0.043478,
+            "tuned_threshold": 0.86
+          },
+          "80502": {
+            "n_samples": 33304,
+            "n_positive": 44,
+            "prevalence": 0.001321,
+            "auprc": 0.046549,
+            "auroc": 0.973864,
+            "brier_score": 0.020673,
+            "f1_tuned": 0.104869,
+            "tuned_threshold": 0.85
+          },
+          "192279": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.055484,
+            "auroc": 0.967178,
+            "brier_score": 0.00729,
+            "f1_tuned": 0.119318,
+            "tuned_threshold": 0.55
+          },
+          "200970": {
+            "n_samples": 33304,
+            "n_positive": 23,
+            "prevalence": 0.000691,
+            "auprc": 0.004516,
+            "auroc": 0.905961,
+            "brier_score": 0.031714,
+            "f1_tuned": 0.017094,
+            "tuned_threshold": 0.89
+          },
+          "201826": {
+            "n_samples": 33304,
+            "n_positive": 36,
+            "prevalence": 0.001081,
+            "auprc": 0.018128,
+            "auroc": 0.817253,
+            "brier_score": 0.0484,
+            "f1_tuned": 0.052632,
+            "tuned_threshold": 0.84
+          },
+          "257012": {
+            "n_samples": 33304,
+            "n_positive": 156,
+            "prevalence": 0.004684,
+            "auprc": 0.103534,
+            "auroc": 0.752442,
+            "brier_score": 0.144525,
+            "f1_tuned": 0.196491,
+            "tuned_threshold": 0.9
+          },
+          "258780": {
+            "n_samples": 33304,
+            "n_positive": 18,
+            "prevalence": 0.00054,
+            "auprc": 0.000456,
+            "auroc": 0.365442,
+            "brier_score": 0.006542,
+            "f1_tuned": 0.000774,
+            "tuned_threshold": 0.02
+          },
+          "316866": {
+            "n_samples": 33304,
+            "n_positive": 196,
+            "prevalence": 0.005885,
+            "auprc": 0.172108,
+            "auroc": 0.974902,
+            "brier_score": 0.045718,
+            "f1_tuned": 0.302425,
+            "tuned_threshold": 0.97
+          },
+          "317576": {
+            "n_samples": 33304,
+            "n_positive": 63,
+            "prevalence": 0.001892,
+            "auprc": 0.005825,
+            "auroc": 0.711601,
+            "brier_score": 0.124744,
+            "f1_tuned": 0.02451,
+            "tuned_threshold": 0.79
+          },
+          "321042": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.002214,
+            "auroc": 0.729228,
+            "brier_score": 0.029934,
+            "f1_tuned": 0.011834,
+            "tuned_threshold": 0.78
+          },
+          "378419": {
+            "n_samples": 33304,
+            "n_positive": 279,
+            "prevalence": 0.008377,
+            "auprc": 0.134507,
+            "auroc": 0.952897,
+            "brier_score": 0.052445,
+            "f1_tuned": 0.204934,
+            "tuned_threshold": 0.85
+          },
+          "380378": {
+            "n_samples": 33304,
+            "n_positive": 9,
+            "prevalence": 0.00027,
+            "auprc": 0.066349,
+            "auroc": 0.855676,
+            "brier_score": 0.030208,
+            "f1_tuned": 0.181818,
+            "tuned_threshold": 0.98
+          },
+          "381316": {
+            "n_samples": 33304,
+            "n_positive": 83,
+            "prevalence": 0.002492,
+            "auprc": 0.023725,
+            "auroc": 0.888481,
+            "brier_score": 0.072138,
+            "f1_tuned": 0.076555,
+            "tuned_threshold": 0.8
+          },
+          "432867": {
+            "n_samples": 33304,
+            "n_positive": 112,
+            "prevalence": 0.003363,
+            "auprc": 0.010879,
+            "auroc": 0.839794,
+            "brier_score": 0.074891,
+            "f1_tuned": 0.027699,
+            "tuned_threshold": 0.57
+          },
+          "436096": {
+            "n_samples": 33304,
+            "n_positive": 281,
+            "prevalence": 0.008437,
+            "auprc": 0.478087,
+            "auroc": 0.958238,
+            "brier_score": 0.043202,
+            "f1_tuned": 0.601093,
+            "tuned_threshold": 0.95
+          },
+          "436940": {
+            "n_samples": 33304,
+            "n_positive": 48,
+            "prevalence": 0.001441,
+            "auprc": 0.436058,
+            "auroc": 0.994759,
+            "brier_score": 0.002195,
+            "f1_tuned": 0.521739,
+            "tuned_threshold": 0.65
+          },
+          "439777": {
+            "n_samples": 33304,
+            "n_positive": 293,
+            "prevalence": 0.008798,
+            "auprc": 0.080176,
+            "auroc": 0.852644,
+            "brier_score": 0.142328,
+            "f1_tuned": 0.178506,
+            "tuned_threshold": 0.88
+          },
+          "440086": {
+            "n_samples": 33304,
+            "n_positive": 14,
+            "prevalence": 0.00042,
+            "auprc": 0.019282,
+            "auroc": 0.972797,
+            "brier_score": 0.008532,
+            "f1_tuned": 0.083333,
+            "tuned_threshold": 0.92
+          },
+          "443614": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.056257,
+            "auroc": 0.971925,
+            "brier_score": 0.006652,
+            "f1_tuned": 0.138728,
+            "tuned_threshold": 0.52
+          },
+          "4029498": {
+            "n_samples": 33304,
+            "n_positive": 10,
+            "prevalence": 0.0003,
+            "auprc": 0.001092,
+            "auroc": 0.807597,
+            "brier_score": 0.061948,
+            "f1_tuned": 0.003614,
+            "tuned_threshold": 0.67
+          },
+          "4043241": {
+            "n_samples": 33304,
+            "n_positive": 29,
+            "prevalence": 0.000871,
+            "auprc": 0.011738,
+            "auroc": 0.8654,
+            "brier_score": 0.021776,
+            "f1_tuned": 0.076923,
+            "tuned_threshold": 0.88
+          },
+          "4051466": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.060742,
+            "auroc": 0.98542,
+            "brier_score": 0.014642,
+            "f1_tuned": 0.111475,
+            "tuned_threshold": 0.86
+          },
+          "4079749": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.001762,
+            "auroc": 0.900337,
+            "brier_score": 0.011344,
+            "f1_tuned": 0.004296,
+            "tuned_threshold": 0.35
+          },
+          "4079750": {
+            "n_samples": 33304,
+            "n_positive": 33,
+            "prevalence": 0.000991,
+            "auprc": 0.005612,
+            "auroc": 0.870721,
+            "brier_score": 0.075423,
+            "f1_tuned": 0.013841,
+            "tuned_threshold": 0.81
+          },
+          "4110591": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.006115,
+            "auroc": 0.919832,
+            "brier_score": 0.053627,
+            "f1_tuned": 0.0191,
+            "tuned_threshold": 0.76
+          },
+          "4115276": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.065705,
+            "auroc": 0.906183,
+            "brier_score": 0.121326,
+            "f1_tuned": 0.108911,
+            "tuned_threshold": 0.94
+          },
+          "4120314": {
+            "n_samples": 33304,
+            "n_positive": 42,
+            "prevalence": 0.001261,
+            "auprc": 0.464547,
+            "auroc": 0.989759,
+            "brier_score": 0.001869,
+            "f1_tuned": 0.596491,
+            "tuned_threshold": 0.98
+          },
+          "4129902": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.006648,
+            "auroc": 0.920496,
+            "brier_score": 0.037697,
+            "f1_tuned": 0.023256,
+            "tuned_threshold": 0.83
+          },
+          "4180790": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.010932,
+            "auroc": 0.856776,
+            "brier_score": 0.00295,
+            "f1_tuned": 0.058824,
+            "tuned_threshold": 0.9
+          },
+          "4214376": {
+            "n_samples": 33304,
+            "n_positive": 35,
+            "prevalence": 0.001051,
+            "auprc": 0.322579,
+            "auroc": 0.988418,
+            "brier_score": 0.002797,
+            "f1_tuned": 0.4,
+            "tuned_threshold": 0.96
+          },
+          "4226121": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.019804,
+            "auroc": 0.957525,
+            "brier_score": 0.005922,
+            "f1_tuned": 0.117647,
+            "tuned_threshold": 0.92
+          },
+          "4229440": {
+            "n_samples": 33304,
+            "n_positive": 106,
+            "prevalence": 0.003183,
+            "auprc": 0.012239,
+            "auroc": 0.860304,
+            "brier_score": 0.106546,
+            "f1_tuned": 0.028254,
+            "tuned_threshold": 0.81
+          },
+          "4283893": {
+            "n_samples": 33304,
+            "n_positive": 120,
+            "prevalence": 0.003603,
+            "auprc": 0.004958,
+            "auroc": 0.618845,
+            "brier_score": 0.175851,
+            "f1_tuned": 0.011719,
+            "tuned_threshold": 0.6
+          },
+          "4285898": {
+            "n_samples": 33304,
+            "n_positive": 207,
+            "prevalence": 0.006215,
+            "auprc": 0.030227,
+            "auroc": 0.893865,
+            "brier_score": 0.084427,
+            "f1_tuned": 0.075714,
+            "tuned_threshold": 0.55
+          },
+          "4310703": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.070633,
+            "auroc": 0.905365,
+            "brier_score": 0.121063,
+            "f1_tuned": 0.10687,
+            "tuned_threshold": 0.92
+          },
+          "4311629": {
+            "n_samples": 33304,
+            "n_positive": 172,
+            "prevalence": 0.005165,
+            "auprc": 0.022874,
+            "auroc": 0.851027,
+            "brier_score": 0.103275,
+            "f1_tuned": 0.057052,
+            "tuned_threshold": 0.79
+          },
+          "37016354": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.034482,
+            "auroc": 0.987284,
+            "brier_score": 0.003789,
+            "f1_tuned": 0.088235,
+            "tuned_threshold": 0.64
+          },
+          "37017023": {
+            "n_samples": 33304,
+            "n_positive": 61,
+            "prevalence": 0.001832,
+            "auprc": 0.058527,
+            "auroc": 0.983282,
+            "brier_score": 0.018266,
+            "f1_tuned": 0.134737,
+            "tuned_threshold": 0.87
+          },
+          "37395648": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.005483,
+            "auroc": 0.916531,
+            "brier_score": 0.055116,
+            "f1_tuned": 0.015826,
+            "tuned_threshold": 0.74
+          },
+          "43530652": {
+            "n_samples": 33304,
+            "n_positive": 295,
+            "prevalence": 0.008858,
+            "auprc": 0.402987,
+            "auroc": 0.94168,
+            "brier_score": 0.052866,
+            "f1_tuned": 0.507042,
+            "tuned_threshold": 0.96
+          }
+        }
+      }
+    },
+    "stacked_ensemble": {
+      "validation": {
+        "macro_metrics": {
+          "macro_auprc": 0.090417,
+          "macro_auroc": 0.87814,
+          "macro_brier_score": 0.003068,
+          "macro_f1": 0.136924,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.125246,
+          "medium_prevalence_macro_auprc": 0.145961,
+          "low_prevalence_macro_auprc": 0.020459,
+          "tier_counts": {
+            "high": 13,
+            "medium": 12,
+            "low": 16
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.266126,
+          "recall_at_3": 0.628211,
+          "map_at_3": 0.516504,
+          "precision_at_5": 0.191673,
+          "recall_at_5": 0.745852,
+          "map_at_5": 0.548915,
+          "precision_at_10": 0.113236,
+          "recall_at_10": 0.873274,
+          "map_at_10": 0.5703
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 73862,
+            "n_positive": 51,
+            "prevalence": 0.00069,
+            "auprc": 0.003678,
+            "auroc": 0.846557,
+            "brier_score": 0.00069,
+            "f1_tuned": 0.024096,
+            "tuned_threshold": 0.02
+          },
+          "79740": {
+            "n_samples": 73862,
+            "n_positive": 44,
+            "prevalence": 0.000596,
+            "auprc": 0.008792,
+            "auroc": 0.829892,
+            "brier_score": 0.000656,
+            "f1_tuned": 0.040816,
+            "tuned_threshold": 0.26
+          },
+          "80502": {
+            "n_samples": 73862,
+            "n_positive": 225,
+            "prevalence": 0.003046,
+            "auprc": 0.086315,
+            "auroc": 0.962993,
+            "brier_score": 0.003085,
+            "f1_tuned": 0.142466,
+            "tuned_threshold": 0.26
+          },
+          "192279": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.028501,
+            "auroc": 0.94662,
+            "brier_score": 0.000946,
+            "f1_tuned": 0.069264,
+            "tuned_threshold": 0.02
+          },
+          "200970": {
+            "n_samples": 73862,
+            "n_positive": 409,
+            "prevalence": 0.005537,
+            "auprc": 0.049176,
+            "auroc": 0.930728,
+            "brier_score": 0.005609,
+            "f1_tuned": 0.091768,
+            "tuned_threshold": 0.18
+          },
+          "201826": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.008069,
+            "auroc": 0.883661,
+            "brier_score": 0.000957,
+            "f1_tuned": 0.00939,
+            "tuned_threshold": 0.01
+          },
+          "257012": {
+            "n_samples": 73862,
+            "n_positive": 445,
+            "prevalence": 0.006025,
+            "auprc": 0.066706,
+            "auroc": 0.681988,
+            "brier_score": 0.005809,
+            "f1_tuned": 0.156648,
+            "tuned_threshold": 0.04
+          },
+          "258780": {
+            "n_samples": 73862,
+            "n_positive": 64,
+            "prevalence": 0.000866,
+            "auprc": 0.000833,
+            "auroc": 0.491053,
+            "brier_score": 0.000872,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "316866": {
+            "n_samples": 73862,
+            "n_positive": 279,
+            "prevalence": 0.003777,
+            "auprc": 0.191938,
+            "auroc": 0.981074,
+            "brier_score": 0.003354,
+            "f1_tuned": 0.272727,
+            "tuned_threshold": 0.17
+          },
+          "317576": {
+            "n_samples": 73862,
+            "n_positive": 367,
+            "prevalence": 0.004969,
+            "auprc": 0.010515,
+            "auroc": 0.655588,
+            "brier_score": 0.005004,
+            "f1_tuned": 0.030632,
+            "tuned_threshold": 0.02
+          },
+          "321042": {
+            "n_samples": 73862,
+            "n_positive": 57,
+            "prevalence": 0.000772,
+            "auprc": 0.001961,
+            "auroc": 0.728196,
+            "brier_score": 0.000778,
+            "f1_tuned": 0.006154,
+            "tuned_threshold": 0.01
+          },
+          "378419": {
+            "n_samples": 73862,
+            "n_positive": 566,
+            "prevalence": 0.007663,
+            "auprc": 0.075667,
+            "auroc": 0.921888,
+            "brier_score": 0.007792,
+            "f1_tuned": 0.133005,
+            "tuned_threshold": 0.21
+          },
+          "380378": {
+            "n_samples": 73862,
+            "n_positive": 58,
+            "prevalence": 0.000785,
+            "auprc": 0.09038,
+            "auroc": 0.929554,
+            "brier_score": 0.000744,
+            "f1_tuned": 0.17765,
+            "tuned_threshold": 0.11
+          },
+          "381316": {
+            "n_samples": 73862,
+            "n_positive": 303,
+            "prevalence": 0.004102,
+            "auprc": 0.090193,
+            "auroc": 0.850488,
+            "brier_score": 0.003991,
+            "f1_tuned": 0.195519,
+            "tuned_threshold": 0.13
+          },
+          "432867": {
+            "n_samples": 73862,
+            "n_positive": 309,
+            "prevalence": 0.004183,
+            "auprc": 0.009761,
+            "auroc": 0.73957,
+            "brier_score": 0.004329,
+            "f1_tuned": 0.019923,
+            "tuned_threshold": 0.01
+          },
+          "436096": {
+            "n_samples": 73862,
+            "n_positive": 871,
+            "prevalence": 0.011792,
+            "auprc": 0.425505,
+            "auroc": 0.934055,
+            "brier_score": 0.008403,
+            "f1_tuned": 0.516063,
+            "tuned_threshold": 0.27
+          },
+          "436940": {
+            "n_samples": 73862,
+            "n_positive": 90,
+            "prevalence": 0.001218,
+            "auprc": 0.400751,
+            "auroc": 0.968055,
+            "brier_score": 0.000861,
+            "f1_tuned": 0.490909,
+            "tuned_threshold": 0.01
+          },
+          "439777": {
+            "n_samples": 73862,
+            "n_positive": 592,
+            "prevalence": 0.008015,
+            "auprc": 0.078171,
+            "auroc": 0.857938,
+            "brier_score": 0.007669,
+            "f1_tuned": 0.181027,
+            "tuned_threshold": 0.12
+          },
+          "440086": {
+            "n_samples": 73862,
+            "n_positive": 15,
+            "prevalence": 0.000203,
+            "auprc": 0.005522,
+            "auroc": 0.979262,
+            "brier_score": 0.000203,
+            "f1_tuned": 0.004211,
+            "tuned_threshold": 0.01
+          },
+          "443614": {
+            "n_samples": 73862,
+            "n_positive": 69,
+            "prevalence": 0.000934,
+            "auprc": 0.027997,
+            "auroc": 0.943927,
+            "brier_score": 0.00092,
+            "f1_tuned": 0.077803,
+            "tuned_threshold": 0.04
+          },
+          "4029498": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.026418,
+            "auroc": 0.821032,
+            "brier_score": 0.000742,
+            "f1_tuned": 0.028571,
+            "tuned_threshold": 0.03
+          },
+          "4043241": {
+            "n_samples": 73862,
+            "n_positive": 30,
+            "prevalence": 0.000406,
+            "auprc": 0.002342,
+            "auroc": 0.879838,
+            "brier_score": 0.000439,
+            "f1_tuned": 0.006547,
+            "tuned_threshold": 0.02
+          },
+          "4051466": {
+            "n_samples": 73862,
+            "n_positive": 26,
+            "prevalence": 0.000352,
+            "auprc": 0.038235,
+            "auroc": 0.993169,
+            "brier_score": 0.000346,
+            "f1_tuned": 0.086957,
+            "tuned_threshold": 0.05
+          },
+          "4079749": {
+            "n_samples": 73862,
+            "n_positive": 29,
+            "prevalence": 0.000393,
+            "auprc": 0.00213,
+            "auroc": 0.896093,
+            "brier_score": 0.000393,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4079750": {
+            "n_samples": 73862,
+            "n_positive": 139,
+            "prevalence": 0.001882,
+            "auprc": 0.005344,
+            "auroc": 0.808807,
+            "brier_score": 0.001878,
+            "f1_tuned": 0.009825,
+            "tuned_threshold": 0.01
+          },
+          "4110591": {
+            "n_samples": 73862,
+            "n_positive": 87,
+            "prevalence": 0.001178,
+            "auprc": 0.022987,
+            "auroc": 0.910907,
+            "brier_score": 0.001172,
+            "f1_tuned": 0.037135,
+            "tuned_threshold": 0.03
+          },
+          "4115276": {
+            "n_samples": 73862,
+            "n_positive": 462,
+            "prevalence": 0.006255,
+            "auprc": 0.170337,
+            "auroc": 0.952221,
+            "brier_score": 0.005709,
+            "f1_tuned": 0.276596,
+            "tuned_threshold": 0.13
+          },
+          "4120314": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.505616,
+            "auroc": 0.97414,
+            "brier_score": 0.000709,
+            "f1_tuned": 0.617188,
+            "tuned_threshold": 0.09
+          },
+          "4129902": {
+            "n_samples": 73862,
+            "n_positive": 457,
+            "prevalence": 0.006187,
+            "auprc": 0.068529,
+            "auroc": 0.932017,
+            "brier_score": 0.006234,
+            "f1_tuned": 0.121287,
+            "tuned_threshold": 0.12
+          },
+          "4180790": {
+            "n_samples": 73862,
+            "n_positive": 46,
+            "prevalence": 0.000623,
+            "auprc": 0.016087,
+            "auroc": 0.950456,
+            "brier_score": 0.0007,
+            "f1_tuned": 0.025316,
+            "tuned_threshold": 0.28
+          },
+          "4214376": {
+            "n_samples": 73862,
+            "n_positive": 79,
+            "prevalence": 0.00107,
+            "auprc": 0.321239,
+            "auroc": 0.974038,
+            "brier_score": 0.000861,
+            "f1_tuned": 0.439306,
+            "tuned_threshold": 0.25
+          },
+          "4226121": {
+            "n_samples": 73862,
+            "n_positive": 53,
+            "prevalence": 0.000718,
+            "auprc": 0.026643,
+            "auroc": 0.975769,
+            "brier_score": 0.000715,
+            "f1_tuned": 0.053763,
+            "tuned_threshold": 0.07
+          },
+          "4229440": {
+            "n_samples": 73862,
+            "n_positive": 496,
+            "prevalence": 0.006715,
+            "auprc": 0.030407,
+            "auroc": 0.856097,
+            "brier_score": 0.006735,
+            "f1_tuned": 0.06478,
+            "tuned_threshold": 0.02
+          },
+          "4283893": {
+            "n_samples": 73862,
+            "n_positive": 461,
+            "prevalence": 0.006241,
+            "auprc": 0.007342,
+            "auroc": 0.522343,
+            "brier_score": 0.006233,
+            "f1_tuned": 0.021236,
+            "tuned_threshold": 0.02
+          },
+          "4285898": {
+            "n_samples": 73862,
+            "n_positive": 505,
+            "prevalence": 0.006837,
+            "auprc": 0.03489,
+            "auroc": 0.898161,
+            "brier_score": 0.006829,
+            "f1_tuned": 0.073076,
+            "tuned_threshold": 0.02
+          },
+          "4310703": {
+            "n_samples": 73862,
+            "n_positive": 467,
+            "prevalence": 0.006323,
+            "auprc": 0.167202,
+            "auroc": 0.951943,
+            "brier_score": 0.005773,
+            "f1_tuned": 0.270165,
+            "tuned_threshold": 0.12
+          },
+          "4311629": {
+            "n_samples": 73862,
+            "n_positive": 440,
+            "prevalence": 0.005957,
+            "auprc": 0.022009,
+            "auroc": 0.852239,
+            "brier_score": 0.005888,
+            "f1_tuned": 0.044337,
+            "tuned_threshold": 0.03
+          },
+          "37016354": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.039764,
+            "auroc": 0.958479,
+            "brier_score": 0.000728,
+            "f1_tuned": 0.109375,
+            "tuned_threshold": 0.07
+          },
+          "37017023": {
+            "n_samples": 73862,
+            "n_positive": 103,
+            "prevalence": 0.001394,
+            "auprc": 0.093312,
+            "auroc": 0.982207,
+            "brier_score": 0.001427,
+            "f1_tuned": 0.144796,
+            "tuned_threshold": 0.14
+          },
+          "37395648": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.01356,
+            "auroc": 0.915615,
+            "brier_score": 0.001184,
+            "f1_tuned": 0.036014,
+            "tuned_threshold": 0.02
+          },
+          "43530652": {
+            "n_samples": 73862,
+            "n_positive": 852,
+            "prevalence": 0.011535,
+            "auprc": 0.432256,
+            "auroc": 0.935096,
+            "brier_score": 0.008408,
+            "f1_tuned": 0.507525,
+            "tuned_threshold": 0.28
+          }
+        }
+      },
+      "test": {
+        "macro_metrics": {
+          "macro_auprc": 0.072827,
+          "macro_auroc": 0.869277,
+          "macro_brier_score": 0.002329,
+          "macro_f1": 0.127913,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.172331,
+          "medium_prevalence_macro_auprc": 0.089572,
+          "low_prevalence_macro_auprc": 0.019246,
+          "tier_counts": {
+            "high": 7,
+            "medium": 16,
+            "low": 18
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.269705,
+          "recall_at_3": 0.663803,
+          "map_at_3": 0.564469,
+          "precision_at_5": 0.189914,
+          "recall_at_5": 0.771697,
+          "map_at_5": 0.593899,
+          "precision_at_10": 0.10975,
+          "recall_at_10": 0.878415,
+          "map_at_10": 0.611764
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 33304,
+            "n_positive": 7,
+            "prevalence": 0.00021,
+            "auprc": 0.001223,
+            "auroc": 0.903659,
+            "brier_score": 0.000212,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "79740": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.012606,
+            "auroc": 0.890716,
+            "brier_score": 0.001413,
+            "f1_tuned": 0.048257,
+            "tuned_threshold": 0.02
+          },
+          "80502": {
+            "n_samples": 33304,
+            "n_positive": 44,
+            "prevalence": 0.001321,
+            "auprc": 0.04938,
+            "auroc": 0.971261,
+            "brier_score": 0.001432,
+            "f1_tuned": 0.111111,
+            "tuned_threshold": 0.24
+          },
+          "192279": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.05826,
+            "auroc": 0.953265,
+            "brier_score": 0.000928,
+            "f1_tuned": 0.115183,
+            "tuned_threshold": 0.04
+          },
+          "200970": {
+            "n_samples": 33304,
+            "n_positive": 23,
+            "prevalence": 0.000691,
+            "auprc": 0.003647,
+            "auroc": 0.89041,
+            "brier_score": 0.00095,
+            "f1_tuned": 0.013245,
+            "tuned_threshold": 0.16
+          },
+          "201826": {
+            "n_samples": 33304,
+            "n_positive": 36,
+            "prevalence": 0.001081,
+            "auprc": 0.006041,
+            "auroc": 0.748649,
+            "brier_score": 0.001078,
+            "f1_tuned": 0.033898,
+            "tuned_threshold": 0.01
+          },
+          "257012": {
+            "n_samples": 33304,
+            "n_positive": 156,
+            "prevalence": 0.004684,
+            "auprc": 0.07696,
+            "auroc": 0.725502,
+            "brier_score": 0.004593,
+            "f1_tuned": 0.176471,
+            "tuned_threshold": 0.24
+          },
+          "258780": {
+            "n_samples": 33304,
+            "n_positive": 18,
+            "prevalence": 0.00054,
+            "auprc": 0.000529,
+            "auroc": 0.399349,
+            "brier_score": 0.000549,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "316866": {
+            "n_samples": 33304,
+            "n_positive": 196,
+            "prevalence": 0.005885,
+            "auprc": 0.148792,
+            "auroc": 0.968351,
+            "brier_score": 0.005467,
+            "f1_tuned": 0.267241,
+            "tuned_threshold": 0.17
+          },
+          "317576": {
+            "n_samples": 33304,
+            "n_positive": 63,
+            "prevalence": 0.001892,
+            "auprc": 0.004365,
+            "auroc": 0.701755,
+            "brier_score": 0.001964,
+            "f1_tuned": 0.011765,
+            "tuned_threshold": 0.07
+          },
+          "321042": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.002458,
+            "auroc": 0.733169,
+            "brier_score": 0.000755,
+            "f1_tuned": 0.008889,
+            "tuned_threshold": 0.02
+          },
+          "378419": {
+            "n_samples": 33304,
+            "n_positive": 279,
+            "prevalence": 0.008377,
+            "auprc": 0.105027,
+            "auroc": 0.949359,
+            "brier_score": 0.008103,
+            "f1_tuned": 0.209215,
+            "tuned_threshold": 0.15
+          },
+          "380378": {
+            "n_samples": 33304,
+            "n_positive": 9,
+            "prevalence": 0.00027,
+            "auprc": 0.100818,
+            "auroc": 0.897472,
+            "brier_score": 0.000325,
+            "f1_tuned": 0.235294,
+            "tuned_threshold": 0.15
+          },
+          "381316": {
+            "n_samples": 33304,
+            "n_positive": 83,
+            "prevalence": 0.002492,
+            "auprc": 0.023151,
+            "auroc": 0.885372,
+            "brier_score": 0.002519,
+            "f1_tuned": 0.077562,
+            "tuned_threshold": 0.07
+          },
+          "432867": {
+            "n_samples": 33304,
+            "n_positive": 112,
+            "prevalence": 0.003363,
+            "auprc": 0.010796,
+            "auroc": 0.81398,
+            "brier_score": 0.003447,
+            "f1_tuned": 0.02696,
+            "tuned_threshold": 0.01
+          },
+          "436096": {
+            "n_samples": 33304,
+            "n_positive": 281,
+            "prevalence": 0.008437,
+            "auprc": 0.468857,
+            "auroc": 0.957445,
+            "brier_score": 0.005649,
+            "f1_tuned": 0.594203,
+            "tuned_threshold": 0.28
+          },
+          "436940": {
+            "n_samples": 33304,
+            "n_positive": 48,
+            "prevalence": 0.001441,
+            "auprc": 0.33378,
+            "auroc": 0.994852,
+            "brier_score": 0.001028,
+            "f1_tuned": 0.534884,
+            "tuned_threshold": 0.01
+          },
+          "439777": {
+            "n_samples": 33304,
+            "n_positive": 293,
+            "prevalence": 0.008798,
+            "auprc": 0.077526,
+            "auroc": 0.84993,
+            "brier_score": 0.008471,
+            "f1_tuned": 0.180812,
+            "tuned_threshold": 0.1
+          },
+          "440086": {
+            "n_samples": 33304,
+            "n_positive": 14,
+            "prevalence": 0.00042,
+            "auprc": 0.021584,
+            "auroc": 0.974034,
+            "brier_score": 0.000417,
+            "f1_tuned": 0.076923,
+            "tuned_threshold": 0.02
+          },
+          "443614": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.058836,
+            "auroc": 0.957892,
+            "brier_score": 0.00093,
+            "f1_tuned": 0.107784,
+            "tuned_threshold": 0.04
+          },
+          "4029498": {
+            "n_samples": 33304,
+            "n_positive": 10,
+            "prevalence": 0.0003,
+            "auprc": 0.001191,
+            "auroc": 0.848437,
+            "brier_score": 0.000327,
+            "f1_tuned": 0.003306,
+            "tuned_threshold": 0.01
+          },
+          "4043241": {
+            "n_samples": 33304,
+            "n_positive": 29,
+            "prevalence": 0.000871,
+            "auprc": 0.013353,
+            "auroc": 0.858876,
+            "brier_score": 0.000898,
+            "f1_tuned": 0.090909,
+            "tuned_threshold": 0.17
+          },
+          "4051466": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.076689,
+            "auroc": 0.985312,
+            "brier_score": 0.001302,
+            "f1_tuned": 0.118919,
+            "tuned_threshold": 0.05
+          },
+          "4079749": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.002389,
+            "auroc": 0.901421,
+            "brier_score": 0.00033,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4079750": {
+            "n_samples": 33304,
+            "n_positive": 33,
+            "prevalence": 0.000991,
+            "auprc": 0.004457,
+            "auroc": 0.873304,
+            "brier_score": 0.000991,
+            "f1_tuned": 0.006987,
+            "tuned_threshold": 0.01
+          },
+          "4110591": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.00455,
+            "auroc": 0.907769,
+            "brier_score": 0.000798,
+            "f1_tuned": 0.009059,
+            "tuned_threshold": 0.01
+          },
+          "4115276": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.071656,
+            "auroc": 0.908172,
+            "brier_score": 0.004309,
+            "f1_tuned": 0.111732,
+            "tuned_threshold": 0.16
+          },
+          "4120314": {
+            "n_samples": 33304,
+            "n_positive": 42,
+            "prevalence": 0.001261,
+            "auprc": 0.380449,
+            "auroc": 0.993783,
+            "brier_score": 0.000843,
+            "f1_tuned": 0.56338,
+            "tuned_threshold": 0.02
+          },
+          "4129902": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.004513,
+            "auroc": 0.504032,
+            "brier_score": 0.001176,
+            "f1_tuned": 0.030691,
+            "tuned_threshold": 0.11
+          },
+          "4180790": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.012869,
+            "auroc": 0.819971,
+            "brier_score": 0.000643,
+            "f1_tuned": 0.068966,
+            "tuned_threshold": 0.32
+          },
+          "4214376": {
+            "n_samples": 33304,
+            "n_positive": 35,
+            "prevalence": 0.001051,
+            "auprc": 0.237332,
+            "auroc": 0.995088,
+            "brier_score": 0.00087,
+            "f1_tuned": 0.371429,
+            "tuned_threshold": 0.24
+          },
+          "4226121": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.013738,
+            "auroc": 0.943646,
+            "brier_score": 0.000338,
+            "f1_tuned": 0.04878,
+            "tuned_threshold": 0.07
+          },
+          "4229440": {
+            "n_samples": 33304,
+            "n_positive": 106,
+            "prevalence": 0.003183,
+            "auprc": 0.015413,
+            "auroc": 0.86746,
+            "brier_score": 0.00336,
+            "f1_tuned": 0.054591,
+            "tuned_threshold": 0.07
+          },
+          "4283893": {
+            "n_samples": 33304,
+            "n_positive": 120,
+            "prevalence": 0.003603,
+            "auprc": 0.004701,
+            "auroc": 0.61269,
+            "brier_score": 0.003624,
+            "f1_tuned": 0.009195,
+            "tuned_threshold": 0.01
+          },
+          "4285898": {
+            "n_samples": 33304,
+            "n_positive": 207,
+            "prevalence": 0.006215,
+            "auprc": 0.027187,
+            "auroc": 0.882943,
+            "brier_score": 0.006294,
+            "f1_tuned": 0.056645,
+            "tuned_threshold": 0.02
+          },
+          "4310703": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.074144,
+            "auroc": 0.907419,
+            "brier_score": 0.004314,
+            "f1_tuned": 0.113043,
+            "tuned_threshold": 0.14
+          },
+          "4311629": {
+            "n_samples": 33304,
+            "n_positive": 172,
+            "prevalence": 0.005165,
+            "auprc": 0.021665,
+            "auroc": 0.844893,
+            "brier_score": 0.005112,
+            "f1_tuned": 0.052055,
+            "tuned_threshold": 0.04
+          },
+          "37016354": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.036596,
+            "auroc": 0.98685,
+            "brier_score": 0.000559,
+            "f1_tuned": 0.081871,
+            "tuned_threshold": 0.03
+          },
+          "37017023": {
+            "n_samples": 33304,
+            "n_positive": 61,
+            "prevalence": 0.001832,
+            "auprc": 0.055693,
+            "auroc": 0.982757,
+            "brier_score": 0.001883,
+            "f1_tuned": 0.114198,
+            "tuned_threshold": 0.04
+          },
+          "37395648": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.005421,
+            "auroc": 0.912401,
+            "brier_score": 0.00079,
+            "f1_tuned": 0.022315,
+            "tuned_threshold": 0.02
+          },
+          "43530652": {
+            "n_samples": 33304,
+            "n_positive": 295,
+            "prevalence": 0.008858,
+            "auprc": 0.35726,
+            "auroc": 0.936701,
+            "brier_score": 0.006501,
+            "f1_tuned": 0.486679,
+            "tuned_threshold": 0.31
+          }
+        }
+      }
+    },
+    "calibrated_stack": {
+      "validation": {
+        "macro_metrics": {
+          "macro_auprc": 0.095003,
+          "macro_auroc": 0.892676,
+          "macro_brier_score": 0.002957,
+          "macro_f1": 0.142111,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.127564,
+          "medium_prevalence_macro_auprc": 0.154801,
+          "low_prevalence_macro_auprc": 0.023699,
+          "tier_counts": {
+            "high": 13,
+            "medium": 12,
+            "low": 16
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.289299,
+          "recall_at_3": 0.669841,
+          "map_at_3": 0.568841,
+          "precision_at_5": 0.206075,
+          "recall_at_5": 0.793677,
+          "map_at_5": 0.601842,
+          "precision_at_10": 0.122283,
+          "recall_at_10": 0.940638,
+          "map_at_10": 0.625505
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 73862,
+            "n_positive": 51,
+            "prevalence": 0.00069,
+            "auprc": 0.004272,
+            "auroc": 0.877622,
+            "brier_score": 0.000688,
+            "f1_tuned": 0.026316,
+            "tuned_threshold": 0.01
+          },
+          "79740": {
+            "n_samples": 73862,
+            "n_positive": 44,
+            "prevalence": 0.000596,
+            "auprc": 0.010235,
+            "auroc": 0.876835,
+            "brier_score": 0.000591,
+            "f1_tuned": 0.040816,
+            "tuned_threshold": 0.02
+          },
+          "80502": {
+            "n_samples": 73862,
+            "n_positive": 225,
+            "prevalence": 0.003046,
+            "auprc": 0.092982,
+            "auroc": 0.965799,
+            "brier_score": 0.002845,
+            "f1_tuned": 0.146341,
+            "tuned_threshold": 0.07
+          },
+          "192279": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.036129,
+            "auroc": 0.959676,
+            "brier_score": 0.000934,
+            "f1_tuned": 0.07598,
+            "tuned_threshold": 0.03
+          },
+          "200970": {
+            "n_samples": 73862,
+            "n_positive": 409,
+            "prevalence": 0.005537,
+            "auprc": 0.052606,
+            "auroc": 0.935848,
+            "brier_score": 0.005308,
+            "f1_tuned": 0.091892,
+            "tuned_threshold": 0.05
+          },
+          "201826": {
+            "n_samples": 73862,
+            "n_positive": 71,
+            "prevalence": 0.000961,
+            "auprc": 0.00886,
+            "auroc": 0.895739,
+            "brier_score": 0.000955,
+            "f1_tuned": 0.031283,
+            "tuned_threshold": 0.01
+          },
+          "257012": {
+            "n_samples": 73862,
+            "n_positive": 445,
+            "prevalence": 0.006025,
+            "auprc": 0.074088,
+            "auroc": 0.706642,
+            "brier_score": 0.005726,
+            "f1_tuned": 0.160748,
+            "tuned_threshold": 0.03
+          },
+          "258780": {
+            "n_samples": 73862,
+            "n_positive": 64,
+            "prevalence": 0.000866,
+            "auprc": 0.001073,
+            "auroc": 0.594115,
+            "brier_score": 0.000866,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "316866": {
+            "n_samples": 73862,
+            "n_positive": 279,
+            "prevalence": 0.003777,
+            "auprc": 0.198998,
+            "auroc": 0.983077,
+            "brier_score": 0.003228,
+            "f1_tuned": 0.278396,
+            "tuned_threshold": 0.13
+          },
+          "317576": {
+            "n_samples": 73862,
+            "n_positive": 367,
+            "prevalence": 0.004969,
+            "auprc": 0.012026,
+            "auroc": 0.682034,
+            "brier_score": 0.004926,
+            "f1_tuned": 0.043497,
+            "tuned_threshold": 0.02
+          },
+          "321042": {
+            "n_samples": 73862,
+            "n_positive": 57,
+            "prevalence": 0.000772,
+            "auprc": 0.002604,
+            "auroc": 0.757162,
+            "brier_score": 0.00077,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "378419": {
+            "n_samples": 73862,
+            "n_positive": 566,
+            "prevalence": 0.007663,
+            "auprc": 0.080713,
+            "auroc": 0.924179,
+            "brier_score": 0.007197,
+            "f1_tuned": 0.137592,
+            "tuned_threshold": 0.06
+          },
+          "380378": {
+            "n_samples": 73862,
+            "n_positive": 58,
+            "prevalence": 0.000785,
+            "auprc": 0.094482,
+            "auroc": 0.946822,
+            "brier_score": 0.000721,
+            "f1_tuned": 0.183432,
+            "tuned_threshold": 0.08
+          },
+          "381316": {
+            "n_samples": 73862,
+            "n_positive": 303,
+            "prevalence": 0.004102,
+            "auprc": 0.099056,
+            "auroc": 0.860796,
+            "brier_score": 0.003814,
+            "f1_tuned": 0.198758,
+            "tuned_threshold": 0.04
+          },
+          "432867": {
+            "n_samples": 73862,
+            "n_positive": 309,
+            "prevalence": 0.004183,
+            "auprc": 0.010831,
+            "auroc": 0.773217,
+            "brier_score": 0.004144,
+            "f1_tuned": 0.021618,
+            "tuned_threshold": 0.01
+          },
+          "436096": {
+            "n_samples": 73862,
+            "n_positive": 871,
+            "prevalence": 0.011792,
+            "auprc": 0.42,
+            "auroc": 0.941346,
+            "brier_score": 0.008117,
+            "f1_tuned": 0.517118,
+            "tuned_threshold": 0.26
+          },
+          "436940": {
+            "n_samples": 73862,
+            "n_positive": 90,
+            "prevalence": 0.001218,
+            "auprc": 0.402526,
+            "auroc": 0.973694,
+            "brier_score": 0.000802,
+            "f1_tuned": 0.492401,
+            "tuned_threshold": 0.01
+          },
+          "439777": {
+            "n_samples": 73862,
+            "n_positive": 592,
+            "prevalence": 0.008015,
+            "auprc": 0.078323,
+            "auroc": 0.864745,
+            "brier_score": 0.007575,
+            "f1_tuned": 0.183099,
+            "tuned_threshold": 0.09
+          },
+          "440086": {
+            "n_samples": 73862,
+            "n_positive": 15,
+            "prevalence": 0.000203,
+            "auprc": 0.007912,
+            "auroc": 0.984029,
+            "brier_score": 0.000202,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "443614": {
+            "n_samples": 73862,
+            "n_positive": 69,
+            "prevalence": 0.000934,
+            "auprc": 0.033314,
+            "auroc": 0.950298,
+            "brier_score": 0.000908,
+            "f1_tuned": 0.087432,
+            "tuned_threshold": 0.05
+          },
+          "4029498": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.028388,
+            "auroc": 0.845906,
+            "brier_score": 0.000727,
+            "f1_tuned": 0.063158,
+            "tuned_threshold": 0.02
+          },
+          "4043241": {
+            "n_samples": 73862,
+            "n_positive": 30,
+            "prevalence": 0.000406,
+            "auprc": 0.002586,
+            "auroc": 0.903634,
+            "brier_score": 0.000405,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4051466": {
+            "n_samples": 73862,
+            "n_positive": 26,
+            "prevalence": 0.000352,
+            "auprc": 0.042862,
+            "auroc": 0.994253,
+            "brier_score": 0.000341,
+            "f1_tuned": 0.093458,
+            "tuned_threshold": 0.03
+          },
+          "4079749": {
+            "n_samples": 73862,
+            "n_positive": 29,
+            "prevalence": 0.000393,
+            "auprc": 0.002472,
+            "auroc": 0.912417,
+            "brier_score": 0.000392,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4079750": {
+            "n_samples": 73862,
+            "n_positive": 139,
+            "prevalence": 0.001882,
+            "auprc": 0.005994,
+            "auroc": 0.832344,
+            "brier_score": 0.001872,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4110591": {
+            "n_samples": 73862,
+            "n_positive": 87,
+            "prevalence": 0.001178,
+            "auprc": 0.024097,
+            "auroc": 0.91761,
+            "brier_score": 0.001155,
+            "f1_tuned": 0.050388,
+            "tuned_threshold": 0.01
+          },
+          "4115276": {
+            "n_samples": 73862,
+            "n_positive": 462,
+            "prevalence": 0.006255,
+            "auprc": 0.174201,
+            "auroc": 0.95393,
+            "brier_score": 0.005516,
+            "f1_tuned": 0.286039,
+            "tuned_threshold": 0.11
+          },
+          "4120314": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.540467,
+            "auroc": 0.979224,
+            "brier_score": 0.000647,
+            "f1_tuned": 0.617188,
+            "tuned_threshold": 0.01
+          },
+          "4129902": {
+            "n_samples": 73862,
+            "n_positive": 457,
+            "prevalence": 0.006187,
+            "auprc": 0.07973,
+            "auroc": 0.940659,
+            "brier_score": 0.005805,
+            "f1_tuned": 0.125,
+            "tuned_threshold": 0.06
+          },
+          "4180790": {
+            "n_samples": 73862,
+            "n_positive": 46,
+            "prevalence": 0.000623,
+            "auprc": 0.025551,
+            "auroc": 0.968076,
+            "brier_score": 0.00061,
+            "f1_tuned": 0.046925,
+            "tuned_threshold": 0.01
+          },
+          "4214376": {
+            "n_samples": 73862,
+            "n_positive": 79,
+            "prevalence": 0.00107,
+            "auprc": 0.347175,
+            "auroc": 0.979141,
+            "brier_score": 0.000794,
+            "f1_tuned": 0.443114,
+            "tuned_threshold": 0.21
+          },
+          "4226121": {
+            "n_samples": 73862,
+            "n_positive": 53,
+            "prevalence": 0.000718,
+            "auprc": 0.032671,
+            "auroc": 0.979348,
+            "brier_score": 0.000699,
+            "f1_tuned": 0.064935,
+            "tuned_threshold": 0.04
+          },
+          "4229440": {
+            "n_samples": 73862,
+            "n_positive": 496,
+            "prevalence": 0.006715,
+            "auprc": 0.032331,
+            "auroc": 0.864912,
+            "brier_score": 0.006554,
+            "f1_tuned": 0.0654,
+            "tuned_threshold": 0.03
+          },
+          "4283893": {
+            "n_samples": 73862,
+            "n_positive": 461,
+            "prevalence": 0.006241,
+            "auprc": 0.007844,
+            "auroc": 0.539699,
+            "brier_score": 0.006198,
+            "f1_tuned": 0.021266,
+            "tuned_threshold": 0.01
+          },
+          "4285898": {
+            "n_samples": 73862,
+            "n_positive": 505,
+            "prevalence": 0.006837,
+            "auprc": 0.039352,
+            "auroc": 0.904863,
+            "brier_score": 0.006622,
+            "f1_tuned": 0.078172,
+            "tuned_threshold": 0.04
+          },
+          "4310703": {
+            "n_samples": 73862,
+            "n_positive": 467,
+            "prevalence": 0.006323,
+            "auprc": 0.17015,
+            "auroc": 0.953586,
+            "brier_score": 0.005606,
+            "f1_tuned": 0.274396,
+            "tuned_threshold": 0.13
+          },
+          "4311629": {
+            "n_samples": 73862,
+            "n_positive": 440,
+            "prevalence": 0.005957,
+            "auprc": 0.022908,
+            "auroc": 0.858989,
+            "brier_score": 0.005843,
+            "f1_tuned": 0.046182,
+            "tuned_threshold": 0.02
+          },
+          "37016354": {
+            "n_samples": 73862,
+            "n_positive": 55,
+            "prevalence": 0.000745,
+            "auprc": 0.045778,
+            "auroc": 0.970293,
+            "brier_score": 0.00072,
+            "f1_tuned": 0.125,
+            "tuned_threshold": 0.07
+          },
+          "37017023": {
+            "n_samples": 73862,
+            "n_positive": 103,
+            "prevalence": 0.001394,
+            "auprc": 0.109148,
+            "auroc": 0.985473,
+            "brier_score": 0.001278,
+            "f1_tuned": 0.152019,
+            "tuned_threshold": 0.05
+          },
+          "37395648": {
+            "n_samples": 73862,
+            "n_positive": 88,
+            "prevalence": 0.001191,
+            "auprc": 0.014307,
+            "auroc": 0.922693,
+            "brier_score": 0.00118,
+            "f1_tuned": 0.049438,
+            "tuned_threshold": 0.02
+          },
+          "43530652": {
+            "n_samples": 73862,
+            "n_positive": 852,
+            "prevalence": 0.011535,
+            "auprc": 0.426089,
+            "auroc": 0.938986,
+            "brier_score": 0.007965,
+            "f1_tuned": 0.507772,
+            "tuned_threshold": 0.26
+          }
+        }
+      },
+      "test": {
+        "macro_metrics": {
+          "macro_auprc": 0.067984,
+          "macro_auroc": 0.868129,
+          "macro_brier_score": 0.002304,
+          "macro_f1": 0.11398,
+          "n_targets": 41
+        },
+        "prevalence_tier_auprc": {
+          "high_prevalence_macro_auprc": 0.164564,
+          "medium_prevalence_macro_auprc": 0.084489,
+          "low_prevalence_macro_auprc": 0.015753,
+          "tier_counts": {
+            "high": 7,
+            "medium": 16,
+            "low": 18
+          }
+        },
+        "ranking_metrics": {
+          "precision_at_3": 0.276055,
+          "recall_at_3": 0.685095,
+          "map_at_3": 0.586934,
+          "precision_at_5": 0.192828,
+          "recall_at_5": 0.777967,
+          "map_at_5": 0.613417,
+          "precision_at_10": 0.110796,
+          "recall_at_10": 0.889092,
+          "map_at_10": 0.631874
+        },
+        "per_target": {
+          "75036": {
+            "n_samples": 33304,
+            "n_positive": 7,
+            "prevalence": 0.00021,
+            "auprc": 0.001652,
+            "auroc": 0.89416,
+            "brier_score": 0.000211,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "79740": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.011928,
+            "auroc": 0.87354,
+            "brier_score": 0.001344,
+            "f1_tuned": 0.050992,
+            "tuned_threshold": 0.01
+          },
+          "80502": {
+            "n_samples": 33304,
+            "n_positive": 44,
+            "prevalence": 0.001321,
+            "auprc": 0.043436,
+            "auroc": 0.970405,
+            "brier_score": 0.001295,
+            "f1_tuned": 0.10101,
+            "tuned_threshold": 0.05
+          },
+          "192279": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.052716,
+            "auroc": 0.930797,
+            "brier_score": 0.000924,
+            "f1_tuned": 0.102273,
+            "tuned_threshold": 0.04
+          },
+          "200970": {
+            "n_samples": 33304,
+            "n_positive": 23,
+            "prevalence": 0.000691,
+            "auprc": 0.003534,
+            "auroc": 0.891451,
+            "brier_score": 0.000837,
+            "f1_tuned": 0.006818,
+            "tuned_threshold": 0.04
+          },
+          "201826": {
+            "n_samples": 33304,
+            "n_positive": 36,
+            "prevalence": 0.001081,
+            "auprc": 0.003975,
+            "auroc": 0.755361,
+            "brier_score": 0.001079,
+            "f1_tuned": 0.013841,
+            "tuned_threshold": 0.01
+          },
+          "257012": {
+            "n_samples": 33304,
+            "n_positive": 156,
+            "prevalence": 0.004684,
+            "auprc": 0.083706,
+            "auroc": 0.717276,
+            "brier_score": 0.004538,
+            "f1_tuned": 0.164103,
+            "tuned_threshold": 0.13
+          },
+          "258780": {
+            "n_samples": 33304,
+            "n_positive": 18,
+            "prevalence": 0.00054,
+            "auprc": 0.000562,
+            "auroc": 0.394444,
+            "brier_score": 0.000541,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "316866": {
+            "n_samples": 33304,
+            "n_positive": 196,
+            "prevalence": 0.005885,
+            "auprc": 0.146274,
+            "auroc": 0.966587,
+            "brier_score": 0.0053,
+            "f1_tuned": 0.272048,
+            "tuned_threshold": 0.13
+          },
+          "317576": {
+            "n_samples": 33304,
+            "n_positive": 63,
+            "prevalence": 0.001892,
+            "auprc": 0.003961,
+            "auroc": 0.714699,
+            "brier_score": 0.001902,
+            "f1_tuned": 0.01241,
+            "tuned_threshold": 0.01
+          },
+          "321042": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.001634,
+            "auroc": 0.713202,
+            "brier_score": 0.00075,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "378419": {
+            "n_samples": 33304,
+            "n_positive": 279,
+            "prevalence": 0.008377,
+            "auprc": 0.092031,
+            "auroc": 0.922087,
+            "brier_score": 0.008153,
+            "f1_tuned": 0.157303,
+            "tuned_threshold": 0.12
+          },
+          "380378": {
+            "n_samples": 33304,
+            "n_positive": 9,
+            "prevalence": 0.00027,
+            "auprc": 0.069709,
+            "auroc": 0.853104,
+            "brier_score": 0.00035,
+            "f1_tuned": 0.103896,
+            "tuned_threshold": 0.08
+          },
+          "381316": {
+            "n_samples": 33304,
+            "n_positive": 83,
+            "prevalence": 0.002492,
+            "auprc": 0.017202,
+            "auroc": 0.884662,
+            "brier_score": 0.002477,
+            "f1_tuned": 0.044248,
+            "tuned_threshold": 0.02
+          },
+          "432867": {
+            "n_samples": 33304,
+            "n_positive": 112,
+            "prevalence": 0.003363,
+            "auprc": 0.011805,
+            "auroc": 0.834869,
+            "brier_score": 0.003332,
+            "f1_tuned": 0.021186,
+            "tuned_threshold": 0.01
+          },
+          "436096": {
+            "n_samples": 33304,
+            "n_positive": 281,
+            "prevalence": 0.008437,
+            "auprc": 0.463616,
+            "auroc": 0.959392,
+            "brier_score": 0.005511,
+            "f1_tuned": 0.588869,
+            "tuned_threshold": 0.26
+          },
+          "436940": {
+            "n_samples": 33304,
+            "n_positive": 48,
+            "prevalence": 0.001441,
+            "auprc": 0.336663,
+            "auroc": 0.986305,
+            "brier_score": 0.001015,
+            "f1_tuned": 0.538012,
+            "tuned_threshold": 0.22
+          },
+          "439777": {
+            "n_samples": 33304,
+            "n_positive": 293,
+            "prevalence": 0.008798,
+            "auprc": 0.068776,
+            "auroc": 0.84852,
+            "brier_score": 0.008396,
+            "f1_tuned": 0.184116,
+            "tuned_threshold": 0.08
+          },
+          "440086": {
+            "n_samples": 33304,
+            "n_positive": 14,
+            "prevalence": 0.00042,
+            "auprc": 0.008818,
+            "auroc": 0.969565,
+            "brier_score": 0.000418,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "443614": {
+            "n_samples": 33304,
+            "n_positive": 32,
+            "prevalence": 0.000961,
+            "auprc": 0.05421,
+            "auroc": 0.950418,
+            "brier_score": 0.000923,
+            "f1_tuned": 0.115385,
+            "tuned_threshold": 0.03
+          },
+          "4029498": {
+            "n_samples": 33304,
+            "n_positive": 10,
+            "prevalence": 0.0003,
+            "auprc": 0.001097,
+            "auroc": 0.851904,
+            "brier_score": 0.000912,
+            "f1_tuned": 0.00221,
+            "tuned_threshold": 0.01
+          },
+          "4043241": {
+            "n_samples": 33304,
+            "n_positive": 29,
+            "prevalence": 0.000871,
+            "auprc": 0.004503,
+            "auroc": 0.850049,
+            "brier_score": 0.000869,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4051466": {
+            "n_samples": 33304,
+            "n_positive": 45,
+            "prevalence": 0.001351,
+            "auprc": 0.061822,
+            "auroc": 0.985796,
+            "brier_score": 0.001296,
+            "f1_tuned": 0.103448,
+            "tuned_threshold": 0.04
+          },
+          "4079749": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.001453,
+            "auroc": 0.881108,
+            "brier_score": 0.00033,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4079750": {
+            "n_samples": 33304,
+            "n_positive": 33,
+            "prevalence": 0.000991,
+            "auprc": 0.003754,
+            "auroc": 0.859159,
+            "brier_score": 0.000989,
+            "f1_tuned": 0.0,
+            "tuned_threshold": 0.5
+          },
+          "4110591": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.004098,
+            "auroc": 0.898185,
+            "brier_score": 0.000817,
+            "f1_tuned": 0.004728,
+            "tuned_threshold": 0.02
+          },
+          "4115276": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.064099,
+            "auroc": 0.90933,
+            "brier_score": 0.004184,
+            "f1_tuned": 0.111732,
+            "tuned_threshold": 0.28
+          },
+          "4120314": {
+            "n_samples": 33304,
+            "n_positive": 42,
+            "prevalence": 0.001261,
+            "auprc": 0.347731,
+            "auroc": 0.988061,
+            "brier_score": 0.000882,
+            "f1_tuned": 0.56338,
+            "tuned_threshold": 0.01
+          },
+          "4129902": {
+            "n_samples": 33304,
+            "n_positive": 25,
+            "prevalence": 0.000751,
+            "auprc": 0.003931,
+            "auroc": 0.745011,
+            "brier_score": 0.000937,
+            "f1_tuned": 0.017143,
+            "tuned_threshold": 0.06
+          },
+          "4180790": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.030142,
+            "auroc": 0.775521,
+            "brier_score": 0.000576,
+            "f1_tuned": 0.0625,
+            "tuned_threshold": 0.03
+          },
+          "4214376": {
+            "n_samples": 33304,
+            "n_positive": 35,
+            "prevalence": 0.001051,
+            "auprc": 0.236534,
+            "auroc": 0.993661,
+            "brier_score": 0.000915,
+            "f1_tuned": 0.393939,
+            "tuned_threshold": 0.15
+          },
+          "4226121": {
+            "n_samples": 33304,
+            "n_positive": 11,
+            "prevalence": 0.00033,
+            "auprc": 0.007931,
+            "auroc": 0.946944,
+            "brier_score": 0.000334,
+            "f1_tuned": 0.022181,
+            "tuned_threshold": 0.01
+          },
+          "4229440": {
+            "n_samples": 33304,
+            "n_positive": 106,
+            "prevalence": 0.003183,
+            "auprc": 0.01567,
+            "auroc": 0.874099,
+            "brier_score": 0.003196,
+            "f1_tuned": 0.028581,
+            "tuned_threshold": 0.03
+          },
+          "4283893": {
+            "n_samples": 33304,
+            "n_positive": 120,
+            "prevalence": 0.003603,
+            "auprc": 0.004677,
+            "auroc": 0.595833,
+            "brier_score": 0.003602,
+            "f1_tuned": 0.004489,
+            "tuned_threshold": 0.01
+          },
+          "4285898": {
+            "n_samples": 33304,
+            "n_positive": 207,
+            "prevalence": 0.006215,
+            "auprc": 0.02753,
+            "auroc": 0.855081,
+            "brier_score": 0.006083,
+            "f1_tuned": 0.061271,
+            "tuned_threshold": 0.02
+          },
+          "4310703": {
+            "n_samples": 33304,
+            "n_positive": 136,
+            "prevalence": 0.004084,
+            "auprc": 0.059505,
+            "auroc": 0.906078,
+            "brier_score": 0.004186,
+            "f1_tuned": 0.114286,
+            "tuned_threshold": 0.24
+          },
+          "4311629": {
+            "n_samples": 33304,
+            "n_positive": 172,
+            "prevalence": 0.005165,
+            "auprc": 0.018814,
+            "auroc": 0.843989,
+            "brier_score": 0.005085,
+            "f1_tuned": 0.035835,
+            "tuned_threshold": 0.02
+          },
+          "37016354": {
+            "n_samples": 33304,
+            "n_positive": 19,
+            "prevalence": 0.000571,
+            "auprc": 0.02918,
+            "auroc": 0.98119,
+            "brier_score": 0.000567,
+            "f1_tuned": 0.083916,
+            "tuned_threshold": 0.02
+          },
+          "37017023": {
+            "n_samples": 33304,
+            "n_positive": 61,
+            "prevalence": 0.001832,
+            "auprc": 0.049114,
+            "auroc": 0.980831,
+            "brier_score": 0.001828,
+            "f1_tuned": 0.089445,
+            "tuned_threshold": 0.03
+          },
+          "37395648": {
+            "n_samples": 33304,
+            "n_positive": 26,
+            "prevalence": 0.000781,
+            "auprc": 0.004622,
+            "auroc": 0.907,
+            "brier_score": 0.000786,
+            "f1_tuned": 0.010899,
+            "tuned_threshold": 0.01
+          },
+          "43530652": {
+            "n_samples": 33304,
+            "n_positive": 295,
+            "prevalence": 0.008858,
+            "auprc": 0.334909,
+            "auroc": 0.933622,
+            "brier_score": 0.006812,
+            "f1_tuned": 0.486667,
+            "tuned_threshold": 0.21
+          }
+        }
+      }
+    }
+  },
+  "best_single_vs_stack": {
+    "75036": {
+      "concept_id": 75036,
+      "disease_name": "Localized Osteoarthritis of Hand",
+      "category": "Musculoskeletal",
+      "lr_auprc": 0.002632,
+      "rf_auprc": 0.0007,
+      "xgb_auprc": 0.001159,
+      "best_base_model": "Logistic Regression",
+      "best_base_auprc": 0.002632,
+      "stack_auprc": 0.001223,
+      "stack_delta": -0.001409,
+      "stack_wins": false
+    },
+    "79740": {
+      "concept_id": 79740,
+      "disease_name": "Primary Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "lr_auprc": 0.012515,
+      "rf_auprc": 0.01325,
+      "xgb_auprc": 0.011407,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.01325,
+      "stack_auprc": 0.012606,
+      "stack_delta": -0.000644,
+      "stack_wins": false
+    },
+    "80502": {
+      "concept_id": 80502,
+      "disease_name": "Osteoporosis",
+      "category": "Musculoskeletal",
+      "lr_auprc": 0.007664,
+      "rf_auprc": 0.045026,
+      "xgb_auprc": 0.046549,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.046549,
+      "stack_auprc": 0.04938,
+      "stack_delta": 0.002831,
+      "stack_wins": true
+    },
+    "192279": {
+      "concept_id": 192279,
+      "disease_name": "Congestive Heart Failure",
+      "category": "Cardiometabolic",
+      "lr_auprc": 0.053464,
+      "rf_auprc": 0.065513,
+      "xgb_auprc": 0.055484,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.065513,
+      "stack_auprc": 0.05826,
+      "stack_delta": -0.007253,
+      "stack_wins": false
+    },
+    "200970": {
+      "concept_id": 200970,
+      "disease_name": "Carcinoma in situ of Prostate",
+      "category": "Oncology / Pre-Malignant",
+      "lr_auprc": 0.005894,
+      "rf_auprc": 0.004722,
+      "xgb_auprc": 0.004516,
+      "best_base_model": "Logistic Regression",
+      "best_base_auprc": 0.005894,
+      "stack_auprc": 0.003647,
+      "stack_delta": -0.002247,
+      "stack_wins": false
+    },
+    "201826": {
+      "concept_id": 201826,
+      "disease_name": "Type 2 Diabetes Mellitus",
+      "category": "Cardiometabolic",
+      "lr_auprc": 0.00322,
+      "rf_auprc": 0.003977,
+      "xgb_auprc": 0.018128,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.018128,
+      "stack_auprc": 0.006041,
+      "stack_delta": -0.012087,
+      "stack_wins": false
+    },
+    "257012": {
+      "concept_id": 257012,
+      "disease_name": "Chronic Sinusitis",
+      "category": "Respiratory / Allergic",
+      "lr_auprc": 0.040533,
+      "rf_auprc": 0.070433,
+      "xgb_auprc": 0.103534,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.103534,
+      "stack_auprc": 0.07696,
+      "stack_delta": -0.026574,
+      "stack_wins": false
+    },
+    "258780": {
+      "concept_id": 258780,
+      "disease_name": "Chronic Obstructive Bronchitis (COPD)",
+      "category": "Respiratory / Allergic",
+      "lr_auprc": 0.001548,
+      "rf_auprc": 0.000442,
+      "xgb_auprc": 0.000456,
+      "best_base_model": "Logistic Regression",
+      "best_base_auprc": 0.001548,
+      "stack_auprc": 0.000529,
+      "stack_delta": -0.001019,
+      "stack_wins": false
+    },
+    "316866": {
+      "concept_id": 316866,
+      "disease_name": "Essential Hypertension",
+      "category": "Cardiometabolic",
+      "lr_auprc": 0.027735,
+      "rf_auprc": 0.137513,
+      "xgb_auprc": 0.172108,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.172108,
+      "stack_auprc": 0.148792,
+      "stack_delta": -0.023316,
+      "stack_wins": false
+    },
+    "317576": {
+      "concept_id": 317576,
+      "disease_name": "Coronary Arteriosclerosis",
+      "category": "Cardiometabolic",
+      "lr_auprc": 0.006945,
+      "rf_auprc": 0.008277,
+      "xgb_auprc": 0.005825,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.008277,
+      "stack_auprc": 0.004365,
+      "stack_delta": -0.003912,
+      "stack_wins": false
+    },
+    "321042": {
+      "concept_id": 321042,
+      "disease_name": "Cardiac Arrest",
+      "category": "Cardiometabolic",
+      "lr_auprc": 0.001966,
+      "rf_auprc": 0.005302,
+      "xgb_auprc": 0.002214,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.005302,
+      "stack_auprc": 0.002458,
+      "stack_delta": -0.002844,
+      "stack_wins": false
+    },
+    "378419": {
+      "concept_id": 378419,
+      "disease_name": "Alzheimer's Disease",
+      "category": "Neurological / Mental Health",
+      "lr_auprc": 0.121582,
+      "rf_auprc": 0.17718,
+      "xgb_auprc": 0.134507,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.17718,
+      "stack_auprc": 0.105027,
+      "stack_delta": -0.072153,
+      "stack_wins": false
+    },
+    "380378": {
+      "concept_id": 380378,
+      "disease_name": "Epilepsy / Seizure Disorder",
+      "category": "Neurological / Mental Health",
+      "lr_auprc": 0.02817,
+      "rf_auprc": 0.079197,
+      "xgb_auprc": 0.066349,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.079197,
+      "stack_auprc": 0.100818,
+      "stack_delta": 0.021621,
+      "stack_wins": true
+    },
+    "381316": {
+      "concept_id": 381316,
+      "disease_name": "Stroke (Cerebrovascular Accident)",
+      "category": "Neurological / Mental Health",
+      "lr_auprc": 0.055055,
+      "rf_auprc": 0.017843,
+      "xgb_auprc": 0.023725,
+      "best_base_model": "Logistic Regression",
+      "best_base_auprc": 0.055055,
+      "stack_auprc": 0.023151,
+      "stack_delta": -0.031904,
+      "stack_wins": false
+    },
+    "432867": {
+      "concept_id": 432867,
+      "disease_name": "Hyperlipidemia",
+      "category": "Cardiometabolic",
+      "lr_auprc": 0.0102,
+      "rf_auprc": 0.012668,
+      "xgb_auprc": 0.010879,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.012668,
+      "stack_auprc": 0.010796,
+      "stack_delta": -0.001872,
+      "stack_wins": false
+    },
+    "436096": {
+      "concept_id": 436096,
+      "disease_name": "Chronic Pain",
+      "category": "Musculoskeletal",
+      "lr_auprc": 0.242081,
+      "rf_auprc": 0.426827,
+      "xgb_auprc": 0.478087,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.478087,
+      "stack_auprc": 0.468857,
+      "stack_delta": -0.00923,
+      "stack_wins": false
+    },
+    "436940": {
+      "concept_id": 436940,
+      "disease_name": "Metabolic Syndrome X",
+      "category": "Cardiometabolic",
+      "lr_auprc": 0.30995,
+      "rf_auprc": 0.35963,
+      "xgb_auprc": 0.436058,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.436058,
+      "stack_auprc": 0.33378,
+      "stack_delta": -0.102278,
+      "stack_wins": false
+    },
+    "439777": {
+      "concept_id": 439777,
+      "disease_name": "Anemia",
+      "category": "Hematology",
+      "lr_auprc": 0.042018,
+      "rf_auprc": 0.077612,
+      "xgb_auprc": 0.080176,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.080176,
+      "stack_auprc": 0.077526,
+      "stack_delta": -0.00265,
+      "stack_wins": false
+    },
+    "440086": {
+      "concept_id": 440086,
+      "disease_name": "Childhood ADHD",
+      "category": "Neurological / Mental Health",
+      "lr_auprc": 0.00349,
+      "rf_auprc": 0.009272,
+      "xgb_auprc": 0.019282,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.019282,
+      "stack_auprc": 0.021584,
+      "stack_delta": 0.002302,
+      "stack_wins": true
+    },
+    "443614": {
+      "concept_id": 443614,
+      "disease_name": "Chronic Kidney Disease Stage 1",
+      "category": "Renal",
+      "lr_auprc": 0.055407,
+      "rf_auprc": 0.063637,
+      "xgb_auprc": 0.056257,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.063637,
+      "stack_auprc": 0.058836,
+      "stack_delta": -0.004801,
+      "stack_wins": false
+    },
+    "4029498": {
+      "concept_id": 4029498,
+      "disease_name": "Seizure Disorder",
+      "category": "Neurological / Mental Health",
+      "lr_auprc": 0.001761,
+      "rf_auprc": 0.0011,
+      "xgb_auprc": 0.001092,
+      "best_base_model": "Logistic Regression",
+      "best_base_auprc": 0.001761,
+      "stack_auprc": 0.001191,
+      "stack_delta": -0.00057,
+      "stack_wins": false
+    },
+    "4043241": {
+      "concept_id": 4043241,
+      "disease_name": "Familial Alzheimer's Disease",
+      "category": "Neurological / Mental Health",
+      "lr_auprc": 0.002827,
+      "rf_auprc": 0.018037,
+      "xgb_auprc": 0.011738,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.018037,
+      "stack_auprc": 0.013353,
+      "stack_delta": -0.004684,
+      "stack_wins": false
+    },
+    "4051466": {
+      "concept_id": 4051466,
+      "disease_name": "Childhood Asthma",
+      "category": "Respiratory / Allergic",
+      "lr_auprc": 0.059065,
+      "rf_auprc": 0.051768,
+      "xgb_auprc": 0.060742,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.060742,
+      "stack_auprc": 0.076689,
+      "stack_delta": 0.015947,
+      "stack_wins": true
+    },
+    "4079749": {
+      "concept_id": 4079749,
+      "disease_name": "Osteoarthritis of Hip",
+      "category": "Musculoskeletal",
+      "lr_auprc": 0.00257,
+      "rf_auprc": 0.00716,
+      "xgb_auprc": 0.001762,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.00716,
+      "stack_auprc": 0.002389,
+      "stack_delta": -0.004771,
+      "stack_wins": false
+    },
+    "4079750": {
+      "concept_id": 4079750,
+      "disease_name": "Osteoarthritis of Knee",
+      "category": "Musculoskeletal",
+      "lr_auprc": 0.003696,
+      "rf_auprc": 0.013093,
+      "xgb_auprc": 0.005612,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.013093,
+      "stack_auprc": 0.004457,
+      "stack_delta": -0.008636,
+      "stack_wins": false
+    },
+    "4110591": {
+      "concept_id": 4110591,
+      "disease_name": "Small Cell Carcinoma of Lung",
+      "category": "Oncology / Pre-Malignant",
+      "lr_auprc": 0.004955,
+      "rf_auprc": 0.004279,
+      "xgb_auprc": 0.006115,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.006115,
+      "stack_auprc": 0.00455,
+      "stack_delta": -0.001565,
+      "stack_wins": false
+    },
+    "4115276": {
+      "concept_id": 4115276,
+      "disease_name": "Non-Small Cell Lung Cancer",
+      "category": "Oncology / Pre-Malignant",
+      "lr_auprc": 0.043128,
+      "rf_auprc": 0.083383,
+      "xgb_auprc": 0.065705,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.083383,
+      "stack_auprc": 0.071656,
+      "stack_delta": -0.011727,
+      "stack_wins": false
+    },
+    "4120314": {
+      "concept_id": 4120314,
+      "disease_name": "Hypertriglyceridemia",
+      "category": "Cardiometabolic",
+      "lr_auprc": 0.308487,
+      "rf_auprc": 0.39873,
+      "xgb_auprc": 0.464547,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.464547,
+      "stack_auprc": 0.380449,
+      "stack_delta": -0.084098,
+      "stack_wins": false
+    },
+    "4129902": {
+      "concept_id": 4129902,
+      "disease_name": "Neoplasm of Prostate",
+      "category": "Oncology / Pre-Malignant",
+      "lr_auprc": 0.007624,
+      "rf_auprc": 0.006505,
+      "xgb_auprc": 0.006648,
+      "best_base_model": "Logistic Regression",
+      "best_base_auprc": 0.007624,
+      "stack_auprc": 0.004513,
+      "stack_delta": -0.003111,
+      "stack_wins": false
+    },
+    "4180790": {
+      "concept_id": 4180790,
+      "disease_name": "Malignant Neoplasm of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "lr_auprc": 0.004447,
+      "rf_auprc": 0.00685,
+      "xgb_auprc": 0.010932,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.010932,
+      "stack_auprc": 0.012869,
+      "stack_delta": 0.001937,
+      "stack_wins": true
+    },
+    "4214376": {
+      "concept_id": 4214376,
+      "disease_name": "Hyperglycemia",
+      "category": "Cardiometabolic",
+      "lr_auprc": 0.123474,
+      "rf_auprc": 0.243802,
+      "xgb_auprc": 0.322579,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.322579,
+      "stack_auprc": 0.237332,
+      "stack_delta": -0.085247,
+      "stack_wins": false
+    },
+    "4226121": {
+      "concept_id": 4226121,
+      "disease_name": "Retinopathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "lr_auprc": 0.006894,
+      "rf_auprc": 0.01813,
+      "xgb_auprc": 0.019804,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.019804,
+      "stack_auprc": 0.013738,
+      "stack_delta": -0.006066,
+      "stack_wins": false
+    },
+    "4229440": {
+      "concept_id": 4229440,
+      "disease_name": "Chronic Kidney Disease",
+      "category": "Renal",
+      "lr_auprc": 0.018026,
+      "rf_auprc": 0.017412,
+      "xgb_auprc": 0.012239,
+      "best_base_model": "Logistic Regression",
+      "best_base_auprc": 0.018026,
+      "stack_auprc": 0.015413,
+      "stack_delta": -0.002613,
+      "stack_wins": false
+    },
+    "4283893": {
+      "concept_id": 4283893,
+      "disease_name": "Sinusitis",
+      "category": "Respiratory / Allergic",
+      "lr_auprc": 0.00531,
+      "rf_auprc": 0.004936,
+      "xgb_auprc": 0.004958,
+      "best_base_model": "Logistic Regression",
+      "best_base_auprc": 0.00531,
+      "stack_auprc": 0.004701,
+      "stack_delta": -0.000609,
+      "stack_wins": false
+    },
+    "4285898": {
+      "concept_id": 4285898,
+      "disease_name": "Polyp of Colon",
+      "category": "Oncology / Pre-Malignant",
+      "lr_auprc": 0.015042,
+      "rf_auprc": 0.01866,
+      "xgb_auprc": 0.030227,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.030227,
+      "stack_auprc": 0.027187,
+      "stack_delta": -0.00304,
+      "stack_wins": false
+    },
+    "4310703": {
+      "concept_id": 4310703,
+      "disease_name": "Non-Small Cell Carcinoma of Lung, Stage 1",
+      "category": "Oncology / Pre-Malignant",
+      "lr_auprc": 0.042686,
+      "rf_auprc": 0.070845,
+      "xgb_auprc": 0.070633,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.070845,
+      "stack_auprc": 0.074144,
+      "stack_delta": 0.003299,
+      "stack_wins": true
+    },
+    "4311629": {
+      "concept_id": 4311629,
+      "disease_name": "Prediabetes",
+      "category": "Cardiometabolic",
+      "lr_auprc": 0.019747,
+      "rf_auprc": 0.018606,
+      "xgb_auprc": 0.022874,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.022874,
+      "stack_auprc": 0.021665,
+      "stack_delta": -0.001209,
+      "stack_wins": false
+    },
+    "37016354": {
+      "concept_id": 37016354,
+      "disease_name": "Neuropathy due to Type 2 Diabetes",
+      "category": "Diabetic Complication",
+      "lr_auprc": 0.038469,
+      "rf_auprc": 0.047867,
+      "xgb_auprc": 0.034482,
+      "best_base_model": "Random Forest",
+      "best_base_auprc": 0.047867,
+      "stack_auprc": 0.036596,
+      "stack_delta": -0.011271,
+      "stack_wins": false
+    },
+    "37017023": {
+      "concept_id": 37017023,
+      "disease_name": "Recurrent Rectal Polyp",
+      "category": "Oncology / Pre-Malignant",
+      "lr_auprc": 0.041275,
+      "rf_auprc": 0.054089,
+      "xgb_auprc": 0.058527,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.058527,
+      "stack_auprc": 0.055693,
+      "stack_delta": -0.002834,
+      "stack_wins": false
+    },
+    "37395648": {
+      "concept_id": 37395648,
+      "disease_name": "Small Cell Carcinoma of Lung, Stage 1",
+      "category": "Oncology / Pre-Malignant",
+      "lr_auprc": 0.004891,
+      "rf_auprc": 0.004884,
+      "xgb_auprc": 0.005483,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.005483,
+      "stack_auprc": 0.005421,
+      "stack_delta": -6.2e-05,
+      "stack_wins": false
+    },
+    "43530652": {
+      "concept_id": 43530652,
+      "disease_name": "Chronic Intractable Migraine",
+      "category": "Musculoskeletal",
+      "lr_auprc": 0.271156,
+      "rf_auprc": 0.358796,
+      "xgb_auprc": 0.402987,
+      "best_base_model": "XGBoost",
+      "best_base_auprc": 0.402987,
+      "stack_auprc": 0.35726,
+      "stack_delta": -0.045727,
+      "stack_wins": false
+    }
+  },
+  "n_targets": 41
+}
