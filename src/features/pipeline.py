@@ -19,7 +19,7 @@ import os
 import sys
 from pathlib import Path
 from typing import List, Dict, Any, Optional
-import duckdb
+
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 if str(ROOT_DIR) not in sys.path:
@@ -176,8 +176,9 @@ def build_feature_sql(target_concepts: List[int]) -> str:
 
 
 def extract_feature_matrix(
-    con: duckdb.DuckDBPyConnection,
+    con: Any,
     target_concepts: List[int],
+
     input_table_or_parquet: str,
     output_parquet: str,
     is_inpatient_ed_cohort: bool = True

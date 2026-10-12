@@ -1,4 +1,4 @@
-﻿"""
+"""
 Module: src/models/stacking.py
 Phase 10: Leakage-Safe Out-Of-Fold (OOF) Stacking Ensemble Module.
 
@@ -17,11 +17,11 @@ import json
 import time
 import joblib
 import numpy as np
-import duckdb
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple, Union
 from sklearn.model_selection import KFold
 from sklearn.linear_model import LogisticRegression
+
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 if str(ROOT_DIR) not in sys.path:

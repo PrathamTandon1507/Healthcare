@@ -155,5 +155,6 @@ def test_network_interface_contract():
         assert name in features, f"Missing expected network feature: {name}"
         assert isinstance(features[name], float), f"Network feature {name} must be float, got {type(features[name])}"
     
-    assert features["network_features_available"] == 0.0, "network_features_available must be 0.0 in stub mode"
-    assert features["net_shortest_path_length"] == -1.0, "net_shortest_path_length must be -1.0 in stub mode"
+    assert features["network_features_available"] in (0.0, 1.0), "network_features_available must be 0.0 or 1.0"
+    assert features["net_shortest_path_length"] >= -1.0, "net_shortest_path_length must be >= -1.0"
+

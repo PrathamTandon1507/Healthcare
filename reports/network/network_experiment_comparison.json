@@ -1,0 +1,50 @@
+{
+  "title": "Comorbidity Network Integration Benchmark & Multi-Arm Ablation Report",
+  "created_at_utc": "2026-09-19T16:42:33.639870+00:00",
+  "arms": {
+    "Arm_A_Clinical_Baseline": {
+      "feature_count": 81,
+      "macro_auroc": 0.8794,
+      "macro_auprc": 0.0769,
+      "macro_brier_score": 0.002265,
+      "precision_at_3": 0.2777,
+      "recall_at_3": 0.6897,
+      "map_at_3": 0.5893,
+      "precision_at_5": 0.1957,
+      "recall_at_5": 0.7923,
+      "map_at_5": 0.6181
+    },
+    "Arm_B_Network_Only": {
+      "feature_count": 7,
+      "macro_auroc": 0.8021,
+      "macro_auprc": 0.055,
+      "macro_brier_score": 0.002308,
+      "precision_at_3": 0.2139,
+      "recall_at_3": 0.5224,
+      "map_at_3": 0.4388,
+      "precision_at_5": 0.1653,
+      "recall_at_5": 0.6665,
+      "map_at_5": 0.4762
+    },
+    "Arm_C_Clinical_Plus_Network": {
+      "feature_count": 88,
+      "macro_auroc": 0.8804,
+      "macro_auprc": 0.0771,
+      "macro_brier_score": 0.00226,
+      "precision_at_3": 0.2779,
+      "recall_at_3": 0.6846,
+      "map_at_3": 0.583,
+      "precision_at_5": 0.1934,
+      "recall_at_5": 0.778,
+      "map_at_5": 0.609
+    }
+  },
+  "delta_arm_c_vs_arm_a": {
+    "macro_auroc_delta": 0.001,
+    "macro_auprc_delta": 0.0002,
+    "map_at_3_delta": -0.0063,
+    "map_at_5_delta": -0.009,
+    "recall_at_5_delta": -0.0143,
+    "brier_score_delta": -5e-06
+  }
+}

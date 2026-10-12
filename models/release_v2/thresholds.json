@@ -1,0 +1,289 @@
+{
+  "43530652": {
+    "concept_id": 43530652,
+    "balanced_f1_threshold": 0.24,
+    "high_sensitivity_threshold": 0.12,
+    "high_specificity_threshold": 0.36,
+    "validation_best_f1": 0.4994
+  },
+  "436096": {
+    "concept_id": 436096,
+    "balanced_f1_threshold": 0.26,
+    "high_sensitivity_threshold": 0.13,
+    "high_specificity_threshold": 0.39,
+    "validation_best_f1": 0.5267
+  },
+  "439777": {
+    "concept_id": 439777,
+    "balanced_f1_threshold": 0.06,
+    "high_sensitivity_threshold": 0.03,
+    "high_specificity_threshold": 0.09,
+    "validation_best_f1": 0.1774
+  },
+  "378419": {
+    "concept_id": 378419,
+    "balanced_f1_threshold": 0.06,
+    "high_sensitivity_threshold": 0.03,
+    "high_specificity_threshold": 0.09,
+    "validation_best_f1": 0.1596
+  },
+  "4310703": {
+    "concept_id": 4310703,
+    "balanced_f1_threshold": 0.09,
+    "high_sensitivity_threshold": 0.045,
+    "high_specificity_threshold": 0.135,
+    "validation_best_f1": 0.2531
+  },
+  "4285898": {
+    "concept_id": 4285898,
+    "balanced_f1_threshold": 0.04,
+    "high_sensitivity_threshold": 0.02,
+    "high_specificity_threshold": 0.06,
+    "validation_best_f1": 0.0816
+  },
+  "4115276": {
+    "concept_id": 4115276,
+    "balanced_f1_threshold": 0.11,
+    "high_sensitivity_threshold": 0.055,
+    "high_specificity_threshold": 0.165,
+    "validation_best_f1": 0.2494
+  },
+  "4311629": {
+    "concept_id": 4311629,
+    "balanced_f1_threshold": 0.03,
+    "high_sensitivity_threshold": 0.015,
+    "high_specificity_threshold": 0.045,
+    "validation_best_f1": 0.0586
+  },
+  "4229440": {
+    "concept_id": 4229440,
+    "balanced_f1_threshold": 0.04,
+    "high_sensitivity_threshold": 0.02,
+    "high_specificity_threshold": 0.06,
+    "validation_best_f1": 0.0976
+  },
+  "257012": {
+    "concept_id": 257012,
+    "balanced_f1_threshold": 0.05,
+    "high_sensitivity_threshold": 0.025,
+    "high_specificity_threshold": 0.075,
+    "validation_best_f1": 0.1659
+  },
+  "4283893": {
+    "concept_id": 4283893,
+    "balanced_f1_threshold": 0.05,
+    "high_sensitivity_threshold": 0.025,
+    "high_specificity_threshold": 0.075,
+    "validation_best_f1": 0.0
+  },
+  "4129902": {
+    "concept_id": 4129902,
+    "balanced_f1_threshold": 0.06,
+    "high_sensitivity_threshold": 0.03,
+    "high_specificity_threshold": 0.09,
+    "validation_best_f1": 0.143
+  },
+  "317576": {
+    "concept_id": 317576,
+    "balanced_f1_threshold": 0.01,
+    "high_sensitivity_threshold": 0.005,
+    "high_specificity_threshold": 0.015,
+    "validation_best_f1": 0.0212
+  },
+  "432867": {
+    "concept_id": 432867,
+    "balanced_f1_threshold": 0.01,
+    "high_sensitivity_threshold": 0.005,
+    "high_specificity_threshold": 0.015,
+    "validation_best_f1": 0.0227
+  },
+  "316866": {
+    "concept_id": 316866,
+    "balanced_f1_threshold": 0.08,
+    "high_sensitivity_threshold": 0.04,
+    "high_specificity_threshold": 0.12,
+    "validation_best_f1": 0.3275
+  },
+  "200970": {
+    "concept_id": 200970,
+    "balanced_f1_threshold": 0.06,
+    "high_sensitivity_threshold": 0.03,
+    "high_specificity_threshold": 0.09,
+    "validation_best_f1": 0.1227
+  },
+  "80502": {
+    "concept_id": 80502,
+    "balanced_f1_threshold": 0.06,
+    "high_sensitivity_threshold": 0.03,
+    "high_specificity_threshold": 0.09,
+    "validation_best_f1": 0.129
+  },
+  "381316": {
+    "concept_id": 381316,
+    "balanced_f1_threshold": 0.02,
+    "high_sensitivity_threshold": 0.01,
+    "high_specificity_threshold": 0.03,
+    "validation_best_f1": 0.0527
+  },
+  "37017023": {
+    "concept_id": 37017023,
+    "balanced_f1_threshold": 0.07,
+    "high_sensitivity_threshold": 0.035,
+    "high_specificity_threshold": 0.105,
+    "validation_best_f1": 0.1581
+  },
+  "4079750": {
+    "concept_id": 4079750,
+    "balanced_f1_threshold": 0.05,
+    "high_sensitivity_threshold": 0.025,
+    "high_specificity_threshold": 0.075,
+    "validation_best_f1": 0.0
+  },
+  "436940": {
+    "concept_id": 436940,
+    "balanced_f1_threshold": 0.22,
+    "high_sensitivity_threshold": 0.11,
+    "high_specificity_threshold": 0.33,
+    "validation_best_f1": 0.5377
+  },
+  "4120314": {
+    "concept_id": 4120314,
+    "balanced_f1_threshold": 0.04,
+    "high_sensitivity_threshold": 0.02,
+    "high_specificity_threshold": 0.06,
+    "validation_best_f1": 0.6393
+  },
+  "4214376": {
+    "concept_id": 4214376,
+    "balanced_f1_threshold": 0.21,
+    "high_sensitivity_threshold": 0.105,
+    "high_specificity_threshold": 0.315,
+    "validation_best_f1": 0.5248
+  },
+  "37395648": {
+    "concept_id": 37395648,
+    "balanced_f1_threshold": 0.02,
+    "high_sensitivity_threshold": 0.01,
+    "high_specificity_threshold": 0.03,
+    "validation_best_f1": 0.0606
+  },
+  "4110591": {
+    "concept_id": 4110591,
+    "balanced_f1_threshold": 0.02,
+    "high_sensitivity_threshold": 0.01,
+    "high_specificity_threshold": 0.03,
+    "validation_best_f1": 0.0517
+  },
+  "201826": {
+    "concept_id": 201826,
+    "balanced_f1_threshold": 0.01,
+    "high_sensitivity_threshold": 0.005,
+    "high_specificity_threshold": 0.015,
+    "validation_best_f1": 0.0265
+  },
+  "4043241": {
+    "concept_id": 4043241,
+    "balanced_f1_threshold": 0.05,
+    "high_sensitivity_threshold": 0.025,
+    "high_specificity_threshold": 0.075,
+    "validation_best_f1": 0.0
+  },
+  "380378": {
+    "concept_id": 380378,
+    "balanced_f1_threshold": 0.14,
+    "high_sensitivity_threshold": 0.07,
+    "high_specificity_threshold": 0.21,
+    "validation_best_f1": 0.2114
+  },
+  "192279": {
+    "concept_id": 192279,
+    "balanced_f1_threshold": 0.03,
+    "high_sensitivity_threshold": 0.015,
+    "high_specificity_threshold": 0.045,
+    "validation_best_f1": 0.058
+  },
+  "443614": {
+    "concept_id": 443614,
+    "balanced_f1_threshold": 0.03,
+    "high_sensitivity_threshold": 0.015,
+    "high_specificity_threshold": 0.045,
+    "validation_best_f1": 0.0669
+  },
+  "258780": {
+    "concept_id": 258780,
+    "balanced_f1_threshold": 0.05,
+    "high_sensitivity_threshold": 0.025,
+    "high_specificity_threshold": 0.075,
+    "validation_best_f1": 0.0
+  },
+  "4180790": {
+    "concept_id": 4180790,
+    "balanced_f1_threshold": 0.02,
+    "high_sensitivity_threshold": 0.01,
+    "high_specificity_threshold": 0.03,
+    "validation_best_f1": 0.0446
+  },
+  "79740": {
+    "concept_id": 79740,
+    "balanced_f1_threshold": 0.2,
+    "high_sensitivity_threshold": 0.1,
+    "high_specificity_threshold": 0.3,
+    "validation_best_f1": 0.0417
+  },
+  "37016354": {
+    "concept_id": 37016354,
+    "balanced_f1_threshold": 0.05,
+    "high_sensitivity_threshold": 0.025,
+    "high_specificity_threshold": 0.075,
+    "validation_best_f1": 0.0941
+  },
+  "4226121": {
+    "concept_id": 4226121,
+    "balanced_f1_threshold": 0.03,
+    "high_sensitivity_threshold": 0.015,
+    "high_specificity_threshold": 0.045,
+    "validation_best_f1": 0.0585
+  },
+  "75036": {
+    "concept_id": 75036,
+    "balanced_f1_threshold": 0.05,
+    "high_sensitivity_threshold": 0.025,
+    "high_specificity_threshold": 0.075,
+    "validation_best_f1": 0.0
+  },
+  "4029498": {
+    "concept_id": 4029498,
+    "balanced_f1_threshold": 0.02,
+    "high_sensitivity_threshold": 0.01,
+    "high_specificity_threshold": 0.03,
+    "validation_best_f1": 0.0494
+  },
+  "4079749": {
+    "concept_id": 4079749,
+    "balanced_f1_threshold": 0.05,
+    "high_sensitivity_threshold": 0.025,
+    "high_specificity_threshold": 0.075,
+    "validation_best_f1": 0.0
+  },
+  "321042": {
+    "concept_id": 321042,
+    "balanced_f1_threshold": 0.05,
+    "high_sensitivity_threshold": 0.025,
+    "high_specificity_threshold": 0.075,
+    "validation_best_f1": 0.0
+  },
+  "4051466": {
+    "concept_id": 4051466,
+    "balanced_f1_threshold": 0.03,
+    "high_sensitivity_threshold": 0.015,
+    "high_specificity_threshold": 0.045,
+    "validation_best_f1": 0.087
+  },
+  "440086": {
+    "concept_id": 440086,
+    "balanced_f1_threshold": 0.05,
+    "high_sensitivity_threshold": 0.025,
+    "high_specificity_threshold": 0.075,
+    "validation_best_f1": 0.0
+  }
+}

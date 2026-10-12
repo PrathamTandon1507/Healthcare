@@ -1,0 +1,30 @@
+{
+  "bundle_version": "2.0.0",
+  "name": "Clinical Comorbidity Risk & Disease Graph Model Bundle",
+  "created_at_utc": "2026-09-19T16:42:34.963847+00:00",
+  "target_count": 41,
+  "clinical_feature_count": 81,
+  "network_feature_count": 7,
+  "total_feature_count_per_target": 88,
+  "training_metadata": {
+    "training_landmarks": 174660,
+    "validation_landmarks": 73862,
+    "test_landmarks": 33304
+  },
+  "performance_summary": {
+    "feature_count": 88,
+    "macro_auroc": 0.8804,
+    "macro_auprc": 0.0771,
+    "macro_brier_score": 0.00226,
+    "precision_at_3": 0.2779,
+    "recall_at_3": 0.6846,
+    "map_at_3": 0.583,
+    "precision_at_5": 0.1934,
+    "recall_at_5": 0.778,
+    "map_at_5": 0.609
+  },
+  "graph_metadata": {
+    "nodes": 41,
+    "significant_edges": 455
+  }
+}

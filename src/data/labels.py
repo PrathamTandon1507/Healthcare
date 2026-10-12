@@ -16,15 +16,11 @@ import sys
 import json
 from pathlib import Path
 from typing import Optional, Dict, Any, List, Tuple
-import duckdb
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from src.data.loader import OMOPDataLoader
-from src.data.landmarks import select_landmarks
-from src.data.timeline import get_condition_name, get_visit_name
 
 
 # Comprehensive Taxonomy: (Clinical Name, Clinical Category, Is Chronic Comorbidity Target)
