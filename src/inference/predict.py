@@ -105,6 +105,11 @@ class PatientInput:
 
         return self
 
+    @property
+    def conditions(self) -> List[Union[int, str]]:
+        """Alias for current_condition_ids for convenience and compatibility."""
+        return self.current_condition_ids
+
 
 def resolve_condition_identifiers(
     conditions: List[Union[int, str]]
@@ -303,6 +308,11 @@ class PatientPredictionResult:
             })
         return pd.DataFrame(rows)
 
+    @property
+    def high_risk_conditions(self) -> List[int]:
+        """List of concept IDs flagged as elevated / high risk."""
+        return [it.concept_id for it in self.top_ranked_predictions if it.is_flagged_elevated_risk]
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             "patient_id": self.patient_id,
@@ -419,15 +429,82 @@ def predict_patient_comorbidity_risk(
     top_n_items = candidate_items[:max(1, top_n)]
     
     if include_explanations:
+        from streamlit_app.disease_metadata.registry import get_condition_info
+
+        def _format_clinical_factor(f_dict: Dict[str, Any]) -> Dict[str, Any]:
+            fname = f_dict.get("feature", "")
+            pval = f_dict.get("patient_value", 0.0)
+            score = f_dict.get("importance_score", 0.0)
+
+            if fname == "age_at_landmark":
+                desc = f"Advanced age ({int(pval)} years)" if pval >= 60 else (f"Age ({int(pval)} years)" if pval >= 40 else f"Younger age profile ({int(pval)} years)")
+            elif fname == "total_prior_condition_count":
+                desc = f"High comorbidity burden ({int(pval)} documented conditions)" if pval >= 3 else f"Low comorbidity burden ({int(pval)} conditions)"
+            elif fname == "prior_obs_years":
+                desc = f"Longitudinal history duration ({pval:.1f} years of EHR follow-up)"
+            elif fname == "gender_male" and pval == 1.0:
+                desc = "Biological Sex: Male"
+            elif fname == "gender_female" and pval == 1.0:
+                desc = "Biological Sex: Female"
+            elif fname.startswith("has_hist_"):
+                cid = int(fname.replace("has_hist_", ""))
+                c_info = get_condition_info(cid)
+                if pval == 1.0:
+                    desc = f"Documented history of {c_info.canonical_term}"
+                else:
+                    desc = f"Absence of prior {c_info.canonical_term}"
+            elif fname.startswith("bg_"):
+                bg_name = fname.replace("bg_", "").replace("_", " ").title()
+                if pval == 1.0:
+                    desc = f"Documented history of {bg_name}"
+                else:
+                    desc = f"Absence of {bg_name}"
+            else:
+                desc = fname.replace("_", " ").title()
+
+            return {
+                "feature": fname,
+                "feature_description": desc,
+                "patient_value": pval,
+                "importance_score": score,
+                "direction": f_dict.get("direction", "increases_risk" if score > 0 else "decreases_risk")
+            }
+
         for it in top_n_items:
             try:
                 exp_dict = bundle.explain(x_vec, it.concept_id)
+                # Map meta weights & model contributions
+                meta_weights_raw = exp_dict.get("ensemble_meta_weights") or exp_dict.get("meta_weights") or {}
+                model_contribs = {}
+                meta_weights = {}
+
+                for m_name in ["logistic_regression", "random_forest", "xgboost"]:
+                    if m_name in meta_weights_raw and isinstance(meta_weights_raw[m_name], dict):
+                        model_contribs[m_name] = float(meta_weights_raw[m_name].get("base_probability", 0.0))
+                        meta_weights[m_name] = float(meta_weights_raw[m_name].get("meta_weight", 0.0))
+                    elif m_name in meta_weights_raw:
+                        meta_weights[m_name] = float(meta_weights_raw[m_name])
+
+                # Transform raw features into clinical descriptions
+                pos_raw = exp_dict.get("key_risk_increasing_factors") or exp_dict.get("top_risk_increasing_factors") or []
+                neg_raw = exp_dict.get("key_protective_factors") or exp_dict.get("top_protective_factors") or []
+
+                exp_dict["model_contributions"] = model_contribs
+                exp_dict["meta_weights"] = meta_weights
+                exp_dict["top_risk_increasing_factors"] = [_format_clinical_factor(f) for f in pos_raw]
+                exp_dict["top_protective_factors"] = [_format_clinical_factor(f) for f in neg_raw]
+
                 it.explanation = exp_dict
             except Exception as e:
                 it.explanation = {
                     "error": f"Could not compute explanation: {str(e)}",
-                    "target_disease": it.disease_name
+                    "target_disease": it.disease_name,
+                    "top_risk_increasing_factors": [],
+                    "top_protective_factors": [],
+                    "model_contributions": {},
+                    "meta_weights": {}
                 }
+
                 
     elapsed = time.time() - t0
     

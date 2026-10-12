@@ -160,7 +160,31 @@ def render():
 
     st.markdown("<hr />", unsafe_allow_html=True)
 
+    # 3b. Disease Network Pathway Evidence
+    st.markdown("### Comorbidity Network Pathway Evidence")
+    st.markdown(
+        '<p class="page-subtitle">Statistically significant (FDR q < 0.05) directional relative-risk pathways connecting documented patient history to this condition.</p>',
+        unsafe_allow_html=True
+    )
+
+    from src.features.network_interface import get_network_features
+    patient_diagnoses = set(getattr(patient, "current_condition_ids", getattr(patient, "conditions", [])))
+    net_feats = get_network_features(existing_diagnoses=patient_diagnoses, target_disease=selected_cid)
+    
+    n_col1, n_col2, n_col3 = st.columns(3)
+    with n_col1:
+        st.metric("Max Preceding Relative Risk", f"{net_feats.get('net_max_relative_risk', 1.0):.2f}×")
+    with n_col2:
+        st.metric("Significant Preceding Pathways", f"{int(net_feats.get('net_n_significant_edges', 0))}")
+    with n_col3:
+        path_len = net_feats.get('net_shortest_path_length', -1.0)
+        path_str = f"{int(path_len)} hop{'s' if path_len != 1 else ''}" if path_len >= 0 else "Disconnected"
+        st.metric("Graph Proximity", path_str)
+
+    st.markdown("<hr />", unsafe_allow_html=True)
+
     # 4. Layer 2: Technical Model Information (Section 20 - Collapsed progressive disclosure)
+
     with st.expander("Technical Model Details (Base Estimator Consensus & Stacking Weights)", expanded=False):
         st.markdown(
             '<p style="color: #64748B; font-size: 0.86rem; margin-bottom: 0.75rem;">'
@@ -199,12 +223,13 @@ def render():
     col_ret, col_atlas = st.columns([0.5, 0.5])
     with col_ret:
         if st.button("← Back to Risk Results", use_container_width=True):
-            from streamlit_app.navigation.router import PAGE_RESULTS
-            st.switch_page(PAGE_RESULTS)
+            from streamlit_app.navigation.router import get_pages
+            st.switch_page(get_pages()["results"])
     with col_atlas:
         if st.button("Browse Disease Explorer →", use_container_width=True):
-            from streamlit_app.navigation.router import PAGE_EXPLORER
-            st.switch_page(PAGE_EXPLORER)
+            from streamlit_app.navigation.router import get_pages
+            st.switch_page(get_pages()["explorer"])
+
 
 
 if __name__ == "__main__":

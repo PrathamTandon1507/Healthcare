@@ -1,8 +1,5 @@
-"""
-Module: streamlit_app.pages.disease_explorer
-Page 5: Disease Explorer — Clean Clinical Comorbidity Reference Atlas.
-"""
-
+import os
+import json
 import streamlit as st
 
 from streamlit_app.components.page_header import render_page_header
@@ -13,11 +10,30 @@ from streamlit_app.disease_metadata.registry import (
 )
 
 
+# Load frozen graph
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+GRAPH_PATH_V2 = os.path.join(ROOT_DIR, "models", "release_v2", "disease_graph.json")
+GRAPH_PATH_V1 = os.path.join(ROOT_DIR, "data", "graph", "disease_graph_v1.json")
+
+
+@st.cache_data
+def load_graph_data():
+    path = GRAPH_PATH_V2 if os.path.exists(GRAPH_PATH_V2) else GRAPH_PATH_V1
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return None
+
+
 def render():
     render_page_header(
         title="Disease Explorer",
-        subtitle="Explore the conditions supported by the comorbidity risk prediction model."
+        subtitle="Explore the conditions supported by the comorbidity risk prediction model and their network relationships."
     )
+
+    graph_data = load_graph_data()
+    nodes_graph = graph_data.get("nodes", {}) if graph_data else {}
+    edges_graph = graph_data.get("edges", []) if graph_data else []
 
     # Search & Category Filter Bar
     col_search, col_cat, col_role = st.columns([0.45, 0.35, 0.20])
@@ -52,7 +68,6 @@ def render():
     st.markdown(f"**Showing {len(results)} Conditions**")
     st.markdown("<hr />", unsafe_allow_html=True)
 
-    # Clean List Layout (Section 21: Whitespace rather than giant cards)
     if not results:
         st.info("No matching clinical conditions found. Please broaden your search criteria.")
         return
@@ -65,6 +80,11 @@ def render():
             role_border = "#BFDBFE" if info.is_target else "#CBD5E1"
             
             hint_str = f" &bull; ICD-10: {info.icd10_hint}" if info.icd10_hint else ""
+
+            cid_str = str(info.concept_id)
+            node_meta = nodes_graph.get(cid_str, {})
+            out_deg = node_meta.get("out_degree_centrality", 0.0)
+            in_deg = node_meta.get("in_degree_centrality", 0.0)
 
             st.markdown(
                 f"""
@@ -81,13 +101,40 @@ def render():
                             </span>
                         </div>
                     </div>
-                    <div style="font-size: 0.90rem; color: #334155; line-height: 1.45;">
+                    <div style="font-size: 0.90rem; color: #334155; line-height: 1.45; margin-bottom: 0.35rem;">
                         {info.plain_language_explanation}
                     </div>
                 </div>
                 """,
                 unsafe_allow_html=True
             )
+
+            # Show network connections if it's a target node in the graph
+            if info.is_target and node_meta:
+                with st.expander(f"Network Associations & Centrality for {info.canonical_term}"):
+                    net_c1, net_c2 = st.columns(2)
+                    with net_c1:
+                        st.caption(f"**Network In-Degree**: `{in_deg:.3f}` | **Out-Degree**: `{out_deg:.3f}`")
+                        # Top upstream drivers (incoming edges)
+                        incoming = [e for e in edges_graph if int(e["target_id"]) == info.concept_id and e.get("is_significant")]
+                        incoming.sort(key=lambda x: x.get("relative_risk", 1.0), reverse=True)
+                        if incoming:
+                            st.markdown("**Top Preceding Risk Drivers:**")
+                            for inc in incoming[:4]:
+                                st.markdown(f"- {inc['source_name']}: **{inc['relative_risk']:.2f}×** relative risk")
+                        else:
+                            st.caption("No significant upstream drivers in graph.")
+
+                    with net_c2:
+                        # Top downstream complications (outgoing edges)
+                        outgoing = [e for e in edges_graph if int(e["source_id"]) == info.concept_id and e.get("is_significant")]
+                        outgoing.sort(key=lambda x: x.get("relative_risk", 1.0), reverse=True)
+                        if outgoing:
+                            st.markdown("**Top Downstream Complications:**")
+                            for out in outgoing[:4]:
+                                st.markdown(f"- {out['target_name']}: **{out['relative_risk']:.2f}×** relative risk")
+                        else:
+                            st.caption("No significant downstream associations in graph.")
 
 
 if __name__ == "__main__":

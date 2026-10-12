@@ -277,9 +277,10 @@ def render():
                 set_result(result)
                 st.session_state["threshold_strategy"] = selected_strategy
                 st.session_state["top_n"] = top_n_val
-                
-                from streamlit_app.navigation.router import PAGE_RESULTS
-                st.switch_page(PAGE_RESULTS)
+
+                from streamlit_app.navigation.router import get_pages
+                st.switch_page(get_pages()["results"])
+
 
 
 if __name__ == "__main__":

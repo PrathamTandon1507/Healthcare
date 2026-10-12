@@ -1,4 +1,4 @@
-﻿"""
+"""
 Module: streamlit_app.components.risk_card
 Section 7 Reusable Risk Card Component.
 Rank, canonical term + plain-language explanation, 3 metrics, "why surfaced" bullet points, "View explanation" CTA.
@@ -89,8 +89,9 @@ def render_risk_card(
                 if switch_page_target is not None:
                     st.switch_page(switch_page_target)
                 else:
-                    from streamlit_app.navigation.router import PAGE_EXPLAINABILITY
-                    st.switch_page(PAGE_EXPLAINABILITY)
+                    from streamlit_app.navigation.router import get_pages
+                    st.switch_page(get_pages()["explainability"])
+
 
         # 3. Why This Was Surfaced (Clinical summary factors)
         if item.explanation and "top_risk_increasing_factors" in item.explanation:

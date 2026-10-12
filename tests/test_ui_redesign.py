@@ -1,4 +1,4 @@
-﻿"""
+"""
 Unit Tests for Phase 18 UI Redesign & Clinical Intelligence Layer.
 Verifies disease metadata registry, design system tokens, session state accessors,
 navigation router integrity, and end-to-end UI rendering flows.
@@ -43,14 +43,9 @@ from streamlit_app.state.session import (
 )
 from streamlit_app.navigation.router import (
     get_navigation_router,
-    PAGE_OVERVIEW,
-    PAGE_ASSESSMENT,
-    PAGE_RESULTS,
-    PAGE_EXPLAINABILITY,
-    PAGE_EXPLORER,
-    PAGE_NETWORK,
-    PAGE_RESEARCH
+    get_pages
 )
+
 
 
 class TestDiseaseMetadataRegistry:

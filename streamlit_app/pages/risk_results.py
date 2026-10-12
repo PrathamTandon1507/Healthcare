@@ -108,12 +108,13 @@ def render():
     col_back, col_exp = st.columns([0.5, 0.5])
     with col_back:
         if st.button("← Modify Patient Assessment", use_container_width=True):
-            from streamlit_app.navigation.router import PAGE_ASSESSMENT
-            st.switch_page(PAGE_ASSESSMENT)
+            from streamlit_app.navigation.router import get_pages
+            st.switch_page(get_pages()["assessment"])
     with col_exp:
         if st.button("Explore Detailed Explainability →", type="primary", use_container_width=True):
-            from streamlit_app.navigation.router import PAGE_EXPLAINABILITY
-            st.switch_page(PAGE_EXPLAINABILITY)
+            from streamlit_app.navigation.router import get_pages
+            st.switch_page(get_pages()["explainability"])
+
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-﻿"""
+"""
 Module: streamlit_app.components.empty_state
 Clean, non-technical empty state with direct clinical call-to-action.
 """
@@ -27,5 +27,6 @@ def render_empty_assessment_state(
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
         if st.button(button_label, type="primary", use_container_width=True):
-            from streamlit_app.navigation.router import PAGE_ASSESSMENT
-            st.switch_page(PAGE_ASSESSMENT)
+            from streamlit_app.navigation.router import get_pages
+            st.switch_page(get_pages()["assessment"])
+

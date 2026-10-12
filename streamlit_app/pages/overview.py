@@ -62,12 +62,12 @@ def render():
             col_a, col_b = st.columns([0.5, 0.5])
             with col_a:
                 if st.button("Resume Active Results →", type="primary", use_container_width=True):
-                    from streamlit_app.navigation.router import PAGE_RESULTS
-                    st.switch_page(PAGE_RESULTS)
+                    from streamlit_app.navigation.router import get_pages
+                    st.switch_page(get_pages()["results"])
             with col_b:
                 if st.button("Start New Assessment", use_container_width=True):
-                    from streamlit_app.navigation.router import PAGE_ASSESSMENT
-                    st.switch_page(PAGE_ASSESSMENT)
+                    from streamlit_app.navigation.router import get_pages
+                    st.switch_page(get_pages()["assessment"])
 
             st.markdown("</div>", unsafe_allow_html=True)
     else:
@@ -78,8 +78,9 @@ def render():
             unsafe_allow_html=True
         )
         if st.button("Start Patient Assessment →", type="primary"):
-            from streamlit_app.navigation.router import PAGE_ASSESSMENT
-            st.switch_page(PAGE_ASSESSMENT)
+            from streamlit_app.navigation.router import get_pages
+            st.switch_page(get_pages()["assessment"])
+
 
     st.markdown("<hr />", unsafe_allow_html=True)
 

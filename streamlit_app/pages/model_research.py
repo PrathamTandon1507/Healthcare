@@ -66,6 +66,24 @@ def render():
 
     st.markdown("<hr />", unsafe_allow_html=True)
 
+    # 2b. Comorbidity Network Integration Benchmark (Release v2 vs v1)
+    st.markdown("### Comorbidity Disease Network Benchmark (Release v2)")
+    st.markdown(
+        '<p class="page-subtitle">'
+        'Multi-arm evaluation comparing standalone clinical features, network-only features, and combined Release v2 models.'
+        '</p>',
+        unsafe_allow_html=True
+    )
+
+    network_arm_data = [
+        {"Experimental Arm": "Arm A: Clinical Baseline (Release v1)", "Input Features": "81 Clinical Features", "Macro AUROC": "0.8794", "Macro AUPRC": "0.0816", "MAP@3": "0.5893", "Key Finding": "Strong clinical baseline utilizing demographics, diagnoses, and interactions."},
+        {"Experimental Arm": "Arm B: Network-Only (Graph Topology)", "Input Features": "7 Target Network Features", "Macro AUROC": "0.8021", "Macro AUPRC": "0.0542", "MAP@3": "0.4388", "Key Finding": "Graph topology & PageRank capture substantial comorbidity clustering standalone."},
+        {"Experimental Arm": "Arm C: Clinical + Network (Release v2)", "Input Features": "88 Features (81 Clinical + 7 Network)", "Macro AUROC": "0.8804", "Macro AUPRC": "0.0820", "MAP@3": "0.5830", "Key Finding": "Combines clinical discrimination with transparent graph-pathway explainability."}
+    ]
+    st.dataframe(pd.DataFrame(network_arm_data), hide_index=True, use_container_width=True)
+
+    st.markdown("<hr />", unsafe_allow_html=True)
+
     # 3. Feature Ablation Experimentation
     st.markdown("### Feature Ablation Progression")
     st.markdown(
